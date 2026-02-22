@@ -3,22 +3,8 @@
     "main": {
       "type": "main-product",
       "blocks": {
-        "vendor": {
-          "type": "text",
-          "settings": {
-            "text": "{{ product.vendor }}",
-            "text_style": "uppercase"
-          }
-        },
         "title": {
           "type": "title"
-        },
-        "caption": {
-          "type": "text",
-          "settings": {
-            "text": "{{ product.metafields.descriptors.subtitle.value }}",
-            "text_style": "subtitle"
-          }
         },
         "price": {
           "type": "price"
@@ -29,76 +15,23 @@
             "picker_type": "button"
           }
         },
-        "quantity_selector": {
-          "type": "quantity_selector"
-        },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
             "show_dynamic_checkout": true,
-            "show_gift_card_recipient": true
+            "show_gift_card_recipient": false
           }
         },
         "description": {
           "type": "description"
-        },
-        "collapsible-row-0": {
-          "type": "collapsible_tab",
-          "settings": {
-            "heading": "Materials",
-            "icon": "leather",
-            "content": "",
-            "page": ""
-          }
-        },
-        "collapsible-row-1": {
-          "type": "collapsible_tab",
-          "settings": {
-            "heading": "Shipping & Returns",
-            "icon": "truck",
-            "content": "",
-            "page": ""
-          }
-        },
-        "collapsible-row-2": {
-          "type": "collapsible_tab",
-          "settings": {
-            "heading": "Dimensions",
-            "icon": "ruler",
-            "content": "",
-            "page": ""
-          }
-        },
-        "collapsible-row-3": {
-          "type": "collapsible_tab",
-          "settings": {
-            "heading": "Care Instructions",
-            "icon": "heart",
-            "content": "",
-            "page": ""
-          }
-        },
-        "share": {
-          "type": "share",
-          "settings": {
-            "share_label": "Share"
-          }
         }
       },
       "block_order": [
-        "vendor",
         "title",
-        "caption",
         "price",
         "variant_picker",
-        "quantity_selector",
         "buy_buttons",
-        "description",
-        "collapsible-row-0",
-        "collapsible-row-1",
-        "collapsible-row-2",
-        "collapsible-row-3",
-        "share"
+        "description"
       ],
       "settings": {
         "enable_sticky_info": true,
@@ -107,87 +40,183 @@
         "constrain_to_viewport": true,
         "mobile_thumbnails": "hide",
         "hide_variants": true,
-        "enable_video_looping": false,
+        "enable_video_looping": true,
         "padding_top": 36,
         "padding_bottom": 12
       }
     },
-    "image-with-text": {
-      "type": "image-with-text",
+    "kova_comparison": {
+      "type": "kova-comparison",
       "blocks": {
-        "image-with-text-0": {
-          "type": "heading",
+        "feat_1": {
+          "type": "feature",
           "settings": {
-            "heading": "Image with text",
-            "heading_size": "h1"
+            "icon": "🔄",
+            "title": "Allows for Movement",
+            "description": "Move naturally without thinking about it"
           }
         },
-        "image-with-text-1": {
-          "type": "text",
+        "feat_2": {
+          "type": "feature",
           "settings": {
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "text_style": "body"
+            "icon": "🧍",
+            "title": "Effortless Posture",
+            "description": "Supports alignment as you shift positions"
+          }
+        },
+        "feat_3": {
+          "type": "feature",
+          "settings": {
+            "icon": "☀️",
+            "title": "All-Day Comfort",
+            "description": "Stays comfortable longer — without feeling stuck"
+          }
+        },
+        "feat_4": {
+          "type": "feature",
+          "settings": {
+            "icon": "📐",
+            "title": "Fits Every Body & Desk",
+            "description": "Adjusts to any height and desk setup"
           }
         }
       },
       "block_order": [
-        "image-with-text-0",
-        "image-with-text-1"
+        "feat_1",
+        "feat_2",
+        "feat_3",
+        "feat_4"
       ],
       "settings": {
-        "height": "small",
-        "desktop_image_width": "medium",
-        "layout": "text_first",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "content_layout": "no-overlap",
-        "color_scheme": "scheme-2",
-        "mobile_content_alignment": "left",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "subheading": "Sitting Still vs Sitting Smart",
+        "heading": "Built for How Your Body Actually Works"
       }
     },
-    "multicolumn": {
-      "type": "multicolumn",
+    "kova_details": {
+      "type": "kova-details-grid",
       "blocks": {
-        "column-0": {
-          "type": "column",
+        "det_1": {
+          "type": "detail",
           "settings": {
-            "title": "Free Shipping",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
+            "title": "Pressure-Relief Seat",
+            "description": "12cm extra-thick high-density foam"
           }
         },
-        "column-1": {
-          "type": "column",
+        "det_2": {
+          "type": "detail",
           "settings": {
-            "title": "Hassle-Free Exchanges",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
+            "title": "360° Smooth Rotating",
+            "description": "For effortless position changes"
+          }
+        },
+        "det_3": {
+          "type": "detail",
+          "settings": {
+            "title": "Breathable Fabric",
+            "description": "Soft-touch material that stays cool"
+          }
+        },
+        "det_4": {
+          "type": "detail",
+          "settings": {
+            "title": "Lockable Wheels",
+            "description": "Stable when you need it"
+          }
+        },
+        "det_5": {
+          "type": "detail",
+          "settings": {
+            "title": "Fully Adjustable Fit",
+            "description": "Adjustable from top to bottom"
+          }
+        },
+        "det_6": {
+          "type": "detail",
+          "settings": {
+            "title": "Built to Last",
+            "description": "Reinforced steel frame"
           }
         }
       },
       "block_order": [
-        "column-0",
-        "column-1"
+        "det_1",
+        "det_2",
+        "det_3",
+        "det_4",
+        "det_5",
+        "det_6"
       ],
       "settings": {
-        "title": "",
-        "heading_size": "h1",
-        "image_width": "full",
-        "image_ratio": "adapt",
-        "columns_desktop": 2,
-        "column_alignment": "left",
-        "background_style": "none",
-        "button_label": "",
-        "button_link": "",
-        "swipe_on_mobile": false,
-        "color_scheme": "scheme-1",
-        "columns_mobile": "1",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "heading": "Designed Down to Every Detail",
+        "subheading": "Smart features, comfort-focused materials, and maximum adjustability"
+      }
+    },
+    "kova_included": {
+      "type": "kova-whats-included",
+      "blocks": {
+        "inc_1": {
+          "type": "item",
+          "settings": {
+            "icon": "🪑",
+            "title": "KÖVA Freedom Chair",
+            "original_price": "$600",
+            "final_price": "$397",
+            "is_free": false
+          }
+        },
+        "inc_2": {
+          "type": "item",
+          "settings": {
+            "icon": "📦",
+            "title": "Fast U.S. Shipping",
+            "original_price": "$14",
+            "final_price": "FREE",
+            "is_free": true
+          }
+        },
+        "inc_3": {
+          "type": "item",
+          "settings": {
+            "icon": "🖱️",
+            "title": "Mouse Pad",
+            "original_price": "$23",
+            "final_price": "FREE",
+            "is_free": true
+          }
+        },
+        "inc_4": {
+          "type": "item",
+          "settings": {
+            "icon": "🔲",
+            "title": "Chair Mat",
+            "original_price": "$49",
+            "final_price": "FREE",
+            "is_free": true
+          }
+        },
+        "inc_5": {
+          "type": "item",
+          "settings": {
+            "icon": "🛡️",
+            "title": "3-Year Warranty",
+            "original_price": "$29",
+            "final_price": "FREE",
+            "is_free": true
+          }
+        }
+      },
+      "block_order": [
+        "inc_1",
+        "inc_2",
+        "inc_3",
+        "inc_4",
+        "inc_5"
+      ],
+      "settings": {
+        "heading": "What's Included with Your KÖVA Chair",
+        "total_label": "Subtotal",
+        "total_price": "$397",
+        "cta_text": "Shop Now"
       }
     },
     "related-products": {
@@ -209,8 +238,9 @@
   },
   "order": [
     "main",
-    "image-with-text",
-    "multicolumn",
+    "kova_comparison",
+    "kova_details",
+    "kova_included",
     "related-products"
   ]
 }
