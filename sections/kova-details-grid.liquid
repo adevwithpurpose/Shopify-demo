@@ -1,0 +1,95 @@
+{{ 'kova-details-grid.css' | asset_url | stylesheet_tag }}
+
+<div class="kova-details-section">
+  <div class="page-width">
+    <div class="kova-det-header">
+      <h2 class="kova-det-heading">{{ section.settings.heading }}</h2>
+      {% if section.settings.subheading != blank %}
+        <p class="kova-det-subheading">{{ section.settings.subheading }}</p>
+      {% endif %}
+    </div>
+
+    <div class="kova-det-grid">
+      {% for block in section.blocks %}
+        <div class="kova-det-card" {{ block.shopify_attributes }}>
+          {% if block.settings.image != blank %}
+            <div class="kova-det-card-image">
+              <img
+                src="{{ block.settings.image | image_url: width: 600 }}"
+                alt="{{ block.settings.title }}"
+                loading="lazy"
+                width="600"
+              >
+            </div>
+          {% endif %}
+          <div class="kova-det-card-content">
+            <h3 class="kova-det-card-title">{{ block.settings.title }}</h3>
+            {% if block.settings.description != blank %}
+              <p class="kova-det-card-desc">{{ block.settings.description }}</p>
+            {% endif %}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "KÖVA Details Grid",
+  "tag": "section",
+  "class": "kova-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Designed Down to Every Detail"
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "Smart features, comfort-focused materials, and maximum adjustability"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "detail",
+      "name": "Detail Card",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Pressure-Relief Seat"
+        },
+        {
+          "type": "text",
+          "id": "description",
+          "label": "Description",
+          "default": "12cm extra-thick high-density foam"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "KÖVA Details Grid",
+      "blocks": [
+        { "type": "detail", "settings": { "title": "Pressure-Relief Seat", "description": "12cm extra-thick high-density foam" } },
+        { "type": "detail", "settings": { "title": "360° Smooth Rotating", "description": "For effortless position changes" } },
+        { "type": "detail", "settings": { "title": "Breathable Fabric", "description": "Soft-touch material that stays cool" } },
+        { "type": "detail", "settings": { "title": "Lockable Wheels", "description": "Stable when you need it" } },
+        { "type": "detail", "settings": { "title": "Fully Adjustable Fit", "description": "Adjustable from top to bottom" } },
+        { "type": "detail", "settings": { "title": "Built to Last", "description": "Reinforced steel frame" } }
+      ]
+    }
+  ]
+}
+{% endschema %}

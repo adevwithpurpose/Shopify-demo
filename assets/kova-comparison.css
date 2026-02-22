@@ -1,0 +1,127 @@
+/* KÖVA Comparison Section */
+.kova-comparison-section {
+    padding: 5rem 0;
+}
+
+.kova-comp-header {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 3rem;
+}
+
+.kova-comp-subheading {
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #666;
+    margin-bottom: 0.5rem;
+}
+
+.kova-comp-heading {
+    font-size: 2.25rem;
+    font-weight: 800;
+    color: #1a1a1a;
+    line-height: 1.2;
+}
+
+.kova-comp-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    align-items: center;
+}
+
+@media screen and (min-width: 990px) {
+    .kova-comp-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+    }
+}
+
+.kova-comp-features {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.kova-comp-feature {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.25rem;
+    background: #f8f9fa;
+    border-radius: 12px;
+    transition: transform 0.2s ease;
+}
+
+.kova-comp-feature:hover {
+    transform: translateX(4px);
+}
+
+.kova-comp-icon {
+    font-size: 1.75rem;
+    flex-shrink: 0;
+    width: 2.5rem;
+    text-align: center;
+}
+
+.kova-comp-feature-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 0.25rem;
+}
+
+.kova-comp-feature-desc {
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.5;
+}
+
+.kova-comp-media {
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.kova-comp-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 16px;
+}
+
+.kova-comp-video {
+    position: relative;
+    padding-bottom: 56.25%;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.kova-comp-video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.kova-comp-placeholder {
+    background: #f0f0f0;
+    border-radius: 16px;
+    padding: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.kova-comp-placeholder .placeholder-svg {
+    width: 60%;
+    opacity: 0.3;
+}
+
+@media screen and (max-width: 749px) {
+    .kova-comp-heading {
+        font-size: 1.75rem;
+    }
+}

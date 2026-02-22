@@ -1,0 +1,85 @@
+/* KÖVA Details Grid */
+.kova-details-section {
+    padding: 5rem 0;
+}
+
+.kova-det-header {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 3rem;
+}
+
+.kova-det-heading {
+    font-size: 2.25rem;
+    font-weight: 800;
+    color: #1a1a1a;
+    margin-bottom: 0.5rem;
+}
+
+.kova-det-subheading {
+    font-size: 1rem;
+    color: #666;
+}
+
+.kova-det-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+}
+
+@media screen and (min-width: 990px) {
+    .kova-det-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (max-width: 749px) {
+    .kova-det-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .kova-det-heading {
+        font-size: 1.75rem;
+    }
+}
+
+.kova-det-card {
+    background: #f8f9fa;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.kova-det-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.kova-det-card-image {
+    aspect-ratio: 16/10;
+    overflow: hidden;
+}
+
+.kova-det-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.kova-det-card-content {
+    padding: 1.25rem;
+    text-align: center;
+}
+
+.kova-det-card-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 0.35rem;
+}
+
+.kova-det-card-desc {
+    font-size: 0.85rem;
+    color: #666;
+    line-height: 1.5;
+}

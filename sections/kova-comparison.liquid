@@ -1,0 +1,126 @@
+{{ 'kova-comparison.css' | asset_url | stylesheet_tag }}
+
+<div class="kova-comparison-section">
+  <div class="page-width">
+    <div class="kova-comp-header">
+      {% if section.settings.subheading != blank %}
+        <p class="kova-comp-subheading">{{ section.settings.subheading }}</p>
+      {% endif %}
+      <h2 class="kova-comp-heading">{{ section.settings.heading }}</h2>
+    </div>
+
+    <div class="kova-comp-grid">
+      <div class="kova-comp-features">
+        {% for block in section.blocks %}
+          <div class="kova-comp-feature" {{ block.shopify_attributes }}>
+            {% if block.settings.icon != blank %}
+              <span class="kova-comp-icon">{{ block.settings.icon }}</span>
+            {% endif %}
+            <div class="kova-comp-feature-content">
+              <h3 class="kova-comp-feature-title">{{ block.settings.title }}</h3>
+              {% if block.settings.description != blank %}
+                <p class="kova-comp-feature-desc">{{ block.settings.description }}</p>
+              {% endif %}
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+
+      <div class="kova-comp-media">
+        {% if section.settings.image != blank %}
+          <img
+            src="{{ section.settings.image | image_url: width: 800 }}"
+            alt="{{ section.settings.heading }}"
+            loading="lazy"
+            width="800"
+            class="kova-comp-image"
+          >
+        {% elsif section.settings.video_url != blank %}
+          <div class="kova-comp-video">
+            {% if section.settings.video_url contains 'youtube' or section.settings.video_url contains 'vimeo' %}
+              <iframe
+                src="{{ section.settings.video_url }}"
+                allow="autoplay; fullscreen"
+                loading="lazy"
+                frameborder="0"
+              ></iframe>
+            {% endif %}
+          </div>
+        {% else %}
+          <div class="kova-comp-placeholder">
+            {{ 'product-2' | placeholder_svg_tag: 'placeholder-svg' }}
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "KÖVA Comparison",
+  "tag": "section",
+  "class": "kova-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "Sitting Still vs Sitting Smart"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Built for How Your Body Actually Works"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Media Image"
+    },
+    {
+      "type": "text",
+      "id": "video_url",
+      "label": "Video URL (YouTube/Vimeo embed)"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "feature",
+      "name": "Feature",
+      "settings": [
+        {
+          "type": "text",
+          "id": "icon",
+          "label": "Icon (emoji)",
+          "default": "🔄"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Allows for Movement"
+        },
+        {
+          "type": "text",
+          "id": "description",
+          "label": "Description",
+          "default": "Move naturally without thinking about it"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "KÖVA Comparison",
+      "blocks": [
+        { "type": "feature", "settings": { "icon": "🔄", "title": "Allows for Movement", "description": "Move naturally without thinking about it" } },
+        { "type": "feature", "settings": { "icon": "🧍", "title": "Effortless Posture", "description": "Supports alignment as you shift positions" } },
+        { "type": "feature", "settings": { "icon": "☀️", "title": "All-Day Comfort", "description": "Stays comfortable longer — without feeling \"stuck\"" } },
+        { "type": "feature", "settings": { "icon": "📐", "title": "Fits Every Body & Desk", "description": "Adjusts to any height and desk setup" } }
+      ]
+    }
+  ]
+}
+{% endschema %}

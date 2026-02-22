@@ -1,0 +1,58 @@
+/* KÖVA Trust Strip */
+.kova-trust-section {
+    padding: 3rem 0;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+
+.kova-trust-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+}
+
+.kova-trust-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    text-align: left;
+}
+
+.kova-trust-item-icon {
+    font-size: 1.75rem;
+}
+
+.kova-trust-item-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.kova-trust-item-title {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #1a1a1a;
+}
+
+.kova-trust-item-subtitle {
+    font-size: 0.8rem;
+    color: #666;
+}
+
+@media screen and (max-width: 749px) {
+    .kova-trust-grid {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .kova-trust-item {
+        text-align: center;
+        flex-direction: column;
+        gap: 0.35rem;
+    }
+
+    .kova-trust-item-content {
+        align-items: center;
+    }
+}

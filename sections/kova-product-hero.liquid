@@ -1,0 +1,509 @@
+{{ 'kova-product-hero.css' | asset_url | stylesheet_tag }}
+
+{%- assign current_product = section.settings.product -%}
+
+<div class="kova-hero-wrapper">
+  <div class="kova-hero-container page-width">
+    <!-- Left Column: Media Gallery -->
+    <div class="kova-media-gallery" id="KovaMediaGallery-{{ section.id }}">
+      {% if current_product != blank and current_product.media.size > 0 %}
+        <div class="kova-media-grid">
+          {% for media in current_product.media %}
+            <div class="kova-media-item {% if forloop.first %}kova-media-item--featured{% endif %}" data-media-id="{{ media.id }}">
+              {% case media.media_type %}
+                {% when 'image' %}
+                  <img
+                    src="{{ media | image_url: width: 800 }}"
+                    alt="{{ media.alt | escape }}"
+                    loading="{% if forloop.first %}eager{% else %}lazy{% endif %}"
+                    width="{{ media.width }}"
+                    height="{{ media.height }}"
+                    srcset="
+                      {{ media | image_url: width: 400 }} 400w,
+                      {{ media | image_url: width: 600 }} 600w,
+                      {{ media | image_url: width: 800 }} 800w
+                    "
+                    sizes="(min-width: 990px) 50vw, 100vw"
+                  >
+                {% when 'video' %}
+                  <div class="kova-video-wrapper">
+                    {{ media | video_tag: autoplay: true, muted: true, loop: true, playsinline: true, controls: false }}
+                  </div>
+                {% when 'external_video' %}
+                  <div class="kova-video-wrapper">
+                    {{ media | external_video_url: autoplay: true, loop: true, mute: true | external_video_tag }}
+                  </div>
+              {% endcase %}
+            </div>
+          {% endfor %}
+        </div>
+      {% else %}
+        <!-- Placeholder images when no product selected -->
+        <div class="kova-media-grid">
+          {% for i in (1..4) %}
+            <div class="kova-media-item kova-media-placeholder">
+              {{ 'product-' | append: i | placeholder_svg_tag: 'placeholder-svg' }}
+            </div>
+          {% endfor %}
+        </div>
+      {% endif %}
+    </div>
+
+    <!-- Right Column: Sticky Buy Box -->
+    <div class="kova-buy-box" id="KovaBuyBox-{{ section.id }}">
+      <div class="kova-buy-box-inner">
+        <!-- Badges -->
+        <div class="kova-badges">
+          {% if section.settings.badge_1 != blank %}
+            <span class="kova-badge kova-badge--primary">{{ section.settings.badge_1 }}</span>
+          {% endif %}
+          {% if section.settings.badge_2 != blank %}
+            <span class="kova-badge kova-badge--secondary">{{ section.settings.badge_2 }}</span>
+          {% endif %}
+        </div>
+
+        <!-- Review Stars -->
+        {% if section.settings.show_reviews %}
+          <div class="kova-rating">
+            <div class="kova-stars">
+              {% for i in (1..5) %}
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="{% if i <= section.settings.rating_value %}#FFB800{% else %}#E0E0E0{% endif %}">
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                </svg>
+              {% endfor %}
+            </div>
+            <span class="kova-rating-text">{{ section.settings.rating_value }}.0 | {{ section.settings.review_count }} reviews</span>
+          </div>
+        {% endif %}
+
+        <!-- Product Title -->
+        <h1 class="kova-product-title">
+          {% if current_product != blank %}
+            {{ current_product.title }}
+          {% else %}
+            {{ section.settings.title_fallback | default: 'KÖVA Freedom Chair' }}
+          {% endif %}
+        </h1>
+
+        <!-- Pricing -->
+        <div class="kova-pricing">
+          {% if current_product != blank %}
+            {% if current_product.compare_at_price > current_product.price %}
+              <span class="kova-price-compare">{{ current_product.compare_at_price | money }}</span>
+            {% endif %}
+            <span class="kova-price-current" id="KovaPrice-{{ section.id }}">{{ current_product.price | money }}</span>
+            {% if current_product.compare_at_price > current_product.price %}
+              {%- assign savings = current_product.compare_at_price | minus: current_product.price -%}
+              <span class="kova-save-badge">SAVE {{ savings | money }}</span>
+            {% endif %}
+          {% else %}
+            <span class="kova-price-compare">{{ section.settings.compare_price_fallback | default: '$600.00' }}</span>
+            <span class="kova-price-current">{{ section.settings.price_fallback | default: '$397.00' }}</span>
+            <span class="kova-save-badge">SAVE {{ section.settings.save_amount_fallback | default: '$203' }}</span>
+          {% endif %}
+        </div>
+
+        <!-- Trust Note -->
+        {% if section.settings.trust_note != blank %}
+          <div class="kova-trust-note">
+            <span class="kova-lock-icon">🔒</span>
+            {{ section.settings.trust_note | replace: '[shop_name]', shop.name }}
+          </div>
+        {% endif %}
+
+        <!-- Product Description / Bullet Points -->
+        <div class="kova-description">
+          {% if current_product != blank and current_product.description != blank %}
+            <div class="kova-description-text">{{ current_product.description }}</div>
+          {% endif %}
+          {% if section.settings.bullet_1 != blank or section.settings.bullet_2 != blank or section.settings.bullet_3 != blank %}
+            <ul class="kova-bullets">
+              {% if section.settings.bullet_1 != blank %}
+                <li>
+                  <svg class="kova-check-icon" width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="#EBF5FF"/><path d="M6 10l3 3 5-5" stroke="#2563EB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  {{ section.settings.bullet_1 }}
+                </li>
+              {% endif %}
+              {% if section.settings.bullet_2 != blank %}
+                <li>
+                  <svg class="kova-check-icon" width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="#EBF5FF"/><path d="M6 10l3 3 5-5" stroke="#2563EB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  {{ section.settings.bullet_2 }}
+                </li>
+              {% endif %}
+              {% if section.settings.bullet_3 != blank %}
+                <li>
+                  <svg class="kova-check-icon" width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="#EBF5FF"/><path d="M6 10l3 3 5-5" stroke="#2563EB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  {{ section.settings.bullet_3 }}
+                </li>
+              {% endif %}
+            </ul>
+          {% endif %}
+        </div>
+
+        {% if current_product != blank %}
+          {% form 'product', current_product %}
+            <!-- Variant Selection -->
+            {% unless current_product.has_only_default_variant %}
+              <div class="kova-variants">
+                {% for option in current_product.options_with_values %}
+                  <div class="kova-option-group">
+                    <label class="kova-option-label">{{ option.name }}: <strong id="KovaOptionLabel-{{ section.id }}-{{ forloop.index0 }}">{{ option.selected_value }}</strong></label>
+                    <div class="kova-option-values">
+                      {% for value in option.values %}
+                        <label class="kova-swatch {% if option.selected_value == value %}kova-swatch--active{% endif %}">
+                          <input
+                            type="radio"
+                            name="option-{{ option.name | handleize }}"
+                            value="{{ value | escape }}"
+                            {% if option.selected_value == value %}checked{% endif %}
+                            data-option-index="{{ forloop.parentloop.index0 }}"
+                            class="kova-swatch-input"
+                          >
+                          <span class="kova-swatch-label">{{ value }}</span>
+                        </label>
+                      {% endfor %}
+                    </div>
+                  </div>
+                {% endfor %}
+              </div>
+            {% endunless %}
+
+            <input type="hidden" name="id" id="KovaVariantId-{{ section.id }}" value="{{ current_product.selected_or_first_available_variant.id }}">
+
+            <!-- Variant JSON -->
+            <script type="application/json" id="KovaVariantJson-{{ section.id }}">
+              {{ current_product.variants | json }}
+            </script>
+
+            <!-- Free Gifts Section -->
+            {%- assign gift_blocks = section.blocks | where: 'type', 'gift' -%}
+            {% if gift_blocks.size > 0 %}
+              <div class="kova-gifts">
+                <h3 class="kova-gifts-heading">
+                  <span class="kova-gifts-icon">🎁</span>
+                  {{ section.settings.gifts_heading | default: 'Limited Sale! Unlock FREE Gifts With Your Order' }}
+                </h3>
+                <div class="kova-gifts-list">
+                  {% for block in gift_blocks %}
+                    <div class="kova-gift-item" {{ block.shopify_attributes }}>
+                      <span class="kova-gift-icon">{{ block.settings.icon }}</span>
+                      <span class="kova-gift-title">{{ block.settings.title }}</span>
+                      <span class="kova-gift-tag">FREE</span>
+                      {% if block.settings.value != blank %}
+                        <span class="kova-gift-value">{{ block.settings.value }}</span>
+                      {% endif %}
+                    </div>
+                  {% endfor %}
+                </div>
+              </div>
+            {% endif %}
+
+            <!-- Urgency Banner -->
+            {% if section.settings.urgency_text != blank %}
+              <div class="kova-urgency">
+                <span class="kova-urgency-dot"></span>
+                {{ section.settings.urgency_text | replace: '[date]', 'now' | date: "%B %d" }}
+              </div>
+            {% endif %}
+
+            <!-- Add to Cart Button -->
+            <button
+              type="submit"
+              class="kova-atc-btn button button--full-width"
+              {% unless current_product.available %}disabled{% endunless %}
+            >
+              {% if current_product.available %}
+                {{ section.settings.atc_text | default: 'Add to cart' }}
+                <span class="kova-atc-price">— {{ current_product.price | money }}</span>
+              {% else %}
+                Sold Out
+              {% endif %}
+            </button>
+
+            <!-- Trust Icons Below ATC -->
+            <div class="kova-trust-icons">
+              {% if section.settings.trust_1 != blank %}
+                <div class="kova-trust-icon-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                  {{ section.settings.trust_1 }}
+                </div>
+              {% endif %}
+              {% if section.settings.trust_2 != blank %}
+                <div class="kova-trust-icon-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12a9 9 0 1 0 18 0 9 9 0 0 0-18 0z"/><path d="M9 12l2 2 4-4"/></svg>
+                  {{ section.settings.trust_2 }}
+                </div>
+              {% endif %}
+            </div>
+
+          {% endform %}
+        {% else %}
+          <!-- No product selected state -->
+          <div class="kova-no-product">
+            <p>Select a product in the theme editor to display it here.</p>
+          </div>
+          <button type="button" class="kova-atc-btn button button--full-width" disabled>
+            Add to cart
+          </button>
+          <div class="kova-trust-icons">
+            <div class="kova-trust-icon-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              Ships Today
+            </div>
+            <div class="kova-trust-icon-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12a9 9 0 1 0 18 0 9 9 0 0 0-18 0z"/><path d="M9 12l2 2 4-4"/></svg>
+              90-Day Easy Returns
+            </div>
+          </div>
+        {% endif %}
+
+        <!-- Accordions -->
+        {%- assign accordion_blocks = section.blocks | where: 'type', 'accordion' -%}
+        {% if accordion_blocks.size > 0 %}
+          <div class="kova-accordions">
+            {% for block in accordion_blocks %}
+              <details class="kova-accordion" {{ block.shopify_attributes }}>
+                <summary class="kova-accordion-trigger">
+                  <span>{{ block.settings.title }}</span>
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </summary>
+                <div class="kova-accordion-content">
+                  {{ block.settings.content }}
+                </div>
+              </details>
+            {% endfor %}
+          </div>
+        {% endif %}
+
+        <!-- Guarantee Text -->
+        {% if section.settings.guarantee_text != blank %}
+          <div class="kova-guarantee">
+            {{ section.settings.guarantee_text }}
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="{{ 'kova-product-hero.js' | asset_url }}" defer="defer"></script>
+
+{% schema %}
+{
+  "name": "KÖVA Product Hero",
+  "tag": "section",
+  "class": "kova-section",
+  "settings": [
+    {
+      "type": "product",
+      "id": "product",
+      "label": "Product"
+    },
+    {
+      "type": "header",
+      "content": "Badges"
+    },
+    {
+      "type": "text",
+      "id": "badge_1",
+      "label": "Badge 1",
+      "default": "BESTSELLER"
+    },
+    {
+      "type": "text",
+      "id": "badge_2",
+      "label": "Badge 2",
+      "default": "#1 ACTIVE SITTING CHAIR"
+    },
+    {
+      "type": "header",
+      "content": "Reviews"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_reviews",
+      "label": "Show review stars",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "rating_value",
+      "min": 1,
+      "max": 5,
+      "step": 1,
+      "label": "Rating (stars)",
+      "default": 5
+    },
+    {
+      "type": "text",
+      "id": "review_count",
+      "label": "Review count",
+      "default": "140"
+    },
+    {
+      "type": "header",
+      "content": "Fallback Text (no product selected)"
+    },
+    {
+      "type": "text",
+      "id": "title_fallback",
+      "label": "Product Title Fallback",
+      "default": "KÖVA Freedom Chair"
+    },
+    {
+      "type": "text",
+      "id": "compare_price_fallback",
+      "label": "Compare Price Fallback",
+      "default": "$600.00"
+    },
+    {
+      "type": "text",
+      "id": "price_fallback",
+      "label": "Sale Price Fallback",
+      "default": "$397.00"
+    },
+    {
+      "type": "text",
+      "id": "save_amount_fallback",
+      "label": "Save Amount Fallback",
+      "default": "$203"
+    },
+    {
+      "type": "header",
+      "content": "Trust & Copy"
+    },
+    {
+      "type": "text",
+      "id": "trust_note",
+      "label": "Trust Note",
+      "default": "Only available at [shop_name]"
+    },
+    {
+      "type": "text",
+      "id": "bullet_1",
+      "label": "Bullet Point 1",
+      "default": "Energy: Prevents all-day sitting fatigue"
+    },
+    {
+      "type": "text",
+      "id": "bullet_2",
+      "label": "Bullet Point 2",
+      "default": "Focus: Boosts concentration and clarity"
+    },
+    {
+      "type": "text",
+      "id": "bullet_3",
+      "label": "Bullet Point 3",
+      "default": "Productivity: Increases daily work output"
+    },
+    {
+      "type": "header",
+      "content": "Gifts"
+    },
+    {
+      "type": "text",
+      "id": "gifts_heading",
+      "label": "Gifts Section Heading",
+      "default": "Limited Sale! Unlock FREE Gifts With Your Order"
+    },
+    {
+      "type": "header",
+      "content": "Urgency"
+    },
+    {
+      "type": "text",
+      "id": "urgency_text",
+      "label": "Urgency Banner Text",
+      "default": "Order by <strong>[date]</strong> for guaranteed FREE Gifts"
+    },
+    {
+      "type": "header",
+      "content": "Button & Trust"
+    },
+    {
+      "type": "text",
+      "id": "atc_text",
+      "label": "Add to Cart Button Text",
+      "default": "Add to cart"
+    },
+    {
+      "type": "text",
+      "id": "trust_1",
+      "label": "Trust Icon 1",
+      "default": "Ships Today"
+    },
+    {
+      "type": "text",
+      "id": "trust_2",
+      "label": "Trust Icon 2",
+      "default": "90-Day Easy Returns"
+    },
+    {
+      "type": "text",
+      "id": "guarantee_text",
+      "label": "Guarantee Text",
+      "default": "Try it risk-free for 90 days. Love it or return it. No questions asked."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "gift",
+      "name": "Free Gift",
+      "settings": [
+        {
+          "type": "text",
+          "id": "icon",
+          "label": "Icon (emoji)",
+          "default": "📦"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Gift Title",
+          "default": "FREE Shipping"
+        },
+        {
+          "type": "text",
+          "id": "value",
+          "label": "Value (strikethrough)",
+          "default": "($14)"
+        }
+      ]
+    },
+    {
+      "type": "accordion",
+      "name": "Accordion",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Benefits"
+        },
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "Content",
+          "default": "<p>Experience the health benefits of active sitting.</p>"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "KÖVA Product Hero",
+      "blocks": [
+        { "type": "gift", "settings": { "icon": "📦", "title": "Fast U.S. Shipping", "value": "($14)" } },
+        { "type": "gift", "settings": { "icon": "🖱️", "title": "FREE Mouse Pad", "value": "($23)" } },
+        { "type": "gift", "settings": { "icon": "🔲", "title": "FREE Chair Mat", "value": "($49)" } },
+        { "type": "gift", "settings": { "icon": "🛡️", "title": "3-Year Guarantee", "value": "($29)" } },
+        { "type": "accordion", "settings": { "title": "Benefits", "content": "<p>KÖVA is made for people who need more than a standard chair. It's ideal for remote workers, creatives, people with ADHD, and anyone who struggles with focus or posture in traditional setups.</p><p>Unlike typical ergonomic chairs that lock you into one "perfect" posture, KÖVA gives you the freedom to move, shift, and sit how your body naturally wants — cross-legged, kneeling, leaning, or switching it up all day long.</p>" } },
+        { "type": "accordion", "settings": { "title": "How to Assemble", "content": "<p>Super simple. Your Freedom Chair comes with an instruction sheet and all the tools you need. In 15 minutes or less, you'll have it fully assembled and ready to use.</p>" } },
+        { "type": "accordion", "settings": { "title": "Specifications", "content": "<ul><li><strong>Material:</strong> High-density memory foam seat, upholstered in premium soft, breathable fabric. Highly resistant steel frame.</li><li><strong>Dimensions:</strong> Adjustable seat height from 45-60 cm. Base width: 58 cm.</li><li><strong>Weight Capacity:</strong> Up to 300 lb.</li><li><strong>Features:</strong> 360° rotatable footrest, two-stage customization for seat and posture.</li><li><strong>Assembly:</strong> Minimal assembly in under 15 minutes.</li><li><strong>Warranty:</strong> 3 years.</li></ul>" } },
+        { "type": "accordion", "settings": { "title": "Shipping & Returns", "content": "<ul><li>Free US Shipping for a limited time.</li><li>Fast Delivery: Orders arrive in 1-2 business days.</li><li>90-Day Easy Returns: No questions asked.</li><li>3-Year Warranty: We stand behind our product.</li></ul>" } },
+        { "type": "accordion", "settings": { "title": "Contact Us", "content": "<p>Questions, feedback, or just want to say hi? We'd love to hear from you.</p><p>Email: <a href=\"mailto:contact@kovachair.com\">contact@kovachair.com</a></p><p>We typically reply within 24 hours on business days.</p>" } }
+      ]
+    }
+  ]
+}
+{% endschema %}
