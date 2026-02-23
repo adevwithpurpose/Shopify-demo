@@ -67,12 +67,12 @@
           <div class="kova-rating">
             <div class="kova-stars">
               {% for i in (1..5) %}
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="{% if i <= section.settings.rating_value %}#FFB800{% else %}#E0E0E0{% endif %}">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="{% if i <= section.settings.rating_value %}#DDA75B{% else %}#E0E0E0{% endif %}">
                   <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
                 </svg>
               {% endfor %}
             </div>
-            <span class="kova-rating-text">{{ section.settings.rating_value }}.0 | {{ section.settings.review_count }} reviews</span>
+            <span class="kova-rating-text">{{ section.settings.rating_value | append: ".0" }} | {{ section.settings.review_count }} reviews</span>
           </div>
         {% endif %}
 
@@ -106,51 +106,51 @@
         <!-- Trust Note -->
         {% if section.settings.trust_note != blank %}
           <div class="kova-trust-note">
-            <span class="kova-lock-icon">🔒</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#DDA75B" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
             {{ section.settings.trust_note | replace: '[shop_name]', shop.name }}
           </div>
         {% endif %}
 
-        <!-- Product Description / Bullet Points -->
-        <div class="kova-description">
-          {% if current_product != blank and current_product.description != blank %}
-            <div class="kova-description-text">{{ current_product.description }}</div>
-          {% endif %}
-          {% if section.settings.bullet_1 != blank or section.settings.bullet_2 != blank or section.settings.bullet_3 != blank %}
-            <ul class="kova-bullets">
-              {% if section.settings.bullet_1 != blank %}
-                <li>
-                  <svg class="kova-check-icon" width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="#EBF5FF"/><path d="M6 10l3 3 5-5" stroke="#2563EB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                  {{ section.settings.bullet_1 }}
-                </li>
-              {% endif %}
-              {% if section.settings.bullet_2 != blank %}
-                <li>
-                  <svg class="kova-check-icon" width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="#EBF5FF"/><path d="M6 10l3 3 5-5" stroke="#2563EB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                  {{ section.settings.bullet_2 }}
-                </li>
-              {% endif %}
-              {% if section.settings.bullet_3 != blank %}
-                <li>
-                  <svg class="kova-check-icon" width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="#EBF5FF"/><path d="M6 10l3 3 5-5" stroke="#2563EB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                  {{ section.settings.bullet_3 }}
-                </li>
-              {% endif %}
-            </ul>
-          {% endif %}
+        <!-- Product Description / Bullets -->
+        <div class="kova-description-text">
+          {{ section.settings.hero_desc | default: "The only chair that supports your body's natural need for movement - working with your body, not against it." }}
         </div>
+        
+        {% if section.settings.bullet_1 != blank or section.settings.bullet_2 != blank or section.settings.bullet_3 != blank %}
+          <ul class="kova-bullets">
+            {% if section.settings.bullet_1 != blank %}
+              <li>
+                <svg class="kova-check-icon" width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10"/><path d="M6 10l3 3 5-5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                {{ section.settings.bullet_1 }}
+              </li>
+            {% endif %}
+            {% if section.settings.bullet_2 != blank %}
+              <li>
+                <svg class="kova-check-icon" width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10"/><path d="M6 10l3 3 5-5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                {{ section.settings.bullet_2 }}
+              </li>
+            {% endif %}
+            {% if section.settings.bullet_3 != blank %}
+              <li>
+                <svg class="kova-check-icon" width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10"/><path d="M6 10l3 3 5-5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                {{ section.settings.bullet_3 }}
+              </li>
+            {% endif %}
+          </ul>
+        {% endif %}
 
         {% if current_product != blank %}
           {% form 'product', current_product %}
+            
             <!-- Variant Selection -->
             {% unless current_product.has_only_default_variant %}
               <div class="kova-variants">
                 {% for option in current_product.options_with_values %}
                   <div class="kova-option-group">
-                    <label class="kova-option-label">{{ option.name }}: <strong id="KovaOptionLabel-{{ section.id }}-{{ forloop.index0 }}">{{ option.selected_value }}</strong></label>
+                    <label class="kova-option-label">{{ option.name }}: <span id="KovaOptionLabel-{{ section.id }}-{{ forloop.index0 }}">{{ option.selected_value }}</span></label>
                     <div class="kova-option-values">
                       {% for value in option.values %}
-                        <label class="kova-swatch {% if option.selected_value == value %}kova-swatch--active{% endif %}">
+                        <label class="kova-swatch {% if option.selected_value == value %}kova-swatch--active{% endif %}" data-color="{{ value | escape }}">
                           <input
                             type="radio"
                             name="option-{{ option.name | handleize }}"
@@ -159,7 +159,7 @@
                             data-option-index="{{ forloop.parentloop.index0 }}"
                             class="kova-swatch-input"
                           >
-                          <span class="kova-swatch-label">{{ value }}</span>
+                          <span class="kova-swatch-inner"></span>
                         </label>
                       {% endfor %}
                     </div>
@@ -180,18 +180,21 @@
             {% if gift_blocks.size > 0 %}
               <div class="kova-gifts">
                 <h3 class="kova-gifts-heading">
-                  <span class="kova-gifts-icon">🎁</span>
                   {{ section.settings.gifts_heading | default: 'Limited Sale! Unlock FREE Gifts With Your Order' }}
                 </h3>
-                <div class="kova-gifts-list">
+                <div class="kova-gifts-grid">
                   {% for block in gift_blocks %}
-                    <div class="kova-gift-item" {{ block.shopify_attributes }}>
-                      <span class="kova-gift-icon">{{ block.settings.icon }}</span>
-                      <span class="kova-gift-title">{{ block.settings.title }}</span>
-                      <span class="kova-gift-tag">FREE</span>
-                      {% if block.settings.value != blank %}
-                        <span class="kova-gift-value">{{ block.settings.value }}</span>
-                      {% endif %}
+                    <div class="kova-gift-card" {{ block.shopify_attributes }}>
+                      <div class="kova-gift-card-top">
+                        {% if block.settings.value != blank %}
+                          <span class="kova-gift-card-value">{{ block.settings.value }}</span>
+                        {% endif %}
+                        <span class="kova-gift-card-free-tag">FREE</span>
+                      </div>
+                      <div class="kova-gift-card-icon">{{ block.settings.icon }}</div>
+                      <div class="kova-gift-card-title">
+                        <span class="kova-gift-card-free-text">FREE</span> {{ block.settings.title }}
+                      </div>
                     </div>
                   {% endfor %}
                 </div>
@@ -202,7 +205,7 @@
             {% if section.settings.urgency_text != blank %}
               <div class="kova-urgency">
                 <span class="kova-urgency-dot"></span>
-                {{ section.settings.urgency_text | replace: '[date]', 'now' | date: "%B %d" }}
+                <span>{{ section.settings.urgency_text | replace: '[date]', 'now' | date: "%B %d" }}</span>
               </div>
             {% endif %}
 
@@ -213,10 +216,9 @@
               {% unless current_product.available %}disabled{% endunless %}
             >
               {% if current_product.available %}
-                {{ section.settings.atc_text | default: 'Add to cart' }}
-                <span class="kova-atc-price">— {{ current_product.price | money }}</span>
+                {{ section.settings.atc_text | default: 'ADD TO CART +' }}
               {% else %}
-                Sold Out
+                SOLD OUT
               {% endif %}
             </button>
 
@@ -224,17 +226,38 @@
             <div class="kova-trust-icons">
               {% if section.settings.trust_1 != blank %}
                 <div class="kova-trust-icon-item">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
                   {{ section.settings.trust_1 }}
                 </div>
               {% endif %}
               {% if section.settings.trust_2 != blank %}
                 <div class="kova-trust-icon-item">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12a9 9 0 1 0 18 0 9 9 0 0 0-18 0z"/><path d="M9 12l2 2 4-4"/></svg>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
                   {{ section.settings.trust_2 }}
                 </div>
               {% endif %}
             </div>
+
+            <!-- Payment Icons -->
+            <div class="kova-payment-icons">
+               {% for type in shop.enabled_payment_types %}
+                 {{ type | payment_type_svg_tag: class: 'icon icon--full-color' }}
+               {% endfor %}
+               <!-- Fallback if shop has none setup yet in dev -->
+               {% if shop.enabled_payment_types == empty %}
+                  {{ 'visa' | payment_type_svg_tag: class: 'icon icon--full-color' }}
+                  {{ 'master' | payment_type_svg_tag: class: 'icon icon--full-color' }}
+                  {{ 'american_express' | payment_type_svg_tag: class: 'icon icon--full-color' }}
+                  {{ 'paypal' | payment_type_svg_tag: class: 'icon icon--full-color' }}
+                  {{ 'apple_pay' | payment_type_svg_tag: class: 'icon icon--full-color' }}
+               {% endif %}
+            </div>
+
+            {% if section.settings.sub_desc != blank %}
+              <div class="kova-sub-desc">
+                {{ section.settings.sub_desc }}
+              </div>
+            {% endif %}
 
           {% endform %}
         {% else %}
@@ -243,18 +266,8 @@
             <p>Select a product in the theme editor to display it here.</p>
           </div>
           <button type="button" class="kova-atc-btn button button--full-width" disabled>
-            Add to cart
+            ADD TO CART +
           </button>
-          <div class="kova-trust-icons">
-            <div class="kova-trust-icon-item">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-              Ships Today
-            </div>
-            <div class="kova-trust-icon-item">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12a9 9 0 1 0 18 0 9 9 0 0 0-18 0z"/><path d="M9 12l2 2 4-4"/></svg>
-              90-Day Easy Returns
-            </div>
-          </div>
         {% endif %}
 
         <!-- Accordions -->
@@ -265,7 +278,7 @@
               <details class="kova-accordion" {{ block.shopify_attributes }}>
                 <summary class="kova-accordion-trigger">
                   <span>{{ block.settings.title }}</span>
-                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M2 8h12M8 2v12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </summary>
                 <div class="kova-accordion-content">
                   {{ block.settings.content }}
@@ -275,12 +288,6 @@
           </div>
         {% endif %}
 
-        <!-- Guarantee Text -->
-        {% if section.settings.guarantee_text != blank %}
-          <div class="kova-guarantee">
-            {{ section.settings.guarantee_text }}
-          </div>
-        {% endif %}
       </div>
     </div>
   </div>
@@ -370,13 +377,19 @@
     },
     {
       "type": "header",
-      "content": "Trust & Copy"
+      "content": "Copy & Selling Points"
     },
     {
       "type": "text",
       "id": "trust_note",
-      "label": "Trust Note",
+      "label": "Trust Note (Lock)",
       "default": "Only available at [shop_name]"
+    },
+    {
+      "type": "textarea",
+      "id": "hero_desc",
+      "label": "Product Description Snippet",
+      "default": "The only chair that supports your body's natural need for movement - working with your body, not against it."
     },
     {
       "type": "text",
@@ -414,7 +427,7 @@
       "type": "text",
       "id": "urgency_text",
       "label": "Urgency Banner Text",
-      "default": "Order by <strong>[date]</strong> for guaranteed FREE Gifts"
+      "default": "Order by February 21st for guaranteed FREE Gifts"
     },
     {
       "type": "header",
@@ -424,25 +437,25 @@
       "type": "text",
       "id": "atc_text",
       "label": "Add to Cart Button Text",
-      "default": "Add to cart"
+      "default": "ADD TO CART +"
     },
     {
       "type": "text",
       "id": "trust_1",
-      "label": "Trust Icon 1",
+      "label": "Trust Text 1",
       "default": "Ships Today"
     },
     {
       "type": "text",
       "id": "trust_2",
-      "label": "Trust Icon 2",
+      "label": "Trust Text 2",
       "default": "90-Day Easy Returns"
     },
     {
-      "type": "text",
-      "id": "guarantee_text",
-      "label": "Guarantee Text",
-      "default": "Try it risk-free for 90 days. Love it or return it. No questions asked."
+      "type": "richtext",
+      "id": "sub_desc",
+      "label": "Description below trust symbols",
+      "default": "<p>KÖVA is made for people who need more than a standard chair. It's ideal for remote workers, creatives, people with ADHD, and... <a href=\"#\">Read More</a></p>"
     }
   ],
   "blocks": [
@@ -453,19 +466,19 @@
         {
           "type": "text",
           "id": "icon",
-          "label": "Icon (emoji)",
+          "label": "Icon/Emoji",
           "default": "📦"
         },
         {
           "type": "text",
           "id": "title",
-          "label": "Gift Title",
-          "default": "FREE Shipping"
+          "label": "Item Name",
+          "default": "Shipping"
         },
         {
           "type": "text",
           "id": "value",
-          "label": "Value (strikethrough)",
+          "label": "Value",
           "default": "($14)"
         }
       ]
@@ -493,15 +506,10 @@
     {
       "name": "KÖVA Product Hero",
       "blocks": [
-        { "type": "gift", "settings": { "icon": "📦", "title": "Fast U.S. Shipping", "value": "($14)" } },
-        { "type": "gift", "settings": { "icon": "🖱️", "title": "FREE Mouse Pad", "value": "($23)" } },
-        { "type": "gift", "settings": { "icon": "🔲", "title": "FREE Chair Mat", "value": "($49)" } },
-        { "type": "gift", "settings": { "icon": "🛡️", "title": "3-Year Guarantee", "value": "($29)" } },
-        { "type": "accordion", "settings": { "title": "Benefits", "content": "<p>KÖVA is made for people who need more than a standard chair. It's ideal for remote workers, creatives, people with ADHD, and anyone who struggles with focus or posture in traditional setups.</p><p>Unlike typical ergonomic chairs that lock you into one "perfect" posture, KÖVA gives you the freedom to move, shift, and sit how your body naturally wants — cross-legged, kneeling, leaning, or switching it up all day long.</p>" } },
-        { "type": "accordion", "settings": { "title": "How to Assemble", "content": "<p>Super simple. Your Freedom Chair comes with an instruction sheet and all the tools you need. In 15 minutes or less, you'll have it fully assembled and ready to use.</p>" } },
-        { "type": "accordion", "settings": { "title": "Specifications", "content": "<ul><li><strong>Material:</strong> High-density memory foam seat, upholstered in premium soft, breathable fabric. Highly resistant steel frame.</li><li><strong>Dimensions:</strong> Adjustable seat height from 45-60 cm. Base width: 58 cm.</li><li><strong>Weight Capacity:</strong> Up to 300 lb.</li><li><strong>Features:</strong> 360° rotatable footrest, two-stage customization for seat and posture.</li><li><strong>Assembly:</strong> Minimal assembly in under 15 minutes.</li><li><strong>Warranty:</strong> 3 years.</li></ul>" } },
-        { "type": "accordion", "settings": { "title": "Shipping & Returns", "content": "<ul><li>Free US Shipping for a limited time.</li><li>Fast Delivery: Orders arrive in 1-2 business days.</li><li>90-Day Easy Returns: No questions asked.</li><li>3-Year Warranty: We stand behind our product.</li></ul>" } },
-        { "type": "accordion", "settings": { "title": "Contact Us", "content": "<p>Questions, feedback, or just want to say hi? We'd love to hear from you.</p><p>Email: <a href=\"mailto:contact@kovachair.com\">contact@kovachair.com</a></p><p>We typically reply within 24 hours on business days.</p>" } }
+        { "type": "gift", "settings": { "icon": "📦", "title": "Shipping", "value": "($14)" } },
+        { "type": "gift", "settings": { "icon": "🖱️", "title": "Mouse Pad", "value": "($23)" } },
+        { "type": "gift", "settings": { "icon": "🔲", "title": "Chair Mat", "value": "($49)" } },
+        { "type": "gift", "settings": { "icon": "🛡️", "title": "Guarantee", "value": "($29)" } }
       ]
     }
   ]

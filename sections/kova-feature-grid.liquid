@@ -4,33 +4,37 @@
   <div class="page-width">
     {% if section.settings.heading != blank %}
       <div class="kova-fg-header">
+        <h2 class="kova-fg-heading">{{ section.settings.heading }}</h2>
         {% if section.settings.subheading != blank %}
           <p class="kova-fg-subheading">{{ section.settings.subheading }}</p>
         {% endif %}
-        <h2 class="kova-fg-heading">{{ section.settings.heading }}</h2>
       </div>
     {% endif %}
 
     <div class="kova-fg-grid kova-fg-grid--{{ section.settings.columns }}">
       {% for block in section.blocks %}
         <div class="kova-fg-card" {{ block.shopify_attributes }}>
-          {% if block.settings.image != blank %}
-            <div class="kova-fg-card-image">
-              <img
-                src="{{ block.settings.image | image_url: width: 100 }}"
-                alt="{{ block.settings.title }}"
-                width="60"
-                height="60"
-                loading="lazy"
-              >
-            </div>
-          {% elsif block.settings.icon != blank %}
-            <div class="kova-fg-card-icon">{{ block.settings.icon }}</div>
-          {% endif %}
-          <h3 class="kova-fg-card-title">{{ block.settings.title }}</h3>
-          {% if block.settings.text != blank %}
-            <div class="kova-fg-card-text">{{ block.settings.text }}</div>
-          {% endif %}
+          <div class="kova-fg-card-left">
+            {% if block.settings.image != blank %}
+              <div class="kova-fg-card-image">
+                <img
+                  src="{{ block.settings.image | image_url: width: 100 }}"
+                  alt="{{ block.settings.title }}"
+                  width="50"
+                  height="50"
+                  loading="lazy"
+                >
+              </div>
+            {% elsif block.settings.icon != blank %}
+              <div class="kova-fg-card-icon">{{ block.settings.icon }}</div>
+            {% endif %}
+          </div>
+          <div class="kova-fg-card-right">
+            <h3 class="kova-fg-card-title">{{ block.settings.title }}</h3>
+            {% if block.settings.text != blank %}
+              <div class="kova-fg-card-text">{{ block.settings.text }}</div>
+            {% endif %}
+          </div>
         </div>
       {% endfor %}
     </div>
@@ -45,14 +49,14 @@
   "settings": [
     {
       "type": "text",
-      "id": "subheading",
-      "label": "Subheading",
+      "id": "heading",
+      "label": "Heading",
       "default": "Who KÖVA Is For?"
     },
     {
       "type": "text",
-      "id": "heading",
-      "label": "Heading",
+      "id": "subheading",
+      "label": "Subheading",
       "default": "Designed for people who can't sit still (and shouldn't have to)"
     },
     {

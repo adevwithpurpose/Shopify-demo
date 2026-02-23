@@ -1,127 +1,141 @@
-/* KÖVA Comparison Section */
+/* KÖVA Feature List (Built for How Your Body Works) */
+:root {
+    --kova-navy: #122442;
+    --kova-text: #555;
+    --kova-gray-light: #F4F6F8;
+    --kova-gray-border: #E5E5E5;
+}
+
 .kova-comparison-section {
     padding: 5rem 0;
-}
-
-.kova-comp-header {
-    text-align: center;
-    max-width: 600px;
-    margin: 0 auto 3rem;
-}
-
-.kova-comp-subheading {
-    font-size: 0.85rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: #666;
-    margin-bottom: 0.5rem;
-}
-
-.kova-comp-heading {
-    font-size: 2.25rem;
-    font-weight: 800;
-    color: #1a1a1a;
-    line-height: 1.2;
+    font-family: var(--font-body-family), sans-serif;
+    background: var(--kova-gray-light);
 }
 
 .kova-comp-grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 3rem;
     align-items: center;
 }
 
 @media screen and (min-width: 990px) {
     .kova-comp-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 4rem;
+        grid-template-columns: 45% 55%;
+        gap: 5rem;
+    }
+}
+
+.kova-comp-text-col {
+    order: 2;
+}
+
+@media screen and (min-width: 990px) {
+    .kova-comp-text-col {
+        order: 1;
+        /* Left side on desktop */
+    }
+}
+
+.kova-comp-heading {
+    font-size: 2.75rem;
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--kova-navy);
+    font-family: var(--font-heading-family), sans-serif;
+    margin: 0 0 3rem 0;
+}
+
+@media screen and (max-width: 749px) {
+    .kova-comp-heading {
+        font-size: 2rem;
+        margin-bottom: 2rem;
     }
 }
 
 .kova-comp-features {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 2rem;
 }
 
 .kova-comp-feature {
     display: flex;
     align-items: flex-start;
-    gap: 1rem;
-    padding: 1.25rem;
-    background: #f8f9fa;
-    border-radius: 12px;
-    transition: transform 0.2s ease;
+    gap: 1.5rem;
 }
 
-.kova-comp-feature:hover {
-    transform: translateX(4px);
+.kova-comp-icon-wrapper {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 1px dashed #A0AEC0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    background: #fff;
+    color: var(--kova-navy);
+}
+
+.kova-comp-svg svg {
+    width: 24px;
+    height: 24px;
+    display: block;
 }
 
 .kova-comp-icon {
-    font-size: 1.75rem;
-    flex-shrink: 0;
-    width: 2.5rem;
-    text-align: center;
+    font-size: 1.5rem;
+}
+
+.kova-comp-feature-content {
+    flex: 1;
 }
 
 .kova-comp-feature-title {
-    font-size: 1rem;
+    font-size: 1.15rem;
     font-weight: 700;
-    color: #1a1a1a;
-    margin-bottom: 0.25rem;
+    color: var(--kova-navy);
+    margin: 0 0 0.4rem 0;
+    font-family: var(--font-heading-family), sans-serif;
 }
 
 .kova-comp-feature-desc {
-    font-size: 0.9rem;
-    color: #666;
+    font-size: 1rem;
+    color: var(--kova-text);
+    margin: 0;
     line-height: 1.5;
 }
 
-.kova-comp-media {
-    border-radius: 16px;
-    overflow: hidden;
+.kova-comp-media-col {
+    order: 1;
+}
+
+@media screen and (min-width: 990px) {
+    .kova-comp-media-col {
+        order: 2;
+        /* Right side on desktop */
+    }
 }
 
 .kova-comp-image {
     width: 100%;
     height: auto;
     display: block;
-    border-radius: 16px;
-}
-
-.kova-comp-video {
-    position: relative;
-    padding-bottom: 56.25%;
-    border-radius: 16px;
-    overflow: hidden;
-}
-
-.kova-comp-video iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    border-radius: 8px;
+    /* Optional slight rounding to match Kova overall aesthetic */
 }
 
 .kova-comp-placeholder {
+    width: 100%;
     background: #f0f0f0;
-    border-radius: 16px;
-    padding: 4rem;
+    border-radius: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 4rem;
 }
 
-.kova-comp-placeholder .placeholder-svg {
-    width: 60%;
+.kova-comp-placeholder svg {
     opacity: 0.3;
-}
-
-@media screen and (max-width: 749px) {
-    .kova-comp-heading {
-        font-size: 1.75rem;
-    }
 }

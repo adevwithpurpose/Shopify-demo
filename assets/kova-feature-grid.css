@@ -1,7 +1,14 @@
 /* KÖVA Feature Grid */
+:root {
+    --kova-navy: #122442;
+    --kova-gray-light: #F4F6F8;
+    --kova-gray-border: #E5E5E5;
+}
+
 .kova-feature-grid-section {
     padding: 5rem 0;
-    background: #f8f9fa;
+    background: var(--kova-gray-light);
+    font-family: var(--font-body-family), sans-serif;
 }
 
 .kova-fg-header {
@@ -10,25 +17,25 @@
     margin: 0 auto 3.5rem;
 }
 
-.kova-fg-subheading {
-    font-size: 0.85rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: #666;
+.kova-fg-heading {
+    font-size: 2.75rem;
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--kova-navy);
+    font-family: var(--font-heading-family), sans-serif;
     margin-bottom: 0.75rem;
+    margin-top: 0;
 }
 
-.kova-fg-heading {
-    font-size: 2.25rem;
-    font-weight: 800;
-    line-height: 1.2;
-    color: #1a1a1a;
+.kova-fg-subheading {
+    font-size: 1rem;
+    color: #555;
+    margin: 0;
 }
 
 .kova-fg-grid {
     display: grid;
-    gap: 1.25rem;
+    gap: 1.5rem;
     grid-template-columns: 1fr;
 }
 
@@ -56,48 +63,62 @@
     }
 
     .kova-fg-heading {
-        font-size: 1.75rem;
+        font-size: 2rem;
     }
 }
 
 .kova-fg-card {
     background: #fff;
-    border-radius: 12px;
-    padding: 2rem 1.5rem;
-    text-align: center;
+    border-radius: 4px;
+    border: 1px solid var(--kova-gray-border);
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    text-align: left;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .kova-fg-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.kova-fg-card-left {
+    flex-shrink: 0;
 }
 
 .kova-fg-card-icon {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-}
-
-.kova-fg-card-image {
-    margin-bottom: 1rem;
+    font-size: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
 }
 
 .kova-fg-card-image img {
-    margin: 0 auto;
-    border-radius: 8px;
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.kova-fg-card-right {
+    flex: 1;
 }
 
 .kova-fg-card-title {
     font-size: 1.1rem;
     font-weight: 700;
-    color: #1a1a1a;
-    margin-bottom: 0.5rem;
+    color: var(--kova-navy);
+    margin: 0 0 0.25rem 0;
+    font-family: var(--font-heading-family), sans-serif;
 }
 
 .kova-fg-card-text {
-    font-size: 0.9rem;
-    line-height: 1.6;
+    font-size: 0.95rem;
     color: #666;
+    line-height: 1.5;
 }
 
 .kova-fg-card-text p {

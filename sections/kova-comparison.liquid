@@ -2,53 +2,45 @@
 
 <div class="kova-comparison-section">
   <div class="page-width">
-    <div class="kova-comp-header">
-      {% if section.settings.subheading != blank %}
-        <p class="kova-comp-subheading">{{ section.settings.subheading }}</p>
-      {% endif %}
-      <h2 class="kova-comp-heading">{{ section.settings.heading }}</h2>
-    </div>
-
     <div class="kova-comp-grid">
-      <div class="kova-comp-features">
-        {% for block in section.blocks %}
-          <div class="kova-comp-feature" {{ block.shopify_attributes }}>
-            {% if block.settings.icon != blank %}
-              <span class="kova-comp-icon">{{ block.settings.icon }}</span>
-            {% endif %}
-            <div class="kova-comp-feature-content">
-              <h3 class="kova-comp-feature-title">{{ block.settings.title }}</h3>
-              {% if block.settings.description != blank %}
-                <p class="kova-comp-feature-desc">{{ block.settings.description }}</p>
-              {% endif %}
+      <div class="kova-comp-text-col">
+        <h2 class="kova-comp-heading">{{ section.settings.heading }}</h2>
+        <div class="kova-comp-features">
+          {% for block in section.blocks %}
+            <div class="kova-comp-feature" {{ block.shopify_attributes }}>
+              <div class="kova-comp-icon-wrapper">
+                {% if block.settings.icon != blank %}
+                  <span class="kova-comp-icon">{{ block.settings.icon }}</span>
+                {% elsif block.settings.svg_icon != blank %}
+                  <div class="kova-comp-svg">{{ block.settings.svg_icon }}</div>
+                {% else %}
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="20 6 9 17 4 12"/></svg>
+                {% endif %}
+              </div>
+              <div class="kova-comp-feature-content">
+                <h3 class="kova-comp-feature-title">{{ block.settings.title }}</h3>
+                {% if block.settings.description != blank %}
+                  <p class="kova-comp-feature-desc">{{ block.settings.description }}</p>
+                {% endif %}
+              </div>
             </div>
-          </div>
-        {% endfor %}
+          {% endfor %}
+        </div>
       </div>
 
-      <div class="kova-comp-media">
+      <div class="kova-comp-media-col">
         {% if section.settings.image != blank %}
           <img
             src="{{ section.settings.image | image_url: width: 800 }}"
             alt="{{ section.settings.heading }}"
             loading="lazy"
-            width="800"
+            width="{{ section.settings.image.width }}"
+            height="{{ section.settings.image.height }}"
             class="kova-comp-image"
           >
-        {% elsif section.settings.video_url != blank %}
-          <div class="kova-comp-video">
-            {% if section.settings.video_url contains 'youtube' or section.settings.video_url contains 'vimeo' %}
-              <iframe
-                src="{{ section.settings.video_url }}"
-                allow="autoplay; fullscreen"
-                loading="lazy"
-                frameborder="0"
-              ></iframe>
-            {% endif %}
-          </div>
         {% else %}
           <div class="kova-comp-placeholder">
-            {{ 'product-2' | placeholder_svg_tag: 'placeholder-svg' }}
+            {{ 'collection-1' | placeholder_svg_tag: 'placeholder-svg' }}
           </div>
         {% endif %}
       </div>
@@ -58,16 +50,10 @@
 
 {% schema %}
 {
-  "name": "KÖVA Comparison",
+  "name": "KÖVA Feature List",
   "tag": "section",
   "class": "kova-section",
   "settings": [
-    {
-      "type": "text",
-      "id": "subheading",
-      "label": "Subheading",
-      "default": "Sitting Still vs Sitting Smart"
-    },
     {
       "type": "text",
       "id": "heading",
@@ -78,11 +64,6 @@
       "type": "image_picker",
       "id": "image",
       "label": "Media Image"
-    },
-    {
-      "type": "text",
-      "id": "video_url",
-      "label": "Video URL (YouTube/Vimeo embed)"
     }
   ],
   "blocks": [
@@ -91,9 +72,15 @@
       "name": "Feature",
       "settings": [
         {
+          "type": "html",
+          "id": "svg_icon",
+          "label": "SVG Icon (Optional)",
+          "info": "Paste SVG code here"
+        },
+        {
           "type": "text",
           "id": "icon",
-          "label": "Icon (emoji)",
+          "label": "Icon (emoji fallback)",
           "default": "🔄"
         },
         {
@@ -113,12 +100,12 @@
   ],
   "presets": [
     {
-      "name": "KÖVA Comparison",
+      "name": "KÖVA Feature List",
       "blocks": [
-        { "type": "feature", "settings": { "icon": "🔄", "title": "Allows for Movement", "description": "Move naturally without thinking about it" } },
-        { "type": "feature", "settings": { "icon": "🧍", "title": "Effortless Posture", "description": "Supports alignment as you shift positions" } },
-        { "type": "feature", "settings": { "icon": "☀️", "title": "All-Day Comfort", "description": "Stays comfortable longer — without feeling \"stuck\"" } },
-        { "type": "feature", "settings": { "icon": "📐", "title": "Fits Every Body & Desk", "description": "Adjusts to any height and desk setup" } }
+        { "type": "feature", "settings": { "svg_icon": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"><path d=\"M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7\"/></svg>", "title": "Allows for Movement", "description": "Move naturally without thinking about it" } },
+        { "type": "feature", "settings": { "svg_icon": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"><path d=\"M20 6L9 17l-5-5\"/></svg>", "title": "Effortless Posture", "description": "Supports alignment as you shift positions" } },
+        { "type": "feature", "settings": { "svg_icon": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"><circle cx=\"12\" cy=\"12\" r=\"10\"/><polyline points=\"12 6 12 12 16 14\"/></svg>", "title": "All-Day Comfort", "description": "Stays comfortable longer - without feeling \"stuck\"" } },
+        { "type": "feature", "settings": { "svg_icon": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"><path d=\"M4 10V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v4M4 14v4a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-4M12 4v16M2 12h20\"/></svg>", "title": "Fits Every Body & Desk", "description": "Adjusts to any height and desk setup" } }
       ]
     }
   ]
