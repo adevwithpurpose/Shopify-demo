@@ -1,94 +1,217 @@
 {
   "sections": {
     "main": {
-      "type": "main-product",
+      "type": "velo-product-hero",
       "blocks": {
-        "title": {
-          "type": "title"
-        },
-        "price": {
-          "type": "price"
-        },
-        "variant_picker": {
-          "type": "variant_picker",
+        "gift_1": {
+          "type": "gift",
           "settings": {
-            "picker_type": "button"
+            "icon": "truck",
+            "title": "FREE Shipping",
+            "value": "($14)"
           }
         },
-        "buy_buttons": {
-          "type": "buy_buttons",
+        "gift_2": {
+          "type": "gift",
           "settings": {
-            "show_dynamic_checkout": true,
-            "show_gift_card_recipient": false
+            "icon": "mouse",
+            "title": "Mouse Pad",
+            "value": "($23)"
           }
         },
-        "description": {
-          "type": "description"
+        "gift_3": {
+          "type": "gift",
+          "settings": {
+            "icon": "mat",
+            "title": "Chair Mat",
+            "value": "($49)"
+          }
+        },
+        "gift_4": {
+          "type": "gift",
+          "settings": {
+            "icon": "shield",
+            "title": "3-Year Warranty",
+            "value": "($29)"
+          }
+        },
+        "acc_benefits": {
+          "type": "accordion",
+          "settings": {
+            "title": "Benefits",
+            "content": "<p>VELO is made for people who need more than a standard chair. Experience reduced fatigue, better posture, and improved focus through natural movement support.</p>"
+          }
+        },
+        "acc_assemble": {
+          "type": "accordion",
+          "settings": {
+            "title": "How to Assemble",
+            "content": "<p>Assembly takes less than 15 minutes. Attach the base, insert the pneumatic cylinder, place the seat cushion, and adjust the backrest. All tools and a simple 4-step guide are included.</p>"
+          }
+        },
+        "acc_specs": {
+          "type": "accordion",
+          "settings": {
+            "title": "Specifications",
+            "content": "<ul><li><strong>Seat Cushion:</strong> 12cm High-density open-cell foam</li><li><strong>Frame:</strong> Reinforced industrial steel</li><li><strong>Weight Capacity:</strong> 300 lbs (136 kg)</li><li><strong>Height Adjustment:</strong> Pneumatic gas lift</li><li><strong>Warranty:</strong> 10 Years</li></ul>"
+          }
+        },
+        "acc_shipping": {
+          "type": "accordion",
+          "settings": {
+            "title": "Shipping & Returns",
+            "content": "<ul><li>Free US Shipping — Orders arrive in 2-4 business days.</li><li>90-Day Risk-Free Trial — Love it or return it.</li><li>10-Year Warranty included free.</li></ul>"
+          }
+        },
+        "acc_contact": {
+          "type": "accordion",
+          "settings": {
+            "title": "Contact Us",
+            "content": "<p>Have a question? Email us at support@velochair.com and we'll reply within 24 hours (Mon-Fri, 9am-5pm EST).</p>"
+          }
         }
       },
       "block_order": [
-        "title",
-        "price",
-        "variant_picker",
-        "buy_buttons",
-        "description"
+        "gift_1",
+        "gift_2",
+        "gift_3",
+        "gift_4",
+        "acc_benefits",
+        "acc_assemble",
+        "acc_specs",
+        "acc_shipping",
+        "acc_contact"
       ],
       "settings": {
-        "enable_sticky_info": true,
-        "gallery_layout": "stacked",
-        "media_size": "large",
-        "constrain_to_viewport": true,
-        "mobile_thumbnails": "hide",
-        "hide_variants": true,
-        "enable_video_looping": true,
-        "padding_top": 36,
-        "padding_bottom": 12
+        "badge_1": "BESTSELLER",
+        "badge_2": "#1 ACTIVE SITTING CHAIR",
+        "show_reviews": true,
+        "rating_value": 5,
+        "review_count": "14,200",
+        "trust_note": "Only available at velochair.com",
+        "hero_desc": "The only chair that supports your body's natural need for movement - working with your body, not against it.",
+        "bullet_1": "Energy: Prevents all-day sitting fatigue",
+        "bullet_2": "Focus: Boosts concentration and clarity",
+        "bullet_3": "Productivity: Increases daily work output",
+        "gifts_heading": "Limited Sale! Unlock FREE Gifts With Your Order",
+        "urgency_text": "Order by February 28th for guaranteed FREE Gifts",
+        "atc_text": "ADD TO CART +",
+        "trust_1": "Ships Today",
+        "trust_2": "90-Day Easy Returns",
+        "sub_desc": "<p>VELO is made for people who need more than a standard chair. It's ideal for remote workers, creatives, people with ADHD, and anyone who feels 'stuck' in their seat. <a href=\"#\">Read More</a></p>"
       }
     },
-    "velo_comparison": {
-      "type": "velo-comparison",
+    "velo_body_built": {
+      "type": "velo-body-built",
       "blocks": {
-        "feat_1": {
-          "type": "feature",
+        "p1": {
+          "type": "point",
           "settings": {
-            "svg_icon": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"><path d=\"M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6\"/></svg>",
-            "title": "1000GSM Ultra-Thick Padding",
-            "description": "3X thicker than standard toppers (300-500GSM). Won't flatten over time."
+            "icon": "move",
+            "title": "Allows for Movement",
+            "description": "Move naturally without thinking about it"
           }
         },
-        "feat_2": {
-          "type": "feature",
+        "p2": {
+          "type": "point",
           "settings": {
-            "svg_icon": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"><path d=\"M4 10V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v4M4 14v4a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-4\"/></svg>",
-            "title": "Deep Pocket Secure Fit (8-21\")",
-            "description": "Fits any mattress. Reinforced elastic corners stay locked in place."
+            "icon": "check",
+            "title": "Effortless Posture",
+            "description": "Supports alignment as you shift positions"
           }
         },
-        "feat_3": {
-          "type": "feature",
+        "p3": {
+          "type": "point",
           "settings": {
-            "svg_icon": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"><path d=\"M12 2v20M2 12h20M7 5l10 14M17 5L7 19\"/></svg>",
-            "title": "Breathable Quilted Design",
-            "description": "Temperature-regulating. Comfort without the memory foam heat trap."
+            "icon": "clock",
+            "title": "All-Day Comfort",
+            "description": "Stays comfortable longer - without feeling \"stuck\""
           }
         },
-        "feat_4": {
-          "type": "feature",
+        "p4": {
+          "type": "point",
           "settings": {
-            "svg_icon": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"><polygon points=\"12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2\"/></svg>",
-            "title": "Hotel-Quality Revival",
-            "description": "Same premium construction 5-star hotels use for ultimate plushness."
+            "icon": "sliders",
+            "title": "Fits Every Body & Desk",
+            "description": "Adjusts to any height and desk setup"
           }
         }
       },
       "block_order": [
-        "feat_1",
-        "feat_2",
-        "feat_3",
-        "feat_4"
+        "p1",
+        "p2",
+        "p3",
+        "p4"
       ],
       "settings": {
-        "heading": "What Makes Us Different"
+        "heading_prefix": "Built for How Your",
+        "heading_bold": "Body Actually Works"
+      }
+    },
+    "velo_details": {
+      "type": "velo-details-grid",
+      "blocks": {
+        "d1": {
+          "type": "detail",
+          "settings": {
+            "icon": "move",
+            "title": "Pressure-Relief Seat",
+            "description": "12cm extra-thick high-density foam"
+          }
+        },
+        "d2": {
+          "type": "detail",
+          "settings": {
+            "icon": "thermometer",
+            "title": "Breathable Fabric",
+            "description": "Soft-touch material that stays cool"
+          }
+        },
+        "d3": {
+          "type": "detail",
+          "settings": {
+            "icon": "sliders",
+            "title": "Fully Adjustable Fit",
+            "description": "Adjustable from top to bottom"
+          }
+        },
+        "d4": {
+          "type": "detail",
+          "settings": {
+            "icon": "refresh",
+            "title": "360° Smooth Rotating",
+            "description": "For effortless position changes"
+          }
+        },
+        "d5": {
+          "type": "detail",
+          "settings": {
+            "icon": "lock",
+            "title": "Lockable Wheels",
+            "description": "Stable when you need it"
+          }
+        },
+        "d6": {
+          "type": "detail",
+          "settings": {
+            "icon": "shield",
+            "title": "Built to Last",
+            "description": "Reinforced steel frame"
+          }
+        }
+      },
+      "block_order": [
+        "d1",
+        "d2",
+        "d3",
+        "d4",
+        "d5",
+        "d6"
+      ],
+      "settings": {
+        "heading_light": "Designed",
+        "heading_bold": "Down to Every Detail",
+        "subheading": "Smart features, comfort-focused materials, and maximum adjustability"
       }
     },
     "velo_included": {
@@ -97,19 +220,17 @@
         "inc_1": {
           "type": "item",
           "settings": {
-            "icon": "🛏️",
-            "title": "1000GSM Luxury Topper",
-            "original_price": "$149",
-            "final_price": "$89",
+            "title": "VELO Freedom Chair",
+            "original_price": "$600.00",
+            "final_price": "$397",
             "is_free": false
           }
         },
         "inc_2": {
           "type": "item",
           "settings": {
-            "icon": "📦",
             "title": "Fast U.S. Shipping",
-            "original_price": "$14",
+            "original_price": "$14.00",
             "final_price": "FREE",
             "is_free": true
           }
@@ -117,9 +238,8 @@
         "inc_3": {
           "type": "item",
           "settings": {
-            "icon": "💤",
-            "title": "Premium Sleep Mask",
-            "original_price": "$25",
+            "title": "Mouse Pad Attachment",
+            "original_price": "$23.00",
             "final_price": "FREE",
             "is_free": true
           }
@@ -127,9 +247,8 @@
         "inc_4": {
           "type": "item",
           "settings": {
-            "icon": "📖",
-            "title": "Sleep Hacks eBook",
-            "original_price": "$19",
+            "title": "Transparent Chair Mat",
+            "original_price": "$49.00",
             "final_price": "FREE",
             "is_free": true
           }
@@ -137,9 +256,8 @@
         "inc_5": {
           "type": "item",
           "settings": {
-            "icon": "🛡️",
-            "title": "10-Year Warranty",
-            "original_price": "$50",
+            "title": "3-Year Warranty",
+            "original_price": "$29.00",
             "final_price": "FREE",
             "is_free": true
           }
@@ -153,10 +271,16 @@
         "inc_5"
       ],
       "settings": {
-        "heading": "Unlock West Month's Sleep Bundle",
+        "heading": "Everything You Need for",
+        "heading_bold": "Active Work",
+        "order_today_label": "IF YOU ORDER TODAY:",
+        "savings_label": "Savings",
+        "savings_value": "You Save $203",
         "total_label": "Subtotal",
-        "total_price": "$89.00",
-        "cta_text": "Claim Your Offer"
+        "total_price": "$397",
+        "free_gifts_count": "4",
+        "cta_text": "SHOP NOW",
+        "badge_text": "FREE Gifts Included ($115 value)"
       }
     },
     "related-products": {
@@ -178,7 +302,8 @@
   },
   "order": [
     "main",
-    "velo_comparison",
+    "velo_body_built",
+    "velo_details",
     "velo_included",
     "related-products"
   ]
