@@ -18,7 +18,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 4rem;
+    gap: 6rem;
     flex-wrap: wrap;
 }
 
@@ -40,17 +40,17 @@
 }
 
 .kova-trust-item-title {
-    font-size: 0.95rem;
+    font-size: 1.4rem;
     font-weight: 700;
     color: var(--kova-navy);
-    font-family: var(--font-heading-family), sans-serif;
+    font-family: 'Jost', sans-serif !important;
     text-transform: uppercase;
     letter-spacing: 0.05em;
     margin-bottom: 0.2rem;
 }
 
 .kova-trust-item-subtitle {
-    font-size: 0.85rem;
+    font-size: 1.3rem;
     color: var(--kova-text);
 }
 

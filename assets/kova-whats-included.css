@@ -6,9 +6,10 @@
 }
 
 .kova-included-section {
-    padding: 5rem 0;
+    padding: 8rem 0;
     background: var(--kova-gray-light);
     font-family: var(--font-body-family), sans-serif;
+    font-size: 1.6rem;
 }
 
 .kova-inc-card {
@@ -21,11 +22,12 @@
 }
 
 .kova-inc-heading {
-    font-size: 2rem;
+    font-size: 3.2rem;
     font-weight: 700 !important;
     text-align: center;
-    margin: 0 0 2rem 0;
+    margin: 0 0 3rem 0;
     color: var(--kova-navy);
+    line-height: 1.1;
     font-family: 'Jost', sans-serif !important;
 }
 
@@ -59,7 +61,7 @@
 }
 
 .kova-inc-name {
-    font-size: 1rem;
+    font-size: 1.6rem;
     font-weight: 600;
     color: var(--kova-navy);
 }
@@ -71,13 +73,13 @@
 }
 
 .kova-inc-original {
-    font-size: 0.9rem;
+    font-size: 1.4rem;
     color: #999;
     text-decoration: line-through;
 }
 
 .kova-inc-final {
-    font-size: 1rem;
+    font-size: 1.6rem;
     font-weight: 700;
     color: var(--kova-navy);
 }
@@ -85,9 +87,9 @@
 .kova-inc-free {
     background: var(--kova-blue);
     color: #fff;
-    padding: 0.2rem 0.6rem;
+    padding: 0.3rem 0.8rem;
     border-radius: 4px;
-    font-size: 0.8rem;
+    font-size: 1.2rem;
     font-weight: 700;
     text-transform: uppercase;
 }
@@ -106,13 +108,13 @@
 }
 
 .kova-inc-total-label {
-    font-size: 1.25rem;
+    font-size: 1.8rem;
     font-weight: 700;
     color: var(--kova-navy);
 }
 
 .kova-inc-total-price {
-    font-size: 1.75rem;
+    font-size: 2.6rem;
     font-weight: 800;
     color: var(--kova-navy);
 }
@@ -123,10 +125,10 @@
     text-align: center;
     background: var(--kova-navy) !important;
     color: #fff !important;
-    padding: 1.25rem 2rem;
+    padding: 1.5rem 2.5rem;
     border-radius: 100px;
     font-weight: 700 !important;
-    font-size: 1.1rem;
+    font-size: 1.8rem;
     text-decoration: none;
     transition: background 0.2s ease, transform 0.2s ease;
     text-transform: uppercase;
