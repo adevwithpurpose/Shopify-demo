@@ -192,116 +192,107 @@
               {{ current_product.variants | json }}
             </script>
 
-            <!-- Free Gifts Section -->
-            {%- assign gift_blocks = section.blocks | where: 'type', 'gift' -%}
-            {% if gift_blocks.size > 0 %}
-              <div class="velo-gifts">
-                <h3 class="velo-gifts-heading">
-                  {{ section.settings.gifts_heading | default: 'Limited Sale! Unlock FREE Gifts With Your Order' }}
-                </h3>
-                <div class="velo-gifts-grid">
+            <!-- Consistently displayed Selling/Trust elements -->
+            <div class="velo-hero-buy-elements">
+              
+              <!-- Free Gifts Row -->
+              {%- assign gift_blocks = section.blocks | where: 'type', 'gift' -%}
+              {% if gift_blocks.size > 0 %}
+                <div class="velo-hero-gifts-grid">
                   {% for block in gift_blocks %}
-                    <div class="velo-gift-card" {{ block.shopify_attributes }}>
-                      <div class="velo-gift-card-badge">
-                        {{ block.settings.value }} FREE
-                      </div>
-                      <div class="velo-gift-card-icon">
+                    <div class="velo-hero-gift-card" {{ block.shopify_attributes }}>
+                      <div class="velo-hero-gift-image">
                         {% render 'velo-icons', icon: block.settings.icon %}
                       </div>
-                      <div class="velo-gift-card-title">
-                        <span class="velo-gift-card-free-text">FREE</span> {{ block.settings.title }}
+                      <div class="velo-hero-gift-title">
+                        <strong>FREE</strong> {{ block.settings.title }}
                       </div>
                     </div>
                   {% endfor %}
                 </div>
-              </div>
-            {% endif %}
-            <!-- Hero Gifts Strip -->
-            <div class="velo-hero-gifts-strip">
-              <div class="velo-hero-gift-item"><strong>FREE</strong> Shipping</div>
-              <div class="velo-hero-gift-item"><strong>FREE</strong> Mouse Pad</div>
-              <div class="velo-hero-gift-item"><strong>FREE</strong> Chair Mat</div>
-              <div class="velo-hero-gift-item">3-Year Guarantee</div>
-            </div>
-
-            <!-- Urgency Banner -->
-            {% if section.settings.urgency_text != blank %}
-              {%- assign today_day = 'now' | date: "%d" -%}
-              {%- assign today_month = 'now' | date: "%B" -%}
-              <div class="velo-urgency">
-                <span class="velo-urgency-dot"></span>
-                <span>Order by <strong>{{ today_month }} {{ today_day }}th</strong> for guaranteed FREE Gifts</span>
-              </div>
-            {% endif %}
-
-            <!-- Add to Cart Button -->
-            <button
-              type="submit"
-              class="velo-atc-btn button button--full-width"
-              {% unless current_product.available %}disabled{% endunless %}
-            >
-              {% if current_product.available %}
-                {{ section.settings.atc_text | default: 'ADD TO CART +' }}
-              {% else %}
-                SOLD OUT
               {% endif %}
-            </button>
 
-            <!-- Trust Icons Below ATC -->
-            <div class="velo-trust-icons">
-              {% if section.settings.trust_1 != blank %}
-                <div class="velo-trust-icon-item">
+              <!-- Urgency Banner (Pill) -->
+              {% if section.settings.urgency_text != blank %}
+                {%- assign today_day = 'now' | date: "%d" -%}
+                {%- assign today_month = 'now' | date: "%B" -%}
+                <div class="velo-urgency-pill">
+                  <span class="velo-urgency-dot"></span>
+                  <span>Order by <strong>{{ today_month }} {{ today_day }}th</strong> for guaranteed FREE Gifts</span>
+                </div>
+              {% endif %}
+
+              <!-- Add to Cart Button -->
+              <div class="velo-atc-wrapper">
+                {% if current_product != blank %}
+                  <button type="submit" class="velo-atc-btn">
+                    {% if current_product.available %}
+                      {{ section.settings.atc_text | default: 'ADD TO CART +' }}
+                    {% else %}
+                      SOLD OUT
+                    {% endif %}
+                  </button>
+                {% else %}
+                  <button type="button" class="velo-atc-btn" disabled>
+                    ADD TO CART +
+                  </button>
+                {% endif %}
+              </div>
+
+              <!-- Trust Strip (Side-by-side) -->
+              <div class="velo-hero-trust-strip">
+                <div class="velo-hero-trust-item">
                   {% render 'velo-icons', icon: 'truck' %}
-                  {{ section.settings.trust_1 }}
+                  <span>Ships <strong>Today</strong></span>
                 </div>
-              {% endif %}
-              {% if section.settings.trust_2 != blank %}
-                <div class="velo-trust-icon-item">
+                <div class="velo-hero-trust-item">
                   {% render 'velo-icons', icon: 'refresh' %}
-                  {{ section.settings.trust_2 }}
+                  <span><strong>90-Day</strong> Easy Returns</span>
                 </div>
-              {% endif %}
-            </div>
-
-            <!-- Payment Icons -->
-            <div class="velo-payment-icons">
-              {{ 'visa' | payment_type_svg_tag: class: 'icon icon--full-color' }}
-              {{ 'master' | payment_type_svg_tag: class: 'icon icon--full-color' }}
-              {{ 'american_express' | payment_type_svg_tag: class: 'icon icon--full-color' }}
-              {{ 'apple_pay' | payment_type_svg_tag: class: 'icon icon--full-color' }}
-              {{ 'paypal' | payment_type_svg_tag: class: 'icon icon--full-color' }}
-              {{ 'google_pay' | payment_type_svg_tag: class: 'icon icon--full-color' }}
-              {{ 'shopify_pay' | payment_type_svg_tag: class: 'icon icon--full-color' }}
-            </div>
-
-            {% if section.settings.sub_desc != blank %}
-              <div class="velo-sub-desc">
-                {{ section.settings.sub_desc }}
               </div>
-            {% endif %}
 
-          {% endform %}
-        {% else %}
-          <!-- No product selected state -->
-          <div class="velo-no-product">
-            <p>Select a product in the theme editor to display it here.</p>
-          </div>
-          <button type="button" class="velo-atc-btn button button--full-width" disabled>
-            ADD TO CART +
-          </button>
-        {% endif %}
+              <!-- Payment Icons -->
+              <div class="velo-hero-payment-icons">
+                {%- assign enabled_payment_types = 'visa,master,american_express,apple_pay,paypal,google_pay,shopify_pay' | split: ',' -%}
+                {% for type in enabled_payment_types %}
+                  <div class="velo-payment-box">
+                    {{ type | payment_type_svg_tag: class: 'icon icon--full-color' }}
+                  </div>
+                {% endfor %}
+              </div>
 
-        <!-- Accordions -->
+              <!-- Description & Read More -->
+              <div class="velo-hero-description">
+                <p>
+                  {% if current_product != blank %}
+                    {{ section.settings.hero_desc }}
+                  {% else %}
+                    KÖVA is made for people who need more than a standard chair. It's ideal for remote workers, creatives, people with ADHD, and...
+                  {% endif %}
+                  <a href="#" class="velo-read-more">Read More</a>
+                </p>
+              </div>
+
+            </div>
+
+          {% if current_product != blank %}
+            {% endform %}
+          {% endif %}
+        </div>
+
+        <!-- Accordions (Outside the form for better reliability) -->
         {%- assign accordion_blocks = section.blocks | where: 'type', 'accordion' -%}
         {% if accordion_blocks.size > 0 %}
-          <div class="velo-accordions">
+          <div class="velo-hero-accordions">
             {% for block in accordion_blocks %}
-              <details class="velo-accordion" {{ block.shopify_attributes }}>
-                <summary class="velo-accordion-trigger">
+              <details class="velo-hero-accordion" {{ block.shopify_attributes }}>
+                <summary class="velo-hero-accordion-trigger">
                   <span>{{ block.settings.title }}</span>
-                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M2 8h12M8 2v12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <div class="velo-accordion-icon">
+                    <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M2 8h12M8 2v12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                  </div>
                 </summary>
-                <div class="velo-accordion-content">
+                <div class="velo-hero-accordion-content">
                   {{ block.settings.content }}
                 </div>
               </details>
