@@ -51,33 +51,33 @@
         "feat_1": {
           "type": "feature",
           "settings": {
-            "icon": "🔄",
-            "title": "Allows for Movement",
-            "description": "Move naturally without thinking about it"
+            "svg_icon": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"><path d=\"M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6\"/></svg>",
+            "title": "1000GSM Ultra-Thick Padding",
+            "description": "3X thicker than standard toppers (300-500GSM). Won't flatten over time."
           }
         },
         "feat_2": {
           "type": "feature",
           "settings": {
-            "icon": "🧍",
-            "title": "Effortless Posture",
-            "description": "Supports alignment as you shift positions"
+            "svg_icon": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"><path d=\"M4 10V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v4M4 14v4a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-4\"/></svg>",
+            "title": "Deep Pocket Secure Fit (8-21\")",
+            "description": "Fits any mattress. Reinforced elastic corners stay locked in place."
           }
         },
         "feat_3": {
           "type": "feature",
           "settings": {
-            "icon": "☀️",
-            "title": "All-Day Comfort",
-            "description": "Stays comfortable longer — without feeling stuck"
+            "svg_icon": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"><path d=\"M12 2v20M2 12h20M7 5l10 14M17 5L7 19\"/></svg>",
+            "title": "Breathable Quilted Design",
+            "description": "Temperature-regulating. Comfort without the memory foam heat trap."
           }
         },
         "feat_4": {
           "type": "feature",
           "settings": {
-            "icon": "📐",
-            "title": "Fits Every Body & Desk",
-            "description": "Adjusts to any height and desk setup"
+            "svg_icon": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"><polygon points=\"12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2\"/></svg>",
+            "title": "Hotel-Quality Revival",
+            "description": "Same premium construction 5-star hotels use for ultimate plushness."
           }
         }
       },
@@ -88,67 +88,7 @@
         "feat_4"
       ],
       "settings": {
-        "subheading": "Sitting Still vs Sitting Smart",
-        "heading": "Built for How Your Body Actually Works"
-      }
-    },
-    "kova_details": {
-      "type": "kova-details-grid",
-      "blocks": {
-        "det_1": {
-          "type": "detail",
-          "settings": {
-            "title": "Pressure-Relief Seat",
-            "description": "12cm extra-thick high-density foam"
-          }
-        },
-        "det_2": {
-          "type": "detail",
-          "settings": {
-            "title": "360° Smooth Rotating",
-            "description": "For effortless position changes"
-          }
-        },
-        "det_3": {
-          "type": "detail",
-          "settings": {
-            "title": "Breathable Fabric",
-            "description": "Soft-touch material that stays cool"
-          }
-        },
-        "det_4": {
-          "type": "detail",
-          "settings": {
-            "title": "Lockable Wheels",
-            "description": "Stable when you need it"
-          }
-        },
-        "det_5": {
-          "type": "detail",
-          "settings": {
-            "title": "Fully Adjustable Fit",
-            "description": "Adjustable from top to bottom"
-          }
-        },
-        "det_6": {
-          "type": "detail",
-          "settings": {
-            "title": "Built to Last",
-            "description": "Reinforced steel frame"
-          }
-        }
-      },
-      "block_order": [
-        "det_1",
-        "det_2",
-        "det_3",
-        "det_4",
-        "det_5",
-        "det_6"
-      ],
-      "settings": {
-        "heading": "Designed Down to Every Detail",
-        "subheading": "Smart features, comfort-focused materials, and maximum adjustability"
+        "heading": "What Makes Us Different"
       }
     },
     "kova_included": {
@@ -157,10 +97,10 @@
         "inc_1": {
           "type": "item",
           "settings": {
-            "icon": "🪑",
-            "title": "KÖVA Freedom Chair",
-            "original_price": "$600",
-            "final_price": "$397",
+            "icon": "🛏️",
+            "title": "1000GSM Luxury Topper",
+            "original_price": "$149",
+            "final_price": "$89",
             "is_free": false
           }
         },
@@ -177,9 +117,9 @@
         "inc_3": {
           "type": "item",
           "settings": {
-            "icon": "🖱️",
-            "title": "Mouse Pad",
-            "original_price": "$23",
+            "icon": "💤",
+            "title": "Premium Sleep Mask",
+            "original_price": "$25",
             "final_price": "FREE",
             "is_free": true
           }
@@ -187,9 +127,9 @@
         "inc_4": {
           "type": "item",
           "settings": {
-            "icon": "🔲",
-            "title": "Chair Mat",
-            "original_price": "$49",
+            "icon": "📖",
+            "title": "Sleep Hacks eBook",
+            "original_price": "$19",
             "final_price": "FREE",
             "is_free": true
           }
@@ -198,8 +138,8 @@
           "type": "item",
           "settings": {
             "icon": "🛡️",
-            "title": "3-Year Warranty",
-            "original_price": "$29",
+            "title": "10-Year Warranty",
+            "original_price": "$50",
             "final_price": "FREE",
             "is_free": true
           }
@@ -213,10 +153,10 @@
         "inc_5"
       ],
       "settings": {
-        "heading": "What's Included with Your KÖVA Chair",
+        "heading": "Unlock West Month's Sleep Bundle",
         "total_label": "Subtotal",
-        "total_price": "$397",
-        "cta_text": "Shop Now"
+        "total_price": "$89.00",
+        "cta_text": "Claim Your Offer"
       }
     },
     "related-products": {
@@ -239,7 +179,6 @@
   "order": [
     "main",
     "kova_comparison",
-    "kova_details",
     "kova_included",
     "related-products"
   ]
