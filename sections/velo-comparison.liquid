@@ -37,7 +37,10 @@
         <div class="velo-comp-content-inner">
           <h2 class="velo-comp-heading">
             <span class="velo-comp-light">{{ section.settings.heading_light }}</span>
-            <strong>{{ section.settings.heading_bold }}</strong>
+            <span class="velo-comp-bold">{{ section.settings.heading_bold }}</span>
+            {% if section.settings.heading_italic != blank %}
+              <em class="velo-comp-italic">{{ section.settings.heading_italic }}</em>
+            {% endif %}
           </h2>
           {% if section.settings.subheading != blank %}
              <p class="velo-comp-subheading">{{ section.settings.subheading }}</p>
@@ -108,7 +111,13 @@
       "type": "text",
       "id": "heading_bold",
       "label": "Heading (bold)",
-      "default": "Sitting Smart"
+      "default": "Sitting"
+    },
+    {
+      "type": "text",
+      "id": "heading_italic",
+      "label": "Heading (italic)",
+      "default": "Smart"
     },
     {
       "type": "text",

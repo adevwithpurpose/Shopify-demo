@@ -34,18 +34,26 @@
 
 .velo-banner-heading {
     font-family: 'Jost', sans-serif !important;
-    font-size: 5.6rem;
-    font-weight: 800 !important;
+    font-size: 6.4rem;
     line-height: 1.05;
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
     color: #fff;
     letter-spacing: -0.02em;
 }
 
-.velo-banner-heading em {
+.velo-banner-light {
+    font-weight: 300;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.velo-banner-bold {
+    font-weight: 800;
+}
+
+.velo-banner-italic {
     font-style: italic;
-    color: #fff;
-    /* Keep white for now, maybe add a gold or light blue if needed */
+    font-weight: 800;
 }
 
 .velo-banner-subtitle {

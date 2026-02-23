@@ -216,13 +216,21 @@
                 </div>
               </div>
             {% endif %}
+            <!-- Hero Gifts Strip -->
+            <div class="velo-hero-gifts-strip">
+              <div class="velo-hero-gift-item"><strong>FREE</strong> Shipping</div>
+              <div class="velo-hero-gift-item"><strong>FREE</strong> Mouse Pad</div>
+              <div class="velo-hero-gift-item"><strong>FREE</strong> Chair Mat</div>
+              <div class="velo-hero-gift-item">3-Year Guarantee</div>
+            </div>
 
             <!-- Urgency Banner -->
             {% if section.settings.urgency_text != blank %}
-              {%- assign today_date = 'now' | date: "%B %d" -%}
+              {%- assign today_day = 'now' | date: "%d" -%}
+              {%- assign today_month = 'now' | date: "%B" -%}
               <div class="velo-urgency">
                 <span class="velo-urgency-dot"></span>
-                <span>{{ section.settings.urgency_text | replace: '[date]', today_date }}</span>
+                <span>Order by <strong>{{ today_month }} {{ today_day }}th</strong> for guaranteed FREE Gifts</span>
               </div>
             {% endif %}
 
@@ -257,17 +265,13 @@
 
             <!-- Payment Icons -->
             <div class="velo-payment-icons">
-               {% for type in shop.enabled_payment_types %}
-                 {{ type | payment_type_svg_tag: class: 'icon icon--full-color' }}
-               {% endfor %}
-               <!-- Fallback if shop has none setup yet in dev -->
-               {% if shop.enabled_payment_types == empty %}
-                  {{ 'visa' | payment_type_svg_tag: class: 'icon icon--full-color' }}
-                  {{ 'master' | payment_type_svg_tag: class: 'icon icon--full-color' }}
-                  {{ 'american_express' | payment_type_svg_tag: class: 'icon icon--full-color' }}
-                  {{ 'paypal' | payment_type_svg_tag: class: 'icon icon--full-color' }}
-                  {{ 'apple_pay' | payment_type_svg_tag: class: 'icon icon--full-color' }}
-               {% endif %}
+              {{ 'visa' | payment_type_svg_tag: class: 'icon icon--full-color' }}
+              {{ 'master' | payment_type_svg_tag: class: 'icon icon--full-color' }}
+              {{ 'american_express' | payment_type_svg_tag: class: 'icon icon--full-color' }}
+              {{ 'apple_pay' | payment_type_svg_tag: class: 'icon icon--full-color' }}
+              {{ 'paypal' | payment_type_svg_tag: class: 'icon icon--full-color' }}
+              {{ 'google_pay' | payment_type_svg_tag: class: 'icon icon--full-color' }}
+              {{ 'shopify_pay' | payment_type_svg_tag: class: 'icon icon--full-color' }}
             </div>
 
             {% if section.settings.sub_desc != blank %}

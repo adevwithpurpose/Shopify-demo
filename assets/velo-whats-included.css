@@ -87,33 +87,37 @@
 .velo-inc-item-right {
     display: flex;
     align-items: center;
-    gap: 0.75rem;
+    gap: 1.5rem;
     flex-shrink: 0;
 }
 
 .velo-inc-original {
-    font-size: 1.4rem;
-    color: #aaa;
+    font-size: 1.6rem;
+    color: #999;
     text-decoration: line-through;
+    opacity: 0.8;
 }
 
 .velo-inc-final {
-    font-size: 1.6rem;
-    font-weight: 700;
+    font-size: 1.8rem;
+    font-weight: 800;
     color: var(--velo-navy);
+    font-family: 'Jost', sans-serif;
 }
 
 .velo-inc-free-badge {
-    font-size: 1.4rem;
-    font-weight: 700;
-    color: var(--velo-blue);
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: #3B82F6;
+    /* Velo Blue */
+    text-transform: uppercase;
 }
 
 /* Divider */
 .velo-inc-divider {
     height: 1px;
-    background: var(--velo-gray-border);
-    margin: 1.5rem 0;
+    background: #eee;
+    margin: 2rem 0;
 }
 
 /* Savings row */
@@ -121,18 +125,19 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.5rem 0;
+    padding: 0.75rem 0;
 }
 
 .velo-inc-savings-label {
-    font-size: 1.6rem;
-    font-weight: 700;
+    font-size: 1.8rem;
+    font-weight: 800;
     color: var(--velo-navy);
 }
 
 .velo-inc-savings-value {
-    font-size: 1.5rem;
-    color: #555;
+    font-size: 1.8rem;
+    color: #3B82F6;
+    font-weight: 600;
 }
 
 /* Total row */
@@ -140,37 +145,39 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.75rem 0 2rem;
+    padding: 1rem 0 3rem;
 }
 
 .velo-inc-total-label {
-    font-size: 1.8rem;
-    font-weight: 700;
+    font-size: 2.2rem;
+    font-weight: 800;
     color: var(--velo-navy);
 }
 
 .velo-inc-total-right {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 1.5rem;
 }
 
 .velo-inc-gifts-badge {
     display: inline-block;
-    background: var(--velo-navy);
+    background: #1E293B;
+    /* Dark navy */
     color: #fff;
-    font-size: 1rem;
-    font-weight: 700;
-    padding: 0.35rem 0.75rem;
+    font-size: 1.2rem;
+    font-weight: 800;
+    padding: 0.6rem 1.2rem;
     border-radius: 4px;
     text-transform: uppercase;
-    letter-spacing: 0.04em;
+    letter-spacing: 0.05em;
 }
 
 .velo-inc-total-price {
-    font-size: 2.6rem;
-    font-weight: 800;
+    font-size: 3.4rem;
+    font-weight: 900;
     color: var(--velo-navy);
+    font-family: 'Jost', sans-serif;
 }
 
 /* CTA Button */
@@ -237,28 +244,31 @@
     display: block;
 }
 
-/* Starburst badge */
+/* Starburst seal badge */
 .velo-inc-starburst {
     position: absolute;
     top: 5%;
     right: 5%;
-    width: 120px;
-    height: 120px;
+    width: 140px;
+    height: 140px;
     background: var(--velo-navy);
     color: #fff;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     font-weight: 800;
     text-align: center;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 1.5rem;
+    padding: 1rem;
     line-height: 1.2;
     border-radius: 50%;
     z-index: 5;
     text-transform: uppercase;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    clip-path: polygon(50% 0%, 63% 38%, 100% 35%, 75% 60%, 85% 100%, 50% 80%, 15% 100%, 25% 60%, 0% 35%, 37% 38%);
+    box-shadow: 0 15px 35px rgba(18, 36, 66, 0.2);
+    border: 2px dashed rgba(255, 255, 255, 0.3);
+    outline: 8px solid var(--velo-navy);
+    letter-spacing: 0.02em;
 }
 
 /* Annotations */

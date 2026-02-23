@@ -35,8 +35,14 @@
     </div>
 
     <div class="velo-banner-content velo-reveal velo-reveal-delay-1">
-      {% if section.settings.heading != blank %}
-        <h2 class="velo-banner-heading">{{ section.settings.heading }}</h2>
+      {% if section.settings.heading_bold != blank %}
+        <h2 class="velo-banner-heading">
+          <span class="velo-banner-light">{{ section.settings.heading_light }}</span>
+          <span class="velo-banner-bold">{{ section.settings.heading_bold }}</span>
+          {% if section.settings.heading_italic != blank %}
+            <em class="velo-banner-italic">{{ section.settings.heading_italic }}</em>
+          {% endif %}
+        </h2>
       {% endif %}
       
       {% if section.settings.subtitle != blank %}
@@ -86,10 +92,22 @@
       "content": "Content"
     },
     {
-      "type": "richtext",
-      "id": "heading",
-      "label": "Heading",
-      "default": "<p>Sitting Still vs <em>Sitting Smart</em></p>"
+      "type": "text",
+      "id": "heading_light",
+      "label": "Heading (light)",
+      "default": "Sitting Still vs"
+    },
+    {
+      "type": "text",
+      "id": "heading_bold",
+      "label": "Heading (bold)",
+      "default": "Sitting"
+    },
+    {
+      "type": "text",
+      "id": "heading_italic",
+      "label": "Heading (italic)",
+      "default": "Smart"
     },
     {
       "type": "textarea",

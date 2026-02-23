@@ -330,7 +330,9 @@
         "tag_6"
       ],
       "settings": {
-        "heading": "<p>Sitting Still vs <em>Sitting Smart</em></p>",
+        "heading_light": "Sitting Still vs",
+        "heading_bold": "Sitting",
+        "heading_italic": "Smart",
         "subtitle": "The VELO Chair supports your natural need to move and adjust, keeping you focused and preventing fatigue."
       }
     },
@@ -340,22 +342,22 @@
         "step_1": {
           "type": "step",
           "settings": {
-            "title": "Traditional Seating",
-            "text": "<p>Supportive and upright for focused work sessions.</p>"
+            "title": "Step 01",
+            "text": "Adjust the seat height to your desk"
           }
         },
         "step_2": {
           "type": "step",
           "settings": {
-            "title": "Cross-Legged Flow",
-            "text": "<p>Open your hips and move freely while you work.</p>"
+            "title": "Step 02",
+            "text": "Move freely throughout your day"
           }
         },
         "step_3": {
           "type": "step",
           "settings": {
-            "title": "Kneeling Support",
-            "text": "<p>Reduce lower back pressure with active alignment.</p>"
+            "title": "Step 03",
+            "text": "Lock into position when needing deep focus"
           }
         }
       },
@@ -364,11 +366,7 @@
         "step_2",
         "step_3"
       ],
-      "settings": {
-        "heading_light": "How to Use The",
-        "heading_bold": "VELO Freedom Chair",
-        "full_width": true
-      }
+      "settings": {}
     },
     "velo_details": {
       "type": "velo-details-grid",
@@ -377,98 +375,34 @@
           "type": "detail",
           "settings": {
             "icon": "move",
-            "title": "Pressure-Relief Seat",
-            "description": "12cm extra-thick high-density foam"
+            "title": "Pressure-Relief Seat"
           }
         },
         "d2": {
           "type": "detail",
           "settings": {
             "icon": "thermometer",
-            "title": "Breathable Fabric",
-            "description": "Soft-touch material that stays cool"
+            "title": "Breathable Fabric"
           }
         },
         "d3": {
           "type": "detail",
           "settings": {
             "icon": "sliders",
-            "title": "Fully Adjustable Fit",
-            "description": "Adjustable from top to bottom"
-          }
-        },
-        "d4": {
-          "type": "detail",
-          "settings": {
-            "icon": "refresh",
-            "title": "360° Smooth Rotating",
-            "description": "For effortless position changes"
-          }
-        },
-        "d5": {
-          "type": "detail",
-          "settings": {
-            "icon": "lock",
-            "title": "Lockable Wheels",
-            "description": "Stable when you need it"
-          }
-        },
-        "d6": {
-          "type": "detail",
-          "settings": {
-            "icon": "shield",
-            "title": "Built to Last",
-            "description": "Reinforced steel frame"
+            "title": "Fully Adjustable Fit"
           }
         }
       },
       "block_order": [
         "d1",
         "d2",
-        "d3",
-        "d4",
-        "d5",
-        "d6"
+        "d3"
       ],
-      "settings": {
-        "heading_light": "Designed",
-        "heading_bold": "Down to Every Detail",
-        "subheading": "Smart features, comfort-focused materials, and maximum adjustability",
-        "full_width": true
-      }
+      "settings": {}
     },
     "velo_risk_free": {
       "type": "velo-risk-free-card",
-      "blocks": {
-        "b1": {
-          "type": "badge",
-          "settings": {
-            "title": "3-Year Warranty"
-          }
-        },
-        "b2": {
-          "type": "badge",
-          "settings": {
-            "title": "Free & Easy Returns"
-          }
-        },
-        "b3": {
-          "type": "badge",
-          "settings": {
-            "title": "Money-Back Guarantee"
-          }
-        }
-      },
-      "block_order": [
-        "b1",
-        "b2",
-        "b3"
-      ],
-      "settings": {
-        "main_icon": "shield",
-        "heading": "90-Day Risk-Free Trial",
-        "subheading": "If it doesn't improve your comfort and focus, return it. No questions asked."
-      }
+      "settings": {}
     },
     "velo_testimonials": {
       "type": "velo-testimonials",
@@ -476,22 +410,22 @@
         "t1": {
           "type": "testimonial",
           "settings": {
-            "author_name": "Sarah J.",
-            "quote": "The VELO Chair changed how I work. I no longer feel stiff after a 10-hour shift."
+            "name": "Sarah J.",
+            "content": "<p>Best chair I've ever owned. My back pain is gone.</p>"
           }
         },
         "t2": {
           "type": "testimonial",
           "settings": {
-            "author_name": "Michael R.",
-            "quote": "I've tried every ergonomic chair out there. This is the first one that actually lets me move."
+            "name": "Mark D.",
+            "content": "<p>Perfect for long coding sessions.</p>"
           }
         },
         "t3": {
           "type": "testimonial",
           "settings": {
-            "author_name": "Emily L.",
-            "quote": "Perfect for my ADHD! Being able to sit cross-legged while working is a game-changer."
+            "name": "Emily R.",
+            "content": "<p>I love how I can sit in so many different ways.</p>"
           }
         }
       },
@@ -505,7 +439,7 @@
     "velo_included": {
       "type": "velo-whats-included",
       "blocks": {
-        "inc_1": {
+        "i1": {
           "type": "item",
           "settings": {
             "title": "VELO Freedom Chair",
@@ -514,49 +448,45 @@
             "is_free": false
           }
         },
-        "inc_2": {
+        "i2": {
           "type": "item",
           "settings": {
             "title": "Fast U.S. Shipping",
             "original_price": "$14.00",
-            "final_price": "FREE",
             "is_free": true
           }
         },
-        "inc_3": {
+        "i3": {
           "type": "item",
           "settings": {
             "title": "Mouse Pad",
             "original_price": "$23.00",
-            "final_price": "FREE",
             "is_free": true
           }
         },
-        "inc_4": {
+        "i4": {
           "type": "item",
           "settings": {
             "title": "Chair Mat",
             "original_price": "$49.00",
-            "final_price": "FREE",
             "is_free": true
           }
         },
-        "inc_5": {
+        "i5": {
           "type": "item",
           "settings": {
             "title": "3-Year Warranty",
             "original_price": "$29.00",
-            "final_price": "FREE",
             "is_free": true
           }
         }
       },
       "block_order": [
-        "inc_1",
-        "inc_2",
-        "inc_3",
-        "inc_4",
-        "inc_5"
+        "i1",
+        "i2",
+        "i3",
+        "i4",
+        "i5"
       ],
       "settings": {
         "heading": "What's Included with",
@@ -569,62 +499,6 @@
         "free_gifts_count": "4",
         "cta_text": "SHOP NOW",
         "badge_text": "FREE Gifts Included ($115 value)"
-      }
-    },
-    "velo_comparison": {
-      "type": "velo-comparison",
-      "blocks": {
-        "feat_1": {
-          "type": "feature",
-          "settings": {
-            "title": "Move Without Limits"
-          }
-        },
-        "feat_2": {
-          "type": "feature",
-          "settings": {
-            "title": "Stay Comfortable All Day"
-          }
-        },
-        "feat_3": {
-          "type": "feature",
-          "settings": {
-            "title": "Less Fatigue, More Focus"
-          }
-        },
-        "feat_4": {
-          "type": "feature",
-          "settings": {
-            "title": "Support That Adapts to You"
-          }
-        },
-        "feat_5": {
-          "type": "feature",
-          "settings": {
-            "title": "Comfort That Lasts Longer"
-          }
-        },
-        "feat_6": {
-          "type": "feature",
-          "settings": {
-            "title": "Good Posture, No Effort"
-          }
-        }
-      },
-      "block_order": [
-        "feat_1",
-        "feat_2",
-        "feat_3",
-        "feat_4",
-        "feat_5",
-        "feat_6"
-      ],
-      "settings": {
-        "heading_light": "Sitting Still vs",
-        "heading_bold": "Sitting Smart",
-        "subheading": "The KOVA Chair supports your natural need to move and adjust, keeping you focused and preventing fatigue",
-        "image_position": "left",
-        "full_width": true
       }
     },
     "velo_faq": {
@@ -679,7 +553,6 @@
     "velo_risk_free",
     "velo_testimonials",
     "velo_included",
-    "velo_comparison",
     "velo_faq",
     "velo_sticky_atc"
   ]

@@ -18,20 +18,27 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 6rem;
+    gap: 5rem;
     flex-wrap: wrap;
 }
 
 .velo-trust-item {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 1.5rem;
     text-align: left;
 }
 
 .velo-trust-item-icon {
-    font-size: 2rem;
+    font-size: 2.8rem;
     color: var(--velo-navy);
+    display: flex;
+    align-items: center;
+}
+
+.velo-trust-item-icon svg {
+    width: 32px;
+    height: 32px;
 }
 
 .velo-trust-item-content {
@@ -40,18 +47,26 @@
 }
 
 .velo-trust-item-title {
-    font-size: 1.4rem;
-    font-weight: 700;
+    font-size: 1.6rem;
+    font-weight: 800;
     color: var(--velo-navy);
     font-family: 'Jost', sans-serif !important;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
-    margin-bottom: 0.2rem;
+    letter-spacing: 0.03em;
+    margin-bottom: 0.1rem;
+    line-height: 1.2;
 }
 
 .velo-trust-item-subtitle {
-    font-size: 1.3rem;
-    color: var(--velo-text);
+    font-size: 1.4rem;
+    color: #666;
+    font-weight: 500;
+}
+
+@media screen and (max-width: 989px) {
+    .velo-trust-grid {
+        gap: 3rem;
+    }
 }
 
 @media screen and (max-width: 749px) {

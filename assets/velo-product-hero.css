@@ -398,17 +398,37 @@
     justify-content: center;
 }
 
-.velo-gift-card-title {
-    font-size: 1.1rem;
-    color: #444;
-    line-height: 1.2;
-    font-weight: 500;
+/* ---- Hero Gifts Strip (Above ATC) ---- */
+.velo-hero-gifts-strip {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin-bottom: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--velo-gray-border);
 }
 
-.velo-gift-card-free-text {
-    font-weight: 700;
+.velo-hero-gift-item {
+    font-size: 1.4rem;
     color: var(--velo-navy);
-    display: block;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+}
+
+.velo-hero-gift-item strong {
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+@media screen and (max-width: 749px) {
+    .velo-hero-gifts-strip {
+        gap: 1.5rem;
+        flex-wrap: wrap;
+    }
+
+    .velo-hero-gift-item {
+        font-size: 1.2rem;
+    }
 }
 
 /* ---- Urgency Banner ---- */
@@ -416,23 +436,25 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 0.5rem;
+    gap: 0.8rem;
     background: #FFF5F5;
-    color: #333;
-    border-radius: 8px;
-    padding: 0.8rem 1rem;
-    font-size: 1.4rem;
-    margin: 1.5rem 0 0.5rem;
+    color: var(--velo-navy);
+    border-radius: 100px;
+    padding: 1.2rem 2.5rem;
+    font-size: 1.5rem;
+    margin: 0 0 1.5rem;
+    font-weight: 500;
 }
 
 .velo-urgency-dot {
-    width: 10px;
-    height: 10px;
+    width: 12px;
+    height: 12px;
     background: #E53E3E;
     border-radius: 50%;
     flex-shrink: 0;
     animation: velo-pulse 1.5s ease-in-out infinite;
-    box-shadow: 0 0 0 0 rgba(229, 62, 62, 0.7);
+    position: relative;
+    box-shadow: 0 0 0 0 rgba(229, 62, 62, 0.4);
 }
 
 @keyframes velo-pulse {
@@ -443,7 +465,7 @@
 
     70% {
         transform: scale(1);
-        box-shadow: 0 0 0 8px rgba(229, 62, 62, 0);
+        box-shadow: 0 0 0 10px rgba(229, 62, 62, 0);
     }
 
     100% {
@@ -463,80 +485,78 @@
     color: #fff !important;
     border: none;
     border-radius: 100px;
-    /* Pill shape */
-    padding: 1.5rem 2.5rem;
-    font-size: 1.8rem;
-    font-weight: 700 !important;
+    padding: 1.8rem 2.5rem;
+    font-size: 2.2rem;
+    font-weight: 800 !important;
     cursor: pointer;
     transition: all 0.2s ease;
-    margin: 1.5rem 0 1.5rem;
+    margin: 0 0 1.5rem;
     text-transform: uppercase;
     letter-spacing: 0.05em;
     font-family: 'Jost', sans-serif !important;
 }
 
-/* Kill Dawn's default .button pseudo-element borders on ALL velo buttons */
-.velo-atc-btn::before,
-.velo-atc-btn::after,
-.velo-inc-cta::before,
-.velo-inc-cta::after {
-    content: none !important;
-    display: none !important;
-    box-shadow: none !important;
-}
-
 .velo-atc-btn:hover {
     background: var(--velo-navy-light);
     transform: translateY(-2px);
-    box-shadow: 0 8px 15px rgba(18, 36, 66, 0.15);
-}
-
-.velo-atc-btn:disabled {
-    background: #ccc;
-    cursor: not-allowed;
-    transform: none;
-    box-shadow: none;
+    box-shadow: 0 10px 20px rgba(18, 36, 66, 0.2);
 }
 
 /* ---- Trust Icons ---- */
 .velo-trust-icons {
     display: flex;
     justify-content: center;
-    gap: 1.5rem;
-    margin: 1rem 0;
+    gap: 3rem;
+    margin-bottom: 2rem;
 }
 
 .velo-trust-icon-item {
     display: flex;
     align-items: center;
-    gap: 0.6rem;
-    font-size: 1.4rem;
-    color: #333;
-    font-weight: 500;
+    gap: 0.8rem;
+    font-size: 1.6rem;
+    color: var(--velo-navy);
+    font-weight: 600;
 }
 
 .velo-trust-icon-item svg {
-    flex-shrink: 0;
+    color: var(--velo-navy);
+    width: 20px;
+    height: 20px;
 }
 
 .velo-payment-icons {
     display: flex;
     justify-content: center;
-    gap: 0.5rem;
-    margin-bottom: 1.5rem;
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+    flex-wrap: wrap;
 }
 
-.velo-payment-icons svg,
-.velo-payment-icons img {
-    height: 24px;
+.velo-payment-icons img,
+.velo-payment-icons svg {
+    height: 32px;
     width: auto;
+    background: #fff;
+    border-radius: 4px;
+    /* Optional: subtle border if visible in image */
 }
 
 .velo-sub-desc {
-    font-size: 1.4rem;
-    color: #666;
-    line-height: 1.6;
-    margin-bottom: 2rem;
+    font-size: 1.7rem;
+    color: #555;
+    line-height: 1.5;
+    margin-bottom: 2.5rem;
+    text-align: center;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.velo-sub-desc a {
+    color: var(--velo-navy);
+    font-weight: 700;
+    text-decoration: underline;
 }
 
 .velo-sub-desc a {
