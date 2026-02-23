@@ -22,7 +22,7 @@
         "gift_3": {
           "type": "gift",
           "settings": {
-            "icon": "monitor",
+            "icon": "mat",
             "title": "Chair Mat",
             "value": "($49)"
           }

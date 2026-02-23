@@ -27,12 +27,13 @@
 }
 
 .velo-inc-heading {
-    font-size: 3.4rem;
-    font-weight: 400;
-    line-height: 1.2;
+    font-size: 5.2rem;
+    font-weight: 300;
+    line-height: 1.05;
     color: var(--velo-navy);
     font-family: var(--font-heading-family), 'Jost', sans-serif;
-    margin: 0 0 3rem 0;
+    margin: 0 0 3.5rem 0;
+    letter-spacing: -0.01em;
 }
 
 .velo-inc-heading strong {

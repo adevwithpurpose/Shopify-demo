@@ -160,17 +160,18 @@
 /* ---- Title ---- */
 .velo-product-title {
     font-family: 'Jost', sans-serif !important;
-    font-size: 3.2rem;
-    font-weight: 700;
-    line-height: 1.1;
-    margin-bottom: 1.25rem;
+    font-size: 4.8rem;
+    font-weight: 800 !important;
+    line-height: 1.05;
+    margin-bottom: 2rem;
     color: var(--velo-navy);
     margin-top: 0;
+    letter-spacing: -0.02em;
 }
 
 @media screen and (min-width: 990px) {
     .velo-product-title {
-        font-size: 2.75rem;
+        font-size: 5.6rem;
     }
 }
 
@@ -245,9 +246,9 @@
 .velo-bullets li {
     display: flex;
     align-items: center;
-    gap: 1rem;
-    font-size: 1.6rem;
-    font-weight: 600;
+    gap: 1.2rem;
+    font-size: 1.7rem;
+    font-weight: 700;
     color: var(--velo-navy);
 }
 

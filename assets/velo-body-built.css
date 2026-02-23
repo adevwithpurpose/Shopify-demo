@@ -15,12 +15,13 @@
 }
 
 .velo-bb-heading {
-    font-size: 4rem;
-    font-weight: 400;
-    line-height: 1.15;
+    font-size: 5.6rem;
+    font-weight: 300;
+    line-height: 1.05;
     color: var(--velo-navy);
     font-family: var(--font-heading-family), 'Jost', sans-serif;
-    margin: 0 0 1rem 0;
+    margin: 0 0 1.5rem 0;
+    letter-spacing: -0.01em;
 }
 
 .velo-bb-heading strong {
