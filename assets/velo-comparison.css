@@ -67,21 +67,27 @@
 }
 
 .velo-comp-heading {
-    font-size: 4.8rem;
-    line-height: 1.1;
-    margin-bottom: 2rem;
+    font-size: 6.4rem;
+    line-height: 1.05;
+    margin-bottom: 2.5rem;
     color: #fff !important;
+    letter-spacing: -0.02em;
 }
 
-.velo-comp-heading .velo-comp-light {
+.velo-comp-light {
     font-weight: 300;
     display: block;
     font-size: 3.6rem;
+    margin-bottom: 0.5rem;
 }
 
-.velo-comp-heading strong {
+.velo-comp-bold {
     font-weight: 800;
-    display: block;
+}
+
+.velo-comp-italic {
+    font-style: italic;
+    font-weight: 800;
 }
 
 @media screen and (max-width: 749px) {
