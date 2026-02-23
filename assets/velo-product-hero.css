@@ -350,29 +350,31 @@
     position: relative;
     border: 1px solid var(--velo-gray-border);
     border-radius: 12px;
-    padding: 2rem 0.5rem 1rem;
+    padding: 2.5rem 0.5rem 1.5rem;
     text-align: center;
-    background: #F8F9FA;
+    background: #fff;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    min-height: 100px;
+    min-height: 110px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
 }
 
 .velo-gift-card-badge {
     position: absolute;
-    top: -10px;
+    top: -12px;
     left: 50%;
     transform: translateX(-50%);
-    background: var(--velo-blue);
+    background: #34465B;
     color: #fff;
     font-size: 1rem;
     font-weight: 800;
-    padding: 2px 8px;
-    border-radius: 4px;
+    padding: 4px 10px;
+    border-radius: 100px;
     white-space: nowrap;
     z-index: 1;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    letter-spacing: 0.02em;
 }
 
 .velo-gift-card-icon {

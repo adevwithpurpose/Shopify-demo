@@ -119,9 +119,32 @@
             class="velo-inc-product-image"
           >
         {% endif %}
+
         {% if section.settings.badge_text != blank %}
           <div class="velo-inc-starburst">{{ section.settings.badge_text }}</div>
         {% endif %}
+
+        <!-- Annotations -->
+        {% if section.settings.annotation_1 != blank %}
+          <div class="velo-inc-anno velo-inc-anno--1">
+            <span class="velo-inc-anno-text">{{ section.settings.annotation_1 }}</span>
+            <svg class="velo-inc-anno-arrow" width="40" height="40" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M10,10 Q50,90 90,80" fill="none" stroke="currentColor" stroke-width="2" marker-end="url(#arrowhead)"/></svg>
+          </div>
+        {% endif %}
+        {% if section.settings.annotation_2 != blank %}
+          <div class="velo-inc-anno velo-inc-anno--2">
+            <span class="velo-inc-anno-text">{{ section.settings.annotation_2 }}</span>
+            <svg class="velo-inc-anno-arrow" width="40" height="40" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M10,10 Q50,90 90,80" fill="none" stroke="currentColor" stroke-width="2" marker-end="url(#arrowhead)"/></svg>
+          </div>
+        {% endif %}
+
+        <svg style="width:0;height:0;position:absolute;" aria-hidden="true" focusable="false">
+          <defs>
+            <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+              <polygon points="0 0, 10 3.5, 0 7" fill="currentColor" />
+            </marker>
+          </defs>
+        </svg>
       </div>
 
     </div>
@@ -237,6 +260,22 @@
       "id": "badge_text",
       "label": "Starburst badge text",
       "default": "FREE Gifts Included ($115 value)"
+    },
+    {
+      "type": "header",
+      "content": "Image Annotations"
+    },
+    {
+      "type": "text",
+      "id": "annotation_1",
+      "label": "Annotation 1 Text",
+      "default": "FREE Mouse Pad"
+    },
+    {
+      "type": "text",
+      "id": "annotation_2",
+      "label": "Annotation 2 Text",
+      "default": "FREE Chair Mat"
     }
   ],
   "blocks": [

@@ -12,20 +12,41 @@
       {% endif %}
     </div>
 
-    <div class="velo-bb-list">
-      {% for block in section.blocks %}
-        <div class="velo-bb-item velo-reveal velo-reveal-delay-{{ forloop.index | at_most: 4 }}" {{ block.shopify_attributes }}>
-          <div class="velo-bb-icon-wrap">
-            {% render 'velo-icons', icon: block.settings.icon %}
-          </div>
-          <div class="velo-bb-content">
-            <h3 class="velo-bb-item-title">{{ block.settings.title }}</h3>
-            {% if block.settings.description != blank %}
-              <p class="velo-bb-item-desc">{{ block.settings.description }}</p>
-            {% endif %}
-          </div>
+    <div class="velo-bb-grid">
+      <div class="velo-bb-list-col">
+        <div class="velo-bb-list">
+          {% for block in section.blocks %}
+            <div class="velo-bb-item velo-reveal velo-reveal-delay-{{ forloop.index | at_most: 4 }}" {{ block.shopify_attributes }}>
+              <div class="velo-bb-icon-wrap">
+                {% render 'velo-icons', icon: block.settings.icon %}
+              </div>
+              <div class="velo-bb-content">
+                <h3 class="velo-bb-item-title">{{ block.settings.title }}</h3>
+                {% if block.settings.description != blank %}
+                  <p class="velo-bb-item-desc">{{ block.settings.description }}</p>
+                {% endif %}
+              </div>
+            </div>
+          {% endfor %}
         </div>
-      {% endfor %}
+      </div>
+      <div class="velo-bb-image-col velo-reveal">
+        {% if section.settings.side_image != blank %}
+          <img
+            src="{{ section.settings.side_image | image_url: width: 800 }}"
+            alt="{{ section.settings.side_image.alt | default: 'VELO Life' }}"
+            loading="lazy"
+            width="800"
+          >
+        {% else %}
+          <img
+            src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+            alt="Person sitting in VELO chair"
+            loading="lazy"
+            width="800"
+          >
+        {% endif %}
+      </div>
     </div>
   </div>
 </div>
@@ -53,6 +74,11 @@
       "id": "subheading",
       "label": "Subheading",
       "default": ""
+    },
+    {
+      "type": "image_picker",
+      "id": "side_image",
+      "label": "Side Image"
     }
   ],
   "blocks": [

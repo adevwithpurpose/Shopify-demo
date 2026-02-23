@@ -257,8 +257,50 @@
     clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
 }
 
+/* Annotations */
+.velo-inc-anno {
+    position: absolute;
+    color: var(--velo-navy);
+    font-family: 'Mulish', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.velo-inc-anno--1 {
+    top: 25%;
+    left: 10%;
+}
+
+.velo-inc-anno--2 {
+    bottom: 25%;
+    right: 15%;
+}
+
+.velo-inc-anno-text {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--velo-navy);
+    background: rgba(255, 255, 255, 0.9);
+    padding: 4px 10px;
+    border-radius: 4px;
+    border: 1px solid #eee;
+    margin-bottom: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.velo-inc-anno-arrow {
+    color: #333;
+}
+
 /* Responsive */
 @media screen and (max-width: 989px) {
+    .velo-inc-anno {
+        display: none;
+    }
+
     .velo-inc-layout {
         grid-template-columns: 1fr;
         gap: 4rem;
