@@ -71,13 +71,14 @@
 
 .velo-fg-card {
     background: #fff;
-    border-radius: 8px;
+    border-radius: 12px;
     border: 1px solid var(--velo-gray-border);
-    padding: 2.5rem;
+    padding: 3rem 2.5rem;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 2rem;
-    text-align: left;
+    gap: 1.5rem;
+    text-align: center;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
@@ -91,12 +92,20 @@
 }
 
 .velo-fg-card-icon {
-    font-size: 3rem;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 60px;
     height: 60px;
+    background: #EDF2F9;
+    color: var(--velo-navy);
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+.velo-fg-card-icon svg {
+    width: 32px;
+    height: 32px;
 }
 
 .velo-fg-card-image img {

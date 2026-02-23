@@ -122,7 +122,7 @@
         <!-- Trust Note -->
         {% if section.settings.trust_note != blank %}
           <div class="velo-trust-note">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#DDA75B" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            {% render 'velo-icons', icon: 'lock' %}
             {{ section.settings.trust_note | replace: '[shop_name]', shop.name }}
           </div>
         {% endif %}
@@ -136,20 +136,20 @@
           <ul class="velo-bullets">
             {% if section.settings.bullet_1 != blank %}
               <li>
-                <svg class="velo-check-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                {{ section.settings.bullet_1 }}
+                {% render 'velo-icons', icon: 'check' %}
+                {{ section.settings.bullet_1 | replace: ':', ':</strong>' | prepend: '<strong>' }}
               </li>
             {% endif %}
             {% if section.settings.bullet_2 != blank %}
               <li>
-                <svg class="velo-check-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                {{ section.settings.bullet_2 }}
+                {% render 'velo-icons', icon: 'check' %}
+                {{ section.settings.bullet_2 | replace: ':', ':</strong>' | prepend: '<strong>' }}
               </li>
             {% endif %}
             {% if section.settings.bullet_3 != blank %}
               <li>
-                <svg class="velo-check-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                {{ section.settings.bullet_3 }}
+                {% render 'velo-icons', icon: 'check' %}
+                {{ section.settings.bullet_3 | replace: ':', ':</strong>' | prepend: '<strong>' }}
               </li>
             {% endif %}
           </ul>
@@ -201,11 +201,8 @@
                 <div class="velo-gifts-grid">
                   {% for block in gift_blocks %}
                     <div class="velo-gift-card" {{ block.shopify_attributes }}>
-                      <div class="velo-gift-card-top">
-                        {% if block.settings.value != blank %}
-                          <span class="velo-gift-card-value">{{ block.settings.value }}</span>
-                        {% endif %}
-                        <span class="velo-gift-card-free-tag">FREE</span>
+                      <div class="velo-gift-card-badge">
+                        {{ block.settings.value }} FREE
                       </div>
                       <div class="velo-gift-card-icon">
                         {% render 'velo-icons', icon: block.settings.icon %}

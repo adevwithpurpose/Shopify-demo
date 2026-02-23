@@ -197,7 +197,7 @@
 
 .velo-save-badge {
     display: inline-block;
-    background: var(--velo-blue-badge);
+    background: var(--velo-navy);
     color: #fff;
     font-size: 1.2rem;
     font-weight: 700;
@@ -212,9 +212,16 @@
     display: flex;
     align-items: center;
     gap: 0.6rem;
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     color: #666;
     margin-bottom: 2rem;
+    opacity: 0.8;
+}
+
+.velo-trust-note svg {
+    color: #DDA75B;
+    width: 14px;
+    height: 14px;
 }
 
 /* ---- Description & Bullets ---- */
@@ -340,36 +347,32 @@
 }
 
 .velo-gift-card {
+    position: relative;
     border: 1px solid var(--velo-gray-border);
-    border-radius: 8px;
-    padding: 0.5rem;
+    border-radius: 12px;
+    padding: 2rem 0.5rem 1rem;
     text-align: center;
-    background: #fff;
+    background: #F8F9FA;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-end;
+    min-height: 100px;
 }
 
-.velo-gift-card-top {
-    display: flex;
-    border-radius: 4px;
-    overflow: hidden;
-    font-size: 1.1rem;
-    font-weight: 700;
-    justify-content: center;
-    margin-bottom: 0.5rem;
-}
-
-.velo-gift-card-value {
-    background: var(--velo-blue-badge);
-    color: #fff;
-    padding: 0.15rem 0.35rem;
-}
-
-.velo-gift-card-free-tag {
+.velo-gift-card-badge {
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
     background: var(--velo-blue);
     color: #fff;
-    padding: 0.15rem 0.35rem;
+    font-size: 1rem;
+    font-weight: 800;
+    padding: 2px 8px;
+    border-radius: 4px;
+    white-space: nowrap;
+    z-index: 1;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .velo-gift-card-icon {
@@ -382,9 +385,10 @@
 }
 
 .velo-gift-card-title {
-    font-size: 1.2rem;
-    color: #555;
+    font-size: 1.1rem;
+    color: #444;
     line-height: 1.2;
+    font-weight: 500;
 }
 
 .velo-gift-card-free-text {

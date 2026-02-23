@@ -6,39 +6,47 @@
         "gift_1": {
           "type": "gift",
           "settings": {
-            "icon": "package",
-            "title": "Fast U.S. Shipping",
-            "value": "FREE"
+            "icon": "truck",
+            "title": "Shipping",
+            "value": "($14)"
           }
         },
         "gift_2": {
           "type": "gift",
           "settings": {
-            "icon": "star",
-            "title": "Premium Sleep Mask",
-            "value": "FREE"
+            "icon": "mouse",
+            "title": "Mouse Pad",
+            "value": "($23)"
           }
         },
         "gift_3": {
           "type": "gift",
           "settings": {
+            "icon": "monitor",
+            "title": "Chair Mat",
+            "value": "($49)"
+          }
+        },
+        "gift_4": {
+          "type": "gift",
+          "settings": {
             "icon": "shield",
-            "title": "10-Year Guarantee",
-            "value": "FREE"
+            "title": "Guarantee",
+            "value": "($29)"
           }
         },
         "acc_benefits": {
           "type": "accordion",
           "settings": {
             "title": "Benefits",
-            "content": "<p>Experience immediate relief with our ergonomic movement support.</p>"
+            "content": "<p>Experience immediate relief with our ergonomic movement support. The VELO Chair is designed to keep your body active while you sit, preventing the stiffness and fatigue associated with traditional office chairs.</p>"
           }
         },
         "acc_specs": {
           "type": "accordion",
           "settings": {
             "title": "Specifications",
-            "content": "<ul><li><strong>Base:</strong> Reinforced steel</li><li><strong>Cushion:</strong> 12cm High-density foam</li><li><strong>Warranty:</strong> 10 Years</li></ul>"
+            "content": "<ul><li><strong>Base:</strong> Reinforced industrial steel</li><li><strong>Cushion:</strong> 12cm High-density open-cell foam</li><li><strong>Weight Capacity:</strong> 300 lbs</li><li><strong>Warranty:</strong> 10 Years</li></ul>"
           }
         }
       },
@@ -46,6 +54,7 @@
         "gift_1",
         "gift_2",
         "gift_3",
+        "gift_4",
         "acc_benefits",
         "acc_specs"
       ],
@@ -59,13 +68,13 @@
         "compare_price_fallback": "$600.00",
         "price_fallback": "$397.00",
         "save_amount_fallback": "$203",
-        "trust_note": "Only available at [shop_name]",
+        "trust_note": "Only available at velochair.com",
         "hero_desc": "The only chair that supports your body's natural need for movement - working with your body, not against it.",
         "bullet_1": "Energy: Prevents all-day sitting fatigue",
         "bullet_2": "Focus: Boosts concentration and clarity",
         "bullet_3": "Productivity: Increases daily work output",
         "gifts_heading": "Limited Sale! Unlock FREE Gifts With Your Order",
-        "urgency_text": "Order by February 21st for guaranteed FREE Gifts",
+        "urgency_text": "Order by [date] for guaranteed FREE Gifts",
         "atc_text": "ADD TO CART +",
         "trust_1": "Ships Today",
         "trust_2": "90-Day Easy Returns",
@@ -87,8 +96,8 @@
           "type": "trust",
           "settings": {
             "icon": "refresh",
-            "title": "90-Day Sleep Trial",
-            "subtitle": "Sleep on it first"
+            "title": "90-Day Easy Trial",
+            "subtitle": "Sit on it first"
           }
         },
         "t3": {
@@ -160,45 +169,6 @@
         "subtitle": "The VELO Chair supports your natural need to move and adjust, keeping you focused and preventing fatigue."
       }
     },
-    "velo_features": {
-      "type": "velo-feature-grid",
-      "blocks": {
-        "card_1": {
-          "type": "card",
-          "settings": {
-            "icon": "brain",
-            "title": "ADHD & Focus",
-            "text": "<p>Movement boosts cognitive function and helps maintain focus.</p>"
-          }
-        },
-        "card_2": {
-          "type": "card",
-          "settings": {
-            "icon": "sparkles",
-            "title": "Creatives",
-            "text": "<p>Dynamic positions spark creativity and reduce physical stiffness.</p>"
-          }
-        },
-        "card_3": {
-          "type": "card",
-          "settings": {
-            "icon": "monitor",
-            "title": "Remote Workers",
-            "text": "<p>Evolve your workspace with a chair that moves as much as you do.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "card_1",
-        "card_2",
-        "card_3"
-      ],
-      "settings": {
-        "heading": "Who is the VELO Freedom Chair For?",
-        "subheading": "Designed for the modern dynamic professional",
-        "columns": "3"
-      }
-    },
     "velo_how_to": {
       "type": "velo-how-to-steps",
       "blocks": {
@@ -231,6 +201,45 @@
       ],
       "settings": {
         "heading": "How to Use The VELO Freedom Chair"
+      }
+    },
+    "velo_features": {
+      "type": "velo-feature-grid",
+      "blocks": {
+        "card_1": {
+          "type": "card",
+          "settings": {
+            "icon": "brain",
+            "title": "Boosted Focus",
+            "text": "<p>Active sitting keeps your brain engaged and reduces afternoon slumps.</p>"
+          }
+        },
+        "card_2": {
+          "type": "card",
+          "settings": {
+            "icon": "move",
+            "title": "360° Freedom",
+            "text": "<p>Effortlessly transition between any position your body naturally desires.</p>"
+          }
+        },
+        "card_3": {
+          "type": "card",
+          "settings": {
+            "icon": "shield",
+            "title": "Pain Prevention",
+            "text": "<p>Specifically engineered to alleviate lower back and hip pressure points.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "card_1",
+        "card_2",
+        "card_3"
+      ],
+      "settings": {
+        "heading": "Engineered for Movement",
+        "subheading": "Real health benefits for every professional",
+        "columns": "3"
       }
     },
     "velo_details": {
@@ -289,32 +298,6 @@
       ],
       "settings": {}
     },
-    "velo_comparison": {
-      "type": "velo-comparison",
-      "blocks": {
-        "feat_1": {
-          "type": "feature",
-          "settings": {
-            "title": "Movement Support",
-            "description": "Enables 360-degree freedom of movement."
-          }
-        },
-        "feat_2": {
-          "type": "feature",
-          "settings": {
-            "title": "Active Sitting",
-            "description": "Engages core muscles and improves circulation."
-          }
-        }
-      },
-      "block_order": [
-        "feat_1",
-        "feat_2"
-      ],
-      "settings": {
-        "heading": "What Makes Us Different"
-      }
-    },
     "velo_testimonials": {
       "type": "velo-testimonials",
       "blocks": {
@@ -346,6 +329,32 @@
         "t3"
       ],
       "settings": {}
+    },
+    "velo_comparison": {
+      "type": "velo-comparison",
+      "blocks": {
+        "feat_1": {
+          "type": "feature",
+          "settings": {
+            "title": "Movement Support",
+            "description": "Enables 360-degree freedom of movement."
+          }
+        },
+        "feat_2": {
+          "type": "feature",
+          "settings": {
+            "title": "Active Sitting",
+            "description": "Engages core muscles and improves circulation."
+          }
+        }
+      },
+      "block_order": [
+        "feat_1",
+        "feat_2"
+      ],
+      "settings": {
+        "heading": "What Makes Us Different"
+      }
     },
     "velo_included": {
       "type": "velo-whats-included",
@@ -405,8 +414,8 @@
     "velo_hero",
     "velo_trust",
     "velo_hero_banner",
-    "velo_features",
     "velo_how_to",
+    "velo_features",
     "velo_details",
     "velo_comparison",
     "velo_testimonials",
