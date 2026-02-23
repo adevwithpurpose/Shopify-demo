@@ -1,6 +1,7 @@
 {{ 'velo-product-hero.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'velo-product-hero.js' | asset_url }}" defer="defer"></script>
 
-{%- assign current_product = section.settings.product -%}
+{%- assign current_product = section.settings.product | default: product -%}
 
 <div class="velo-hero-wrapper">
   <div class="velo-hero-container page-width">
@@ -136,20 +137,20 @@
           <ul class="velo-bullets">
             {% if section.settings.bullet_1 != blank %}
               <li>
-                {% render 'velo-icons', icon: 'check' %}
-                {{ section.settings.bullet_1 | replace: ':', ':</strong>' | prepend: '<strong>' }}
+                <div class="velo-bullet-check">{% render 'velo-icons', icon: 'check' %}</div>
+                <span>{{ section.settings.bullet_1 }}</span>
               </li>
             {% endif %}
             {% if section.settings.bullet_2 != blank %}
               <li>
-                {% render 'velo-icons', icon: 'check' %}
-                {{ section.settings.bullet_2 | replace: ':', ':</strong>' | prepend: '<strong>' }}
+                <div class="velo-bullet-check">{% render 'velo-icons', icon: 'check' %}</div>
+                <span>{{ section.settings.bullet_2 }}</span>
               </li>
             {% endif %}
             {% if section.settings.bullet_3 != blank %}
               <li>
-                {% render 'velo-icons', icon: 'check' %}
-                {{ section.settings.bullet_3 | replace: ':', ':</strong>' | prepend: '<strong>' }}
+                <div class="velo-bullet-check">{% render 'velo-icons', icon: 'check' %}</div>
+                <span>{{ section.settings.bullet_3 }}</span>
               </li>
             {% endif %}
           </ul>
@@ -218,9 +219,10 @@
 
             <!-- Urgency Banner -->
             {% if section.settings.urgency_text != blank %}
+              {%- assign today_date = 'now' | date: "%B %d" -%}
               <div class="velo-urgency">
                 <span class="velo-urgency-dot"></span>
-                <span>{{ section.settings.urgency_text | replace: '[date]', 'now' | date: "%B %d" }}</span>
+                <span>{{ section.settings.urgency_text | replace: '[date]', today_date }}</span>
               </div>
             {% endif %}
 
@@ -503,11 +505,26 @@
           "label": "Icon",
           "options": [
             { "value": "none", "label": "None" },
-            { "value": "package", "label": "Package" },
             { "value": "truck", "label": "Truck" },
-            { "value": "shield", "label": "Shield" },
+            { "value": "package", "label": "Package" },
+            { "value": "refresh", "label": "Returns / Refresh" },
+            { "value": "shield", "label": "Shield / Guarantee" },
             { "value": "star", "label": "Star" },
-            { "value": "monitor", "label": "Monitor" }
+            { "value": "thermometer", "label": "Temperature" },
+            { "value": "bandage", "label": "Relief / Bandage" },
+            { "value": "bed", "label": "Bed / Sleep" },
+            { "value": "palette", "label": "Palette / Creative" },
+            { "value": "sparkles", "label": "Sparkles / New" },
+            { "value": "move", "label": "Move / Arrows" },
+            { "value": "brain", "label": "Brain / Focus" },
+            { "value": "monitor", "label": "Monitor / Desk" },
+            { "value": "check", "label": "Check" },
+            { "value": "lock", "label": "Lock / Secure" },
+            { "value": "gift", "label": "Gift" },
+            { "value": "mouse", "label": "Mouse Pad" },
+            { "value": "mat", "label": "Chair Mat" },
+            { "value": "clock", "label": "Clock / Speed" },
+            { "value": "sliders", "label": "Sliders / Settings" }
           ],
           "default": "package"
         },

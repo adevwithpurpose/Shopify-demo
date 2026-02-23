@@ -126,21 +126,25 @@
 
         <!-- Annotations -->
         {% if section.settings.annotation_1 != blank %}
-          <div class="velo-inc-anno velo-inc-anno--1">
+          <div class="velo-inc-anno velo-inc-anno--1" style="top: {{ section.settings.anno_1_top }}%; left: {{ section.settings.anno_1_left }}%;">
             <span class="velo-inc-anno-text">{{ section.settings.annotation_1 }}</span>
-            <svg class="velo-inc-anno-arrow" width="40" height="40" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M10,10 Q50,90 90,80" fill="none" stroke="currentColor" stroke-width="2" marker-end="url(#arrowhead)"/></svg>
+            <svg class="velo-inc-anno-arrow" width="50" height="50" viewBox="0 0 50 50" style="transform: rotate({{ section.settings.anno_1_rotate }}deg);">
+              <path d="M10,5 Q25,10 30,40" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" marker-end="url(#arrowhead)"/>
+            </svg>
           </div>
         {% endif %}
         {% if section.settings.annotation_2 != blank %}
-          <div class="velo-inc-anno velo-inc-anno--2">
+          <div class="velo-inc-anno velo-inc-anno--2" style="top: {{ section.settings.anno_2_top }}%; left: {{ section.settings.anno_2_left }}%;">
             <span class="velo-inc-anno-text">{{ section.settings.annotation_2 }}</span>
-            <svg class="velo-inc-anno-arrow" width="40" height="40" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M10,10 Q50,90 90,80" fill="none" stroke="currentColor" stroke-width="2" marker-end="url(#arrowhead)"/></svg>
+            <svg class="velo-inc-anno-arrow" width="50" height="50" viewBox="0 0 50 50" style="transform: rotate({{ section.settings.anno_2_rotate }}deg);">
+              <path d="M40,5 Q25,10 20,40" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" marker-end="url(#arrowhead)"/>
+            </svg>
           </div>
         {% endif %}
 
         <svg style="width:0;height:0;position:absolute;" aria-hidden="true" focusable="false">
           <defs>
-            <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+            <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
               <polygon points="0 0, 10 3.5, 0 7" fill="currentColor" />
             </marker>
           </defs>
@@ -272,10 +276,70 @@
       "default": "FREE Mouse Pad"
     },
     {
+      "type": "range",
+      "id": "anno_1_top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "label": "Anno 1 Top Position",
+      "default": 25
+    },
+    {
+      "type": "range",
+      "id": "anno_1_left",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "label": "Anno 1 Left Position",
+      "default": 15
+    },
+    {
+      "type": "range",
+      "id": "anno_1_rotate",
+      "min": 0,
+      "max": 360,
+      "step": 5,
+      "unit": "deg",
+      "label": "Anno 1 Rotation",
+      "default": 0
+    },
+    {
       "type": "text",
       "id": "annotation_2",
       "label": "Annotation 2 Text",
       "default": "FREE Chair Mat"
+    },
+    {
+      "type": "range",
+      "id": "anno_2_top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "label": "Anno 2 Top Position",
+      "default": 65
+    },
+    {
+      "type": "range",
+      "id": "anno_2_left",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "label": "Anno 2 Left Position",
+      "default": 70
+    },
+    {
+      "type": "range",
+      "id": "anno_2_rotate",
+      "min": 0,
+      "max": 360,
+      "step": 5,
+      "unit": "deg",
+      "label": "Anno 2 Rotation",
+      "default": 0
     }
   ],
   "blocks": [

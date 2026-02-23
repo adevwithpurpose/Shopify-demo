@@ -10,16 +10,30 @@
 
 .velo-steps-heading {
     font-family: 'Jost', sans-serif !important;
-    font-size: 3.2rem;
-    font-weight: 700 !important;
+    font-size: 5.2rem;
+    font-weight: 300 !important;
+    line-height: 1.1;
     color: var(--velo-navy, #122442);
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
+    letter-spacing: -0.01em;
+}
+
+.velo-steps-heading strong {
+    font-weight: 800 !important;
+    display: block;
+}
+
+.velo-steps-subheading {
+    font-size: 1.6rem;
+    color: #666;
+    margin-bottom: 3rem;
+    font-weight: 500;
 }
 
 .velo-steps-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 3rem;
+    gap: 4rem;
 }
 
 .velo-step-card {

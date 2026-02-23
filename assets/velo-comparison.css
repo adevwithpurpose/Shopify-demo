@@ -1,142 +1,141 @@
-/* VELO Feature List (Built for How Your Body Works) */
-:root {
-    --velo-navy: #122442;
-    --velo-text: #555;
-    --velo-gray-light: #F4F6F8;
-    --velo-gray-border: #E5E5E5;
+.velo-comparison-section {
+    padding: 0;
+    font-family: 'Jost', sans-serif !important;
+    overflow: hidden;
 }
 
-.velo-comparison-section {
-    padding: 8rem 0;
-    font-family: var(--font-body-family), sans-serif;
-    font-size: 1.6rem;
-    background: var(--velo-gray-light);
+.velo-comp--full .page-width {
+    padding: 0;
+    max-width: none;
+    margin: 0;
 }
 
 .velo-comp-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 3rem;
-    align-items: center;
+    display: flex;
+    flex-direction: column;
 }
 
 @media screen and (min-width: 990px) {
     .velo-comp-grid {
-        grid-template-columns: 45% 55%;
-        gap: 5rem;
+        flex-direction: row;
+        min-height: 80vh;
+    }
+
+    .velo-comp-grid--right {
+        flex-direction: row-reverse;
     }
 }
 
+.velo-comp-media-col,
 .velo-comp-text-col {
-    order: 2;
-}
-
-@media screen and (min-width: 990px) {
-    .velo-comp-text-col {
-        order: 1;
-        /* Left side on desktop */
-    }
-}
-
-.velo-comp-heading {
-    font-size: 3.2rem;
-    font-weight: 700 !important;
-    line-height: 1.1;
-    color: var(--velo-navy);
-    font-family: 'Jost', sans-serif !important;
-    margin: 0 0 4rem 0;
-}
-
-@media screen and (max-width: 749px) {
-    .velo-comp-heading {
-        font-size: 2rem;
-        margin-bottom: 2rem;
-    }
-}
-
-.velo-comp-features {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-}
-
-.velo-comp-feature {
-    display: flex;
-    align-items: flex-start;
-    gap: 1.5rem;
-}
-
-.velo-comp-icon-wrapper {
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    border: 1px dashed #A0AEC0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-    background: #fff;
-    color: var(--velo-navy);
-}
-
-.velo-comp-svg svg {
-    width: 24px;
-    height: 24px;
-    display: block;
-}
-
-.velo-comp-icon {
-    font-size: 1.5rem;
-}
-
-.velo-comp-feature-content {
     flex: 1;
-}
-
-.velo-comp-feature-title {
-    font-size: 1.8rem;
-    font-weight: 700 !important;
-    color: var(--velo-navy);
-    margin: 0 0 0.5rem 0;
-    font-family: 'Jost', sans-serif !important;
-}
-
-.velo-comp-feature-desc {
-    font-size: 1.6rem;
-    color: var(--velo-text);
-    margin: 0;
-    line-height: 1.6;
+    position: relative;
+    overflow: hidden;
 }
 
 .velo-comp-media-col {
-    order: 1;
-}
-
-@media screen and (min-width: 990px) {
-    .velo-comp-media-col {
-        order: 2;
-        /* Right side on desktop */
-    }
+    background: #E5E5E5;
+    min-height: 400px;
 }
 
 .velo-comp-image {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
     display: block;
-    border-radius: 8px;
-    /* Optional slight rounding to match velo overall aesthetic */
 }
 
-.velo-comp-placeholder {
-    width: 100%;
-    background: #f0f0f0;
-    border-radius: 8px;
+.velo-comp-text-col {
+    background: var(--velo-navy, #122442);
+    color: #fff;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 4rem;
+    padding: 6rem 4rem;
 }
 
-.velo-comp-placeholder svg {
-    opacity: 0.3;
+@media screen and (min-width: 990px) {
+    .velo-comp-text-col {
+        padding: 8rem 6rem;
+    }
+}
+
+.velo-comp-content-inner {
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+}
+
+.velo-comp-heading {
+    font-size: 4.8rem;
+    line-height: 1.1;
+    margin-bottom: 2rem;
+    color: #fff !important;
+}
+
+.velo-comp-heading .velo-comp-light {
+    font-weight: 300;
+    display: block;
+    font-size: 3.6rem;
+}
+
+.velo-comp-heading strong {
+    font-weight: 800;
+    display: block;
+}
+
+@media screen and (max-width: 749px) {
+    .velo-comp-heading {
+        font-size: 3.2rem;
+    }
+
+    .velo-comp-heading .velo-comp-light {
+        font-size: 2.4rem;
+    }
+}
+
+.velo-comp-subheading {
+    font-size: 1.6rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 4rem;
+    line-height: 1.5;
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.velo-comp-features-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+    justify-content: center;
+}
+
+.velo-comp-tag {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 0.8rem 1.6rem;
+    border-radius: 50px;
+    font-size: 1.4rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+}
+
+.velo-comp-tag:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+    border-color: #fff;
+}
+
+.velo-tag-check {
+    color: #fff;
+    opacity: 0.8;
+}
+
+.velo-comp-placeholder {
+    height: 100%;
 }

@@ -1,7 +1,7 @@
 {{ 'velo-details-grid.css' | asset_url | stylesheet_tag }}
 
 <div class="velo-details-section">
-  <div class="page-width">
+  <div class="{% unless section.settings.full_width %}page-width{% endunless %}">
     <div class="velo-det-header velo-reveal">
       <h2 class="velo-det-heading">
         {{ section.settings.heading_light | default: 'Designed' }}<br>
@@ -13,52 +13,10 @@
     </div>
 
     <div class="velo-det-layout">
-      <!-- Left column cards -->
-      <div class="velo-det-col velo-det-col--left">
-        {%- assign left_blocks = section.blocks | where: 'type', 'detail' -%}
-        {% for block in left_blocks %}
-          {% if forloop.index <= 3 %}
-            <div class="velo-det-card velo-reveal velo-reveal-delay-{{ forloop.index | at_most: 3 }}" {{ block.shopify_attributes }}>
-              <div class="velo-det-card-icon-wrap">
-                {% render 'velo-icons', icon: block.settings.icon %}
-              </div>
-              <div class="velo-det-card-body">
-                <h3 class="velo-det-card-title">{{ block.settings.title }}</h3>
-                {% if block.settings.description != blank %}
-                  <p class="velo-det-card-desc">{{ block.settings.description }}</p>
-                {% endif %}
-              </div>
-            </div>
-          {% endif %}
-        {% endfor %}
-      </div>
-
-      <!-- Center product image -->
-      <div class="velo-det-center-image velo-reveal">
-        <div class="velo-det-image-bubble">
-          {% if section.settings.product_image != blank %}
-            <img
-              src="{{ section.settings.product_image | image_url: width: 600 }}"
-              alt="{{ section.settings.product_image.alt | default: 'VELO Chair detail' }}"
-              width="600"
-              loading="lazy"
-            />
-          {% else %}
-            <img
-              src="https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
-              alt="VELO Freedom Chair"
-              width="600"
-              loading="lazy"
-            />
-          {% endif %}
-        </div>
-      </div>
-
-      <!-- Right column cards -->
-      <div class="velo-det-col velo-det-col--right">
-        {% for block in left_blocks %}
-          {% if forloop.index > 3 %}
-            <div class="velo-det-card velo-reveal velo-reveal-delay-{{ forloop.index | minus: 3 | at_most: 3 }}" {{ block.shopify_attributes }}>
+      <div class="velo-det-grid">
+        {% for block in section.blocks %}
+          {% if block.type == 'detail' %}
+            <div class="velo-det-card velo-reveal velo-reveal-delay-{{ forloop.index | modulo: 4 | plus: 1 }}" {{ block.shopify_attributes }}>
               <div class="velo-det-card-icon-wrap">
                 {% render 'velo-icons', icon: block.settings.icon %}
               </div>
@@ -101,6 +59,12 @@
       "default": "Smart features, comfort-focused materials, and maximum adjustability"
     },
     {
+      "type": "checkbox",
+      "id": "full_width",
+      "label": "Full width",
+      "default": false
+    },
+    {
       "type": "image_picker",
       "id": "product_image",
       "label": "Center Product Image"
@@ -117,16 +81,26 @@
           "label": "Icon",
           "options": [
             { "value": "none", "label": "None" },
-            { "value": "move", "label": "Move" },
-            { "value": "check", "label": "Check" },
-            { "value": "thermometer", "label": "Temperature" },
-            { "value": "sliders", "label": "Sliders (Adjustable)" },
-            { "value": "shield", "label": "Shield" },
-            { "value": "star", "label": "Star" },
-            { "value": "refresh", "label": "Rotate" },
-            { "value": "lock", "label": "Lock" },
+            { "value": "truck", "label": "Truck" },
             { "value": "package", "label": "Package" },
-            { "value": "truck", "label": "Truck" }
+            { "value": "refresh", "label": "Returns / Refresh" },
+            { "value": "shield", "label": "Shield / Guarantee" },
+            { "value": "star", "label": "Star" },
+            { "value": "thermometer", "label": "Temperature" },
+            { "value": "bandage", "label": "Relief / Bandage" },
+            { "value": "bed", "label": "Bed / Sleep" },
+            { "value": "palette", "label": "Palette / Creative" },
+            { "value": "sparkles", "label": "Sparkles / New" },
+            { "value": "move", "label": "Move / Arrows" },
+            { "value": "brain", "label": "Brain / Focus" },
+            { "value": "monitor", "label": "Monitor / Desk" },
+            { "value": "check", "label": "Check" },
+            { "value": "lock", "label": "Lock / Secure" },
+            { "value": "gift", "label": "Gift" },
+            { "value": "mouse", "label": "Mouse Pad" },
+            { "value": "mat", "label": "Chair Mat" },
+            { "value": "clock", "label": "Clock / Speed" },
+            { "value": "sliders", "label": "Sliders / Settings" }
           ],
           "default": "move"
         },

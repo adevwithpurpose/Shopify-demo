@@ -16,9 +16,12 @@
 
 <div class="velo-feature-grid-section section-{{ section.id }}-padding color-{{ section.settings.color_scheme }} gradient">
   <div class="page-width">
-    {% if section.settings.heading != blank %}
+    {% if section.settings.heading_bold != blank or section.settings.heading_light != blank %}
       <div class="velo-fg-header velo-reveal">
-        <h2 class="velo-fg-heading">{{ section.settings.heading }}</h2>
+        <h2 class="velo-fg-heading">
+          {{ section.settings.heading_light }}
+          <strong>{{ section.settings.heading_bold }}</strong>
+        </h2>
         {% if section.settings.subheading != blank %}
           <p class="velo-fg-subheading">{{ section.settings.subheading }}</p>
         {% endif %}
@@ -99,9 +102,15 @@
     },
     {
       "type": "text",
-      "id": "heading",
-      "label": "Heading",
-      "default": "Who VELO Is For?"
+      "id": "heading_light",
+      "label": "Heading (light)",
+      "default": "Who"
+    },
+    {
+      "type": "text",
+      "id": "heading_bold",
+      "label": "Heading (bold)",
+      "default": "KÖVA Is For?"
     },
     {
       "type": "text",
@@ -131,12 +140,26 @@
           "label": "Icon",
           "options": [
             { "value": "none", "label": "None" },
-            { "value": "monitor", "label": "Monitor" },
-            { "value": "palette", "label": "Palette" },
-            { "value": "move", "label": "Move" },
-            { "value": "brain", "label": "Brain" },
-            { "value": "bandage", "label": "Bandage" },
-            { "value": "sparkles", "label": "Sparkles" }
+            { "value": "truck", "label": "Truck" },
+            { "value": "package", "label": "Package" },
+            { "value": "refresh", "label": "Returns / Refresh" },
+            { "value": "shield", "label": "Shield / Guarantee" },
+            { "value": "star", "label": "Star" },
+            { "value": "thermometer", "label": "Temperature" },
+            { "value": "bandage", "label": "Relief / Bandage" },
+            { "value": "bed", "label": "Bed / Sleep" },
+            { "value": "palette", "label": "Palette / Creative" },
+            { "value": "sparkles", "label": "Sparkles / New" },
+            { "value": "move", "label": "Move / Arrows" },
+            { "value": "brain", "label": "Brain / Focus" },
+            { "value": "monitor", "label": "Monitor / Desk" },
+            { "value": "check", "label": "Check" },
+            { "value": "lock", "label": "Lock / Secure" },
+            { "value": "gift", "label": "Gift" },
+            { "value": "mouse", "label": "Mouse Pad" },
+            { "value": "mat", "label": "Chair Mat" },
+            { "value": "clock", "label": "Clock / Speed" },
+            { "value": "sliders", "label": "Sliders / Settings" }
           ],
           "default": "monitor"
         },

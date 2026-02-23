@@ -9,8 +9,7 @@
           "type": "announcement",
           "settings": {
             "text": "FREE U.S. Shipping",
-            "text_alignment": "center",
-            "color_scheme": "scheme-4",
+            "icon": "truck",
             "link": ""
           }
         },
@@ -18,8 +17,7 @@
           "type": "announcement",
           "settings": {
             "text": "90-Day Easy Returns",
-            "text_alignment": "center",
-            "color_scheme": "scheme-4",
+            "icon": "refresh",
             "link": ""
           }
         },
@@ -27,8 +25,7 @@
           "type": "announcement",
           "settings": {
             "text": "3-Year Warranty",
-            "text_alignment": "center",
-            "color_scheme": "scheme-4",
+            "icon": "shield",
             "link": ""
           }
         },
@@ -36,8 +33,7 @@
           "type": "announcement",
           "settings": {
             "text": "FREE Limited Time Gifts",
-            "text_alignment": "center",
-            "color_scheme": "scheme-4",
+            "icon": "gift",
             "link": ""
           }
         }
@@ -49,9 +45,10 @@
         "announcement-4"
       ],
       "settings": {
+        "layout": "static",
         "color_scheme": "scheme-4",
         "auto_rotate": true,
-        "auto_rotate_speed": 5
+        "change_slides_speed": 5
       }
     },
     "header": {
@@ -61,7 +58,7 @@
         "logo_position": "middle-center",
         "menu": "main-menu",
         "menu_type_desktop": "dropdown",
-        "sticky_header_type": "on-scroll-up",
+        "sticky_header_type": "always",
         "show_line_separator": true,
         "enable_country_selector": false,
         "enable_language_selector": false,

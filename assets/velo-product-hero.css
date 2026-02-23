@@ -237,32 +237,37 @@
 .velo-bullets {
     list-style: none;
     padding: 0;
-    margin: 1rem 0;
+    margin: 1.5rem 0 2rem;
     display: flex;
     flex-direction: column;
-    gap: 0.75rem;
+    gap: 1rem;
 }
 
 .velo-bullets li {
     display: flex;
     align-items: center;
-    gap: 1.2rem;
-    font-size: 1.7rem;
-    font-weight: 700;
+    gap: 1.25rem;
+    font-size: 1.6rem;
+    font-weight: 500;
     color: var(--velo-navy);
 }
 
-.velo-check-icon {
+.velo-bullet-check {
     flex-shrink: 0;
-    color: var(--velo-navy);
+    width: 22px;
+    height: 22px;
+    background: var(--velo-navy);
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.velo-check-icon circle {
-    fill: var(--velo-navy);
-}
-
-.velo-check-icon path {
-    stroke: #fff;
+.velo-bullet-check svg {
+    width: 12px;
+    height: 12px;
+    stroke-width: 4;
 }
 
 /* ---- Variants ---- */
@@ -344,7 +349,13 @@
 .velo-gifts-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 0.5rem;
+    gap: 1rem;
+}
+
+@media screen and (max-width: 480px) {
+    .velo-gifts-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 .velo-gift-card {

@@ -240,60 +240,70 @@
 /* Starburst badge */
 .velo-inc-starburst {
     position: absolute;
-    top: 8%;
+    top: 5%;
     right: 5%;
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
     background: var(--velo-navy);
     color: #fff;
-    font-size: 1rem;
-    font-weight: 700;
+    font-size: 1.1rem;
+    font-weight: 800;
     text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 1rem;
-    line-height: 1.3;
+    padding: 1.5rem;
+    line-height: 1.2;
     border-radius: 50%;
-    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    z-index: 5;
+    text-transform: uppercase;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    clip-path: polygon(50% 0%, 63% 38%, 100% 35%, 75% 60%, 85% 100%, 50% 80%, 15% 100%, 25% 60%, 0% 35%, 37% 38%);
 }
 
 /* Annotations */
 .velo-inc-anno {
     position: absolute;
-    color: var(--velo-navy);
-    font-family: 'Mulish', sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
     pointer-events: none;
-    z-index: 2;
-}
-
-.velo-inc-anno--1 {
-    top: 25%;
-    left: 10%;
+    z-index: 10;
+    animation: velo-float 3s ease-in-out infinite;
 }
 
 .velo-inc-anno--2 {
-    bottom: 25%;
-    right: 15%;
+    animation-delay: 1.5s;
+}
+
+@keyframes velo-float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
 }
 
 .velo-inc-anno-text {
-    font-size: 1.2rem;
-    font-weight: 700;
+    font-size: 1.3rem;
+    font-weight: 800;
     color: var(--velo-navy);
-    background: rgba(255, 255, 255, 0.9);
-    padding: 4px 10px;
-    border-radius: 4px;
-    border: 1px solid #eee;
-    margin-bottom: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    background: #fff;
+    padding: 6px 14px;
+    border-radius: 50px;
+    border: 2px solid var(--velo-navy);
+    white-space: nowrap;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .velo-inc-anno-arrow {
-    color: #333;
+    color: var(--velo-navy);
+    opacity: 0.8;
+    margin-top: -5px;
 }
 
 /* Responsive */

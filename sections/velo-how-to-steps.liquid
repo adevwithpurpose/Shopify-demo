@@ -15,10 +15,13 @@
 {%- endstyle -%}
 
 <div class="velo-steps-section section-{{ section.id }}-padding color-{{ section.settings.color_scheme }} gradient">
-  <div class="page-width">
-    {% if section.settings.heading != blank %}
+  <div class="{% unless section.settings.full_width %}page-width{% endunless %}">
+    {% if section.settings.heading_bold != blank or section.settings.heading_light != blank %}
       <div class="velo-steps-header velo-reveal">
-        <h2 class="velo-steps-heading">{{ section.settings.heading }}</h2>
+        <h2 class="velo-steps-heading">
+          {{ section.settings.heading_light }}<br>
+          <strong>{{ section.settings.heading_bold }}</strong>
+        </h2>
         {% if section.settings.subheading != blank %}
           <div class="velo-steps-subheading">{{ section.settings.subheading }}</div>
         {% endif %}
@@ -38,7 +41,15 @@
                 height="450"
               >
             {% else %}
-               <img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Demo Step" width="600" height="450" />
+               {%- capture placeholder_url -%}
+                 {%- case forloop.index -%}
+                   {%- when 1 -%}https://images.unsplash.com/photo-1593062096033-9a26b09da705?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80
+                   {%- when 2 -%}https://images.unsplash.com/photo-1524758631624-e2822e304c36?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80
+                   {%- when 3 -%}https://images.unsplash.com/photo-1497215728101-856f4ea42174?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80
+                   {%- else -%}https://images.unsplash.com/photo-1540518614846-7eded433c457?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80
+                 {%- endcase -%}
+               {%- endcapture -%}
+               <img src="{{ placeholder_url | strip }}" alt="Demo Step {{ forloop.index }}" width="600" height="450" />
             {% endif %}
           </div>
           <div class="velo-step-content">
@@ -72,15 +83,27 @@
     },
     {
       "type": "text",
-      "id": "heading",
-      "label": "Heading",
-      "default": "How to Use The VELO Freedom Chair"
+      "id": "heading_light",
+      "label": "Heading (light)",
+      "default": "How to Use The"
+    },
+    {
+      "type": "text",
+      "id": "heading_bold",
+      "label": "Heading (bold)",
+      "default": "VELO Freedom Chair"
     },
     {
       "type": "text",
       "id": "subheading",
       "label": "Subheading",
       "default": "VELO effortlessly adapts to your changing postures."
+    },
+    {
+      "type": "checkbox",
+      "id": "full_width",
+      "label": "Full width",
+      "default": false
     },
     {
       "type": "header",
