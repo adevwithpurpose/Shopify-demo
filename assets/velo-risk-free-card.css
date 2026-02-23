@@ -114,3 +114,19 @@
         gap: 1.2rem;
     }
 }
+
+.velo-risk-social-proof {
+    text-align: center;
+    font-size: 1.4rem;
+    color: #666;
+    margin-top: 2rem;
+    font-weight: 500;
+    opacity: 0.8;
+}
+
+@media screen and (max-width: 749px) {
+    .velo-risk-social-proof {
+        font-size: 1.2rem;
+        margin-top: 1.5rem;
+    }
+}

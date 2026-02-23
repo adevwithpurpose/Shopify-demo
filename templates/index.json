@@ -146,8 +146,8 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "One Chair = <strong>Endless Positions</strong>",
-            "heading_size": "h2"
+            "heading_light": "One Chair =",
+            "heading_bold": "Endless Positions"
           }
         },
         "text": {
@@ -163,9 +163,8 @@
       ],
       "settings": {
         "color_scheme": "scheme-1",
-        "full_width": true,
-        "padding_top": 64,
-        "padding_bottom": 16
+        "padding_top": 80,
+        "padding_bottom": 40
       }
     },
     "velo_features": {
@@ -546,9 +545,9 @@
   "order": [
     "velo_hero",
     "velo_risk_free",
+    "velo_rich_text",
     "velo_trust",
     "velo_features",
-    "velo_rich_text",
     "velo_body_built",
     "velo_comparison",
     "velo_how_to",

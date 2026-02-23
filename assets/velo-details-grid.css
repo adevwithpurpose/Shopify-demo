@@ -19,18 +19,20 @@
 }
 
 .velo-det-heading {
-    font-size: 5.2rem;
-    font-weight: 300;
-    line-height: 1.1;
-    color: var(--velo-navy);
-    font-family: var(--font-heading-family), 'Jost', sans-serif;
+    font-size: 6.4rem;
+    font-weight: 800;
+    line-height: 1.05;
+    color: var(--velo-navy, #122442);
+    font-family: 'Jost', sans-serif !important;
     margin: 0 0 1.5rem 0;
-    letter-spacing: -0.01em;
+    letter-spacing: -0.02em;
 }
 
-.velo-det-heading strong {
-    font-weight: 800;
+.velo-det-heading span {
+    font-weight: 300;
     display: block;
+    font-size: 3.6rem;
+    margin-bottom: 0.5rem;
 }
 
 .velo-det-subheading {

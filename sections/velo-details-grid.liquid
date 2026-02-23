@@ -4,7 +4,7 @@
   <div class="{% unless section.settings.full_width %}page-width{% endunless %}">
     <div class="velo-det-header velo-reveal">
       <h2 class="velo-det-heading">
-        {{ section.settings.heading_light | default: 'Designed' }}<br>
+        <span>{{ section.settings.heading_light | default: 'Designed' }}</span>
         <strong>{{ section.settings.heading_bold | default: 'Down to Every Detail' }}</strong>
       </h2>
       {% if section.settings.subheading != blank %}
