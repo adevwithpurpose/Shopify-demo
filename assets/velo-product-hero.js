@@ -101,7 +101,9 @@
                     if (atcBtn) {
                         if (matchedVariant.available) {
                             atcBtn.disabled = false;
-                            atcBtn.querySelector('.velo-atc-price').style.display = '';
+                            if (atcBtn.querySelector('.velo-atc-price')) {
+                                atcBtn.querySelector('.velo-atc-price').style.display = '';
+                            }
                         } else {
                             atcBtn.disabled = true;
                             atcBtn.textContent = 'Sold Out';
