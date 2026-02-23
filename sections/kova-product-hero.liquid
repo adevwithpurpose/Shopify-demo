@@ -38,13 +38,17 @@
           {% endfor %}
         </div>
       {% else %}
-        <!-- Placeholder images when no product selected -->
+        <!-- Placeholder images when no product selected (Demo Setup) -->
         <div class="kova-media-grid">
-          {% for i in (1..4) %}
-            <div class="kova-media-item kova-media-placeholder">
-              {{ 'product-' | append: i | placeholder_svg_tag: 'placeholder-svg' }}
-            </div>
-          {% endfor %}
+          <div class="kova-media-item kova-media-item--featured">
+            <img src="https://images.unsplash.com/photo-1505693314120-0d443867891c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Mattress Topper 1" width="800" height="800" loading="eager" />
+          </div>
+          <div class="kova-media-item">
+            <img src="https://images.unsplash.com/photo-1631679706909-1844bbd07221?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Mattress Topper 2" width="400" height="400" loading="lazy" />
+          </div>
+          <div class="kova-media-item">
+            <img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Mattress Topper 3" width="400" height="400" loading="lazy" />
+          </div>
         </div>
       {% endif %}
     </div>
