@@ -1,18 +1,18 @@
-/* KÖVA What's Included */
+/* VELO What's Included */
 :root {
-    --kova-navy: #122442;
-    --kova-blue: #2F5AC7;
-    --kova-gray-light: #F4F6F8;
+    --velo-navy: #122442;
+    --velo-blue: #2F5AC7;
+    --velo-gray-light: #F4F6F8;
 }
 
-.kova-included-section {
+.velo-included-section {
     padding: 8rem 0;
-    background: var(--kova-gray-light);
+    background: var(--velo-gray-light);
     font-family: var(--font-body-family), sans-serif;
     font-size: 1.6rem;
 }
 
-.kova-inc-card {
+.velo-inc-card {
     max-width: 600px;
     margin: 0 auto;
     background: #fff;
@@ -21,22 +21,22 @@
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
-.kova-inc-heading {
+.velo-inc-heading {
     font-size: 3.2rem;
     font-weight: 700 !important;
     text-align: center;
     margin: 0 0 3rem 0;
-    color: var(--kova-navy);
+    color: var(--velo-navy);
     line-height: 1.1;
     font-family: 'Jost', sans-serif !important;
 }
 
-.kova-inc-list {
+.velo-inc-list {
     display: flex;
     flex-direction: column;
 }
 
-.kova-inc-item {
+.velo-inc-item {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -44,48 +44,48 @@
     border-bottom: 1px solid #f0f0f0;
 }
 
-.kova-inc-item:last-child {
+.velo-inc-item:last-child {
     border-bottom: none;
 }
 
-.kova-inc-item-left {
+.velo-inc-item-left {
     display: flex;
     align-items: center;
     gap: 0.75rem;
 }
 
-.kova-inc-icon {
+.velo-inc-icon {
     font-size: 1.5rem;
     width: 30px;
     text-align: center;
 }
 
-.kova-inc-name {
+.velo-inc-name {
     font-size: 1.6rem;
     font-weight: 600;
-    color: var(--kova-navy);
+    color: var(--velo-navy);
 }
 
-.kova-inc-item-right {
+.velo-inc-item-right {
     display: flex;
     align-items: center;
     gap: 0.75rem;
 }
 
-.kova-inc-original {
+.velo-inc-original {
     font-size: 1.4rem;
     color: #999;
     text-decoration: line-through;
 }
 
-.kova-inc-final {
+.velo-inc-final {
     font-size: 1.6rem;
     font-weight: 700;
-    color: var(--kova-navy);
+    color: var(--velo-navy);
 }
 
-.kova-inc-free {
-    background: var(--kova-blue);
+.velo-inc-free {
+    background: var(--velo-blue);
     color: #fff;
     padding: 0.3rem 0.8rem;
     border-radius: 4px;
@@ -94,36 +94,36 @@
     text-transform: uppercase;
 }
 
-.kova-inc-divider {
+.velo-inc-divider {
     height: 2px;
-    background: var(--kova-navy);
+    background: var(--velo-navy);
     margin: 1.5rem 0;
 }
 
-.kova-inc-total {
+.velo-inc-total {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0.5rem 0 1.5rem;
 }
 
-.kova-inc-total-label {
+.velo-inc-total-label {
     font-size: 1.8rem;
     font-weight: 700;
-    color: var(--kova-navy);
+    color: var(--velo-navy);
 }
 
-.kova-inc-total-price {
+.velo-inc-total-price {
     font-size: 2.6rem;
     font-weight: 800;
-    color: var(--kova-navy);
+    color: var(--velo-navy);
 }
 
-.kova-inc-cta {
+.velo-inc-cta {
     display: block;
     width: 100%;
     text-align: center;
-    background: var(--kova-navy) !important;
+    background: var(--velo-navy) !important;
     color: #fff !important;
     padding: 1.5rem 2.5rem;
     border-radius: 100px;
@@ -136,18 +136,26 @@
     font-family: 'Jost', sans-serif !important;
 }
 
-.kova-inc-cta:hover {
+.velo-inc-cta:hover {
     background: #1A335D;
     transform: translateY(-2px);
     box-shadow: 0 8px 15px rgba(18, 36, 66, 0.15);
 }
 
+/* Kill Dawn's default .button pseudo-element borders */
+.velo-inc-cta::before,
+.velo-inc-cta::after {
+    content: none !important;
+    display: none !important;
+    box-shadow: none !important;
+}
+
 @media screen and (max-width: 749px) {
-    .kova-inc-card {
+    .velo-inc-card {
         padding: 1.5rem;
     }
 
-    .kova-inc-heading {
-        font-size: 1.5rem;
+    .velo-inc-heading {
+        font-size: 2.4rem;
     }
 }

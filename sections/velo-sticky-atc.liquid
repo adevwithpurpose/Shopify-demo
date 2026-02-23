@@ -1,0 +1,56 @@
+{{ 'velo-sticky-atc.css' | asset_url | stylesheet_tag }}
+
+{%- assign product = section.settings.product | default: all_products[settings.featured_product] -%}
+
+{% if product != blank or section.settings.show_for_demo %}
+  <div class="velo-sticky-atc" id="veloStickyAtc-{{ section.id }}">
+    <div class="velo-sticky-atc-left">
+      <span class="velo-sticky-atc-name">
+        {% if product != blank %}{{ product.title }}{% else %}VELO Freedom Chair{% endif %}
+      </span>
+      <span class="velo-sticky-atc-price">
+        {% if product != blank %}{{ product.price | money }}{% else %}$397.00{% endif %}
+      </span>
+    </div>
+    <div class="velo-sticky-atc-right">
+      <button type="button" class="velo-sticky-atc-btn">
+        {{ section.settings.btn_text | default: 'ADD TO CART +' }}
+      </button>
+    </div>
+  </div>
+
+  <script src="{{ 'velo-sticky-atc.js' | asset_url }}" defer="defer"></script>
+{% endif %}
+
+{% schema %}
+{
+  "name": "VELO Sticky Mobile ATC",
+  "tag": "section",
+  "class": "velo-section-sticky",
+  "settings": [
+    {
+      "type": "product",
+      "id": "product",
+      "label": "Product to Track",
+      "info": "Leave blank to use the first product in the hero section."
+    },
+    {
+      "type": "text",
+      "id": "btn_text",
+      "label": "Button Text",
+      "default": "ADD TO CART +"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_for_demo",
+      "label": "Show even if no product selected (Demo)",
+      "default": true
+    }
+  ],
+  "presets": [
+    {
+      "name": "VELO Sticky Mobile ATC"
+    }
+  ]
+}
+{% endschema %}

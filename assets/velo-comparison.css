@@ -1,19 +1,19 @@
-/* KÖVA Feature List (Built for How Your Body Works) */
+/* VELO Feature List (Built for How Your Body Works) */
 :root {
-    --kova-navy: #122442;
-    --kova-text: #555;
-    --kova-gray-light: #F4F6F8;
-    --kova-gray-border: #E5E5E5;
+    --velo-navy: #122442;
+    --velo-text: #555;
+    --velo-gray-light: #F4F6F8;
+    --velo-gray-border: #E5E5E5;
 }
 
-.kova-comparison-section {
+.velo-comparison-section {
     padding: 8rem 0;
     font-family: var(--font-body-family), sans-serif;
     font-size: 1.6rem;
-    background: var(--kova-gray-light);
+    background: var(--velo-gray-light);
 }
 
-.kova-comp-grid {
+.velo-comp-grid {
     display: grid;
     grid-template-columns: 1fr;
     gap: 3rem;
@@ -21,52 +21,52 @@
 }
 
 @media screen and (min-width: 990px) {
-    .kova-comp-grid {
+    .velo-comp-grid {
         grid-template-columns: 45% 55%;
         gap: 5rem;
     }
 }
 
-.kova-comp-text-col {
+.velo-comp-text-col {
     order: 2;
 }
 
 @media screen and (min-width: 990px) {
-    .kova-comp-text-col {
+    .velo-comp-text-col {
         order: 1;
         /* Left side on desktop */
     }
 }
 
-.kova-comp-heading {
+.velo-comp-heading {
     font-size: 3.2rem;
     font-weight: 700 !important;
     line-height: 1.1;
-    color: var(--kova-navy);
+    color: var(--velo-navy);
     font-family: 'Jost', sans-serif !important;
     margin: 0 0 4rem 0;
 }
 
 @media screen and (max-width: 749px) {
-    .kova-comp-heading {
+    .velo-comp-heading {
         font-size: 2rem;
         margin-bottom: 2rem;
     }
 }
 
-.kova-comp-features {
+.velo-comp-features {
     display: flex;
     flex-direction: column;
     gap: 2rem;
 }
 
-.kova-comp-feature {
+.velo-comp-feature {
     display: flex;
     align-items: flex-start;
     gap: 1.5rem;
 }
 
-.kova-comp-icon-wrapper {
+.velo-comp-icon-wrapper {
     width: 70px;
     height: 70px;
     border-radius: 50%;
@@ -76,58 +76,58 @@
     justify-content: center;
     flex-shrink: 0;
     background: #fff;
-    color: var(--kova-navy);
+    color: var(--velo-navy);
 }
 
-.kova-comp-svg svg {
+.velo-comp-svg svg {
     width: 24px;
     height: 24px;
     display: block;
 }
 
-.kova-comp-icon {
+.velo-comp-icon {
     font-size: 1.5rem;
 }
 
-.kova-comp-feature-content {
+.velo-comp-feature-content {
     flex: 1;
 }
 
-.kova-comp-feature-title {
+.velo-comp-feature-title {
     font-size: 1.8rem;
     font-weight: 700 !important;
-    color: var(--kova-navy);
+    color: var(--velo-navy);
     margin: 0 0 0.5rem 0;
     font-family: 'Jost', sans-serif !important;
 }
 
-.kova-comp-feature-desc {
+.velo-comp-feature-desc {
     font-size: 1.6rem;
-    color: var(--kova-text);
+    color: var(--velo-text);
     margin: 0;
     line-height: 1.6;
 }
 
-.kova-comp-media-col {
+.velo-comp-media-col {
     order: 1;
 }
 
 @media screen and (min-width: 990px) {
-    .kova-comp-media-col {
+    .velo-comp-media-col {
         order: 2;
         /* Right side on desktop */
     }
 }
 
-.kova-comp-image {
+.velo-comp-image {
     width: 100%;
     height: auto;
     display: block;
     border-radius: 8px;
-    /* Optional slight rounding to match Kova overall aesthetic */
+    /* Optional slight rounding to match velo overall aesthetic */
 }
 
-.kova-comp-placeholder {
+.velo-comp-placeholder {
     width: 100%;
     background: #f0f0f0;
     border-radius: 8px;
@@ -137,6 +137,6 @@
     padding: 4rem;
 }
 
-.kova-comp-placeholder svg {
+.velo-comp-placeholder svg {
     opacity: 0.3;
 }

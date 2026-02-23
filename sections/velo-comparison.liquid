@@ -1,26 +1,40 @@
-{{ 'kova-comparison.css' | asset_url | stylesheet_tag }}
+{{ 'velo-comparison.css' | asset_url | stylesheet_tag }}
 
-<div class="kova-comparison-section">
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+<div class="velo-comparison-section section-{{ section.id }}-padding color-{{ section.settings.color_scheme }} gradient">
   <div class="page-width">
-    <div class="kova-comp-grid">
-      <div class="kova-comp-text-col">
-        <h2 class="kova-comp-heading">{{ section.settings.heading }}</h2>
-        <div class="kova-comp-features">
+    <div class="velo-comp-grid">
+      <div class="velo-comp-text-col">
+        <h2 class="velo-comp-heading">{{ section.settings.heading }}</h2>
+        <div class="velo-comp-features">
           {% for block in section.blocks %}
-            <div class="kova-comp-feature" {{ block.shopify_attributes }}>
-              <div class="kova-comp-icon-wrapper">
+            <div class="velo-comp-feature" {{ block.shopify_attributes }}>
+              <div class="velo-comp-icon-wrapper">
                 {% if block.settings.icon != blank %}
-                  <span class="kova-comp-icon">{{ block.settings.icon }}</span>
+                  <span class="velo-comp-icon">{{ block.settings.icon }}</span>
                 {% elsif block.settings.svg_icon != blank %}
-                  <div class="kova-comp-svg">{{ block.settings.svg_icon }}</div>
+                  <div class="velo-comp-svg">{{ block.settings.svg_icon }}</div>
                 {% else %}
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="20 6 9 17 4 12"/></svg>
                 {% endif %}
               </div>
-              <div class="kova-comp-feature-content">
-                <h3 class="kova-comp-feature-title">{{ block.settings.title }}</h3>
+              <div class="velo-comp-feature-content">
+                <h3 class="velo-comp-feature-title">{{ block.settings.title }}</h3>
                 {% if block.settings.description != blank %}
-                  <p class="kova-comp-feature-desc">{{ block.settings.description }}</p>
+                  <p class="velo-comp-feature-desc">{{ block.settings.description }}</p>
                 {% endif %}
               </div>
             </div>
@@ -28,7 +42,7 @@
         </div>
       </div>
 
-      <div class="kova-comp-media-col">
+      <div class="velo-comp-media-col">
         {% if section.settings.image != blank %}
           <img
             src="{{ section.settings.image | image_url: width: 800 }}"
@@ -36,10 +50,10 @@
             loading="lazy"
             width="{{ section.settings.image.width }}"
             height="{{ section.settings.image.height }}"
-            class="kova-comp-image"
+            class="velo-comp-image"
           >
         {% else %}
-          <img src="https://images.unsplash.com/photo-1582582621959-48d27397dc69?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Comparison Mattress Topper" width="800" height="800" class="kova-comp-image" />
+          <img src="https://images.unsplash.com/photo-1582582621959-48d27397dc69?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Comparison Mattress Topper" width="800" height="800" class="velo-comp-image" />
         {% endif %}
       </div>
     </div>
@@ -48,10 +62,44 @@
 
 {% schema %}
 {
-  "name": "KÖVA Feature List",
+  "name": "VELO Feature List",
   "tag": "section",
-  "class": "kova-section",
+  "class": "velo-section",
   "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "header",
+      "content": "Spacing"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Top padding",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Bottom padding",
+      "default": 80
+    },
+    {
+      "type": "header",
+      "content": "Content"
+    },
     {
       "type": "text",
       "id": "heading",
@@ -98,7 +146,7 @@
   ],
   "presets": [
     {
-      "name": "KÖVA Feature List",
+      "name": "VELO Feature List",
       "blocks": [
         { "type": "feature", "settings": { "svg_icon": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"><path d=\"M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7\"/></svg>", "title": "Allows for Movement", "description": "Move naturally without thinking about it" } },
         { "type": "feature", "settings": { "svg_icon": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"><path d=\"M20 6L9 17l-5-5\"/></svg>", "title": "Effortless Posture", "description": "Supports alignment as you shift positions" } },
@@ -109,3 +157,4 @@
   ]
 }
 {% endschema %}
+

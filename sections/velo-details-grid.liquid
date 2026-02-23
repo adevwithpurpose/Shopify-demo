@@ -1,19 +1,19 @@
-{{ 'kova-details-grid.css' | asset_url | stylesheet_tag }}
+{{ 'velo-details-grid.css' | asset_url | stylesheet_tag }}
 
-<div class="kova-details-section">
+<div class="velo-details-section">
   <div class="page-width">
-    <div class="kova-det-header">
-      <h2 class="kova-det-heading">{{ section.settings.heading }}</h2>
+    <div class="velo-det-header velo-reveal">
+      <h2 class="velo-det-heading">{{ section.settings.heading }}</h2>
       {% if section.settings.subheading != blank %}
-        <p class="kova-det-subheading">{{ section.settings.subheading }}</p>
+        <p class="velo-det-subheading">{{ section.settings.subheading }}</p>
       {% endif %}
     </div>
 
-    <div class="kova-det-grid">
+    <div class="velo-det-grid">
       {% for block in section.blocks %}
-        <div class="kova-det-card" {{ block.shopify_attributes }}>
+        <div class="velo-det-card velo-card-hover velo-reveal velo-reveal-delay-{{ forloop.index | at_most: 4 }}" {{ block.shopify_attributes }}>
           {% if block.settings.image != blank %}
-            <div class="kova-det-card-image">
+            <div class="velo-det-card-image">
               <img
                 src="{{ block.settings.image | image_url: width: 600 }}"
                 alt="{{ block.settings.title }}"
@@ -22,10 +22,10 @@
               >
             </div>
           {% endif %}
-          <div class="kova-det-card-content">
-            <h3 class="kova-det-card-title">{{ block.settings.title }}</h3>
+          <div class="velo-det-card-content">
+            <h3 class="velo-det-card-title">{{ block.settings.title }}</h3>
             {% if block.settings.description != blank %}
-              <p class="kova-det-card-desc">{{ block.settings.description }}</p>
+              <p class="velo-det-card-desc">{{ block.settings.description }}</p>
             {% endif %}
           </div>
         </div>
@@ -36,9 +36,9 @@
 
 {% schema %}
 {
-  "name": "KÖVA Details Grid",
+  "name": "VELO Details Grid",
   "tag": "section",
-  "class": "kova-section",
+  "class": "velo-section",
   "settings": [
     {
       "type": "text",
@@ -80,7 +80,7 @@
   ],
   "presets": [
     {
-      "name": "KÖVA Details Grid",
+      "name": "VELO Details Grid",
       "blocks": [
         { "type": "detail", "settings": { "title": "Pressure-Relief Seat", "description": "12cm extra-thick high-density foam" } },
         { "type": "detail", "settings": { "title": "360° Smooth Rotating", "description": "For effortless position changes" } },
@@ -93,3 +93,4 @@
   ]
 }
 {% endschema %}
+

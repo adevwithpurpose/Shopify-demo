@@ -1,0 +1,178 @@
+{{ 'velo-feature-grid.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+<div class="velo-feature-grid-section section-{{ section.id }}-padding color-{{ section.settings.color_scheme }} gradient">
+  <div class="page-width">
+    {% if section.settings.heading != blank %}
+      <div class="velo-fg-header velo-reveal">
+        <h2 class="velo-fg-heading">{{ section.settings.heading }}</h2>
+        {% if section.settings.subheading != blank %}
+          <p class="velo-fg-subheading">{{ section.settings.subheading }}</p>
+        {% endif %}
+      </div>
+    {% endif %}
+
+    <div class="velo-fg-grid velo-fg-grid--{{ section.settings.columns }}">
+      {% for block in section.blocks %}
+        <div class="velo-fg-card velo-card-hover velo-reveal velo-reveal-delay-{{ forloop.index | at_most: 4 }}" {{ block.shopify_attributes }}>
+          <div class="velo-fg-card-left">
+            {% if block.settings.image != blank %}
+              <div class="velo-fg-card-image">
+                <img
+                  src="{{ block.settings.image | image_url: width: 100 }}"
+                  alt="{{ block.settings.title }}"
+                  width="50"
+                  height="50"
+                  loading="lazy"
+                >
+              </div>
+            {% elsif block.settings.icon != 'none' %}
+              <div class="velo-fg-card-icon">
+                {% render 'velo-icons', icon: block.settings.icon %}
+              </div>
+            {% endif %}
+          </div>
+          <div class="velo-fg-card-right">
+            <h3 class="velo-fg-card-title">{{ block.settings.title }}</h3>
+            {% if block.settings.text != blank %}
+              <div class="velo-fg-card-text">{{ block.settings.text }}</div>
+            {% endif %}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "VELO Feature Grid",
+  "tag": "section",
+  "class": "velo-section",
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "header",
+      "content": "Spacing"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Top padding",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Bottom padding",
+      "default": 80
+    },
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Who VELO Is For?"
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "Designed for people who can't sit still (and shouldn't have to)"
+    },
+    {
+      "type": "select",
+      "id": "columns",
+      "label": "Columns (desktop)",
+      "options": [
+        { "value": "2", "label": "2 columns" },
+        { "value": "3", "label": "3 columns" }
+      ],
+      "default": "3"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "card",
+      "name": "Feature Card",
+      "settings": [
+        {
+          "type": "select",
+          "id": "icon",
+          "label": "Icon",
+          "options": [
+            { "value": "none", "label": "None" },
+            { "value": "monitor", "label": "Monitor" },
+            { "value": "palette", "label": "Palette" },
+            { "value": "move", "label": "Move" },
+            { "value": "brain", "label": "Brain" },
+            { "value": "bandage", "label": "Bandage" },
+            { "value": "sparkles", "label": "Sparkles" }
+          ],
+          "default": "monitor"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Icon Image (overrides icon)"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Long-Hour Desk Workers"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Description",
+          "default": "<p>Stay comfortable through long sessions</p>"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "VELO Feature Grid",
+      "blocks": [
+        { "type": "card", "settings": { "icon": "monitor", "title": "Long-Hour Desk Workers", "text": "<p>Stay comfortable through long sessions</p>" } },
+        { "type": "card", "settings": { "icon": "palette", "title": "Creative Professionals", "text": "<p>Keeps body & mind engaged.</p>" } },
+        { "type": "card", "settings": { "icon": "move", "title": "Fidgety People", "text": "<p>Lets you move freely.</p>" } },
+        { "type": "card", "settings": { "icon": "brain", "title": "Neurodiverse Individuals", "text": "<p>Helps improve focus.</p>" } },
+        { "type": "card", "settings": { "icon": "bandage", "title": "Chronic Pain Sufferers", "text": "<p>Reduces pressure and stiffness.</p>" } },
+        { "type": "card", "settings": { "icon": "sparkles", "title": "Meditation Practitioners", "text": "<p>Supports relaxed sitting</p>" } }
+      ]
+    }
+  ]
+}
+{% endschema %}
+

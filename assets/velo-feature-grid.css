@@ -1,78 +1,78 @@
-/* KÖVA Feature Grid */
+/* VELO Feature Grid */
 :root {
-    --kova-navy: #122442;
-    --kova-gray-light: #F4F6F8;
-    --kova-gray-border: #E5E5E5;
+    --velo-navy: #122442;
+    --velo-gray-light: #F4F6F8;
+    --velo-gray-border: #E5E5E5;
 }
 
-.kova-feature-grid-section {
+.velo-feature-grid-section {
     padding: 8rem 0;
-    background: var(--kova-gray-light);
+    background: var(--velo-gray-light);
     font-family: var(--font-body-family), sans-serif;
     font-size: 1.6rem;
 }
 
-.kova-fg-header {
+.velo-fg-header {
     text-align: center;
     max-width: 700px;
     margin: 0 auto 3.5rem;
 }
 
-.kova-fg-heading {
+.velo-fg-heading {
     font-size: 3.2rem;
     font-weight: 700 !important;
     line-height: 1.1;
-    color: var(--kova-navy);
+    color: var(--velo-navy);
     font-family: 'Jost', sans-serif !important;
     margin-bottom: 1.5rem;
     margin-top: 0;
 }
 
-.kova-fg-subheading {
+.velo-fg-subheading {
     font-size: 1.8rem;
     color: #555;
     margin: 0;
     line-height: 1.4;
 }
 
-.kova-fg-grid {
+.velo-fg-grid {
     display: grid;
     gap: 1.5rem;
     grid-template-columns: 1fr;
 }
 
-.kova-fg-grid--2 {
+.velo-fg-grid--2 {
     grid-template-columns: repeat(2, 1fr);
 }
 
-.kova-fg-grid--3 {
+.velo-fg-grid--3 {
     grid-template-columns: repeat(3, 1fr);
 }
 
 @media screen and (max-width: 989px) {
 
-    .kova-fg-grid--3,
-    .kova-fg-grid--2 {
+    .velo-fg-grid--3,
+    .velo-fg-grid--2 {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media screen and (max-width: 749px) {
 
-    .kova-fg-grid--3,
-    .kova-fg-grid--2 {
+    .velo-fg-grid--3,
+    .velo-fg-grid--2 {
         grid-template-columns: 1fr;
     }
 
-    .kova-fg-heading {
+    .velo-fg-heading {
         font-size: 2rem;
     }
 }
 
-.kova-fg-card {
+.velo-fg-card {
     background: #fff;
     border-radius: 8px;
-    border: 1px solid var(--kova-gray-border);
+    border: 1px solid var(--velo-gray-border);
     padding: 2.5rem;
     display: flex;
     align-items: center;
@@ -81,16 +81,16 @@
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.kova-fg-card:hover {
+.velo-fg-card:hover {
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
-.kova-fg-card-left {
+.velo-fg-card-left {
     flex-shrink: 0;
 }
 
-.kova-fg-card-icon {
+.velo-fg-card-icon {
     font-size: 3rem;
     display: flex;
     align-items: center;
@@ -99,30 +99,30 @@
     height: 60px;
 }
 
-.kova-fg-card-image img {
+.velo-fg-card-image img {
     display: block;
     max-width: 100%;
     height: auto;
 }
 
-.kova-fg-card-right {
+.velo-fg-card-right {
     flex: 1;
 }
 
-.kova-fg-card-title {
+.velo-fg-card-title {
     font-size: 1.8rem;
     font-weight: 700 !important;
-    color: var(--kova-navy);
+    color: var(--velo-navy);
     margin: 0 0 0.5rem 0;
     font-family: 'Jost', sans-serif !important;
 }
 
-.kova-fg-card-text {
+.velo-fg-card-text {
     font-size: 1.5rem;
     color: #666;
     line-height: 1.6;
 }
 
-.kova-fg-card-text p {
+.velo-fg-card-text p {
     margin: 0;
 }

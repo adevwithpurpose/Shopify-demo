@@ -1,0 +1,122 @@
+{{ 'velo-trust-strip.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+<div class="velo-trust-section section-{{ section.id }}-padding color-{{ section.settings.color_scheme }} gradient">
+  <div class="page-width">
+    <div class="velo-trust-grid">
+      {% for block in section.blocks %}
+        <div class="velo-trust-item" {{ block.shopify_attributes }}>
+          {% if block.settings.icon != 'none' %}
+            <span class="velo-trust-item-icon">
+              {% render 'velo-icons', icon: block.settings.icon %}
+            </span>
+          {% endif %}
+          <div class="velo-trust-item-content">
+            <strong class="velo-trust-item-title">{{ block.settings.title }}</strong>
+            {% if block.settings.subtitle != blank %}
+              <span class="velo-trust-item-subtitle">{{ block.settings.subtitle }}</span>
+            {% endif %}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "VELO Trust Strip",
+  "tag": "section",
+  "class": "velo-section",
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "header",
+      "content": "Spacing"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Top padding",
+      "default": 32
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Bottom padding",
+      "default": 32
+    }
+  ],
+  "blocks": [
+    {
+      "type": "trust",
+      "name": "Trust Item",
+      "settings": [
+        {
+          "type": "select",
+          "id": "icon",
+          "label": "Icon",
+          "options": [
+            { "value": "none", "label": "None" },
+            { "value": "truck", "label": "Truck" },
+            { "value": "package", "label": "Package" },
+            { "value": "refresh", "label": "Return" },
+            { "value": "shield", "label": "Shield" },
+            { "value": "star", "label": "Star" }
+          ],
+          "default": "package"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "FREE U.S. Shipping"
+        },
+        {
+          "type": "text",
+          "id": "subtitle",
+          "label": "Subtitle",
+          "default": "24-48h delivery"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "VELO Trust Strip",
+      "blocks": [
+        { "type": "trust", "settings": { "icon": "truck", "title": "FREE U.S. Shipping", "subtitle": "24-48h delivery" } },
+        { "type": "trust", "settings": { "icon": "refresh", "title": "90 Day Easy Returns", "subtitle": "Love it, or send it back" } },
+        { "type": "trust", "settings": { "icon": "shield", "title": "3 Year Warranty", "subtitle": "Built to Last" } }
+      ]
+    }
+  ]
+}
+{% endschema %}
+

@@ -1,0 +1,94 @@
+.velo-testimonials-section {
+    background: #FAFAFA;
+}
+
+.velo-testimonials-header {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 5rem;
+}
+
+.velo-testimonials-heading {
+    font-family: 'Jost', sans-serif !important;
+    font-size: 3.2rem;
+    font-weight: 700 !important;
+    color: var(--velo-navy, #122442);
+    margin-bottom: 1rem;
+}
+
+.velo-testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+}
+
+.velo-testimonial-card {
+    background: #fff;
+    padding: 3rem;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.velo-testimonial-stars {
+    display: flex;
+    gap: 2px;
+    margin-bottom: 1.5rem;
+    color: #DDA75B;
+}
+
+.velo-testimonial-quote {
+    font-size: 1.6rem;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 2rem;
+    font-style: italic;
+    flex-grow: 1;
+}
+
+.velo-testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+.velo-testimonial-avatar {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: var(--velo-gray-light, #F4F6F8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    color: var(--velo-navy, #122442);
+    font-size: 1.4rem;
+}
+
+.velo-testimonial-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.velo-testimonial-name {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--velo-navy, #122442);
+}
+
+.velo-testimonial-verified {
+    font-size: 1.2rem;
+    color: #2fb13c;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-weight: 600;
+}
+
+@media screen and (max-width: 989px) {
+    .velo-testimonials-grid {
+        grid-template-columns: 1fr;
+    }
+}

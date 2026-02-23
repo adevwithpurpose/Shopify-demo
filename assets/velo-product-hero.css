@@ -1,24 +1,24 @@
 /* ============================
-   KÖVA Product Hero Section
+   VELO Product Hero Section
    ============================ */
 :root {
-    --kova-navy: #122442;
-    --kova-navy-light: #1A335D;
-    --kova-blue: #2F5AC7;
-    --kova-blue-badge: #34465B;
-    --kova-gray-light: #F4F6F8;
-    --kova-gray-border: #E5E5E5;
-    --kova-text: rgba(0, 0, 0, 0.81);
+    --velo-navy: #122442;
+    --velo-navy-light: #1A335D;
+    --velo-blue: #2F5AC7;
+    --velo-blue-badge: #34465B;
+    --velo-gray-light: #F4F6F8;
+    --velo-gray-border: #E5E5E5;
+    --velo-text: rgba(0, 0, 0, 0.81);
 }
 
-.kova-hero-wrapper {
+.velo-hero-wrapper {
     padding: 0;
     font-family: var(--font-body-family), sans-serif;
     font-size: 1.6rem;
-    color: var(--kova-text);
+    color: var(--velo-text);
 }
 
-.kova-hero-container {
+.velo-hero-container {
     display: grid;
     grid-template-columns: 1fr;
     gap: 2rem;
@@ -26,7 +26,7 @@
 }
 
 @media screen and (min-width: 990px) {
-    .kova-hero-container {
+    .velo-hero-container {
         grid-template-columns: 55% 45%;
         gap: 4rem;
         padding: 2rem 0;
@@ -34,63 +34,63 @@
 }
 
 /* ---- Media Gallery ---- */
-.kova-media-gallery {
+.velo-media-gallery {
     position: relative;
 }
 
-.kova-media-grid {
+.velo-media-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 0.5rem;
 }
 
-.kova-media-item {
+.velo-media-item {
     border-radius: 8px;
     overflow: hidden;
     background: #f7f7f7;
     aspect-ratio: 1/1;
 }
 
-.kova-media-item img,
-.kova-media-item video {
+.velo-media-item img,
+.velo-media-item video {
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
 }
 
-.kova-media-item--featured {
+.velo-media-item--featured {
     grid-column: 1 / -1;
     aspect-ratio: 1/1;
     /* Square on desktop like reference */
 }
 
 @media screen and (max-width: 989px) {
-    .kova-media-grid {
+    .velo-media-grid {
         grid-template-columns: 1fr;
     }
 }
 
-.kova-media-placeholder {
+.velo-media-placeholder {
     display: flex;
     align-items: center;
     justify-content: center;
     background: #f0f0f0;
 }
 
-.kova-video-wrapper {
+.velo-video-wrapper {
     width: 100%;
     height: 100%;
     position: relative;
 }
 
 /* ---- Buy Box ---- */
-.kova-buy-box {
+.velo-buy-box {
     position: relative;
 }
 
 @media screen and (min-width: 990px) {
-    .kova-buy-box {
+    .velo-buy-box {
         position: sticky;
         top: 2rem;
         align-self: start;
@@ -100,25 +100,25 @@
         /* Firefox */
     }
 
-    .kova-buy-box::-webkit-scrollbar {
+    .velo-buy-box::-webkit-scrollbar {
         display: none;
         /* Safari and Chrome */
     }
 }
 
-.kova-buy-box-inner {
+.velo-buy-box-inner {
     padding: 0;
 }
 
 /* ---- Badges ---- */
-.kova-badges {
+.velo-badges {
     display: flex;
     gap: 0.5rem;
     margin-bottom: 0.75rem;
     flex-wrap: wrap;
 }
 
-.kova-badge {
+.velo-badge {
     display: inline-block;
     font-size: 1.1rem;
     font-weight: 700;
@@ -128,54 +128,54 @@
     border-radius: 4px;
 }
 
-.kova-badge--primary {
-    background: var(--kova-navy);
+.velo-badge--primary {
+    background: var(--velo-navy);
     color: #fff;
 }
 
-.kova-badge--secondary {
+.velo-badge--secondary {
     background: #EDF2F9;
-    color: var(--kova-navy);
+    color: var(--velo-navy);
 }
 
 /* ---- Rating ---- */
-.kova-rating {
+.velo-rating {
     display: flex;
     align-items: center;
     gap: 0.5rem;
     margin-bottom: 1rem;
 }
 
-.kova-stars {
+.velo-stars {
     display: flex;
     gap: 2px;
 }
 
-.kova-rating-text {
+.velo-rating-text {
     font-size: 1.4rem;
     color: #666;
     font-weight: 500;
 }
 
 /* ---- Title ---- */
-.kova-product-title {
+.velo-product-title {
     font-family: 'Jost', sans-serif !important;
     font-size: 3.2rem;
     font-weight: 700;
     line-height: 1.1;
     margin-bottom: 1.25rem;
-    color: var(--kova-navy);
+    color: var(--velo-navy);
     margin-top: 0;
 }
 
 @media screen and (min-width: 990px) {
-    .kova-product-title {
+    .velo-product-title {
         font-size: 2.75rem;
     }
 }
 
 /* ---- Pricing ---- */
-.kova-pricing {
+.velo-pricing {
     display: flex;
     align-items: center;
     gap: 0.5rem;
@@ -183,21 +183,21 @@
     flex-wrap: wrap;
 }
 
-.kova-price-compare {
+.velo-price-compare {
     font-size: 1.8rem;
     color: #999;
     text-decoration: line-through;
 }
 
-.kova-price-current {
+.velo-price-current {
     font-size: 2.6rem;
     font-weight: 800;
-    color: var(--kova-navy);
+    color: var(--velo-navy);
 }
 
-.kova-save-badge {
+.velo-save-badge {
     display: inline-block;
-    background: var(--kova-blue-badge);
+    background: var(--velo-blue-badge);
     color: #fff;
     font-size: 1.2rem;
     font-weight: 700;
@@ -208,7 +208,7 @@
 }
 
 /* ---- Trust Note ---- */
-.kova-trust-note {
+.velo-trust-note {
     display: flex;
     align-items: center;
     gap: 0.6rem;
@@ -218,15 +218,15 @@
 }
 
 /* ---- Description & Bullets ---- */
-.kova-description-text {
+.velo-description-text {
     font-family: 'Mulish', sans-serif !important;
     font-size: 1.6rem;
     line-height: 1.6;
-    color: var(--kova-text);
+    color: var(--velo-text);
     margin-bottom: 1.5rem;
 }
 
-.kova-bullets {
+.velo-bullets {
     list-style: none;
     padding: 0;
     margin: 1rem 0;
@@ -235,58 +235,58 @@
     gap: 0.75rem;
 }
 
-.kova-bullets li {
+.velo-bullets li {
     display: flex;
     align-items: center;
     gap: 1rem;
     font-size: 1.6rem;
     font-weight: 600;
-    color: var(--kova-navy);
+    color: var(--velo-navy);
 }
 
-.kova-check-icon {
+.velo-check-icon {
     flex-shrink: 0;
-    color: var(--kova-navy);
+    color: var(--velo-navy);
 }
 
-.kova-check-icon circle {
-    fill: var(--kova-navy);
+.velo-check-icon circle {
+    fill: var(--velo-navy);
 }
 
-.kova-check-icon path {
+.velo-check-icon path {
     stroke: #fff;
 }
 
 /* ---- Variants ---- */
-.kova-variants {
+.velo-variants {
     margin: 1.5rem 0;
 }
 
-.kova-option-group {
+.velo-option-group {
     margin-bottom: 1rem;
 }
 
-.kova-option-label {
+.velo-option-label {
     display: block;
-    font-size: 0.95rem;
+    font-size: 1.4rem;
     margin-bottom: 0.75rem;
     font-weight: 600;
-    color: var(--kova-navy);
+    color: var(--velo-navy);
 }
 
-.kova-option-label span {
+.velo-option-label span {
     font-weight: 400;
     color: #555;
     margin-left: 0.25rem;
 }
 
-.kova-option-values {
+.velo-option-values {
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
 }
 
-.kova-swatch {
+.velo-swatch {
     position: relative;
     cursor: pointer;
     display: block;
@@ -297,50 +297,50 @@
     padding: 2px;
 }
 
-.kova-swatch[data-color="Soft Sand"] .kova-swatch-inner {
+.velo-swatch[data-color="Soft Sand"] .velo-swatch-inner {
     background: #fdf5e6;
 }
 
-.kova-swatch-inner {
+.velo-swatch-inner {
     width: 100%;
     height: 100%;
     border-radius: 2px;
     display: block;
 }
 
-.kova-swatch-input {
+.velo-swatch-input {
     position: absolute;
     opacity: 0;
     width: 0;
     height: 0;
 }
 
-.kova-swatch-input:checked+.kova-swatch-inner,
-.kova-swatch--active {
-    border-color: var(--kova-navy);
+.velo-swatch-input:checked+.velo-swatch-inner,
+.velo-swatch--active {
+    border-color: var(--velo-navy);
 }
 
 /* ---- Gifts ---- */
-.kova-gifts {
+.velo-gifts {
     margin: 1.5rem 0;
 }
 
-.kova-gifts-heading {
-    font-size: 0.95rem;
+.velo-gifts-heading {
+    font-size: 1.4rem;
     font-weight: 600;
     margin-bottom: 1rem;
-    color: var(--kova-navy);
+    color: var(--velo-navy);
     text-align: center;
 }
 
-.kova-gifts-grid {
+.velo-gifts-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 0.5rem;
 }
 
-.kova-gift-card {
-    border: 1px solid var(--kova-gray-border);
+.velo-gift-card {
+    border: 1px solid var(--velo-gray-border);
     border-radius: 8px;
     padding: 0.5rem;
     text-align: center;
@@ -350,29 +350,29 @@
     justify-content: space-between;
 }
 
-.kova-gift-card-top {
+.velo-gift-card-top {
     display: flex;
     border-radius: 4px;
     overflow: hidden;
-    font-size: 0.65rem;
+    font-size: 1.1rem;
     font-weight: 700;
     justify-content: center;
     margin-bottom: 0.5rem;
 }
 
-.kova-gift-card-value {
-    background: var(--kova-blue-badge);
+.velo-gift-card-value {
+    background: var(--velo-blue-badge);
     color: #fff;
     padding: 0.15rem 0.35rem;
 }
 
-.kova-gift-card-free-tag {
-    background: var(--kova-blue);
+.velo-gift-card-free-tag {
+    background: var(--velo-blue);
     color: #fff;
     padding: 0.15rem 0.35rem;
 }
 
-.kova-gift-card-icon {
+.velo-gift-card-icon {
     font-size: 1.75rem;
     margin: 0.5rem 0;
     height: 40px;
@@ -381,20 +381,20 @@
     justify-content: center;
 }
 
-.kova-gift-card-title {
-    font-size: 0.7rem;
+.velo-gift-card-title {
+    font-size: 1.2rem;
     color: #555;
     line-height: 1.2;
 }
 
-.kova-gift-card-free-text {
+.velo-gift-card-free-text {
     font-weight: 700;
-    color: var(--kova-navy);
+    color: var(--velo-navy);
     display: block;
 }
 
 /* ---- Urgency Banner ---- */
-.kova-urgency {
+.velo-urgency {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -403,21 +403,21 @@
     color: #333;
     border-radius: 8px;
     padding: 0.8rem 1rem;
-    font-size: 0.85rem;
+    font-size: 1.4rem;
     margin: 1.5rem 0 0.5rem;
 }
 
-.kova-urgency-dot {
+.velo-urgency-dot {
     width: 10px;
     height: 10px;
     background: #E53E3E;
     border-radius: 50%;
     flex-shrink: 0;
-    animation: kova-pulse 1.5s ease-in-out infinite;
+    animation: velo-pulse 1.5s ease-in-out infinite;
     box-shadow: 0 0 0 0 rgba(229, 62, 62, 0.7);
 }
 
-@keyframes kova-pulse {
+@keyframes velo-pulse {
     0% {
         transform: scale(0.95);
         box-shadow: 0 0 0 0 rgba(229, 62, 62, 0.7);
@@ -435,13 +435,13 @@
 }
 
 /* ---- ATC Button ---- */
-.kova-atc-btn {
+.velo-atc-btn {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 0.75rem;
-    background: var(--kova-navy) !important;
+    background: var(--velo-navy) !important;
     color: #fff !important;
     border: none;
     border-radius: 100px;
@@ -457,13 +457,23 @@
     font-family: 'Jost', sans-serif !important;
 }
 
-.kova-atc-btn:hover {
-    background: var(--kova-navy-light);
+/* Kill Dawn's default .button pseudo-element borders on ALL velo buttons */
+.velo-atc-btn::before,
+.velo-atc-btn::after,
+.velo-inc-cta::before,
+.velo-inc-cta::after {
+    content: none !important;
+    display: none !important;
+    box-shadow: none !important;
+}
+
+.velo-atc-btn:hover {
+    background: var(--velo-navy-light);
     transform: translateY(-2px);
     box-shadow: 0 8px 15px rgba(18, 36, 66, 0.15);
 }
 
-.kova-atc-btn:disabled {
+.velo-atc-btn:disabled {
     background: #ccc;
     cursor: not-allowed;
     transform: none;
@@ -471,14 +481,14 @@
 }
 
 /* ---- Trust Icons ---- */
-.kova-trust-icons {
+.velo-trust-icons {
     display: flex;
     justify-content: center;
     gap: 1.5rem;
     margin: 1rem 0;
 }
 
-.kova-trust-icon-item {
+.velo-trust-icon-item {
     display: flex;
     align-items: center;
     gap: 0.6rem;
@@ -487,49 +497,49 @@
     font-weight: 500;
 }
 
-.kova-trust-icon-item svg {
+.velo-trust-icon-item svg {
     flex-shrink: 0;
 }
 
-.kova-payment-icons {
+.velo-payment-icons {
     display: flex;
     justify-content: center;
     gap: 0.5rem;
     margin-bottom: 1.5rem;
 }
 
-.kova-payment-icons svg,
-.kova-payment-icons img {
+.velo-payment-icons svg,
+.velo-payment-icons img {
     height: 24px;
     width: auto;
 }
 
-.kova-sub-desc {
+.velo-sub-desc {
     font-size: 1.4rem;
     color: #666;
     line-height: 1.6;
     margin-bottom: 2rem;
 }
 
-.kova-sub-desc a {
-    color: var(--kova-navy);
+.velo-sub-desc a {
+    color: var(--velo-navy);
     font-weight: 600;
     text-decoration: underline;
 }
 
 /* ---- Accordions ---- */
-.kova-accordions {
-    border-top: 1px solid var(--kova-gray-border);
+.velo-accordions {
+    border-top: 1px solid var(--velo-gray-border);
 }
 
-.kova-accordion {
-    border-bottom: 1px solid var(--kova-gray-border);
+.velo-accordion {
+    border-bottom: 1px solid var(--velo-gray-border);
     background: #FAFAFA;
     margin-bottom: -1px;
     /* border collapse */
 }
 
-.kova-accordion-trigger {
+.velo-accordion-trigger {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -538,37 +548,37 @@
     cursor: pointer;
     font-size: 1.6rem;
     font-weight: 600;
-    color: var(--kova-navy);
+    color: var(--velo-navy);
     list-style: none;
 }
 
-.kova-accordion-trigger::-webkit-details-marker {
+.velo-accordion-trigger::-webkit-details-marker {
     display: none;
 }
 
-.kova-accordion-trigger svg {
+.velo-accordion-trigger svg {
     transition: transform 0.2s ease;
     flex-shrink: 0;
     color: #999;
 }
 
-.kova-accordion[open] .kova-accordion-trigger svg {
+.velo-accordion[open] .velo-accordion-trigger svg {
     transform: rotate(45deg);
     /* + to x */
 }
 
-.kova-accordion-content {
+.velo-accordion-content {
     padding: 0 1.25rem 1.5rem;
     font-size: 1.5rem;
     line-height: 1.6;
-    color: var(--kova-text);
+    color: var(--velo-text);
     background: #FAFAFA;
 }
 
-.kova-accordion-content ul {
+.velo-accordion-content ul {
     padding-left: 1.25rem;
 }
 
-.kova-accordion-content li {
+.velo-accordion-content li {
     margin-bottom: 0.35rem;
 }

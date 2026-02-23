@@ -1,17 +1,17 @@
 /**
- * KÖVA Product Hero — Variant Switching & Interactivity
+ * VELO Product Hero — Variant Switching & Interactivity
  */
 (function () {
     'use strict';
 
-    document.querySelectorAll('.kova-section').forEach(function (section) {
-        const sectionId = section.querySelector('[id^="KovaBuyBox-"]');
+    document.querySelectorAll('.velo-section').forEach(function (section) {
+        const sectionId = section.querySelector('[id^="veloBuyBox-"]');
         if (!sectionId) return;
 
-        const id = sectionId.id.replace('KovaBuyBox-', '');
-        const variantJsonEl = document.getElementById('KovaVariantJson-' + id);
-        const variantIdInput = document.getElementById('KovaVariantId-' + id);
-        const priceEl = document.getElementById('KovaPrice-' + id);
+        const id = sectionId.id.replace('veloBuyBox-', '');
+        const variantJsonEl = document.getElementById('veloVariantJson-' + id);
+        const variantIdInput = document.getElementById('veloVariantId-' + id);
+        const priceEl = document.getElementById('veloPrice-' + id);
 
         if (!variantJsonEl) return;
 
@@ -23,25 +23,25 @@
         }
 
         // --- Variant Switching ---
-        const swatchInputs = section.querySelectorAll('.kova-swatch-input');
+        const swatchInputs = section.querySelectorAll('.velo-swatch-input');
         swatchInputs.forEach(function (input) {
             input.addEventListener('change', function () {
                 // Update swatch visual
-                const group = input.closest('.kova-option-values');
-                group.querySelectorAll('.kova-swatch').forEach(function (s) {
-                    s.classList.remove('kova-swatch--active');
+                const group = input.closest('.velo-option-values');
+                group.querySelectorAll('.velo-swatch').forEach(function (s) {
+                    s.classList.remove('velo-swatch--active');
                 });
-                input.closest('.kova-swatch').classList.add('kova-swatch--active');
+                input.closest('.velo-swatch').classList.add('velo-swatch--active');
 
                 // Update label
                 const optionIndex = input.dataset.optionIndex;
-                const labelEl = document.getElementById('KovaOptionLabel-' + id + '-' + optionIndex);
+                const labelEl = document.getElementById('veloOptionLabel-' + id + '-' + optionIndex);
                 if (labelEl) labelEl.textContent = input.value;
 
                 // Find matching variant
                 const selectedOptions = [];
-                section.querySelectorAll('.kova-option-group').forEach(function (group) {
-                    const checked = group.querySelector('.kova-swatch-input:checked');
+                section.querySelectorAll('.velo-option-group').forEach(function (group) {
+                    const checked = group.querySelector('.velo-swatch-input:checked');
                     if (checked) selectedOptions.push(checked.value);
                 });
 
@@ -63,8 +63,8 @@
                     }
 
                     // Update compare price & save badge
-                    const compareEl = section.querySelector('.kova-price-compare');
-                    const saveEl = section.querySelector('.kova-save-badge');
+                    const compareEl = section.querySelector('.velo-price-compare');
+                    const saveEl = section.querySelector('.velo-save-badge');
                     if (matchedVariant.compare_at_price && matchedVariant.compare_at_price > matchedVariant.price) {
                         const compareFormatted = Shopify.formatMoney
                             ? Shopify.formatMoney(matchedVariant.compare_at_price)
@@ -88,7 +88,7 @@
                     }
 
                     // Update ATC button price
-                    const atcPrice = section.querySelector('.kova-atc-price');
+                    const atcPrice = section.querySelector('.velo-atc-price');
                     if (atcPrice) {
                         const priceFormatted = Shopify.formatMoney
                             ? Shopify.formatMoney(matchedVariant.price)
@@ -97,11 +97,11 @@
                     }
 
                     // Update ATC availability
-                    const atcBtn = section.querySelector('.kova-atc-btn');
+                    const atcBtn = section.querySelector('.velo-atc-btn');
                     if (atcBtn) {
                         if (matchedVariant.available) {
                             atcBtn.disabled = false;
-                            atcBtn.querySelector('.kova-atc-price').style.display = '';
+                            atcBtn.querySelector('.velo-atc-price').style.display = '';
                         } else {
                             atcBtn.disabled = true;
                             atcBtn.textContent = 'Sold Out';
@@ -115,11 +115,11 @@
 
                     // Highlight matching media (if media IDs correspond)
                     if (matchedVariant.featured_media) {
-                        const mediaItems = section.querySelectorAll('.kova-media-item');
+                        const mediaItems = section.querySelectorAll('.velo-media-item');
                         mediaItems.forEach(function (item) {
-                            item.classList.remove('kova-media-item--featured');
+                            item.classList.remove('velo-media-item--featured');
                             if (item.dataset.mediaId == matchedVariant.featured_media.id) {
-                                item.classList.add('kova-media-item--featured');
+                                item.classList.add('velo-media-item--featured');
                                 item.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
                             }
                         });
@@ -129,7 +129,7 @@
         });
 
         // --- Dynamic Urgency Date ---
-        const urgencyEl = section.querySelector('.kova-urgency');
+        const urgencyEl = section.querySelector('.velo-urgency');
         if (urgencyEl) {
             const now = new Date();
             // Next business day (if today is Fri/Sat/Sun, jump to Monday)
@@ -142,3 +142,4 @@
         }
     });
 })();
+

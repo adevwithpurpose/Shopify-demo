@@ -1,0 +1,136 @@
+{{ 'velo-faq.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+<div class="velo-faq-section section-{{ section.id }}-padding color-{{ section.settings.color_scheme }} gradient">
+  <div class="page-width">
+    {% if section.settings.heading != blank %}
+      <div class="velo-faq-header velo-reveal">
+        <h2 class="velo-faq-heading">{{ section.settings.heading }}</h2>
+        {% if section.settings.subheading != blank %}
+          <div class="velo-faq-subheading">{{ section.settings.subheading }}</div>
+        {% endif %}
+      </div>
+    {% endif %}
+
+    <div class="velo-faq-container velo-reveal velo-reveal-delay-1">
+      {% for block in section.blocks %}
+        <details class="velo-faq-item" {{ block.shopify_attributes }}>
+          <summary class="velo-faq-trigger">
+            <span class="velo-faq-title">{{ block.settings.title }}</span>
+            <span class="velo-faq-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="12" y1="5" x2="12" y2="19"></line>
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+              </svg>
+            </span>
+          </summary>
+          <div class="velo-faq-details">
+            <div class="velo-faq-content">
+              {{ block.settings.content }}
+            </div>
+          </div>
+        </details>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "VELO FAQ",
+  "tag": "section",
+  "class": "velo-section",
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Frequently Asked Questions"
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "Everything you need to know about the VELO Freedom Chair."
+    },
+    {
+      "type": "header",
+      "content": "Spacing"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Top padding",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Bottom padding",
+      "default": 80
+    }
+  ],
+  "blocks": [
+    {
+      "type": "faq",
+      "name": "FAQ Item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Question",
+          "default": "How long does assembly take?"
+        },
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "Answer",
+          "default": "<p>Assembly typically takes less than 15 minutes. We include all necessary tools and a simple 4-step guide.</p>"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "VELO FAQ",
+      "blocks": [
+        { "type": "faq", "settings": { "title": "How long does assembly take?", "content": "<p>Assembly typically takes less than 15 minutes. We include all necessary tools and a simple 4-step guide.</p>" } },
+        { "type": "faq", "settings": { "title": "What is the weight limit?", "content": "<p>The VELO Freedom Chair is tested to support up to 300 lbs (136 kg).</p>" } },
+        { "type": "faq", "settings": { "title": "Can I return it if I don't like it?", "content": "<p>Yes! We offer a 90-day risk-free trial. If you're not completely satisfied, we'll arrange a return and refund.</p>" } },
+        { "type": "faq", "settings": { "title": "Does it have a warranty?", "content": "<p>Every VELO chair comes with a 10-year structural warranty covering the frame and moving parts.</p>" } }
+      ]
+    }
+  ]
+}
+{% endschema %}

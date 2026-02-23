@@ -1,0 +1,93 @@
+.velo-faq-section {
+    background: #fff;
+}
+
+.velo-faq-header {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 4rem;
+}
+
+.velo-faq-heading {
+    font-family: 'Jost', sans-serif !important;
+    font-size: 3.2rem;
+    font-weight: 700 !important;
+    color: var(--velo-navy, #122442);
+    margin-bottom: 1rem;
+}
+
+.velo-faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.velo-faq-item {
+    border-bottom: 1px solid #E5E7EB;
+    margin-bottom: 0;
+}
+
+.velo-faq-item:first-child {
+    border-top: 1px solid #E5E7EB;
+}
+
+.velo-faq-trigger {
+    width: 100%;
+    padding: 2.5rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    color: var(--velo-navy, #122442);
+    transition: color 0.2s ease;
+}
+
+.velo-faq-trigger:hover {
+    color: #DDA75B;
+}
+
+.velo-faq-title {
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.velo-faq-icon {
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+    margin-left: 1rem;
+}
+
+.velo-faq-details {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.3s ease, margin-bottom 0.3s ease;
+}
+
+.velo-faq-content {
+    padding-bottom: 2.5rem;
+    color: #555;
+    font-size: 1.6rem;
+    line-height: 1.6;
+}
+
+/* Active State */
+.velo-faq-item[open] .velo-faq-icon {
+    transform: rotate(45deg);
+}
+
+.velo-faq-item[open] .velo-faq-details {
+    max-height: 1000px;
+    /* Large enough for content */
+}
+
+@media screen and (max-width: 749px) {
+    .velo-faq-heading {
+        font-size: 2.6rem;
+    }
+
+    .velo-faq-title {
+        font-size: 1.6rem;
+    }
+}

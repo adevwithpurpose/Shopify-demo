@@ -45,8 +45,8 @@
         "padding_bottom": 12
       }
     },
-    "kova_comparison": {
-      "type": "kova-comparison",
+    "velo_comparison": {
+      "type": "velo-comparison",
       "blocks": {
         "feat_1": {
           "type": "feature",
@@ -91,8 +91,8 @@
         "heading": "What Makes Us Different"
       }
     },
-    "kova_included": {
-      "type": "kova-whats-included",
+    "velo_included": {
+      "type": "velo-whats-included",
       "blocks": {
         "inc_1": {
           "type": "item",
@@ -178,8 +178,8 @@
   },
   "order": [
     "main",
-    "kova_comparison",
-    "kova_included",
+    "velo_comparison",
+    "velo_included",
     "related-products"
   ]
 }

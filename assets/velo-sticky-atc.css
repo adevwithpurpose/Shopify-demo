@@ -1,0 +1,84 @@
+.velo-sticky-atc {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.08);
+    padding: 1.25rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    transform: translateY(100%);
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    visibility: hidden;
+}
+
+.velo-sticky-atc--visible {
+    transform: translateY(0);
+    visibility: visible;
+}
+
+.velo-sticky-atc-left {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.velo-sticky-atc-name {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--velo-navy, #122442);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 180px;
+}
+
+.velo-sticky-atc-price {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #444;
+}
+
+.velo-sticky-atc-btn {
+    background: var(--velo-navy, #122442);
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    padding: 1.2rem 2.5rem;
+    font-size: 1.4rem;
+    font-weight: 700;
+    cursor: pointer;
+    white-space: nowrap;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 12px rgba(18, 36, 66, 0.2);
+    min-width: 140px;
+}
+
+.velo-sticky-atc-btn:hover {
+    background: #1a345e;
+}
+
+/* Hide on Desktop by default if requested, but site is mobile-first landing, so usually keep for both or just mobile */
+@media screen and (min-width: 990px) {
+    /* If you want to hide on desktop, uncomment below: */
+    /* .velo-sticky-atc { display: none; } */
+
+    /* On desktop, maybe make it slightly more compact */
+    .velo-sticky-atc {
+        padding: 1.5rem 10%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .velo-sticky-atc {
+        padding: 1.2rem 1.5rem;
+    }
+
+    .velo-sticky-atc-name {
+        max-width: 140px;
+    }
+}

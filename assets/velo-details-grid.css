@@ -1,97 +1,97 @@
-/* KÖVA Details Grid */
+/* VELO Details Grid */
 :root {
-    --kova-navy: #122442;
-    --kova-gray-light: #F4F6F8;
-    --kova-gray-border: #E5E5E5;
+    --velo-navy: #122442;
+    --velo-gray-light: #F4F6F8;
+    --velo-gray-border: #E5E5E5;
 }
 
-.kova-details-section {
+.velo-details-section {
     padding: 5rem 0;
     font-family: var(--font-body-family), sans-serif;
 }
 
-.kova-det-header {
+.velo-det-header {
     text-align: center;
     max-width: 600px;
     margin: 0 auto 3rem;
 }
 
-.kova-det-heading {
+.velo-det-heading {
     font-size: 2.75rem;
     font-weight: 700;
     line-height: 1.2;
-    color: var(--kova-navy);
+    color: var(--velo-navy);
     font-family: var(--font-heading-family), sans-serif;
     margin: 0 0 0.75rem 0;
 }
 
-.kova-det-subheading {
-    font-size: 1rem;
+.velo-det-subheading {
+    font-size: 1.4rem;
     color: #555;
     margin: 0;
 }
 
-.kova-det-grid {
+.velo-det-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
 }
 
 @media screen and (min-width: 990px) {
-    .kova-det-grid {
+    .velo-det-grid {
         grid-template-columns: repeat(3, 1fr);
     }
 }
 
 @media screen and (max-width: 749px) {
-    .kova-det-grid {
+    .velo-det-grid {
         grid-template-columns: 1fr;
     }
 
-    .kova-det-heading {
+    .velo-det-heading {
         font-size: 2rem;
     }
 }
 
-.kova-det-card {
+.velo-det-card {
     background: #fff;
     border-radius: 4px;
-    border: 1px solid var(--kova-gray-border);
+    border: 1px solid var(--velo-gray-border);
     overflow: hidden;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.kova-det-card:hover {
+.velo-det-card:hover {
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
-.kova-det-card-image {
+.velo-det-card-image {
     aspect-ratio: 16/10;
     overflow: hidden;
 }
 
-.kova-det-card-image img {
+.velo-det-card-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.kova-det-card-content {
+.velo-det-card-content {
     padding: 1.5rem;
     text-align: left;
 }
 
-.kova-det-card-title {
-    font-size: 1.15rem;
+.velo-det-card-title {
+    font-size: 1.6rem;
     font-weight: 700;
-    color: var(--kova-navy);
+    color: var(--velo-navy);
     margin: 0 0 0.5rem 0;
     font-family: var(--font-heading-family), sans-serif;
 }
 
-.kova-det-card-desc {
-    font-size: 0.95rem;
+.velo-det-card-desc {
+    font-size: 1.4rem;
     color: #666;
     line-height: 1.5;
     margin: 0;
