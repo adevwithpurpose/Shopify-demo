@@ -1,39 +1,49 @@
-/* VELO What's Included */
+/* VELO What's Included — Reference-accurate two-column layout */
 :root {
     --velo-navy: #122442;
     --velo-blue: #2F5AC7;
     --velo-gray-light: #F4F6F8;
+    --velo-gray-border: #E5E5E5;
 }
 
 .velo-included-section {
     padding: 8rem 0;
-    background: var(--velo-gray-light);
+    background: #fff;
     font-family: var(--font-body-family), sans-serif;
     font-size: 1.6rem;
 }
 
-.velo-inc-card {
-    max-width: 600px;
-    margin: 0 auto;
-    background: #fff;
-    border-radius: 8px;
-    padding: 3rem;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+/* Two-column layout */
+.velo-inc-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+    align-items: center;
+}
+
+/* ---- Left column ---- */
+.velo-inc-table-col {
+    max-width: 520px;
 }
 
 .velo-inc-heading {
-    font-size: 3.2rem;
-    font-weight: 700 !important;
-    text-align: center;
-    margin: 0 0 3rem 0;
+    font-size: 3.4rem;
+    font-weight: 400;
+    line-height: 1.2;
     color: var(--velo-navy);
-    line-height: 1.1;
-    font-family: 'Jost', sans-serif !important;
+    font-family: var(--font-heading-family), 'Jost', sans-serif;
+    margin: 0 0 3rem 0;
+}
+
+.velo-inc-heading strong {
+    font-weight: 800;
+    display: block;
 }
 
 .velo-inc-list {
     display: flex;
     flex-direction: column;
+    gap: 0;
 }
 
 .velo-inc-item {
@@ -44,37 +54,45 @@
     border-bottom: 1px solid #f0f0f0;
 }
 
-.velo-inc-item:last-child {
-    border-bottom: none;
+.velo-inc-item:first-child {
+    border-top: 1px solid #f0f0f0;
 }
 
-.velo-inc-item-left {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-}
-
-.velo-inc-icon {
-    font-size: 1.5rem;
-    width: 30px;
-    text-align: center;
+.velo-inc-item--main .velo-inc-name {
+    font-weight: 700;
+    font-size: 1.7rem;
 }
 
 .velo-inc-name {
-    font-size: 1.6rem;
-    font-weight: 600;
+    font-size: 1.5rem;
+    font-weight: 500;
     color: var(--velo-navy);
+}
+
+.velo-inc-name--free {
+    color: #444;
+    font-weight: 500;
+}
+
+.velo-inc-order-today-label {
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #999;
+    padding: 1.25rem 0 0.25rem;
 }
 
 .velo-inc-item-right {
     display: flex;
     align-items: center;
     gap: 0.75rem;
+    flex-shrink: 0;
 }
 
 .velo-inc-original {
     font-size: 1.4rem;
-    color: #999;
+    color: #aaa;
     text-decoration: line-through;
 }
 
@@ -84,27 +102,44 @@
     color: var(--velo-navy);
 }
 
-.velo-inc-free {
-    background: var(--velo-blue);
-    color: #fff;
-    padding: 0.3rem 0.8rem;
-    border-radius: 4px;
-    font-size: 1.2rem;
+.velo-inc-free-badge {
+    font-size: 1.4rem;
     font-weight: 700;
-    text-transform: uppercase;
+    color: var(--velo-blue);
 }
 
+/* Divider */
 .velo-inc-divider {
-    height: 2px;
-    background: var(--velo-navy);
+    height: 1px;
+    background: var(--velo-gray-border);
     margin: 1.5rem 0;
 }
 
+/* Savings row */
+.velo-inc-savings-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0;
+}
+
+.velo-inc-savings-label {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--velo-navy);
+}
+
+.velo-inc-savings-value {
+    font-size: 1.5rem;
+    color: #555;
+}
+
+/* Total row */
 .velo-inc-total {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.5rem 0 1.5rem;
+    padding: 0.75rem 0 2rem;
 }
 
 .velo-inc-total-label {
@@ -113,12 +148,31 @@
     color: var(--velo-navy);
 }
 
+.velo-inc-total-right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.velo-inc-gifts-badge {
+    display: inline-block;
+    background: var(--velo-navy);
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 0.35rem 0.75rem;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
 .velo-inc-total-price {
     font-size: 2.6rem;
     font-weight: 800;
     color: var(--velo-navy);
 }
 
+/* CTA Button */
 .velo-inc-cta {
     display: block;
     width: 100%;
@@ -134,15 +188,15 @@
     text-transform: uppercase;
     letter-spacing: 0.05em;
     font-family: 'Jost', sans-serif !important;
+    margin-bottom: 1.5rem;
 }
 
 .velo-inc-cta:hover {
-    background: #1A335D;
+    background: #1A335D !important;
     transform: translateY(-2px);
     box-shadow: 0 8px 15px rgba(18, 36, 66, 0.15);
 }
 
-/* Kill Dawn's default .button pseudo-element borders */
 .velo-inc-cta::before,
 .velo-inc-cta::after {
     content: none !important;
@@ -150,12 +204,81 @@
     box-shadow: none !important;
 }
 
-@media screen and (max-width: 749px) {
-    .velo-inc-card {
-        padding: 1.5rem;
+/* Mini trust strip */
+.velo-inc-trust {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    font-size: 1.3rem;
+    color: #777;
+}
+
+.velo-inc-trust span {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* ---- Right column ---- */
+.velo-inc-image-col {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.velo-inc-product-image {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
+
+/* Starburst badge */
+.velo-inc-starburst {
+    position: absolute;
+    top: 8%;
+    right: 5%;
+    width: 100px;
+    height: 100px;
+    background: var(--velo-navy);
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 700;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    line-height: 1.3;
+    border-radius: 50%;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+
+/* Responsive */
+@media screen and (max-width: 989px) {
+    .velo-inc-layout {
+        grid-template-columns: 1fr;
+        gap: 4rem;
+    }
+
+    .velo-inc-table-col {
+        max-width: 100%;
+    }
+
+    .velo-inc-image-col {
+        order: -1;
     }
 
     .velo-inc-heading {
-        font-size: 2.4rem;
+        font-size: 2.6rem;
+    }
+}
+
+@media screen and (max-width: 749px) {
+    .velo-inc-heading {
+        font-size: 2.2rem;
     }
 }

@@ -3,33 +3,75 @@
 <div class="velo-details-section">
   <div class="page-width">
     <div class="velo-det-header velo-reveal">
-      <h2 class="velo-det-heading">{{ section.settings.heading }}</h2>
+      <h2 class="velo-det-heading">
+        {{ section.settings.heading_light | default: 'Designed' }}<br>
+        <strong>{{ section.settings.heading_bold | default: 'Down to Every Detail' }}</strong>
+      </h2>
       {% if section.settings.subheading != blank %}
         <p class="velo-det-subheading">{{ section.settings.subheading }}</p>
       {% endif %}
     </div>
 
-    <div class="velo-det-grid">
-      {% for block in section.blocks %}
-        <div class="velo-det-card velo-card-hover velo-reveal velo-reveal-delay-{{ forloop.index | at_most: 4 }}" {{ block.shopify_attributes }}>
-          {% if block.settings.image != blank %}
-            <div class="velo-det-card-image">
-              <img
-                src="{{ block.settings.image | image_url: width: 600 }}"
-                alt="{{ block.settings.title }}"
-                loading="lazy"
-                width="600"
-              >
+    <div class="velo-det-layout">
+      <!-- Left column cards -->
+      <div class="velo-det-col velo-det-col--left">
+        {%- assign left_blocks = section.blocks | where: 'type', 'detail' -%}
+        {% for block in left_blocks %}
+          {% if forloop.index <= 3 %}
+            <div class="velo-det-card velo-reveal velo-reveal-delay-{{ forloop.index | at_most: 3 }}" {{ block.shopify_attributes }}>
+              <div class="velo-det-card-icon-wrap">
+                {% render 'velo-icons', icon: block.settings.icon %}
+              </div>
+              <div class="velo-det-card-body">
+                <h3 class="velo-det-card-title">{{ block.settings.title }}</h3>
+                {% if block.settings.description != blank %}
+                  <p class="velo-det-card-desc">{{ block.settings.description }}</p>
+                {% endif %}
+              </div>
             </div>
           {% endif %}
-          <div class="velo-det-card-content">
-            <h3 class="velo-det-card-title">{{ block.settings.title }}</h3>
-            {% if block.settings.description != blank %}
-              <p class="velo-det-card-desc">{{ block.settings.description }}</p>
-            {% endif %}
-          </div>
+        {% endfor %}
+      </div>
+
+      <!-- Center product image -->
+      <div class="velo-det-center-image velo-reveal">
+        <div class="velo-det-image-bubble">
+          {% if section.settings.product_image != blank %}
+            <img
+              src="{{ section.settings.product_image | image_url: width: 600 }}"
+              alt="{{ section.settings.product_image.alt | default: 'VELO Chair detail' }}"
+              width="600"
+              loading="lazy"
+            />
+          {% else %}
+            <img
+              src="https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+              alt="VELO Freedom Chair"
+              width="600"
+              loading="lazy"
+            />
+          {% endif %}
         </div>
-      {% endfor %}
+      </div>
+
+      <!-- Right column cards -->
+      <div class="velo-det-col velo-det-col--right">
+        {% for block in left_blocks %}
+          {% if forloop.index > 3 %}
+            <div class="velo-det-card velo-reveal velo-reveal-delay-{{ forloop.index | minus: 3 | at_most: 3 }}" {{ block.shopify_attributes }}>
+              <div class="velo-det-card-icon-wrap">
+                {% render 'velo-icons', icon: block.settings.icon %}
+              </div>
+              <div class="velo-det-card-body">
+                <h3 class="velo-det-card-title">{{ block.settings.title }}</h3>
+                {% if block.settings.description != blank %}
+                  <p class="velo-det-card-desc">{{ block.settings.description }}</p>
+                {% endif %}
+              </div>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
     </div>
   </div>
 </div>
@@ -42,15 +84,26 @@
   "settings": [
     {
       "type": "text",
-      "id": "heading",
-      "label": "Heading",
-      "default": "Designed Down to Every Detail"
+      "id": "heading_light",
+      "label": "Heading (light part)",
+      "default": "Designed"
+    },
+    {
+      "type": "text",
+      "id": "heading_bold",
+      "label": "Heading (bold part)",
+      "default": "Down to Every Detail"
     },
     {
       "type": "text",
       "id": "subheading",
       "label": "Subheading",
       "default": "Smart features, comfort-focused materials, and maximum adjustability"
+    },
+    {
+      "type": "image_picker",
+      "id": "product_image",
+      "label": "Center Product Image"
     }
   ],
   "blocks": [
@@ -59,9 +112,23 @@
       "name": "Detail Card",
       "settings": [
         {
-          "type": "image_picker",
-          "id": "image",
-          "label": "Image"
+          "type": "select",
+          "id": "icon",
+          "label": "Icon",
+          "options": [
+            { "value": "none", "label": "None" },
+            { "value": "move", "label": "Move" },
+            { "value": "check", "label": "Check" },
+            { "value": "thermometer", "label": "Temperature" },
+            { "value": "sliders", "label": "Sliders (Adjustable)" },
+            { "value": "shield", "label": "Shield" },
+            { "value": "star", "label": "Star" },
+            { "value": "refresh", "label": "Rotate" },
+            { "value": "lock", "label": "Lock" },
+            { "value": "package", "label": "Package" },
+            { "value": "truck", "label": "Truck" }
+          ],
+          "default": "move"
         },
         {
           "type": "text",
@@ -82,15 +149,14 @@
     {
       "name": "VELO Details Grid",
       "blocks": [
-        { "type": "detail", "settings": { "title": "Pressure-Relief Seat", "description": "12cm extra-thick high-density foam" } },
-        { "type": "detail", "settings": { "title": "360° Smooth Rotating", "description": "For effortless position changes" } },
-        { "type": "detail", "settings": { "title": "Breathable Fabric", "description": "Soft-touch material that stays cool" } },
-        { "type": "detail", "settings": { "title": "Lockable Wheels", "description": "Stable when you need it" } },
-        { "type": "detail", "settings": { "title": "Fully Adjustable Fit", "description": "Adjustable from top to bottom" } },
-        { "type": "detail", "settings": { "title": "Built to Last", "description": "Reinforced steel frame" } }
+        { "type": "detail", "settings": { "icon": "move", "title": "Pressure-Relief Seat", "description": "12cm extra-thick high-density foam" } },
+        { "type": "detail", "settings": { "icon": "thermometer", "title": "Breathable Fabric", "description": "Soft-touch material that stays cool" } },
+        { "type": "detail", "settings": { "icon": "sliders", "title": "Fully Adjustable Fit", "description": "Adjustable from top to bottom" } },
+        { "type": "detail", "settings": { "icon": "refresh", "title": "360° Smooth Rotating", "description": "For effortless position changes" } },
+        { "type": "detail", "settings": { "icon": "lock", "title": "Lockable Wheels", "description": "Stable when you need it" } },
+        { "type": "detail", "settings": { "icon": "shield", "title": "Built to Last", "description": "Reinforced steel frame" } }
       ]
     }
   ]
 }
 {% endschema %}
-

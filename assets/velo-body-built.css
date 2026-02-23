@@ -1,0 +1,99 @@
+/* VELO Body Built Section */
+:root {
+    --velo-navy: #122442;
+    --velo-gray-border: #E5E5E5;
+}
+
+.velo-body-built-section {
+    padding: 8rem 0;
+    background: #fff;
+    font-family: var(--font-body-family), sans-serif;
+}
+
+.velo-bb-header {
+    margin-bottom: 4rem;
+}
+
+.velo-bb-heading {
+    font-size: 4rem;
+    font-weight: 400;
+    line-height: 1.15;
+    color: var(--velo-navy);
+    font-family: var(--font-heading-family), 'Jost', sans-serif;
+    margin: 0 0 1rem 0;
+}
+
+.velo-bb-heading strong {
+    font-weight: 800;
+    display: block;
+}
+
+.velo-bb-subheading {
+    font-size: 1.6rem;
+    color: #666;
+    margin: 0;
+    line-height: 1.5;
+}
+
+.velo-bb-list {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    max-width: 540px;
+}
+
+.velo-bb-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 2.5rem;
+}
+
+/* Dashed circle icon container */
+.velo-bb-icon-wrap {
+    flex-shrink: 0;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    border: 2px dashed #b0b8c9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--velo-navy);
+    background: transparent;
+}
+
+.velo-bb-icon-wrap svg {
+    width: 22px;
+    height: 22px;
+    stroke-width: 1.5;
+}
+
+.velo-bb-content {
+    padding-top: 0.5rem;
+}
+
+.velo-bb-item-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--velo-navy);
+    margin: 0 0 0.4rem 0;
+    font-family: var(--font-heading-family), 'Jost', sans-serif;
+    line-height: 1.2;
+}
+
+.velo-bb-item-desc {
+    font-size: 1.5rem;
+    color: #666;
+    margin: 0;
+    line-height: 1.5;
+}
+
+@media screen and (max-width: 749px) {
+    .velo-bb-heading {
+        font-size: 2.8rem;
+    }
+
+    .velo-bb-list {
+        max-width: 100%;
+    }
+}

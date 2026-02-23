@@ -39,14 +39,35 @@
           "type": "accordion",
           "settings": {
             "title": "Benefits",
-            "content": "<p>Experience immediate relief with our ergonomic movement support. The VELO Chair is designed to keep your body active while you sit, preventing the stiffness and fatigue associated with traditional office chairs.</p>"
+            "content": "<p>VELO is made for people who need more than a standard chair. Experience reduced fatigue, better posture, and improved focus through natural movement support.</p>"
+          }
+        },
+        "acc_assemble": {
+          "type": "accordion",
+          "settings": {
+            "title": "How to Assemble",
+            "content": "<p>Assembly takes less than 15 minutes. Attach the base, insert the pneumatic cylinder, place the seat cushion, and adjust the backrest. All tools and a simple 4-step guide are included.</p>"
           }
         },
         "acc_specs": {
           "type": "accordion",
           "settings": {
             "title": "Specifications",
-            "content": "<ul><li><strong>Base:</strong> Reinforced industrial steel</li><li><strong>Cushion:</strong> 12cm High-density open-cell foam</li><li><strong>Weight Capacity:</strong> 300 lbs</li><li><strong>Warranty:</strong> 10 Years</li></ul>"
+            "content": "<ul><li><strong>Seat Cushion:</strong> 12cm High-density open-cell foam</li><li><strong>Frame:</strong> Reinforced industrial steel</li><li><strong>Weight Capacity:</strong> 300 lbs (136 kg)</li><li><strong>Height Adjustment:</strong> Pneumatic gas lift</li><li><strong>Warranty:</strong> 10 Years</li></ul>"
+          }
+        },
+        "acc_shipping": {
+          "type": "accordion",
+          "settings": {
+            "title": "Shipping & Returns",
+            "content": "<ul><li>Free US Shipping — Orders arrive in 2-4 business days.</li><li>90-Day Risk-Free Trial — Love it or return it.</li><li>10-Year Warranty included free.</li></ul>"
+          }
+        },
+        "acc_contact": {
+          "type": "accordion",
+          "settings": {
+            "title": "Contact Us",
+            "content": "<p>Have a question? Email us at support@velochair.com and we'll reply within 24 hours (Mon-Fri, 9am-5pm EST).</p>"
           }
         }
       },
@@ -56,7 +77,10 @@
         "gift_3",
         "gift_4",
         "acc_benefits",
-        "acc_specs"
+        "acc_assemble",
+        "acc_specs",
+        "acc_shipping",
+        "acc_contact"
       ],
       "settings": {
         "badge_1": "BESTSELLER",
@@ -78,7 +102,7 @@
         "atc_text": "ADD TO CART +",
         "trust_1": "Ships Today",
         "trust_2": "90-Day Easy Returns",
-        "sub_desc": ""
+        "sub_desc": "<p>VELO is made for people who need more than a standard chair. It's ideal for remote workers, creatives, people with ADHD, and ... <a href=\"#\">Read More</a></p>"
       }
     },
     "velo_trust": {
@@ -96,7 +120,7 @@
           "type": "trust",
           "settings": {
             "icon": "refresh",
-            "title": "90-Day Easy Trial",
+            "title": "90-Day Easy Returns",
             "subtitle": "Sit on it first"
           }
         },
@@ -115,6 +139,147 @@
         "t3"
       ],
       "settings": {}
+    },
+    "velo_rich_text": {
+      "type": "rich-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "One Chair = <strong>Endless Positions</strong>",
+            "heading_size": "h2"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>VELO effortlessly adapts to your changing postures, improves comfort and healthy sitting throughout your day</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text"
+      ],
+      "settings": {
+        "color_scheme": "scheme-1",
+        "full_width": true,
+        "padding_top": 64,
+        "padding_bottom": 16
+      }
+    },
+    "velo_features": {
+      "type": "velo-feature-grid",
+      "blocks": {
+        "card_1": {
+          "type": "card",
+          "settings": {
+            "icon": "monitor",
+            "title": "Long-Hour Desk Workers",
+            "text": "<p>Stay comfortable through long sessions</p>"
+          }
+        },
+        "card_2": {
+          "type": "card",
+          "settings": {
+            "icon": "palette",
+            "title": "Creative Professionals",
+            "text": "<p>Keeps body & mind engaged.</p>"
+          }
+        },
+        "card_3": {
+          "type": "card",
+          "settings": {
+            "icon": "move",
+            "title": "Fidgety People",
+            "text": "<p>Lets you move freely.</p>"
+          }
+        },
+        "card_4": {
+          "type": "card",
+          "settings": {
+            "icon": "brain",
+            "title": "Neurodiverse Individuals",
+            "text": "<p>Helps improve focus.</p>"
+          }
+        },
+        "card_5": {
+          "type": "card",
+          "settings": {
+            "icon": "bandage",
+            "title": "Chronic Pain Sufferers",
+            "text": "<p>Reduces pressure and stiffness.</p>"
+          }
+        },
+        "card_6": {
+          "type": "card",
+          "settings": {
+            "icon": "sparkles",
+            "title": "Meditation Practitioners",
+            "text": "<p>Supports relaxed sitting</p>"
+          }
+        }
+      },
+      "block_order": [
+        "card_1",
+        "card_2",
+        "card_3",
+        "card_4",
+        "card_5",
+        "card_6"
+      ],
+      "settings": {
+        "heading": "Who VELO Is For?",
+        "subheading": "Designed for people who can't sit still (and shouldn't have to)",
+        "columns": "3"
+      }
+    },
+    "velo_body_built": {
+      "type": "velo-body-built",
+      "blocks": {
+        "p1": {
+          "type": "point",
+          "settings": {
+            "icon": "move",
+            "title": "Allows for Movement",
+            "description": "Move naturally without thinking about it"
+          }
+        },
+        "p2": {
+          "type": "point",
+          "settings": {
+            "icon": "check",
+            "title": "Effortless Posture",
+            "description": "Supports alignment as you shift positions"
+          }
+        },
+        "p3": {
+          "type": "point",
+          "settings": {
+            "icon": "clock",
+            "title": "All-Day Comfort",
+            "description": "Stays comfortable longer - without feeling \"stuck\""
+          }
+        },
+        "p4": {
+          "type": "point",
+          "settings": {
+            "icon": "sliders",
+            "title": "Fits Every Body & Desk",
+            "description": "Adjusts to any height and desk setup"
+          }
+        }
+      },
+      "block_order": [
+        "p1",
+        "p2",
+        "p3",
+        "p4"
+      ],
+      "settings": {
+        "heading_prefix": "Built for How Your",
+        "heading_bold": "Body Actually Works"
+      }
     },
     "velo_hero_banner": {
       "type": "velo-hero-banner",
@@ -203,51 +368,13 @@
         "heading": "How to Use The VELO Freedom Chair"
       }
     },
-    "velo_features": {
-      "type": "velo-feature-grid",
-      "blocks": {
-        "card_1": {
-          "type": "card",
-          "settings": {
-            "icon": "brain",
-            "title": "Boosted Focus",
-            "text": "<p>Active sitting keeps your brain engaged and reduces afternoon slumps.</p>"
-          }
-        },
-        "card_2": {
-          "type": "card",
-          "settings": {
-            "icon": "move",
-            "title": "360° Freedom",
-            "text": "<p>Effortlessly transition between any position your body naturally desires.</p>"
-          }
-        },
-        "card_3": {
-          "type": "card",
-          "settings": {
-            "icon": "shield",
-            "title": "Pain Prevention",
-            "text": "<p>Specifically engineered to alleviate lower back and hip pressure points.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "card_1",
-        "card_2",
-        "card_3"
-      ],
-      "settings": {
-        "heading": "Engineered for Movement",
-        "subheading": "Real health benefits for every professional",
-        "columns": "3"
-      }
-    },
     "velo_details": {
       "type": "velo-details-grid",
       "blocks": {
         "d1": {
           "type": "detail",
           "settings": {
+            "icon": "move",
             "title": "Pressure-Relief Seat",
             "description": "12cm extra-thick high-density foam"
           }
@@ -255,34 +382,39 @@
         "d2": {
           "type": "detail",
           "settings": {
-            "title": "360° Smooth Rotating",
-            "description": "For effortless position changes"
+            "icon": "thermometer",
+            "title": "Breathable Fabric",
+            "description": "Soft-touch material that stays cool"
           }
         },
         "d3": {
           "type": "detail",
           "settings": {
-            "title": "Breathable Fabric",
-            "description": "Soft-touch material that stays cool"
+            "icon": "sliders",
+            "title": "Fully Adjustable Fit",
+            "description": "Adjustable from top to bottom"
           }
         },
         "d4": {
           "type": "detail",
           "settings": {
-            "title": "Lockable Wheels",
-            "description": "Stable when you need it"
+            "icon": "refresh",
+            "title": "360° Smooth Rotating",
+            "description": "For effortless position changes"
           }
         },
         "d5": {
           "type": "detail",
           "settings": {
-            "title": "Fully Adjustable Fit",
-            "description": "Adjustable from top to bottom"
+            "icon": "lock",
+            "title": "Lockable Wheels",
+            "description": "Stable when you need it"
           }
         },
         "d6": {
           "type": "detail",
           "settings": {
+            "icon": "shield",
             "title": "Built to Last",
             "description": "Reinforced steel frame"
           }
@@ -296,7 +428,11 @@
         "d5",
         "d6"
       ],
-      "settings": {}
+      "settings": {
+        "heading_light": "Designed",
+        "heading_bold": "Down to Every Detail",
+        "subheading": "Smart features, comfort-focused materials, and maximum adjustability"
+      }
     },
     "velo_testimonials": {
       "type": "velo-testimonials",
@@ -330,6 +466,75 @@
       ],
       "settings": {}
     },
+    "velo_included": {
+      "type": "velo-whats-included",
+      "blocks": {
+        "inc_1": {
+          "type": "item",
+          "settings": {
+            "title": "VELO Freedom Chair",
+            "original_price": "$600.00",
+            "final_price": "$397",
+            "is_free": false
+          }
+        },
+        "inc_2": {
+          "type": "item",
+          "settings": {
+            "title": "Fast U.S. Shipping",
+            "original_price": "$14.00",
+            "final_price": "FREE",
+            "is_free": true
+          }
+        },
+        "inc_3": {
+          "type": "item",
+          "settings": {
+            "title": "Mouse Pad",
+            "original_price": "$23.00",
+            "final_price": "FREE",
+            "is_free": true
+          }
+        },
+        "inc_4": {
+          "type": "item",
+          "settings": {
+            "title": "Chair Mat",
+            "original_price": "$49.00",
+            "final_price": "FREE",
+            "is_free": true
+          }
+        },
+        "inc_5": {
+          "type": "item",
+          "settings": {
+            "title": "3-Year Warranty",
+            "original_price": "$29.00",
+            "final_price": "FREE",
+            "is_free": true
+          }
+        }
+      },
+      "block_order": [
+        "inc_1",
+        "inc_2",
+        "inc_3",
+        "inc_4",
+        "inc_5"
+      ],
+      "settings": {
+        "heading": "What's Included with",
+        "heading_bold": "Your VELO Chair",
+        "order_today_label": "IF YOU ORDER TODAY:",
+        "savings_label": "Savings",
+        "savings_value": "You Save $203",
+        "total_label": "Subtotal",
+        "total_price": "$397",
+        "free_gifts_count": "4",
+        "cta_text": "SHOP NOW",
+        "badge_text": "FREE Gifts Included ($115 value)"
+      }
+    },
     "velo_comparison": {
       "type": "velo-comparison",
       "blocks": {
@@ -356,28 +561,6 @@
         "heading": "What Makes Us Different"
       }
     },
-    "velo_included": {
-      "type": "velo-whats-included",
-      "blocks": {
-        "inc_1": {
-          "type": "item",
-          "settings": {
-            "icon": "package",
-            "title": "VELO Freedom Chair",
-            "original_price": "$600",
-            "final_price": "$397"
-          }
-        }
-      },
-      "block_order": [
-        "inc_1"
-      ],
-      "settings": {
-        "heading": "Everything You Need for Active Work",
-        "total_label": "Subtotal",
-        "total_price": "$397.00"
-      }
-    },
     "velo_faq": {
       "type": "velo-faq",
       "blocks": {
@@ -394,11 +577,19 @@
             "title": "What is the weight limit?",
             "content": "<p>Tested to support up to 300 lbs.</p>"
           }
+        },
+        "f3": {
+          "type": "faq",
+          "settings": {
+            "title": "Can I return it if I don't like it?",
+            "content": "<p>Yes! We offer a 90-day risk-free trial. If you're not completely satisfied, we'll arrange a return and full refund.</p>"
+          }
         }
       },
       "block_order": [
         "f1",
-        "f2"
+        "f2",
+        "f3"
       ],
       "settings": {}
     },
@@ -413,13 +604,15 @@
   "order": [
     "velo_hero",
     "velo_trust",
+    "velo_rich_text",
+    "velo_features",
+    "velo_body_built",
     "velo_hero_banner",
     "velo_how_to",
-    "velo_features",
     "velo_details",
-    "velo_comparison",
     "velo_testimonials",
     "velo_included",
+    "velo_comparison",
     "velo_faq",
     "velo_sticky_atc"
   ]

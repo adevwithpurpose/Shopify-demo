@@ -16,44 +16,114 @@
 
 <div class="velo-included-section section-{{ section.id }}-padding color-{{ section.settings.color_scheme }} gradient">
   <div class="page-width">
-    <div class="velo-inc-card">
-      <h2 class="velo-inc-heading">{{ section.settings.heading }}</h2>
+    <div class="velo-inc-layout">
 
-      <div class="velo-inc-list">
-        {% for block in section.blocks %}
-          <div class="velo-inc-item" {{ block.shopify_attributes }}>
-            <div class="velo-inc-item-left">
-              {% if block.settings.icon != 'none' %}
-                <span class="velo-inc-icon">
-                  {% render 'velo-icons', icon: block.settings.icon %}
-                </span>
-              {% endif %}
-              <span class="velo-inc-name">{{ block.settings.title }}</span>
-            </div>
-            <div class="velo-inc-item-right">
-              {% if block.settings.original_price != blank %}
-                <span class="velo-inc-original">{{ block.settings.original_price }}</span>
-              {% endif %}
-              <span class="velo-inc-final {% if block.settings.is_free %}velo-inc-free{% endif %}">
-                {{ block.settings.final_price | default: 'FREE' }}
-              </span>
-            </div>
+      <!-- Left: table of items -->
+      <div class="velo-inc-table-col">
+        <h2 class="velo-inc-heading">{{ section.settings.heading | default: "What's Included with" }}<br><strong>{{ section.settings.heading_bold | default: 'Your VELO Chair' }}</strong></h2>
+
+        <div class="velo-inc-list">
+          <!-- Main product row -->
+          {%- assign item_blocks = section.blocks | where: 'type', 'item' -%}
+          {% for block in item_blocks %}
+            {% if block.settings.is_free == false %}
+              <div class="velo-inc-item velo-inc-item--main" {{ block.shopify_attributes }}>
+                <span class="velo-inc-name">{{ block.settings.title }}</span>
+                <div class="velo-inc-item-right">
+                  {% if block.settings.original_price != blank %}
+                    <span class="velo-inc-original">{{ block.settings.original_price }}</span>
+                  {% endif %}
+                  <span class="velo-inc-final">{{ block.settings.final_price }}</span>
+                </div>
+              </div>
+            {% endif %}
+          {% endfor %}
+
+          <!-- "If you order today" label -->
+          {% if section.settings.order_today_label != blank %}
+            <div class="velo-inc-order-today-label">{{ section.settings.order_today_label }}</div>
+          {% endif %}
+
+          <!-- Free items -->
+          {% for block in item_blocks %}
+            {% if block.settings.is_free %}
+              <div class="velo-inc-item" {{ block.shopify_attributes }}>
+                <span class="velo-inc-name velo-inc-name--free">{{ block.settings.title }}</span>
+                <div class="velo-inc-item-right">
+                  {% if block.settings.original_price != blank %}
+                    <span class="velo-inc-original">{{ block.settings.original_price }}</span>
+                  {% endif %}
+                  <span class="velo-inc-free-badge">FREE</span>
+                </div>
+              </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+
+        <div class="velo-inc-divider"></div>
+
+        <!-- Savings row -->
+        {% if section.settings.savings_label != blank %}
+          <div class="velo-inc-savings-row">
+            <span class="velo-inc-savings-label">{{ section.settings.savings_label }}</span>
+            <span class="velo-inc-savings-value">{{ section.settings.savings_value | default: 'You Save $203' }}</span>
           </div>
-        {% endfor %}
+        {% endif %}
+
+        <!-- Subtotal row -->
+        <div class="velo-inc-total">
+          <span class="velo-inc-total-label">{{ section.settings.total_label | default: 'Subtotal' }}</span>
+          <div class="velo-inc-total-right">
+            {% if section.settings.free_gifts_count != blank %}
+              <span class="velo-inc-gifts-badge">+{{ section.settings.free_gifts_count }} FREE GIFTS</span>
+            {% endif %}
+            <span class="velo-inc-total-price">{{ section.settings.total_price | default: '$397' }}</span>
+          </div>
+        </div>
+
+        {% if section.settings.cta_text != blank %}
+          <a href="{{ section.settings.cta_link | default: '#' }}" class="velo-inc-cta button">
+            {{ section.settings.cta_text }}
+          </a>
+        {% endif %}
+
+        <!-- Mini trust strip -->
+        <div class="velo-inc-trust">
+          <span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><path d="M15 18H9"/><path d="M19 18h2a1 1 0 0 0 1-1v-4.2a2 2 0 0 0-.6-1.4l-2.4-2.4a2 2 0 0 0-1.4-.6H15"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg>
+            Ship Today
+          </span>
+          <span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/><path d="M3 12a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16"/><path d="M16 16h5v5"/></svg>
+            90-Day Easy Returns
+          </span>
+        </div>
       </div>
 
-      <div class="velo-inc-divider"></div>
-
-      <div class="velo-inc-total">
-        <span class="velo-inc-total-label">{{ section.settings.total_label | default: 'Subtotal' }}</span>
-        <span class="velo-inc-total-price">{{ section.settings.total_price | default: '$397' }}</span>
+      <!-- Right: product image -->
+      <div class="velo-inc-image-col">
+        {% if section.settings.product_image != blank %}
+          <img
+            src="{{ section.settings.product_image | image_url: width: 700 }}"
+            alt="{{ section.settings.product_image.alt | default: 'VELO Chair bundle' }}"
+            loading="lazy"
+            width="700"
+            class="velo-inc-product-image"
+          >
+        {% else %}
+          <img
+            src="https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?ixlib=rb-4.0.3&auto=format&fit=crop&w=700&q=80"
+            alt="VELO Freedom Chair"
+            loading="lazy"
+            width="700"
+            class="velo-inc-product-image"
+          >
+        {% endif %}
+        {% if section.settings.badge_text != blank %}
+          <div class="velo-inc-starburst">{{ section.settings.badge_text }}</div>
+        {% endif %}
       </div>
 
-      {% if section.settings.cta_text != blank %}
-        <a href="{{ section.settings.cta_link | default: '#' }}" class="velo-inc-cta button">
-          {{ section.settings.cta_text }}
-        </a>
-      {% endif %}
     </div>
   </div>
 </div>
@@ -101,8 +171,32 @@
     {
       "type": "text",
       "id": "heading",
-      "label": "Heading",
-      "default": "What's Included with Your VELO Chair"
+      "label": "Heading (light)",
+      "default": "What's Included with"
+    },
+    {
+      "type": "text",
+      "id": "heading_bold",
+      "label": "Heading (bold)",
+      "default": "Your VELO Chair"
+    },
+    {
+      "type": "text",
+      "id": "order_today_label",
+      "label": "Order Today Label",
+      "default": "IF YOU ORDER TODAY:"
+    },
+    {
+      "type": "text",
+      "id": "savings_label",
+      "label": "Savings Label",
+      "default": "Savings"
+    },
+    {
+      "type": "text",
+      "id": "savings_value",
+      "label": "Savings Value",
+      "default": "You Save $203"
     },
     {
       "type": "text",
@@ -118,14 +212,31 @@
     },
     {
       "type": "text",
+      "id": "free_gifts_count",
+      "label": "Free Gifts Count (shows badge)",
+      "default": "4"
+    },
+    {
+      "type": "text",
       "id": "cta_text",
       "label": "CTA Button Text",
-      "default": "Shop Now"
+      "default": "SHOP NOW"
     },
     {
       "type": "url",
       "id": "cta_link",
       "label": "CTA Button Link"
+    },
+    {
+      "type": "image_picker",
+      "id": "product_image",
+      "label": "Product Image (right side)"
+    },
+    {
+      "type": "text",
+      "id": "badge_text",
+      "label": "Starburst badge text",
+      "default": "FREE Gifts Included ($115 value)"
     }
   ],
   "blocks": [
@@ -133,20 +244,6 @@
       "type": "item",
       "name": "Included Item",
       "settings": [
-        {
-          "type": "select",
-          "id": "icon",
-          "label": "Icon",
-          "options": [
-            { "value": "none", "label": "None" },
-            { "value": "bed", "label": "Chair/Bed" },
-            { "value": "truck", "label": "Truck" },
-            { "value": "package", "label": "Package" },
-            { "value": "shield", "label": "Shield" },
-            { "value": "star", "label": "Star" }
-          ],
-          "default": "bed"
-        },
         {
           "type": "text",
           "id": "title",
@@ -157,7 +254,7 @@
           "type": "text",
           "id": "original_price",
           "label": "Original Price (strikethrough)",
-          "default": "$600"
+          "default": "$600.00"
         },
         {
           "type": "text",
@@ -168,7 +265,7 @@
         {
           "type": "checkbox",
           "id": "is_free",
-          "label": "Show as FREE",
+          "label": "Show as FREE item",
           "default": false
         }
       ]
@@ -178,13 +275,13 @@
     {
       "name": "VELO What's Included",
       "blocks": [
-        { "type": "item", "settings": { "icon": "bed", "title": "VELO Freedom Chair", "original_price": "$600", "final_price": "$397", "is_free": false } },
-        { "type": "item", "settings": { "icon": "truck", "title": "Fast U.S. Shipping", "original_price": "$14", "final_price": "FREE", "is_free": true } },
-        { "type": "item", "settings": { "icon": "package", "title": "Accessory Bundle", "original_price": "$23", "final_price": "FREE", "is_free": true } },
-        { "type": "item", "settings": { "icon": "shield", "title": "3-Year Warranty", "original_price": "$29", "final_price": "FREE", "is_free": true } }
+        { "type": "item", "settings": { "title": "VELO Freedom Chair", "original_price": "$600.00", "final_price": "$397", "is_free": false } },
+        { "type": "item", "settings": { "title": "Fast U.S. Shipping", "original_price": "$14.00", "final_price": "FREE", "is_free": true } },
+        { "type": "item", "settings": { "title": "Mouse Pad", "original_price": "$23.00", "final_price": "FREE", "is_free": true } },
+        { "type": "item", "settings": { "title": "Chair Mat", "original_price": "$49.00", "final_price": "FREE", "is_free": true } },
+        { "type": "item", "settings": { "title": "3-Year Warranty", "original_price": "$29.00", "final_price": "FREE", "is_free": true } }
       ]
     }
   ]
 }
 {% endschema %}
-

@@ -1,0 +1,104 @@
+{{ 'velo-body-built.css' | asset_url | stylesheet_tag }}
+
+<div class="velo-body-built-section">
+  <div class="page-width">
+    <div class="velo-bb-header velo-reveal">
+      <h2 class="velo-bb-heading">
+        {{ section.settings.heading_prefix | default: 'Built for How Your' }}<br>
+        <strong>{{ section.settings.heading_bold | default: 'Body Actually Works' }}</strong>
+      </h2>
+      {% if section.settings.subheading != blank %}
+        <p class="velo-bb-subheading">{{ section.settings.subheading }}</p>
+      {% endif %}
+    </div>
+
+    <div class="velo-bb-list">
+      {% for block in section.blocks %}
+        <div class="velo-bb-item velo-reveal velo-reveal-delay-{{ forloop.index | at_most: 4 }}" {{ block.shopify_attributes }}>
+          <div class="velo-bb-icon-wrap">
+            {% render 'velo-icons', icon: block.settings.icon %}
+          </div>
+          <div class="velo-bb-content">
+            <h3 class="velo-bb-item-title">{{ block.settings.title }}</h3>
+            {% if block.settings.description != blank %}
+              <p class="velo-bb-item-desc">{{ block.settings.description }}</p>
+            {% endif %}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "VELO Body Built",
+  "tag": "section",
+  "class": "velo-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading_prefix",
+      "label": "Heading (light part)",
+      "default": "Built for How Your"
+    },
+    {
+      "type": "text",
+      "id": "heading_bold",
+      "label": "Heading (bold part)",
+      "default": "Body Actually Works"
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": ""
+    }
+  ],
+  "blocks": [
+    {
+      "type": "point",
+      "name": "Point",
+      "settings": [
+        {
+          "type": "select",
+          "id": "icon",
+          "label": "Icon",
+          "options": [
+            { "value": "move", "label": "Move / Arrows" },
+            { "value": "check", "label": "Check" },
+            { "value": "clock", "label": "Clock" },
+            { "value": "sliders", "label": "Sliders" },
+            { "value": "shield", "label": "Shield" },
+            { "value": "sparkles", "label": "Sparkles" }
+          ],
+          "default": "move"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Allows for Movement"
+        },
+        {
+          "type": "text",
+          "id": "description",
+          "label": "Description",
+          "default": "Move naturally without thinking about it"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "VELO Body Built",
+      "blocks": [
+        { "type": "point", "settings": { "icon": "move", "title": "Allows for Movement", "description": "Move naturally without thinking about it" } },
+        { "type": "point", "settings": { "icon": "check", "title": "Effortless Posture", "description": "Supports alignment as you shift positions" } },
+        { "type": "point", "settings": { "icon": "clock", "title": "All-Day Comfort", "description": "Stays comfortable longer - without feeling \"stuck\"" } },
+        { "type": "point", "settings": { "icon": "sliders", "title": "Fits Every Body & Desk", "description": "Adjusts to any height and desk setup" } }
+      ]
+    }
+  ]
+}
+{% endschema %}

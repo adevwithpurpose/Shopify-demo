@@ -71,14 +71,14 @@
 
 .velo-fg-card {
     background: #fff;
-    border-radius: 12px;
+    border-radius: 8px;
     border: 1px solid var(--velo-gray-border);
-    padding: 3rem 2.5rem;
+    padding: 2rem 2rem;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     gap: 1.5rem;
-    text-align: center;
+    text-align: left;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
@@ -92,20 +92,29 @@
 }
 
 .velo-fg-card-icon {
+    flex-shrink: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 60px;
-    height: 60px;
+    width: 56px;
+    height: 56px;
     background: #EDF2F9;
     color: var(--velo-navy);
     border-radius: 50%;
-    margin-bottom: 1rem;
 }
 
 .velo-fg-card-icon svg {
-    width: 32px;
-    height: 32px;
+    width: 26px;
+    height: 26px;
+}
+
+.velo-fg-card-title {
+    font-size: 1.7rem;
+    font-weight: 700 !important;
+    color: var(--velo-navy);
+    margin: 0 0 0.4rem 0;
+    font-family: 'Jost', sans-serif !important;
+    text-align: left;
 }
 
 .velo-fg-card-image img {
