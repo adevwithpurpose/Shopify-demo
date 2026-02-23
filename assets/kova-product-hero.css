@@ -158,7 +158,7 @@
 
 /* ---- Title ---- */
 .kova-product-title {
-    font-family: var(--font-heading-family), sans-serif;
+    font-family: 'Jost', sans-serif !important;
     font-size: 2.5rem;
     font-weight: 700;
     line-height: 1.15;
@@ -218,6 +218,7 @@
 
 /* ---- Description & Bullets ---- */
 .kova-description-text {
+    font-family: 'Mulish', sans-serif !important;
     font-size: 0.95rem;
     line-height: 1.6;
     color: var(--kova-text);
@@ -439,20 +440,20 @@
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
-    background: var(--kova-navy);
-    color: #fff;
+    background: var(--kova-navy) !important;
+    color: #fff !important;
     border: none;
     border-radius: 100px;
     /* Pill shape */
-    padding: 1.1rem 2rem;
-    font-size: 1rem;
-    font-weight: 700;
+    padding: 1.25rem 2rem;
+    font-size: 1.1rem;
+    font-weight: 700 !important;
     cursor: pointer;
     transition: all 0.2s ease;
     margin: 0.75rem 0 1rem;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    font-family: var(--font-heading-family);
+    font-family: 'Jost', sans-serif !important;
 }
 
 .kova-atc-btn:hover {

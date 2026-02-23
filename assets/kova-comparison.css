@@ -39,10 +39,10 @@
 
 .kova-comp-heading {
     font-size: 2.75rem;
-    font-weight: 700;
+    font-weight: 700 !important;
     line-height: 1.2;
     color: var(--kova-navy);
-    font-family: var(--font-heading-family), sans-serif;
+    font-family: 'Jost', sans-serif !important;
     margin: 0 0 3rem 0;
 }
 
@@ -94,10 +94,10 @@
 
 .kova-comp-feature-title {
     font-size: 1.15rem;
-    font-weight: 700;
+    font-weight: 700 !important;
     color: var(--kova-navy);
     margin: 0 0 0.4rem 0;
-    font-family: var(--font-heading-family), sans-serif;
+    font-family: 'Jost', sans-serif !important;
 }
 
 .kova-comp-feature-desc {

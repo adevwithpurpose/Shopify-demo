@@ -19,10 +19,10 @@
 
 .kova-fg-heading {
     font-size: 2.75rem;
-    font-weight: 700;
+    font-weight: 700 !important;
     line-height: 1.2;
     color: var(--kova-navy);
-    font-family: var(--font-heading-family), sans-serif;
+    font-family: 'Jost', sans-serif !important;
     margin-bottom: 0.75rem;
     margin-top: 0;
 }
@@ -109,10 +109,10 @@
 
 .kova-fg-card-title {
     font-size: 1.1rem;
-    font-weight: 700;
+    font-weight: 700 !important;
     color: var(--kova-navy);
     margin: 0 0 0.25rem 0;
-    font-family: var(--font-heading-family), sans-serif;
+    font-family: 'Jost', sans-serif !important;
 }
 
 .kova-fg-card-text {

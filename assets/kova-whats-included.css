@@ -22,11 +22,11 @@
 
 .kova-inc-heading {
     font-size: 2rem;
-    font-weight: 700;
+    font-weight: 700 !important;
     text-align: center;
     margin: 0 0 2rem 0;
     color: var(--kova-navy);
-    font-family: var(--font-heading-family), sans-serif;
+    font-family: 'Jost', sans-serif !important;
 }
 
 .kova-inc-list {
@@ -121,17 +121,17 @@
     display: block;
     width: 100%;
     text-align: center;
-    background: var(--kova-navy);
-    color: #fff;
-    padding: 1.1rem;
+    background: var(--kova-navy) !important;
+    color: #fff !important;
+    padding: 1.25rem 2rem;
     border-radius: 100px;
-    font-weight: 700;
-    font-size: 1rem;
+    font-weight: 700 !important;
+    font-size: 1.1rem;
     text-decoration: none;
     transition: background 0.2s ease, transform 0.2s ease;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    font-family: var(--font-heading-family), sans-serif;
+    font-family: 'Jost', sans-serif !important;
 }
 
 .kova-inc-cta:hover {
