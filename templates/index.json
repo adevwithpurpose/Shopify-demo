@@ -502,10 +502,12 @@
         "savings_label": "Savings",
         "savings_value": "You Save $203",
         "total_label": "Subtotal",
-        "total_price": "$397",
+        "total_price": "$89.99",
         "free_gifts_count": "4",
         "cta_text": "SHOP NOW",
-        "badge_text": "FREE Gifts Included ($115 value)"
+        "badge_text": "FREE Gifts Included ($115 value)",
+        "annotation_1": "FREE Pillowcases",
+        "annotation_2": "Night Sleep Guide"
       }
     },
     "velo_faq": {
@@ -531,12 +533,28 @@
             "title": "Can I return it if I don't like it?",
             "content": "<p>Yes! We offer a 30-day money-back guarantee.</p>"
           }
+        },
+        "f4": {
+          "type": "faq",
+          "settings": {
+            "title": "Will it make me sweat at night?",
+            "content": "<p>Not at all! Unlike traditional memory foam that traps heat, our 1000GSM topper features a breathable quilted design that promotes air circulation, keeping you cool and comfortable all night long.</p>"
+          }
+        },
+        "f5": {
+          "type": "faq",
+          "settings": {
+            "title": "How thick is the 1000GSM padding?",
+            "content": "<p>It provides about 2 inches of ultra-plush, hotel-quality loft. Because of the high density (1000GSM), it won't flatten out quickly like cheaper alternatives.</p>"
+          }
         }
       },
       "block_order": [
         "f1",
         "f2",
-        "f3"
+        "f3",
+        "f4",
+        "f5"
       ],
       "settings": {}
     },
