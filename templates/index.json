@@ -14,16 +14,16 @@
         "gift_2": {
           "type": "gift",
           "settings": {
-            "icon": "mouse",
-            "title": "Mouse Pad",
+            "icon": "gift",
+            "title": "Free Pillowcases",
             "value": "($23)"
           }
         },
         "gift_3": {
           "type": "gift",
           "settings": {
-            "icon": "mat",
-            "title": "Chair Mat",
+            "icon": "shield",
+            "title": "Extended Warranty",
             "value": "($49)"
           }
         },
@@ -39,28 +39,28 @@
           "type": "accordion",
           "settings": {
             "title": "Benefits",
-            "content": "<p>VELO is made for people who need more than a standard chair. Experience reduced fatigue, better posture, and improved focus through natural movement support.</p>"
+            "content": "<p>Experience ultimate comfort with our 1000GSM mattress topper. Reduces tossing and turning, provides immediate pressure point relief, and keeps you cool all night long.</p>"
           }
         },
         "acc_assemble": {
           "type": "accordion",
           "settings": {
-            "title": "How to Assemble",
-            "content": "<p>Assembly takes less than 15 minutes. Attach the base, insert the pneumatic cylinder, place the seat cushion, and adjust the backrest. All tools and a simple 4-step guide are included.</p>"
+            "title": "How To Fit",
+            "content": "<p>Installation takes less than a minute. Simply stretch the reinforced elastic corners over your mattress. Fits any depth from 8-21 inches securely.</p>"
           }
         },
         "acc_specs": {
           "type": "accordion",
           "settings": {
             "title": "Specifications",
-            "content": "<ul><li><strong>Seat Cushion:</strong> 12cm High-density open-cell foam</li><li><strong>Frame:</strong> Reinforced industrial steel</li><li><strong>Weight Capacity:</strong> 300 lbs (136 kg)</li><li><strong>Height Adjustment:</strong> Pneumatic gas lift</li><li><strong>Warranty:</strong> 10 Years</li></ul>"
+            "content": "<p><strong>Filling:</strong> 1000GSM Premium Padding<br/><strong>Fit:</strong> 8-21 inch deep pocket skirts<br/><strong>Care:</strong> 100% Machine Washable<br/><strong>Cooling:</strong> Breathable quilted air movement design</p>"
           }
         },
         "acc_shipping": {
           "type": "accordion",
           "settings": {
             "title": "Shipping & Returns",
-            "content": "<ul><li>Free US Shipping â€” Orders arrive in 2-4 business days.</li><li>90-Day Risk-Free Trial â€” Love it or return it.</li><li>10-Year Warranty included free.</li></ul>"
+            "content": "<ul><li>Free US Shipping \u2014 Orders arrive in 2-4 business days.</li><li>30-Day Money Back Guarantee.</li><li>Premium Quality included.</li></ul>"
           }
         },
         "acc_contact": {
@@ -84,26 +84,26 @@
       ],
       "settings": {
         "badge_1": "BESTSELLER",
-        "badge_2": "#1 ACTIVE SITTING CHAIR",
+        "badge_2": "#1 LUXURY MATTRESS TOPPER",
         "show_reviews": true,
         "rating_value": 5,
         "review_count": "14,200",
-        "title_fallback": "VELO Freedom Chair",
-        "compare_price_fallback": "$600.00",
-        "price_fallback": "$397.00",
-        "save_amount_fallback": "$203",
-        "trust_note": "Only available at velochair.com",
-        "hero_desc": "The only chair that supports your body's natural need for movement - working with your body, not against it.",
-        "product_url": "/products/velo-freedom-chair",
-        "bullet_1": "Energy: Prevents all-day sitting fatigue",
-        "bullet_2": "Focus: Boosts concentration and clarity",
-        "bullet_3": "Productivity: Increases daily work output",
+        "title_fallback": "West Month Luxury Mattress Topper",
+        "compare_price_fallback": "$199.00",
+        "price_fallback": "$89.99",
+        "save_amount_fallback": "$109.01",
+        "trust_note": "Only available at usewestmonth.com",
+        "hero_desc": "1000GSM ultra-thick padding, breathable quilted design, and deep-pocket fit. Transform your sleep quality starting tonight.",
+        "product_url": "/products/west-month-luxury-topper",
+        "bullet_1": "Comfort: 3X thicker than standard toppers",
+        "bullet_2": "Cooling: Breathable design prevents night sweats",
+        "bullet_3": "Secure: Deep pocket fits mattresses 8-21\"",
         "gifts_heading": "Limited Sale! Unlock FREE Gifts With Your Order",
         "urgency_text": "Order by [date] for guaranteed FREE Gifts",
         "atc_text": "ADD TO CART +",
         "trust_1": "Ships Today",
         "trust_2": "90-Day Easy Returns",
-        "sub_desc": "<p>VELO is made for people who need more than a standard chair. It's ideal for remote workers, creatives, people with ADHD, and ... <a href=\"#\">Read More</a></p>"
+        "sub_desc": "<p>West Month is made for people who need more than a standard topper. It is ideal for hot sleepers, back pain sufferers, and anyone wanting hotel luxury... <a href=\"#\">Read More</a></p>"
       }
     },
     "velo_trust": {
@@ -122,15 +122,15 @@
           "settings": {
             "icon": "refresh",
             "title": "90-Day Easy Returns",
-            "subtitle": "Sit on it first"
+            "subtitle": "Sleep on it first"
           }
         },
         "t3": {
           "type": "trust",
           "settings": {
             "icon": "shield",
-            "title": "10-Year Warranty",
-            "subtitle": "Guaranteed lifespan"
+            "title": "Premium Quality",
+            "subtitle": "1000GSM Construction"
           }
         }
       },
@@ -147,14 +147,14 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading_light": "One Chair =",
-            "heading_bold": "Endless Positions"
+            "heading_light": "Ultimate Comfort =",
+            "heading_bold": "Better Sleep"
           }
         },
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p>VELO effortlessly adapts to your changing postures, improves comfort and healthy sitting throughout your day</p>"
+            "text": "<p>West Month effortlessly adapts to your body, improves comfort, and regulates temperature throughout the night.</p>"
           }
         }
       },
@@ -174,49 +174,49 @@
         "card_1": {
           "type": "card",
           "settings": {
-            "icon": "monitor",
-            "title": "Long-Hour Desk Workers",
-            "text": "<p>Stay comfortable through long sessions</p>"
+            "icon": "thermometer",
+            "title": "Hot Sleepers",
+            "text": "<p>Breathable design regulates temperature.</p>"
           }
         },
         "card_2": {
           "type": "card",
           "settings": {
-            "icon": "palette",
-            "title": "Creative Professionals",
-            "text": "<p>Keeps body & mind engaged.</p>"
+            "icon": "bandage",
+            "title": "Back & Hip Pain",
+            "text": "<p>Provides instant pressure point relief.</p>"
           }
         },
         "card_3": {
           "type": "card",
           "settings": {
-            "icon": "move",
-            "title": "Fidgety People",
-            "text": "<p>Lets you move freely.</p>"
+            "icon": "sparkles",
+            "title": "Old Mattress Owners",
+            "text": "<p>Adds luxury hotel plushness instantly.</p>"
           }
         },
         "card_4": {
           "type": "card",
           "settings": {
-            "icon": "brain",
-            "title": "Neurodiverse Individuals",
-            "text": "<p>Helps improve focus.</p>"
+            "icon": "bed",
+            "title": "Restless Sleepers",
+            "text": "<p>Reduces tossing and turning.</p>"
           }
         },
         "card_5": {
           "type": "card",
           "settings": {
-            "icon": "bandage",
-            "title": "Chronic Pain Sufferers",
-            "text": "<p>Reduces pressure and stiffness.</p>"
+            "icon": "clock",
+            "title": "Deep Stretch Readers",
+            "text": "<p>Plush support for late night reading.</p>"
           }
         },
         "card_6": {
           "type": "card",
           "settings": {
-            "icon": "sparkles",
-            "title": "Meditation Practitioners",
-            "text": "<p>Supports relaxed sitting</p>"
+            "icon": "check",
+            "title": "Everyone",
+            "text": "<p>Wake up feeling totally energized.</p>"
           }
         }
       },
@@ -229,8 +229,8 @@
         "card_6"
       ],
       "settings": {
-        "heading": "Who VELO Is For?",
-        "subheading": "Designed for people who can't sit still (and shouldn't have to)",
+        "heading": "Who West Month Is For?",
+        "subheading": "Designed for people who want to wake up refreshed (and pain-free)",
         "columns": "3"
       }
     },
@@ -240,33 +240,33 @@
         "p1": {
           "type": "point",
           "settings": {
-            "icon": "move",
-            "title": "Allows for Movement",
-            "description": "<p>Move naturally without thinking about it</p>"
+            "icon": "lock",
+            "title": "Stays Secure All Night",
+            "description": "<p>Reinforced corners keep the topper locked in place.</p>"
           }
         },
         "p2": {
           "type": "point",
           "settings": {
             "icon": "check",
-            "title": "Effortless Posture",
-            "description": "<p>Supports alignment as you shift positions</p>"
+            "title": "Effortless Cloud Comfort",
+            "description": "<p>1000GSM padding forms exactly to your body.</p>"
           }
         },
         "p3": {
           "type": "point",
           "settings": {
-            "icon": "clock",
-            "title": "All-Day Comfort",
-            "description": "<p>Stays comfortable longer - without feeling \"stuck\"</p>"
+            "icon": "thermometer",
+            "title": "Temperature Control",
+            "description": "<p>No memory foam heat traps - sleeps cool.</p>"
           }
         },
         "p4": {
           "type": "point",
           "settings": {
             "icon": "sliders",
-            "title": "Fits Every Body & Desk",
-            "description": "<p>Adjusts to any height and desk setup</p>"
+            "title": "Fits Any Mattress Depth",
+            "description": "<p>Deep pocket skirts fit 8-21\" effortlessly.</p>"
           }
         }
       },
@@ -277,8 +277,9 @@
         "p4"
       ],
       "settings": {
-        "heading_prefix": "Built for How Your",
-        "heading_bold": "Body Actually Works"
+        "heading_prefix": "Built for How You",
+        "heading_bold": "Actually Sleep",
+        "subheading": "Supporting your natural resting positions"
       }
     },
     "velo_comparison": {
@@ -287,37 +288,37 @@
         "feat_1": {
           "type": "feature",
           "settings": {
-            "title": "Move Without Limits"
+            "title": "3X Thicker Padding"
           }
         },
         "feat_2": {
           "type": "feature",
           "settings": {
-            "title": "Stay Comfortable All Day"
+            "title": "Stays Cool All Night"
           }
         },
         "feat_3": {
           "type": "feature",
           "settings": {
-            "title": "Less Fatigue, More Focus"
+            "title": "Machine Washable"
           }
         },
         "feat_4": {
           "type": "feature",
           "settings": {
-            "title": "Support That Adapts to You"
+            "title": "Fits Deep Mattresses"
           }
         },
         "feat_5": {
           "type": "feature",
           "settings": {
-            "title": "Comfort That Lasts Longer"
+            "title": "Pain Targeting Comfort"
           }
         },
         "feat_6": {
           "type": "feature",
           "settings": {
-            "title": "Good Posture, No Effort"
+            "title": "Won't Compress or Flatten"
           }
         }
       },
@@ -330,10 +331,10 @@
         "feat_6"
       ],
       "settings": {
-        "heading_light": "Sitting Still vs",
-        "heading_bold": "Sitting",
-        "heading_italic": "Smart",
-        "subheading": "The VELO Chair supports your natural need to move and adjust, keeping you focused and preventing fatigue.",
+        "heading_light": "Standard Toppers vs",
+        "heading_bold": "1000GSM",
+        "heading_italic": "Luxury",
+        "subheading": "The West Month Topper supports your natural sleep positions, keeping you cool and preventing stiffness.",
         "image_position": "left",
         "full_width": true
       }
@@ -345,21 +346,21 @@
           "type": "step",
           "settings": {
             "title": "Step 01",
-            "text": "<p>Adjust the seat height to your desk</p>"
+            "text": "<p>Unbox and shake slightly to fluff the 1000GSM padding</p>"
           }
         },
         "step_2": {
           "type": "step",
           "settings": {
             "title": "Step 02",
-            "text": "<p>Move freely throughout your day</p>"
+            "text": "<p>Stretch the elastic skirt over your mattress corners</p>"
           }
         },
         "step_3": {
           "type": "step",
           "settings": {
             "title": "Step 03",
-            "text": "<p>Lock into position when needing deep focus</p>"
+            "text": "<p>Put your fitted sheet over it and sleep on a cloud</p>"
           }
         }
       },
@@ -368,7 +369,10 @@
         "step_2",
         "step_3"
       ],
-      "settings": {}
+      "settings": {
+        "heading": "How to Use The West Month Topper",
+        "subheading": "As easy as making your bed."
+      }
     },
     "velo_details": {
       "type": "velo-details-grid",
@@ -377,21 +381,21 @@
           "type": "detail",
           "settings": {
             "icon": "move",
-            "title": "Pressure-Relief Seat"
+            "title": "1000GSM Luxury Fill"
           }
         },
         "d2": {
           "type": "detail",
           "settings": {
             "icon": "thermometer",
-            "title": "Breathable Fabric"
+            "title": "Cooling Quilt Pattern"
           }
         },
         "d3": {
           "type": "detail",
           "settings": {
             "icon": "sliders",
-            "title": "Fully Adjustable Fit"
+            "title": "Deep Skirt Fit (8-21\")"
           }
         }
       },
@@ -413,21 +417,21 @@
           "type": "testimonial",
           "settings": {
             "author_name": "Sarah J.",
-            "quote": "The VELO Chair changed how I work. I no longer feel stiff after a 10-hour shift."
+            "quote": "The West Month topper changed how I sleep. I no longer wake up with hip pain."
           }
         },
         "t2": {
           "type": "testimonial",
           "settings": {
             "author_name": "Michael R.",
-            "quote": "I've tried every ergonomic chair out there. This is the first one that actually lets me move freely while working."
+            "quote": "I've tried memory foam, but it was too hot. This is perfectly plush and sleeps extremely cool."
           }
         },
         "t3": {
           "type": "testimonial",
           "settings": {
             "author_name": "Emily L.",
-            "quote": "Perfect for my ADHD! Being able to sit cross-legged while working is a total game-changer for my focus."
+            "quote": "Perfect for my old mattress! Saved me $1000 from having to buy a completely new bed."
           }
         }
       },
@@ -444,9 +448,9 @@
         "i1": {
           "type": "item",
           "settings": {
-            "title": "VELO Freedom Chair",
-            "original_price": "$600.00",
-            "final_price": "$397",
+            "title": "West Month Mattress Topper",
+            "original_price": "$199.00",
+            "final_price": "$89.99",
             "is_free": false
           }
         },
@@ -461,7 +465,7 @@
         "i3": {
           "type": "item",
           "settings": {
-            "title": "Mouse Pad",
+            "title": "2x Premium Pillowcases",
             "original_price": "$23.00",
             "is_free": true
           }
@@ -469,7 +473,7 @@
         "i4": {
           "type": "item",
           "settings": {
-            "title": "Chair Mat",
+            "title": "Night Sleep Guide",
             "original_price": "$49.00",
             "is_free": true
           }
@@ -492,7 +496,7 @@
       ],
       "settings": {
         "heading": "What's Included with",
-        "heading_bold": "Your VELO Chair",
+        "heading_bold": "Your West Month Topper",
         "order_today_label": "IF YOU ORDER TODAY:",
         "savings_label": "Savings",
         "savings_value": "You Save $203",
@@ -509,22 +513,22 @@
         "f1": {
           "type": "faq",
           "settings": {
-            "title": "How long does assembly take?",
-            "content": "<p>Assembly typically takes less than 15 minutes.</p>"
+            "title": "Is this machine washable?",
+            "content": "<p>Yes, absolutely. It is 100% machine washable for easy care.</p>"
           }
         },
         "f2": {
           "type": "faq",
           "settings": {
-            "title": "What is the weight limit?",
-            "content": "<p>Tested to support up to 300 lbs.</p>"
+            "title": "Will it fit my deep mattress?",
+            "content": "<p>Yes, the skirt stretches to accommodate mattresses from 8 to 21 inches deep.</p>"
           }
         },
         "f3": {
           "type": "faq",
           "settings": {
             "title": "Can I return it if I don't like it?",
-            "content": "<p>Yes! We offer a 90-day risk-free trial. If you're not completely satisfied, we'll arrange a return and full refund.</p>"
+            "content": "<p>Yes! We offer a 30-day money-back guarantee.</p>"
           }
         }
       },
@@ -538,7 +542,7 @@
     "velo_sticky_atc": {
       "type": "velo-sticky-atc",
       "settings": {
-        "btn_text": "ADD TO CART +",
+        "btn_text": "CLAIM OFFER +",
         "show_for_demo": true
       }
     }
