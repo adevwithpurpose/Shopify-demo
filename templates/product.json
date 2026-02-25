@@ -109,7 +109,7 @@
           "settings": {
             "icon": "move",
             "title": "Allows for Movement",
-            "description": "Move naturally without thinking about it"
+            "description": "<p>Move naturally without thinking about it</p>"
           }
         },
         "p2": {
@@ -117,7 +117,7 @@
           "settings": {
             "icon": "check",
             "title": "Effortless Posture",
-            "description": "Supports alignment as you shift positions"
+            "description": "<p>Supports alignment as you shift positions</p>"
           }
         },
         "p3": {
@@ -125,7 +125,7 @@
           "settings": {
             "icon": "clock",
             "title": "All-Day Comfort",
-            "description": "Stays comfortable longer - without feeling \"stuck\""
+            "description": "<p>Stays comfortable longer - without feeling \"stuck\"</p>"
           }
         },
         "p4": {
@@ -133,7 +133,7 @@
           "settings": {
             "icon": "sliders",
             "title": "Fits Every Body & Desk",
-            "description": "Adjusts to any height and desk setup"
+            "description": "<p>Adjusts to any height and desk setup</p>"
           }
         }
       },
@@ -156,7 +156,7 @@
           "settings": {
             "icon": "move",
             "title": "Pressure-Relief Seat",
-            "description": "12cm extra-thick high-density foam"
+            "description": "<p>12cm extra-thick high-density foam</p>"
           }
         },
         "d2": {
@@ -164,7 +164,7 @@
           "settings": {
             "icon": "thermometer",
             "title": "Breathable Fabric",
-            "description": "Soft-touch material that stays cool"
+            "description": "<p>Soft-touch material that stays cool</p>"
           }
         },
         "d3": {
@@ -172,7 +172,7 @@
           "settings": {
             "icon": "sliders",
             "title": "Fully Adjustable Fit",
-            "description": "Adjustable from top to bottom"
+            "description": "<p>Adjustable from top to bottom</p>"
           }
         },
         "d4": {
@@ -180,7 +180,7 @@
           "settings": {
             "icon": "refresh",
             "title": "360° Smooth Rotating",
-            "description": "For effortless position changes"
+            "description": "<p>For effortless position changes</p>"
           }
         },
         "d5": {
@@ -188,7 +188,7 @@
           "settings": {
             "icon": "lock",
             "title": "Lockable Wheels",
-            "description": "Stable when you need it"
+            "description": "<p>Stable when you need it</p>"
           }
         },
         "d6": {
@@ -196,7 +196,7 @@
           "settings": {
             "icon": "shield",
             "title": "Built to Last",
-            "description": "Reinforced steel frame"
+            "description": "<p>Reinforced steel frame</p>"
           }
         }
       },

@@ -1,0 +1,4 @@
+0a98e20 Refine KÖVA design: align typography, hex values, card grids, and pill buttons with reference UI
+8cffdee Enhance product page with KÖVA funnel sections
+22163cd Update README with theme documentation
+01cbf24 Initial commit: KÖVA Freedom Theme (Dawn-based)

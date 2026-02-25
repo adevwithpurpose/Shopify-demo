@@ -5,12 +5,21 @@
 {% if product != blank or section.settings.show_for_demo %}
   <div class="velo-sticky-atc" id="veloStickyAtc-{{ section.id }}">
     <div class="velo-sticky-atc-left">
-      <span class="velo-sticky-atc-name">
-        {% if product != blank %}{{ product.title }}{% else %}VELO Freedom Chair{% endif %}
-      </span>
-      <span class="velo-sticky-atc-price">
-        {% if product != blank %}{{ product.price | money }}{% else %}$397.00{% endif %}
-      </span>
+      {%- if product != blank and product.featured_image -%}
+        <div class="velo-sticky-img">
+          {{ product.featured_image | image_url: width: 100 | image_tag: loading: 'lazy' }}
+        </div>
+      {%- else -%}
+        <div class="velo-sticky-img velo-sticky-placeholder"></div>
+      {%- endif -%}
+      <div class="velo-sticky-info">
+        <span class="velo-sticky-atc-name">
+          {% if product != blank %}{{ product.title }}{% else %}VELO Freedom Chair{% endif %}
+        </span>
+        <span class="velo-sticky-atc-price">
+          {% if product != blank %}{{ product.price | money }}{% else %}$397.00{% endif %}
+        </span>
+      </div>
     </div>
     <div class="velo-sticky-atc-right">
       <button type="button" class="velo-sticky-atc-btn">

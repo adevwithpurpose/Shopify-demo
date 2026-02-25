@@ -1,0 +1,5 @@
+b8feb52 style: exactly match product hero reference layout and elements
+9afb173 style: ultra-premium typography, fix atc button borders, and add social proof
+8792dba style: compact risk-free section and reorder to top, refine rich text sizing
+e2216ac feat: polish pricing table, implement floating risk-free section, and refine hero banner typography
+e40240b fix: resolve Shopify schema validation error in velo-body-built.liquid

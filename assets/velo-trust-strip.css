@@ -7,7 +7,7 @@
 }
 
 .velo-trust-section {
-    padding: 3rem 0;
+    padding: 4.5rem 0;
     border-top: 1px solid var(--velo-gray-border);
     border-bottom: 1px solid var(--velo-gray-border);
     font-family: var(--font-body-family), sans-serif;
@@ -39,6 +39,7 @@
 .velo-trust-item-icon svg {
     width: 32px;
     height: 32px;
+    stroke-width: 2.5;
 }
 
 .velo-trust-item-content {

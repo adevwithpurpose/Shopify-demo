@@ -75,6 +75,17 @@
 {%- style -%}
   .header {
     padding: {{ section.settings.padding_top | times: 0.5 | round: 0 }}px 3rem {{ section.settings.padding_bottom | times: 0.5 | round: 0 }}px 3rem;
+    transition: padding 0.3s ease, background-color 0.3s ease;
+  }
+
+  .scrolled-past-header .header {
+    padding-top: 0.8rem !important;
+    padding-bottom: 0.8rem !important;
+  }
+  
+  .scrolled-past-header .header__heading-logo {
+    max-width: 80px !important;
+    transition: max-width 0.3s ease;
   }
 
   .section-header {
@@ -160,7 +171,7 @@
                 }}
               </div>
             {%- else -%}
-              <span class="h2">{{ shop.name }}</span>
+              <span class="h2">VELO</span>
             {%- endif -%}
           </a>
       {%- if request.page_type == 'index' -%}
@@ -200,7 +211,7 @@
                 }}
               </div>
             {%- else -%}
-              <span class="h2">{{ shop.name }}</span>
+              <span class="h2">VELO</span>
             {%- endif -%}
           </a>
       {%- if request.page_type == 'index' -%}

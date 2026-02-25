@@ -60,7 +60,7 @@
           "type": "accordion",
           "settings": {
             "title": "Shipping & Returns",
-            "content": "<ul><li>Free US Shipping — Orders arrive in 2-4 business days.</li><li>90-Day Risk-Free Trial — Love it or return it.</li><li>10-Year Warranty included free.</li></ul>"
+            "content": "<ul><li>Free US Shipping â€” Orders arrive in 2-4 business days.</li><li>90-Day Risk-Free Trial â€” Love it or return it.</li><li>10-Year Warranty included free.</li></ul>"
           }
         },
         "acc_contact": {
@@ -94,6 +94,7 @@
         "save_amount_fallback": "$203",
         "trust_note": "Only available at velochair.com",
         "hero_desc": "The only chair that supports your body's natural need for movement - working with your body, not against it.",
+        "product_url": "/products/velo-freedom-chair",
         "bullet_1": "Energy: Prevents all-day sitting fatigue",
         "bullet_2": "Focus: Boosts concentration and clarity",
         "bullet_3": "Productivity: Increases daily work output",
@@ -141,7 +142,7 @@
       "settings": {}
     },
     "velo_rich_text": {
-      "type": "rich-text",
+      "type": "velo-rich-text",
       "blocks": {
         "heading": {
           "type": "heading",
@@ -153,7 +154,7 @@
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p>KÖVA effortlessly adapts to your changing postures, improves comfort and healthy sitting throughout your day</p>"
+            "text": "<p>VELO effortlessly adapts to your changing postures, improves comfort and healthy sitting throughout your day</p>"
           }
         }
       },
@@ -241,7 +242,7 @@
           "settings": {
             "icon": "move",
             "title": "Allows for Movement",
-            "description": "Move naturally without thinking about it"
+            "description": "<p>Move naturally without thinking about it</p>"
           }
         },
         "p2": {
@@ -249,7 +250,7 @@
           "settings": {
             "icon": "check",
             "title": "Effortless Posture",
-            "description": "Supports alignment as you shift positions"
+            "description": "<p>Supports alignment as you shift positions</p>"
           }
         },
         "p3": {
@@ -257,7 +258,7 @@
           "settings": {
             "icon": "clock",
             "title": "All-Day Comfort",
-            "description": "Stays comfortable longer - without feeling \"stuck\""
+            "description": "<p>Stays comfortable longer - without feeling \"stuck\"</p>"
           }
         },
         "p4": {
@@ -265,7 +266,7 @@
           "settings": {
             "icon": "sliders",
             "title": "Fits Every Body & Desk",
-            "description": "Adjusts to any height and desk setup"
+            "description": "<p>Adjusts to any height and desk setup</p>"
           }
         }
       },
@@ -344,21 +345,21 @@
           "type": "step",
           "settings": {
             "title": "Step 01",
-            "text": "Adjust the seat height to your desk"
+            "text": "<p>Adjust the seat height to your desk</p>"
           }
         },
         "step_2": {
           "type": "step",
           "settings": {
             "title": "Step 02",
-            "text": "Move freely throughout your day"
+            "text": "<p>Move freely throughout your day</p>"
           }
         },
         "step_3": {
           "type": "step",
           "settings": {
             "title": "Step 03",
-            "text": "Lock into position when needing deep focus"
+            "text": "<p>Lock into position when needing deep focus</p>"
           }
         }
       },
@@ -411,22 +412,22 @@
         "t1": {
           "type": "testimonial",
           "settings": {
-            "name": "Sarah J.",
-            "content": "<p>Best chair I've ever owned. My back pain is gone.</p>"
+            "author_name": "Sarah J.",
+            "quote": "The VELO Chair changed how I work. I no longer feel stiff after a 10-hour shift."
           }
         },
         "t2": {
           "type": "testimonial",
           "settings": {
-            "name": "Mark D.",
-            "content": "<p>Perfect for long coding sessions.</p>"
+            "author_name": "Michael R.",
+            "quote": "I've tried every ergonomic chair out there. This is the first one that actually lets me move freely while working."
           }
         },
         "t3": {
           "type": "testimonial",
           "settings": {
-            "name": "Emily R.",
-            "content": "<p>I love how I can sit in so many different ways.</p>"
+            "author_name": "Emily L.",
+            "quote": "Perfect for my ADHD! Being able to sit cross-legged while working is a total game-changer for my focus."
           }
         }
       },
@@ -544,7 +545,6 @@
   },
   "order": [
     "velo_hero",
-    "velo_risk_free",
     "velo_rich_text",
     "velo_trust",
     "velo_features",
@@ -552,6 +552,7 @@
     "velo_comparison",
     "velo_how_to",
     "velo_details",
+    "velo_risk_free",
     "velo_testimonials",
     "velo_included",
     "velo_faq",

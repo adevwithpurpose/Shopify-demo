@@ -22,13 +22,38 @@
 
 .velo-sticky-atc-left {
     display: flex;
+    flex-direction: row;
+    gap: 1.2rem;
+    align-items: center;
+}
+
+.velo-sticky-img {
+    width: 44px;
+    height: 44px;
+    border-radius: 6px;
+    overflow: hidden;
+    background: #f0f3f8;
+    /* fallback color */
+    flex-shrink: 0;
+}
+
+.velo-sticky-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.velo-sticky-info {
+    display: flex;
     flex-direction: column;
-    gap: 2px;
+    justify-content: center;
 }
 
 .velo-sticky-atc-name {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     font-weight: 700;
+    line-height: 1.2;
     color: var(--velo-navy, #122442);
     white-space: nowrap;
     overflow: hidden;
@@ -37,9 +62,10 @@
 }
 
 .velo-sticky-atc-price {
-    font-size: 1.4rem;
-    font-weight: 600;
-    color: #444;
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 1.4;
+    color: #666;
 }
 
 .velo-sticky-atc-btn {
