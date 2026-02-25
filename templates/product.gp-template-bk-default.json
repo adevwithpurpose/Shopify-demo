@@ -8,78 +8,15 @@
  * ------------------------------------------------------------
  */
 {
+  "order": [
+    "main",
+    "velo_body_built",
+    "velo_details",
+    "velo_included",
+    "related-products"
+  ],
   "sections": {
     "main": {
-      "type": "velo-product-hero",
-      "blocks": {
-        "gift_1": {
-          "type": "gift",
-          "settings": {
-            "icon": "truck",
-            "title": "FREE Shipping",
-            "value": "($14)"
-          }
-        },
-        "gift_2": {
-          "type": "gift",
-          "settings": {
-            "icon": "mouse",
-            "title": "Mouse Pad",
-            "value": "($23)"
-          }
-        },
-        "gift_3": {
-          "type": "gift",
-          "settings": {
-            "icon": "mat",
-            "title": "Chair Mat",
-            "value": "($49)"
-          }
-        },
-        "gift_4": {
-          "type": "gift",
-          "settings": {
-            "icon": "shield",
-            "title": "3-Year Warranty",
-            "value": "($29)"
-          }
-        },
-        "acc_benefits": {
-          "type": "accordion",
-          "settings": {
-            "title": "Benefits",
-            "content": "<p>VELO is made for people who need more than a standard chair. Experience reduced fatigue, better posture, and improved focus through natural movement support.</p>"
-          }
-        },
-        "acc_assemble": {
-          "type": "accordion",
-          "settings": {
-            "title": "How to Assemble",
-            "content": "<p>Assembly takes less than 15 minutes. Attach the base, insert the pneumatic cylinder, place the seat cushion, and adjust the backrest. All tools and a simple 4-step guide are included.</p>"
-          }
-        },
-        "acc_specs": {
-          "type": "accordion",
-          "settings": {
-            "title": "Specifications",
-            "content": "<ul><li><strong>Seat Cushion:</strong> 12cm High-density open-cell foam</li><li><strong>Frame:</strong> Reinforced industrial steel</li><li><strong>Weight Capacity:</strong> 300 lbs (136 kg)</li><li><strong>Height Adjustment:</strong> Pneumatic gas lift</li><li><strong>Warranty:</strong> 10 Years</li></ul>"
-          }
-        },
-        "acc_shipping": {
-          "type": "accordion",
-          "settings": {
-            "title": "Shipping & Returns",
-            "content": "<ul><li>Free US Shipping — Orders arrive in 2-4 business days.</li><li>90-Day Risk-Free Trial — Love it or return it.</li><li>10-Year Warranty included free.</li></ul>"
-          }
-        },
-        "acc_contact": {
-          "type": "accordion",
-          "settings": {
-            "title": "Contact Us",
-            "content": "<p>Have a question? Email us at support@velochair.com and we'll reply within 24 hours (Mon-Fri, 9am-5pm EST).</p>"
-          }
-        }
-      },
       "block_order": [
         "gift_1",
         "gift_2",
@@ -91,124 +28,159 @@
         "acc_shipping",
         "acc_contact"
       ],
+      "blocks": {
+        "acc_assemble": {
+          "settings": {
+            "content": "<p>Assembly takes less than 15 minutes. Attach the base, insert the pneumatic cylinder, place the seat cushion, and adjust the backrest. All tools and a simple 4-step guide are included.</p>",
+            "title": "How to Assemble"
+          },
+          "type": "accordion"
+        },
+        "acc_benefits": {
+          "settings": {
+            "content": "<p>VELO is made for people who need more than a standard chair. Experience reduced fatigue, better posture, and improved focus through natural movement support.</p>",
+            "title": "Benefits"
+          },
+          "type": "accordion"
+        },
+        "acc_contact": {
+          "settings": {
+            "content": "<p>Have a question? Email us at support@velochair.com and we'll reply within 24 hours (Mon-Fri, 9am-5pm EST).</p>",
+            "title": "Contact Us"
+          },
+          "type": "accordion"
+        },
+        "acc_shipping": {
+          "settings": {
+            "content": "<ul><li>Free US Shipping — Orders arrive in 2-4 business days.</li><li>90-Day Risk-Free Trial — Love it or return it.</li><li>10-Year Warranty included free.</li></ul>",
+            "title": "Shipping & Returns"
+          },
+          "type": "accordion"
+        },
+        "acc_specs": {
+          "settings": {
+            "content": "<ul><li><strong>Seat Cushion:</strong> 12cm High-density open-cell foam</li><li><strong>Frame:</strong> Reinforced industrial steel</li><li><strong>Weight Capacity:</strong> 300 lbs (136 kg)</li><li><strong>Height Adjustment:</strong> Pneumatic gas lift</li><li><strong>Warranty:</strong> 10 Years</li></ul>",
+            "title": "Specifications"
+          },
+          "type": "accordion"
+        },
+        "gift_1": {
+          "settings": {
+            "icon": "truck",
+            "title": "FREE Shipping",
+            "value": "($14)"
+          },
+          "type": "gift"
+        },
+        "gift_2": {
+          "settings": {
+            "icon": "mouse",
+            "title": "Mouse Pad",
+            "value": "($23)"
+          },
+          "type": "gift"
+        },
+        "gift_3": {
+          "settings": {
+            "icon": "mat",
+            "title": "Chair Mat",
+            "value": "($49)"
+          },
+          "type": "gift"
+        },
+        "gift_4": {
+          "settings": {
+            "icon": "shield",
+            "title": "3-Year Warranty",
+            "value": "($29)"
+          },
+          "type": "gift"
+        }
+      },
       "settings": {
+        "atc_text": "ADD TO CART +",
         "badge_1": "BESTSELLER",
         "badge_2": "#1 ACTIVE SITTING CHAIR",
-        "show_reviews": true,
-        "rating_value": 5,
-        "review_count": "14,200",
-        "trust_note": "Only available at velochair.com",
-        "hero_desc": "The only chair that supports your body's natural need for movement - working with your body, not against it.",
         "bullet_1": "Energy: Prevents all-day sitting fatigue",
         "bullet_2": "Focus: Boosts concentration and clarity",
         "bullet_3": "Productivity: Increases daily work output",
         "gifts_heading": "Limited Sale! Unlock FREE Gifts With Your Order",
-        "urgency_text": "Order by [date] for guaranteed FREE Gifts",
-        "atc_text": "ADD TO CART +",
+        "hero_desc": "The only chair that supports your body's natural need for movement - working with your body, not against it.",
+        "rating_value": 5,
+        "review_count": "14,200",
+        "show_reviews": true,
+        "sub_desc": "<p>VELO is made for people who need more than a standard chair. It's ideal for remote workers, creatives, people with ADHD, and anyone who feels 'stuck' in their seat. <a href=\"#\">Read More</a></p>",
         "trust_1": "Ships Today",
         "trust_2": "90-Day Easy Returns",
-        "sub_desc": "<p>VELO is made for people who need more than a standard chair. It's ideal for remote workers, creatives, people with ADHD, and anyone who feels 'stuck' in their seat. <a href=\"#\">Read More</a></p>"
-      }
+        "trust_note": "Only available at velochair.com",
+        "urgency_text": "Order by [date] for guaranteed FREE Gifts"
+      },
+      "type": "velo-product-hero"
+    },
+    "related-products": {
+      "settings": {
+        "color_scheme": "scheme-1",
+        "columns_desktop": 4,
+        "columns_mobile": "2",
+        "heading": "You may also like",
+        "heading_size": "h2",
+        "image_ratio": "square",
+        "padding_bottom": 28,
+        "padding_top": 36,
+        "show_rating": false,
+        "show_secondary_image": true,
+        "show_vendor": false
+      },
+      "type": "related-products"
     },
     "velo_body_built": {
-      "type": "velo-body-built",
-      "blocks": {
-        "p1": {
-          "type": "point",
-          "settings": {
-            "icon": "move",
-            "title": "Allows for Movement",
-            "description": "<p>Move naturally without thinking about it</p>"
-          }
-        },
-        "p2": {
-          "type": "point",
-          "settings": {
-            "icon": "check",
-            "title": "Effortless Posture",
-            "description": "<p>Supports alignment as you shift positions</p>"
-          }
-        },
-        "p3": {
-          "type": "point",
-          "settings": {
-            "icon": "clock",
-            "title": "All-Day Comfort",
-            "description": "<p>Stays comfortable longer - without feeling \"stuck\"</p>"
-          }
-        },
-        "p4": {
-          "type": "point",
-          "settings": {
-            "icon": "sliders",
-            "title": "Fits Every Body & Desk",
-            "description": "<p>Adjusts to any height and desk setup</p>"
-          }
-        }
-      },
       "block_order": [
         "p1",
         "p2",
         "p3",
         "p4"
       ],
-      "settings": {
-        "heading_prefix": "Built for How Your",
-        "heading_bold": "Body Actually Works"
-      }
-    },
-    "velo_details": {
-      "type": "velo-details-grid",
       "blocks": {
-        "d1": {
-          "type": "detail",
+        "p1": {
           "settings": {
+            "description": "<p>Move naturally without thinking about it</p>",
             "icon": "move",
-            "title": "Pressure-Relief Seat",
-            "description": "<p>12cm extra-thick high-density foam</p>"
-          }
+            "title": "Allows for Movement"
+          },
+          "type": "point"
         },
-        "d2": {
-          "type": "detail",
+        "p2": {
           "settings": {
-            "icon": "thermometer",
-            "title": "Breathable Fabric",
-            "description": "<p>Soft-touch material that stays cool</p>"
-          }
+            "description": "<p>Supports alignment as you shift positions</p>",
+            "icon": "check",
+            "title": "Effortless Posture"
+          },
+          "type": "point"
         },
-        "d3": {
-          "type": "detail",
+        "p3": {
           "settings": {
+            "description": "<p>Stays comfortable longer - without feeling \"stuck\"</p>",
+            "icon": "clock",
+            "title": "All-Day Comfort"
+          },
+          "type": "point"
+        },
+        "p4": {
+          "settings": {
+            "description": "<p>Adjusts to any height and desk setup</p>",
             "icon": "sliders",
-            "title": "Fully Adjustable Fit",
-            "description": "<p>Adjustable from top to bottom</p>"
-          }
-        },
-        "d4": {
-          "type": "detail",
-          "settings": {
-            "icon": "refresh",
-            "title": "360° Smooth Rotating",
-            "description": "<p>For effortless position changes</p>"
-          }
-        },
-        "d5": {
-          "type": "detail",
-          "settings": {
-            "icon": "lock",
-            "title": "Lockable Wheels",
-            "description": "<p>Stable when you need it</p>"
-          }
-        },
-        "d6": {
-          "type": "detail",
-          "settings": {
-            "icon": "shield",
-            "title": "Built to Last",
-            "description": "<p>Reinforced steel frame</p>"
-          }
+            "title": "Fits Every Body & Desk"
+          },
+          "type": "point"
         }
       },
+      "settings": {
+        "heading_bold": "Body Actually Works",
+        "heading_prefix": "Built for How Your"
+      },
+      "type": "velo-body-built"
+    },
+    "velo_details": {
       "block_order": [
         "d1",
         "d2",
@@ -217,61 +189,64 @@
         "d5",
         "d6"
       ],
-      "settings": {
-        "heading_light": "Designed",
-        "heading_bold": "Down to Every Detail",
-        "subheading": "Smart features, comfort-focused materials, and maximum adjustability"
-      }
-    },
-    "velo_included": {
-      "type": "velo-whats-included",
       "blocks": {
-        "inc_1": {
-          "type": "item",
+        "d1": {
           "settings": {
-            "title": "VELO Freedom Chair",
-            "original_price": "$600.00",
-            "final_price": "$397",
-            "is_free": false
-          }
+            "description": "<p>12cm extra-thick high-density foam</p>",
+            "icon": "move",
+            "title": "Pressure-Relief Seat"
+          },
+          "type": "detail"
         },
-        "inc_2": {
-          "type": "item",
+        "d2": {
           "settings": {
-            "title": "Fast U.S. Shipping",
-            "original_price": "$14.00",
-            "final_price": "FREE",
-            "is_free": true
-          }
+            "description": "<p>Soft-touch material that stays cool</p>",
+            "icon": "thermometer",
+            "title": "Breathable Fabric"
+          },
+          "type": "detail"
         },
-        "inc_3": {
-          "type": "item",
+        "d3": {
           "settings": {
-            "title": "Mouse Pad Attachment",
-            "original_price": "$23.00",
-            "final_price": "FREE",
-            "is_free": true
-          }
+            "description": "<p>Adjustable from top to bottom</p>",
+            "icon": "sliders",
+            "title": "Fully Adjustable Fit"
+          },
+          "type": "detail"
         },
-        "inc_4": {
-          "type": "item",
+        "d4": {
           "settings": {
-            "title": "Transparent Chair Mat",
-            "original_price": "$49.00",
-            "final_price": "FREE",
-            "is_free": true
-          }
+            "description": "<p>For effortless position changes</p>",
+            "icon": "refresh",
+            "title": "360° Smooth Rotating"
+          },
+          "type": "detail"
         },
-        "inc_5": {
-          "type": "item",
+        "d5": {
           "settings": {
-            "title": "3-Year Warranty",
-            "original_price": "$29.00",
-            "final_price": "FREE",
-            "is_free": true
-          }
+            "description": "<p>Stable when you need it</p>",
+            "icon": "lock",
+            "title": "Lockable Wheels"
+          },
+          "type": "detail"
+        },
+        "d6": {
+          "settings": {
+            "description": "<p>Reinforced steel frame</p>",
+            "icon": "shield",
+            "title": "Built to Last"
+          },
+          "type": "detail"
         }
       },
+      "settings": {
+        "heading_bold": "Down to Every Detail",
+        "heading_light": "Designed",
+        "subheading": "Smart features, comfort-focused materials, and maximum adjustability"
+      },
+      "type": "velo-details-grid"
+    },
+    "velo_included": {
       "block_order": [
         "inc_1",
         "inc_2",
@@ -279,41 +254,66 @@
         "inc_4",
         "inc_5"
       ],
+      "blocks": {
+        "inc_1": {
+          "settings": {
+            "final_price": "$397",
+            "is_free": false,
+            "original_price": "$600.00",
+            "title": "VELO Freedom Chair"
+          },
+          "type": "item"
+        },
+        "inc_2": {
+          "settings": {
+            "final_price": "FREE",
+            "is_free": true,
+            "original_price": "$14.00",
+            "title": "Fast U.S. Shipping"
+          },
+          "type": "item"
+        },
+        "inc_3": {
+          "settings": {
+            "final_price": "FREE",
+            "is_free": true,
+            "original_price": "$23.00",
+            "title": "Mouse Pad Attachment"
+          },
+          "type": "item"
+        },
+        "inc_4": {
+          "settings": {
+            "final_price": "FREE",
+            "is_free": true,
+            "original_price": "$49.00",
+            "title": "Transparent Chair Mat"
+          },
+          "type": "item"
+        },
+        "inc_5": {
+          "settings": {
+            "final_price": "FREE",
+            "is_free": true,
+            "original_price": "$29.00",
+            "title": "3-Year Warranty"
+          },
+          "type": "item"
+        }
+      },
       "settings": {
+        "badge_text": "FREE Gifts Included ($115 value)",
+        "cta_text": "SHOP NOW",
+        "free_gifts_count": "4",
         "heading": "Everything You Need for",
         "heading_bold": "Active Work",
         "order_today_label": "IF YOU ORDER TODAY:",
         "savings_label": "Savings",
         "savings_value": "You Save $203",
         "total_label": "Subtotal",
-        "total_price": "$397",
-        "free_gifts_count": "4",
-        "cta_text": "SHOP NOW",
-        "badge_text": "FREE Gifts Included ($115 value)"
-      }
-    },
-    "related-products": {
-      "type": "related-products",
-      "settings": {
-        "heading": "You may also like",
-        "heading_size": "h2",
-        "columns_desktop": 4,
-        "color_scheme": "scheme-1",
-        "image_ratio": "square",
-        "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": false,
-        "columns_mobile": "2",
-        "padding_top": 36,
-        "padding_bottom": 28
-      }
+        "total_price": "$397"
+      },
+      "type": "velo-whats-included"
     }
-  },
-  "order": [
-    "main",
-    "velo_body_built",
-    "velo_details",
-    "velo_included",
-    "related-products"
-  ]
+  }
 }
