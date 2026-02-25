@@ -1,0 +1,49 @@
+
+    {%-liquid
+      assign gpTemplateSuffix = template.suffix
+      assign arrSplitSuffix = gpTemplateSuffix | split: "-"
+      if gpTemplateSuffix contains "gp-template-" and arrSplitSuffix.size == 3
+        assign isV7GpTemplate = true
+      endif
+      assign gpShopMeta = shop.metafields.GEMPAGES
+      if gpShopMeta and request.page_type == 'product'
+        if gpShopMeta['product-default']
+          assign isV7GpTemplate = true
+        endif
+      endif
+      if gpShopMeta and request.page_type == 'index'
+        if gpShopMeta['index-default']
+          assign isV7GpTemplate = true
+        endif
+      endif
+      if gpShopMeta and request.page_type == 'collection'
+        if gpShopMeta['collection-default']
+          assign isV7GpTemplate = true
+        endif
+      endif
+      if isPreview
+        assign isV7GpTemplate = true
+      endif
+
+      assign isV7GpNotThemeSection = false
+      if isV7GpTemplate and isThemeSection != true
+        assign isV7GpNotThemeSection = true
+      endif
+      assign isNotV7GpButThemeSection = false
+      if isV7GpTemplate != true and isThemeSection
+        assign isNotV7GpButThemeSection = true
+      endif
+    %}
+
+    {% if isV7GpNotThemeSection or isNotV7GpButThemeSection %}
+      {{ 'gp-global.css' | asset_url | preload_tag: as: 'style' }}
+      {{ 'gp-global.css' | asset_url | stylesheet_tag }}
+
+      <style>{{ shop.metafields.GEMPAGES['gp_style_css'] }}{{ shop.metafields.GEMPAGES['gp_custom_fonts_css'] }}</style>
+    {% endif %}
+
+    {% if isV7GpNotThemeSection or isNotV7GpButThemeSection %}
+      <script src="https://assets.gemcommerce.com/assets-v2/gp-lazyload.v2.js?v={{ shop.metafields.GEMPAGES.ASSETS_VERSION }}" defer></script>
+      <script src="https://assets.gemcommerce.com/assets-v2/gp-global.js?v={{ shop.metafields.GEMPAGES.ASSETS_VERSION }}" defer></script>
+    {% endif %}
+  

@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "velo_hero": {
@@ -60,7 +69,7 @@
           "type": "accordion",
           "settings": {
             "title": "Shipping & Returns",
-            "content": "<ul><li>Free US Shipping \u2014 Orders arrive in 2-4 business days.</li><li>30-Day Money Back Guarantee.</li><li>Premium Quality included.</li></ul>"
+            "content": "<ul><li>Free US Shipping — Orders arrive in 2-4 business days.</li><li>30-Day Money Back Guarantee.</li><li>Premium Quality included.</li></ul>"
           }
         },
         "acc_contact": {
@@ -89,12 +98,12 @@
         "rating_value": 5,
         "review_count": "14,200",
         "title_fallback": "West Month Luxury Mattress Topper",
+        "product_url": "/products/west-month-luxury-topper",
         "compare_price_fallback": "$199.00",
         "price_fallback": "$89.99",
         "save_amount_fallback": "$109.01",
         "trust_note": "Only available at usewestmonth.com",
         "hero_desc": "1000GSM ultra-thick padding, breathable quilted design, and deep-pocket fit. Transform your sleep quality starting tonight.",
-        "product_url": "/products/west-month-luxury-topper",
         "bullet_1": "Comfort: 3X thicker than standard toppers",
         "bullet_2": "Cooling: Breathable design prevents night sweats",
         "bullet_3": "Secure: Deep pocket fits mattresses 8-21\"",
@@ -163,7 +172,6 @@
         "text"
       ],
       "settings": {
-        "color_scheme": "scheme-1",
         "padding_top": 80,
         "padding_bottom": 40
       }
@@ -229,7 +237,6 @@
         "card_6"
       ],
       "settings": {
-        "heading": "Who West Month Is For?",
         "subheading": "Designed for people who want to wake up refreshed (and pain-free)",
         "columns": "3"
       }
@@ -370,9 +377,9 @@
         "step_3"
       ],
       "settings": {
-        "subheading": "As easy as making your bed.",
         "heading_light": "How to Use The",
-        "heading_bold": "West Month Topper"
+        "heading_bold": "West Month Topper",
+        "subheading": "As easy as making your bed."
       }
     },
     "velo_details": {
@@ -417,22 +424,22 @@
         "t1": {
           "type": "testimonial",
           "settings": {
-            "author_name": "Sarah J.",
-            "quote": "The West Month topper changed how I sleep. I no longer wake up with hip pain."
+            "quote": "The West Month topper changed how I sleep. I no longer wake up with hip pain.",
+            "author_name": "Sarah J."
           }
         },
         "t2": {
           "type": "testimonial",
           "settings": {
-            "author_name": "Michael R.",
-            "quote": "I've tried memory foam, but it was too hot. This is perfectly plush and sleeps extremely cool."
+            "quote": "I've tried memory foam, but it was too hot. This is perfectly plush and sleeps extremely cool.",
+            "author_name": "Michael R."
           }
         },
         "t3": {
           "type": "testimonial",
           "settings": {
-            "author_name": "Emily L.",
-            "quote": "Perfect for my old mattress! Saved me $1000 from having to buy a completely new bed."
+            "quote": "Perfect for my old mattress! Saved me $1000 from having to buy a completely new bed.",
+            "author_name": "Emily L."
           }
         }
       },
