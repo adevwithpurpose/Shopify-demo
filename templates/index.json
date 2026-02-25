@@ -370,8 +370,9 @@
         "step_3"
       ],
       "settings": {
-        "heading": "How to Use The West Month Topper",
-        "subheading": "As easy as making your bed."
+        "subheading": "As easy as making your bed.",
+        "heading_light": "How to Use The",
+        "heading_bold": "West Month Topper"
       }
     },
     "velo_details": {
