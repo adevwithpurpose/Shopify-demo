@@ -93,6 +93,9 @@
       ],
       "settings": {
         "product": "",
+        "image_1": "shopify://shop_images/2_1060x_646209e8-9a8c-4b12-951f-2c827def31a2.webp",
+        "image_2": "shopify://shop_images/3_1060x_27d5f2ec-6e7a-4912-bd7c-d7b6b36a93f6.webp",
+        "image_3": "shopify://shop_images/8_1060x_ee347b1a-2570-4c85-a13d-3cf5a980cbe4.webp",
         "badge_1": "BESTSELLER",
         "badge_2": "#1 TOPPER MATERASSO di LUSSO",
         "show_reviews": true,
