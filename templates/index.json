@@ -92,27 +92,55 @@
         "acc_contact"
       ],
       "settings": {
+        "product": "",
         "badge_1": "BESTSELLER",
-        "badge_2": "#1 LUXURY MATTRESS TOPPER",
+        "badge_2": "#1 TOPPER MATERASSO di LUSSO",
         "show_reviews": true,
         "rating_value": 5,
         "review_count": "14,200",
-        "title_fallback": "West Month Luxury Mattress Topper",
+        "title_fallback": "Topper Materasso Premium Trapuntato Extra Spesso 1000 GSM – Traspirante e Ultra Soffice",
         "product_url": "/products/west-month-luxury-topper",
-        "compare_price_fallback": "$199.00",
-        "price_fallback": "$89.99",
-        "save_amount_fallback": "$109.01",
-        "trust_note": "Only available at usewestmonth.com",
-        "hero_desc": "1000GSM ultra-thick padding, breathable quilted design, and deep-pocket fit. Transform your sleep quality starting tonight.",
+        "compare_price_fallback": "€399",
+        "price_fallback": "€199",
+        "save_amount_fallback": "50%",
+        "trust_note": "Disponibile esclusivamente su beisogni.com",
+        "hero_desc": "Lasciati avvolgere da un’imbottitura ultra spessa da 1000 GSM, un comfort trapuntato traspirante e una vestibilità sicura con tasche profonde — progettato per migliorare immediatamente la tua esperienza di riposo.",
         "bullet_1": "Comfort: 3X thicker than standard toppers",
         "bullet_2": "Cooling: Breathable design prevents night sweats",
         "bullet_3": "Secure: Deep pocket fits mattresses 8-21\"",
         "gifts_heading": "Limited Sale! Unlock FREE Gifts With Your Order",
         "urgency_text": "Order by [date] for guaranteed FREE Gifts",
-        "atc_text": "ADD TO CART +",
-        "trust_1": "Ships Today",
-        "trust_2": "90-Day Easy Returns",
-        "sub_desc": "<p>West Month is made for people who need more than a standard topper. It is ideal for hot sleepers, back pain sufferers, and anyone wanting hotel luxury... <a href=\"#\">Read More</a></p>"
+        "atc_text": "Acquista ora",
+        "trust_1": "Spedizione Rapida in tutta Italia",
+        "trust_2": "Reso facile entro 30 giorni",
+        "sub_desc": ""
+      }
+    },
+    "velo_rich_text": {
+      "type": "velo-rich-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading_light": "Ultimate Comfort =",
+            "heading_bold": "Better Sleep"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>West Month effortlessly adapts to your body, improves comfort, and regulates temperature throughout the night.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text"
+      ],
+      "settings": {
+        "padding_top": 80,
+        "padding_bottom": 40
       }
     },
     "velo_trust": {
@@ -148,32 +176,10 @@
         "t2",
         "t3"
       ],
-      "settings": {}
-    },
-    "velo_rich_text": {
-      "type": "velo-rich-text",
-      "blocks": {
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "heading_light": "Ultimate Comfort =",
-            "heading_bold": "Better Sleep"
-          }
-        },
-        "text": {
-          "type": "text",
-          "settings": {
-            "text": "<p>West Month effortlessly adapts to your body, improves comfort, and regulates temperature throughout the night.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "heading",
-        "text"
-      ],
       "settings": {
-        "padding_top": 80,
-        "padding_bottom": 40
+        "color_scheme": "",
+        "padding_top": 32,
+        "padding_bottom": 32
       }
     },
     "velo_features": {
@@ -237,6 +243,11 @@
         "card_6"
       ],
       "settings": {
+        "color_scheme": "",
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "heading_light": "Who",
+        "heading_bold": "VELO Is For?",
         "subheading": "Designed for people who want to wake up refreshed (and pain-free)",
         "columns": "3"
       }
@@ -295,37 +306,55 @@
         "feat_1": {
           "type": "feature",
           "settings": {
-            "title": "3X Thicker Padding"
+            "svg_icon": "",
+            "icon": "check",
+            "title": "3X Thicker Padding",
+            "description": "Move naturally without thinking about it"
           }
         },
         "feat_2": {
           "type": "feature",
           "settings": {
-            "title": "Stays Cool All Night"
+            "svg_icon": "",
+            "icon": "check",
+            "title": "Stays Cool All Night",
+            "description": "Move naturally without thinking about it"
           }
         },
         "feat_3": {
           "type": "feature",
           "settings": {
-            "title": "Machine Washable"
+            "svg_icon": "",
+            "icon": "check",
+            "title": "Machine Washable",
+            "description": "Move naturally without thinking about it"
           }
         },
         "feat_4": {
           "type": "feature",
           "settings": {
-            "title": "Fits Deep Mattresses"
+            "svg_icon": "",
+            "icon": "check",
+            "title": "Fits Deep Mattresses",
+            "description": "Move naturally without thinking about it"
           }
         },
         "feat_5": {
           "type": "feature",
           "settings": {
-            "title": "Pain Targeting Comfort"
+            "svg_icon": "",
+            "icon": "check",
+            "title": "Pain Targeting Comfort",
+            "description": "Move naturally without thinking about it"
           }
         },
         "feat_6": {
           "type": "feature",
           "settings": {
-            "title": "Won't Compress or Flatten"
+            "svg_icon": "",
+            "icon": "check",
+            "title": "Won't Compress or Flatten",
+            "description": "Move naturally without thinking about it"
           }
         }
       },
@@ -338,6 +367,9 @@
         "feat_6"
       ],
       "settings": {
+        "color_scheme": "",
+        "padding_top": 80,
+        "padding_bottom": 80,
         "heading_light": "Standard Toppers vs",
         "heading_bold": "1000GSM",
         "heading_italic": "Luxury",
@@ -377,9 +409,13 @@
         "step_3"
       ],
       "settings": {
+        "color_scheme": "",
         "heading_light": "How to Use The",
         "heading_bold": "West Month Topper",
-        "subheading": "As easy as making your bed."
+        "subheading": "As easy as making your bed.",
+        "full_width": false,
+        "padding_top": 80,
+        "padding_bottom": 80
       }
     },
     "velo_details": {
@@ -389,21 +425,24 @@
           "type": "detail",
           "settings": {
             "icon": "move",
-            "title": "1000GSM Luxury Fill"
+            "title": "1000GSM Luxury Fill",
+            "description": "12cm extra-thick high-density foam"
           }
         },
         "d2": {
           "type": "detail",
           "settings": {
             "icon": "thermometer",
-            "title": "Cooling Quilt Pattern"
+            "title": "Cooling Quilt Pattern",
+            "description": "12cm extra-thick high-density foam"
           }
         },
         "d3": {
           "type": "detail",
           "settings": {
             "icon": "sliders",
-            "title": "Deep Skirt Fit (8-21\")"
+            "title": "Deep Skirt Fit (8-21\")",
+            "description": "12cm extra-thick high-density foam"
           }
         }
       },
@@ -412,11 +451,21 @@
         "d2",
         "d3"
       ],
-      "settings": {}
+      "settings": {
+        "heading_light": "Designed",
+        "heading_bold": "Down to Every Detail",
+        "subheading": "Smart features, comfort-focused materials, and maximum adjustability",
+        "full_width": false
+      }
     },
     "velo_risk_free": {
       "type": "velo-risk-free-card",
-      "settings": {}
+      "settings": {
+        "main_icon": "shield",
+        "heading": "90-Day Risk-Free Trial",
+        "subheading": "If it doesn't improve your comfort and focus, return it. No questions asked.",
+        "social_proof": "Over 10,000+ people have upgraded their work setup with VELO."
+      }
     },
     "velo_testimonials": {
       "type": "velo-testimonials",
@@ -448,7 +497,13 @@
         "t2",
         "t3"
       ],
-      "settings": {}
+      "settings": {
+        "color_scheme": "",
+        "heading": "What Our Customers Say",
+        "subheading": "Over 10,000+ people have upgraded their work setup with VELO.",
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
     },
     "velo_included": {
       "type": "velo-whats-included",
@@ -467,6 +522,7 @@
           "settings": {
             "title": "Fast U.S. Shipping",
             "original_price": "$14.00",
+            "final_price": "$397",
             "is_free": true
           }
         },
@@ -475,6 +531,7 @@
           "settings": {
             "title": "2x Premium Pillowcases",
             "original_price": "$23.00",
+            "final_price": "$397",
             "is_free": true
           }
         },
@@ -483,6 +540,7 @@
           "settings": {
             "title": "Night Sleep Guide",
             "original_price": "$49.00",
+            "final_price": "$397",
             "is_free": true
           }
         },
@@ -491,6 +549,7 @@
           "settings": {
             "title": "3-Year Warranty",
             "original_price": "$29.00",
+            "final_price": "$397",
             "is_free": true
           }
         }
@@ -503,6 +562,9 @@
         "i5"
       ],
       "settings": {
+        "color_scheme": "",
+        "padding_top": 80,
+        "padding_bottom": 80,
         "heading": "What's Included with",
         "heading_bold": "Your West Month Topper",
         "order_today_label": "IF YOU ORDER TODAY:",
@@ -512,9 +574,16 @@
         "total_price": "$89.99",
         "free_gifts_count": "4",
         "cta_text": "SHOP NOW",
+        "cta_link": "",
         "badge_text": "FREE Gifts Included ($115 value)",
         "annotation_1": "FREE Pillowcases",
-        "annotation_2": "Night Sleep Guide"
+        "anno_1_top": 25,
+        "anno_1_left": 15,
+        "anno_1_rotate": 0,
+        "annotation_2": "Night Sleep Guide",
+        "anno_2_top": 65,
+        "anno_2_left": 70,
+        "anno_2_rotate": 0
       }
     },
     "velo_faq": {
@@ -563,11 +632,18 @@
         "f4",
         "f5"
       ],
-      "settings": {}
+      "settings": {
+        "color_scheme": "",
+        "heading": "Frequently Asked Questions",
+        "subheading": "Everything you need to know about the West Month Mattress Topper.",
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
     },
     "velo_sticky_atc": {
       "type": "velo-sticky-atc",
       "settings": {
+        "product": "",
         "btn_text": "CLAIM OFFER +",
         "show_for_demo": true
       }
