@@ -200,7 +200,7 @@
           "type": "card",
           "settings": {
             "icon": "bandage",
-            "title": "Acuti Dolori Alla Schiena e Cervicale",
+            "title": "Hai Dolori Alla Schiena e Cervicale",
             "text": "<p>Immediato sollievo sui punti di pressione.</p>"
           }
         },
@@ -251,7 +251,7 @@
         "padding_bottom": 80,
         "heading_light": "",
         "heading_bold": "Il Topper Perfetto Per...",
-        "subheading": "Persone che vogliono svegliarsi riposate e senza dolori ogni giorno.",
+        "subheading": "Persone che vogliono svegliarsi riposate e senza dolori ogni giorno. È perfetto per te se:",
         "columns": "3"
       }
     },
