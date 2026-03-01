@@ -192,8 +192,8 @@
           "type": "card",
           "settings": {
             "icon": "thermometer",
-            "title": "Hot Sleepers",
-            "text": "<p>Breathable design regulates temperature.</p>"
+            "title": "Soffri Il Caldo",
+            "text": "<p>Design traspirante che regola la temperatura.</p>"
           }
         },
         "card_2": {
