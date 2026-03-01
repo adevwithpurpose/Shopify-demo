@@ -208,7 +208,7 @@
           "type": "card",
           "settings": {
             "icon": "sparkles",
-            "title": "Proprietari di un Materasso Vecchio",
+            "title": "Possiedi un Materasso Vecchio",
             "text": "<p>Aggiunge alle tue notti lusso e morbidezza.</p>"
           }
         },
@@ -216,8 +216,8 @@
           "type": "card",
           "settings": {
             "icon": "bed",
-            "title": "Restless Sleepers",
-            "text": "<p>Reduces tossing and turning.</p>"
+            "title": "Ti Svegli Spesso Durante la Notte",
+            "text": "<p>Riduce i movimenti notturni.</p>"
           }
         },
         "card_5": {
