@@ -1,12 +1,3 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
 {
   "sections": {
     "velo_hero": {
@@ -27,7 +18,7 @@
           "settings": {
             "image": "shopify://shop_images/81yslK0H7zL._AC_UF1000_1000_QL80.jpg",
             "icon": "sparkles",
-            "free_text": "FREE",
+            "free_text": "OMAGGIO",
             "title": "Federe Premium",
             "value": "(€23)"
           }
@@ -262,32 +253,32 @@
           "type": "point",
           "settings": {
             "icon": "lock",
-            "title": "Stays Secure All Night",
-            "description": "Reinforced corners keep the topper locked in place."
+            "title": "Stabile Tutta La Notte",
+            "description": "Gli angoli rinforzati mantengono il topper bloccato in posizione."
           }
         },
         "p2": {
           "type": "point",
           "settings": {
             "icon": "check",
-            "title": "Effortless Cloud Comfort",
-            "description": "<p>1000GSM padding forms exactly to your body.</p>"
+            "title": "Comfort Effetto Nuvola",
+            "description": "<p>L'imbottitura da 1000GSM si adatta esattamente al tuo corpo.</p>"
           }
         },
         "p3": {
           "type": "point",
           "settings": {
             "icon": "thermometer",
-            "title": "Temperature Control",
-            "description": "<p>No memory foam heat traps - sleeps cool.</p>"
+            "title": "Controllo Temperatura",
+            "description": "<p>Nessun accumulo di calore come il memory foam - fresco tutta la notte.</p>"
           }
         },
         "p4": {
           "type": "point",
           "settings": {
             "icon": "sliders",
-            "title": "Fits Any Mattress Depth",
-            "description": "<p>Deep pocket skirts fit 8-21\" effortlessly.</p>"
+            "title": "Per Ogni Materasso",
+            "description": "<p>Le tasche profonde si adattano a materassi da 20 a 53 cm.</p>"
           }
         }
       },
@@ -300,7 +291,7 @@
       "settings": {
         "heading_prefix": "Pensato Per Chi Vuole",
         "heading_bold": "Riposarsi Davvero",
-        "subheading": "Supporting your natural resting positions",
+        "subheading": "Supporta le tue posizioni naturali di riposo",
         "side_video": "shopify://files/videos/compressed_video.mp4"
       }
     },
@@ -313,7 +304,7 @@
             "svg_icon": "",
             "icon": "check",
             "title": "Imbottitura 3 Volte Più Spessa",
-            "description": "Muoviti in modo naturale, senza pensarci"
+            "description": "Dormi in modo naturale e rigenerante"
           }
         },
         "feat_2": {
@@ -389,22 +380,22 @@
         "step_1": {
           "type": "step",
           "settings": {
-            "title": "Step 01",
-            "text": "<p>Unbox and shake slightly to fluff the 1000GSM padding</p>"
+            "title": "Fase 01",
+            "text": "<p>Apri la confezione e scuoti leggermente per ravvivare l'imbottitura da 1000GSM</p>"
           }
         },
         "step_2": {
           "type": "step",
           "settings": {
-            "title": "Step 02",
-            "text": "<p>Stretch the elastic skirt over your mattress corners</p>"
+            "title": "Fase 02",
+            "text": "<p>Stendi la fascia elastica sopra gli angoli del tuo materasso</p>"
           }
         },
         "step_3": {
           "type": "step",
           "settings": {
-            "title": "Step 03",
-            "text": "<p>Put your fitted sheet over it and sleep on a cloud</p>"
+            "title": "Fase 03",
+            "text": "<p>Metti il lenzuolo sopra e dormi finalmente come su una nuvola</p>"
           }
         }
       },
@@ -431,16 +422,16 @@
           "type": "detail",
           "settings": {
             "icon": "move",
-            "title": "1000GSM Luxury Fill",
-            "description": "12cm extra-thick high-density foam"
+            "title": "Imbottitura da 1000GSM",
+            "description": "Fino a 6cm di spessore extra per un supporto hotel 5 stelle"
           }
         },
         "d2": {
           "type": "detail",
           "settings": {
             "icon": "thermometer",
-            "title": "Cooling Quilt Pattern",
-            "description": "12cm extra-thick high-density foam"
+            "title": "Design Trapuntato Traspirante",
+            "description": "Favorisce la circolazione dell'aria costante"
           }
         },
         "d3": {
@@ -458,9 +449,9 @@
         "d3"
       ],
       "settings": {
-        "heading_light": "Designed",
-        "heading_bold": "Down to Every Detail",
-        "subheading": "Smart features, comfort-focused materials, and maximum adjustability",
+        "heading_light": "Progettato Nei",
+        "heading_bold": "Minimi Dettagli",
+        "subheading": "Caratteristiche intelligenti e materiali focalizzati sul comfort",
         "full_width": false
       }
     },
@@ -470,7 +461,7 @@
         "main_icon": "shield",
         "heading": "Prova senza rischi di 30 giorni",
         "subheading": "Siamo così sicuri che dormirai meglio sul nostro coprimaterasso da 1000 GSM che offriamo una garanzia di soddisfazione. Se non ti svegli più riposato e senza dolori, puoi semplicemente restituirlo entro 30 giorni per un rimborso completo.",
-        "social_proof": "Oltre 10.000 persone hanno migliorato la propria postazione di lavoro con Amanotte."
+        "social_proof": "Oltre 10.000 persone hanno migliorato il loro riposo con Amanotte."
       }
     },
     "velo_testimonials": {
@@ -486,7 +477,7 @@
         "t2": {
           "type": "testimonial",
           "settings": {
-            "quote": "Prima del topper Amanotte avevo provato il memory foam, ma mi svegliavo continuamente accaldata e sudata. Il topper Beisogni è una vera svolta: è soffice e traspirante, e non mi sveglio più per le vampate di calore. Sono felicissima!",
+            "quote": "Prima del topper Amanotte avevo provato il memory foam, ma mi svegliavo continuamente accaldata e sudata. Il topper Amanotte è una vera svolta: è soffice e traspirante, e non mi sveglio più per le vampate di calore. Sono felicissima!",
             "author_name": "Amalia C."
           }
         },
@@ -505,8 +496,8 @@
       ],
       "settings": {
         "color_scheme": "",
-        "heading": "Quello Che i Nostri Clienti Dicono di Noi",
-        "subheading": "Oltre 10.000 persone hanno migliorato il loro sonno con il topper Beisogni.",
+        "heading": "Cosa Dicono i Nostri Clienti",
+        "subheading": "Oltre 10.000 persone hanno migliorato il loro sonno con Amanotte.",
         "padding_top": 80,
         "padding_bottom": 80
       }
@@ -544,20 +535,20 @@
         "padding_bottom": 80,
         "heading": "Incluso nel tuo",
         "heading_bold": "Ordine Amanotte",
-        "order_today_label": "IF YOU ORDER TODAY:",
-        "savings_label": "Savings",
-        "savings_value": "You Save $203",
-        "total_label": "Subtotal",
-        "total_price": "$397",
+        "order_today_label": "SE ORDINI OGGI:",
+        "savings_label": "Risparmio",
+        "savings_value": "Risparmi €200",
+        "total_label": "Totale",
+        "total_price": "€199",
         "free_gifts_count": "4",
-        "cta_text": "SHOP NOW",
+        "cta_text": "ACQUISTA ORA",
         "cta_link": "",
         "badge_text": "Spedizione GRATUITA Inclusa",
-        "annotation_1": "FREE Mouse Pad",
+        "annotation_1": "OMAGGIO Federe",
         "anno_1_top": 25,
         "anno_1_left": 15,
         "anno_1_rotate": 0,
-        "annotation_2": "FREE Chair Mat",
+        "annotation_2": "OMAGGIO Mascherina",
         "anno_2_top": 65,
         "anno_2_left": 70,
         "anno_2_rotate": 0
@@ -569,36 +560,36 @@
         "f1": {
           "type": "faq",
           "settings": {
-            "title": "Is this machine washable?",
-            "content": "<p>Yes, absolutely. It is 100% machine washable for easy care.</p>"
+            "title": "È lavabile in lavatrice?",
+            "content": "<p>Sì, assolutamente. È lavabile in lavatrice al 100% per una facile manutenzione.</p>"
           }
         },
         "f2": {
           "type": "faq",
           "settings": {
-            "title": "Will it fit my deep mattress?",
-            "content": "<p>Yes, the skirt stretches to accommodate mattresses from 8 to 21 inches deep.</p>"
+            "title": "Si adatterà al mio materasso alto?",
+            "content": "<p>Sì, la fascia elastica è progettata per adattarsi a materassi profondi fino a 53 cm.</p>"
           }
         },
         "f3": {
           "type": "faq",
           "settings": {
-            "title": "Can I return it if I don't like it?",
-            "content": "<p>Yes! We offer a 30-day money-back guarantee.</p>"
+            "title": "Posso restituirlo se non mi piace?",
+            "content": "<p>Certamente! Offriamo una garanzia di rimborso di 30 giorni.</p>"
           }
         },
         "f4": {
           "type": "faq",
           "settings": {
-            "title": "Will it make me sweat at night?",
-            "content": "<p>Not at all! Unlike traditional memory foam that traps heat, our 1000GSM topper features a breathable quilted design that promotes air circulation, keeping you cool and comfortable all night long.</p>"
+            "title": "Mi farà sudare di notte?",
+            "content": "<p>Assolutamente no! A differenza del memory foam tradizionale che intrappola il calore, il nostro topper da 1000GSM presenta un design trapuntato traspirante che favorisce la circolazione dell'aria, mantenendoti fresco e comodo per tutta la notte.</p>"
           }
         },
         "f5": {
           "type": "faq",
           "settings": {
-            "title": "How thick is the 1000GSM padding?",
-            "content": "<p>It provides about 2 inches of ultra-plush, hotel-quality loft. Because of the high density (1000GSM), it won't flatten out quickly like cheaper alternatives.</p>"
+            "title": "Quanto è alto il topper da 1000GSM?",
+            "content": "<p>Fornisce circa 5-6 cm di morbidezza ultra-plush, come negli hotel a 5 stelle. Grazie all'alta densità (1000GSM), non si appiattisce velocemente come le alternative più economiche.</p>"
           }
         }
       },
@@ -611,8 +602,8 @@
       ],
       "settings": {
         "color_scheme": "",
-        "heading": "Frequently Asked Questions",
-        "subheading": "Everything you need to know about the West Month Mattress Topper.",
+        "heading": "Domande Frequenti",
+        "subheading": "Tutto quello che devi sapere sul Topper Amanotte.",
         "padding_top": 80,
         "padding_bottom": 80
       }

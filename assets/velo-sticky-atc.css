@@ -1,23 +1,48 @@
 .velo-sticky-atc {
     position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background: #fff;
-    box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.08);
-    padding: 1.25rem 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    z-index: 1000;
-    transform: translateY(100%);
-    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    bottom: 24px;
+    left: 20px;
+    right: 20px;
+    width: auto;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    padding: 1rem 1.6rem;
+    z-index: 2000;
+    transform: translateY(150%) scale(0.9);
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s ease;
     visibility: hidden;
+    opacity: 0;
 }
 
 .velo-sticky-atc--visible {
-    transform: translateY(0);
+    transform: translateY(0) scale(1);
     visibility: visible;
+    opacity: 1;
+    animation: stickyFloat 4s ease-in-out infinite;
+}
+
+@keyframes stickyFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-6px);
+    }
+}
+
+.velo-sticky-atc-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0 auto;
 }
 
 .velo-sticky-atc-left {
@@ -28,13 +53,13 @@
 }
 
 .velo-sticky-img {
-    width: 44px;
-    height: 44px;
-    border-radius: 6px;
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
     overflow: hidden;
     background: #f0f3f8;
-    /* fallback color */
     flex-shrink: 0;
+    border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .velo-sticky-img img {
@@ -51,14 +76,27 @@
 }
 
 .velo-sticky-atc-name {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     font-weight: 700;
-    line-height: 1.2;
+    line-height: 1.1;
     color: var(--velo-navy, #122442);
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    max-width: 180px;
+    display: block;
+    margin-bottom: 2px;
+}
+
+.velo-sticky-atc-price-wrapper {
+    display: flex;
+    align-items: baseline;
+    gap: 0.6rem;
+}
+
+.velo-sticky-atc-compare {
+    font-size: 1rem;
+    text-decoration: line-through;
+    color: #999;
 }
 
 .velo-sticky-atc-price {
@@ -72,16 +110,31 @@
     background: var(--velo-navy, #122442);
     color: #fff;
     border: none;
-    border-radius: 50px;
-    padding: 1.2rem 2.5rem;
-    font-size: 1.4rem;
+    border-radius: 12px;
+    padding: 1rem 1.8rem;
+    font-size: 1.3rem;
     font-weight: 700;
     cursor: pointer;
     white-space: nowrap;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    box-shadow: 0 4px 12px rgba(18, 36, 66, 0.2);
-    min-width: 140px;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(18, 36, 66, 0.3);
+}
+
+.velo-sticky-atc-btn svg {
+    transition: transform 0.3s ease;
+}
+
+.velo-sticky-atc-btn:hover {
+    background: #1a345e;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(18, 36, 66, 0.4);
+}
+
+.velo-sticky-atc-btn:hover svg {
+    transform: rotate(90deg);
 }
 
 .velo-sticky-atc-btn:hover {
@@ -101,10 +154,21 @@
 
 @media screen and (max-width: 480px) {
     .velo-sticky-atc {
-        padding: 1.2rem 1.5rem;
+        bottom: 16px;
+        left: 12px;
+        right: 12px;
+        padding: 0.8rem 1rem;
+        border-radius: 16px;
     }
 
     .velo-sticky-atc-name {
-        max-width: 140px;
+        max-width: 110px;
+        font-size: 1.1rem;
+    }
+
+    .velo-sticky-atc-btn {
+        padding: 0.9rem 1.4rem;
+        font-size: 1.2rem;
+        gap: 0.5rem;
     }
 }
