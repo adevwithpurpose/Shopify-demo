@@ -11,7 +11,8 @@
         <div class="velo-media-grid">
           {% for media in current_product.media %}
             {% if forloop.index == 4 %}
-              <div class="velo-media-slider">
+              <div class="velo-media-slider-wrapper">
+                <div class="velo-media-slider">
             {% endif %}
             
             <div class="velo-media-item {% if forloop.first %}velo-media-item--featured{% endif %} {% if forloop.index >= 4 %}velo-slider-slide{% endif %}" data-media-id="{{ media.id }}">
@@ -42,6 +43,10 @@
             </div>
             
             {% if forloop.last and forloop.index >= 4 %}
+                </div>
+                <!-- Navigation Buttons -->
+                <button class="velo-slider-nav velo-slider-prev" aria-label="Previous">{% render 'velo-icons', icon: 'chevron-left' %}</button>
+                <button class="velo-slider-nav velo-slider-next" aria-label="Next">{% render 'velo-icons', icon: 'chevron-right' %}</button>
               </div>
             {% endif %}
           {% endfor %}

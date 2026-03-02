@@ -142,6 +142,20 @@
             const dateStr = months[nextDay.getMonth()] + ' ' + nextDay.getDate();
             urgencyEl.innerHTML = urgencyEl.innerHTML.replace(/\[date\]/g, '<strong>' + dateStr + '</strong>');
         }
+        // --- Media Slider Navigation ---
+        const slider = section.querySelector('.velo-media-slider');
+        const prevBtn = section.querySelector('.velo-slider-prev');
+        const nextBtn = section.querySelector('.velo-slider-next');
+
+        if (slider && prevBtn && nextBtn) {
+            const scrollAmount = 200; // Adjust as needed
+            prevBtn.addEventListener('click', function () {
+                slider.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+            });
+            nextBtn.addEventListener('click', function () {
+                slider.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+            });
+        }
     });
 })();
 
