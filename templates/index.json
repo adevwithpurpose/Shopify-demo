@@ -300,7 +300,8 @@
       "settings": {
         "heading_prefix": "Pensato Per Chi Vuole",
         "heading_bold": "Riposarsi Davvero",
-        "subheading": "Supporting your natural resting positions"
+        "subheading": "Supporting your natural resting positions",
+        "side_video": "shopify://files/videos/compressed_video.mp4"
       }
     },
     "velo_comparison": {
