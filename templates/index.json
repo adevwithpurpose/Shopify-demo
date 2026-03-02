@@ -16,67 +16,67 @@
           "type": "gift",
           "settings": {
             "icon": "truck",
-            "title": "Shipping",
-            "value": "($14)"
+            "title": "Spedizione GRATUITA",
+            "value": "(€14)"
           }
         },
         "gift_2": {
           "type": "gift",
           "settings": {
-            "icon": "gift",
-            "title": "Pillowcases",
-            "value": "($23)"
+            "icon": "sparkles",
+            "title": "Federe Premium",
+            "value": "(€23)"
           }
         },
         "gift_3": {
           "type": "gift",
           "settings": {
             "icon": "shield",
-            "title": "Extended Warranty",
-            "value": "($49)"
+            "title": "Garanzia Estesa",
+            "value": "(€49)"
           }
         },
         "gift_4": {
           "type": "gift",
           "settings": {
-            "icon": "shield",
-            "title": "Guarantee",
-            "value": "($29)"
+            "icon": "check",
+            "title": "Soddisfazione GARANTITA",
+            "value": "(€29)"
           }
         },
         "acc_benefits": {
           "type": "accordion",
           "settings": {
-            "title": "Benefits",
-            "content": "<p>Experience ultimate comfort with our 1000GSM mattress topper. Reduces tossing and turning, provides immediate pressure point relief, and keeps you cool all night long.</p>"
+            "title": "Vantaggi",
+            "content": "<p>Goditi il massimo comfort con il nostro topper da 1000GSM. Riduce i risvegli notturni, allevia i punti di pressione e ti mantiene fresco per tutta la notte.</p>"
           }
         },
         "acc_assemble": {
           "type": "accordion",
           "settings": {
-            "title": "How To Fit",
-            "content": "<p>Installation takes less than a minute. Simply stretch the reinforced elastic corners over your mattress. Fits any depth from 8-21 inches securely.</p>"
+            "title": "Come Si Installa",
+            "content": "<p>L'installazione richiede meno di un minuto. Stendi semplicemente gli angoli elastici rinforzati sul tuo materasso. Si adatta a qualsiasi profondità da 20 a 53 cm.</p>"
           }
         },
         "acc_specs": {
           "type": "accordion",
           "settings": {
-            "title": "Specifications",
-            "content": "<p><strong>Filling:</strong> 1000GSM Premium Padding<br/><strong>Fit:</strong> 8-21 inch deep pocket skirts<br/><strong>Care:</strong> 100% Machine Washable<br/><strong>Cooling:</strong> Breathable quilted air movement design</p>"
+            "title": "Specifiche",
+            "content": "<p><strong>Imbottitura:</strong> 1000GSM Premium<br/><strong>Vestibilità:</strong> Tasche profonde universali<br/><strong>Lavaggio:</strong> 100% Lavabile in lavatrice<br/><strong>Termoregolazione:</strong> Design trapuntato con movimento d'aria</p>"
           }
         },
         "acc_shipping": {
           "type": "accordion",
           "settings": {
-            "title": "Shipping & Returns",
-            "content": "<ul><li>Free US Shipping — Orders arrive in 2-4 business days.</li><li>30-Day Money Back Guarantee.</li><li>Premium Quality included.</li></ul>"
+            "title": "Spedizione e Resi",
+            "content": "<ul><li>Spedizione GRATUITA in tutta Italia — consegna in 2-4 giorni lavorativi.</li><li>Garanzia Soddisfatti o Rimborsati 30 Giorni.</li><li>Qualità Premium garantita.</li></ul>"
           }
         },
         "acc_contact": {
           "type": "accordion",
           "settings": {
-            "title": "Contact Us",
-            "content": "<p>Have a question? Email us at support@velochair.com and we'll reply within 24 hours (Mon-Fri, 9am-5pm EST).</p>"
+            "title": "Contattaci",
+            "content": "<p>Hai una domanda? Scrivici a supporto@amanotte.com e risponderemo entro 24 ore (Lun-Ven, 9:00-18:00).</p>"
           }
         }
       },
@@ -93,20 +93,12 @@
       ],
       "settings": {
         "product": "topper-materasso-premium-trapuntato",
-        "image_1": "shopify://shop_images/2_1060x_646209e8-9a8c-4b12-951f-2c827def31a2.webp",
-        "image_2": "shopify://shop_images/3_1060x_27d5f2ec-6e7a-4912-bd7c-d7b6b36a93f6.webp",
-        "image_3": "shopify://shop_images/8_1060x_ee347b1a-2570-4c85-a13d-3cf5a980cbe4.webp",
         "badge_1": "BESTSELLER",
         "badge_2": "TOPPER #1 NEGLI HOTEL di lusso",
         "show_reviews": true,
         "rating_value": "4.9",
         "review_count": "9700+",
-        "title_fallback": "Topper Materasso Premium Trapuntato Extra Spesso 1000 GSM - Traspirante e Ultra Soffice",
-        "product_url": "",
-        "compare_price_fallback": "€399",
-        "price_fallback": "€199",
-        "save_amount_fallback": "50%",
-        "trust_note": "Disponibile esclusivamente su beisogni.com",
+        "trust_note": "Disponibile esclusivamente su Amanotte.com",
         "hero_desc": "Lasciati avvolgere da un’imbottitura ultra spessa da 1000 GSM, un comfort trapuntato traspirante e una vestibilità sicura con tasche profonde — progettato per migliorare immediatamente la tua esperienza di riposo.",
         "bullet_1": "Comfort di Lusso: Qualità da hotel a 5 stelle, 3 volte più spesso dei topper standard",
         "bullet_2": "Effetto Fresco: Design traspirante che aiuta a prevenire la sudorazione notturna",
