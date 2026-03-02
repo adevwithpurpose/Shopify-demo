@@ -92,6 +92,7 @@
         "acc_contact"
       ],
       "settings": {
+        "product": "shopify://products/topper-materasso-premium-trapuntato",
         "image_1": "shopify://shop_images/2_1060x_646209e8-9a8c-4b12-951f-2c827def31a2.webp",
         "image_2": "shopify://shop_images/3_1060x_27d5f2ec-6e7a-4912-bd7c-d7b6b36a93f6.webp",
         "image_3": "shopify://shop_images/8_1060x_ee347b1a-2570-4c85-a13d-3cf5a980cbe4.webp",
@@ -151,24 +152,24 @@
           "type": "trust",
           "settings": {
             "icon": "truck",
-            "title": "FREE U.S. Shipping",
-            "subtitle": "2-4 day delivery"
+            "title": "Spedizione GRATUITA in Italia",
+            "subtitle": ""
           }
         },
         "t2": {
           "type": "trust",
           "settings": {
-            "icon": "refresh",
-            "title": "90-Day Easy Returns",
-            "subtitle": "Sleep on it first"
+            "icon": "shield",
+            "title": "Qualità Premium",
+            "subtitle": ""
           }
         },
         "t3": {
           "type": "trust",
           "settings": {
-            "icon": "shield",
-            "title": "Premium Quality",
-            "subtitle": "1000GSM Construction"
+            "icon": "refresh",
+            "title": "Reso facile entro 30 giorni",
+            "subtitle": ""
           }
         }
       },
@@ -380,46 +381,6 @@
         "full_width": true
       }
     },
-    "velo_how_to": {
-      "type": "velo-how-to-steps",
-      "blocks": {
-        "step_1": {
-          "type": "step",
-          "settings": {
-            "title": "Step 01",
-            "text": "<p>Unbox and shake slightly to fluff the 1000GSM padding</p>"
-          }
-        },
-        "step_2": {
-          "type": "step",
-          "settings": {
-            "title": "Step 02",
-            "text": "<p>Stretch the elastic skirt over your mattress corners</p>"
-          }
-        },
-        "step_3": {
-          "type": "step",
-          "settings": {
-            "title": "Step 03",
-            "text": "<p>Put your fitted sheet over it and sleep on a cloud</p>"
-          }
-        }
-      },
-      "block_order": [
-        "step_1",
-        "step_2",
-        "step_3"
-      ],
-      "settings": {
-        "color_scheme": "",
-        "heading_light": "How to Use The",
-        "heading_bold": "West Month Topper",
-        "subheading": "As easy as making your bed.",
-        "full_width": false,
-        "padding_top": 80,
-        "padding_bottom": 80
-      }
-    },
     "velo_details": {
       "type": "velo-details-grid",
       "blocks": {
@@ -507,87 +468,6 @@
         "padding_bottom": 80
       }
     },
-    "velo_included": {
-      "type": "velo-whats-included",
-      "blocks": {
-        "i1": {
-          "type": "item",
-          "settings": {
-            "title": "West Month Mattress Topper",
-            "original_price": "$199.00",
-            "final_price": "$89.99",
-            "is_free": false
-          }
-        },
-        "i2": {
-          "type": "item",
-          "settings": {
-            "title": "Fast U.S. Shipping",
-            "original_price": "$14.00",
-            "final_price": "$397",
-            "is_free": true
-          }
-        },
-        "i3": {
-          "type": "item",
-          "settings": {
-            "title": "2x Premium Pillowcases",
-            "original_price": "$23.00",
-            "final_price": "$397",
-            "is_free": true
-          }
-        },
-        "i4": {
-          "type": "item",
-          "settings": {
-            "title": "Night Sleep Guide",
-            "original_price": "$49.00",
-            "final_price": "$397",
-            "is_free": true
-          }
-        },
-        "i5": {
-          "type": "item",
-          "settings": {
-            "title": "3-Year Warranty",
-            "original_price": "$29.00",
-            "final_price": "$397",
-            "is_free": true
-          }
-        }
-      },
-      "block_order": [
-        "i1",
-        "i2",
-        "i3",
-        "i4",
-        "i5"
-      ],
-      "settings": {
-        "color_scheme": "",
-        "padding_top": 80,
-        "padding_bottom": 80,
-        "heading": "What's Included with",
-        "heading_bold": "Your West Month Topper",
-        "order_today_label": "IF YOU ORDER TODAY:",
-        "savings_label": "Savings",
-        "savings_value": "You Save $203",
-        "total_label": "Subtotal",
-        "total_price": "$89.99",
-        "free_gifts_count": "4",
-        "cta_text": "SHOP NOW",
-        "cta_link": "",
-        "badge_text": "FREE Gifts Included ($115 value)",
-        "annotation_1": "FREE Pillowcases",
-        "anno_1_top": 25,
-        "anno_1_left": 15,
-        "anno_1_rotate": 0,
-        "annotation_2": "Night Sleep Guide",
-        "anno_2_top": 65,
-        "anno_2_left": 70,
-        "anno_2_rotate": 0
-      }
-    },
     "velo_faq": {
       "type": "velo-faq",
       "blocks": {
@@ -642,11 +522,80 @@
         "padding_bottom": 80
       }
     },
+    "velo_how_to": {
+      "type": "velo-how-to-steps",
+      "disabled": true,
+      "blocks": {
+        "step_1": {
+          "type": "step",
+          "settings": {
+            "title": "Step 01",
+            "text": "<p>Unbox and shake slightly to fluff the 1000GSM padding</p>"
+          }
+        },
+        "step_2": {
+          "type": "step",
+          "settings": {
+            "title": "Step 02",
+            "text": "<p>Stretch the elastic skirt over your mattress corners</p>"
+          }
+        },
+        "step_3": {
+          "type": "step",
+          "settings": {
+            "title": "Step 03",
+            "text": "<p>Put your fitted sheet over it and sleep on a cloud</p>"
+          }
+        }
+      },
+      "block_order": [
+        "step_1",
+        "step_2",
+        "step_3"
+      ],
+      "settings": {
+        "subheading": "Semplice come rifare il letto.",
+        "heading_light": "Come usare il",
+        "heading_bold": "Topper Amanotte"
+      }
+    },
+    "velo_included": {
+      "type": "velo-whats-included",
+      "disabled": true,
+      "blocks": {
+        "i1": {
+          "type": "item",
+          "settings": {
+            "title": "Amanotte Topper Materasso",
+            "original_price": "\u20ac399",
+            "final_price": "\u20ac199",
+            "is_free": false
+          }
+        },
+        "i2": {
+          "type": "item",
+          "settings": {
+            "title": "Spedizione Rapida",
+            "original_price": "\u20ac14.00",
+            "is_free": true
+          }
+        }
+      },
+      "block_order": [
+        "i1",
+        "i2"
+      ],
+      "settings": {
+        "heading": "Incluso nel tuo",
+        "heading_bold": "Ordine Amanotte",
+        "badge_text": "Spedizione GRATUITA Inclusa"
+      }
+    },
     "velo_sticky_atc": {
       "type": "velo-sticky-atc",
       "settings": {
-        "product": "",
-        "btn_text": "CLAIM OFFER +",
+        "product": "shopify://products/topper-materasso-premium-trapuntato",
+        "btn_text": "Acquista ora",
         "show_for_demo": true
       }
     }
@@ -658,9 +607,11 @@
     "velo_features",
     "velo_body_built",
     "velo_comparison",
+    "velo_how_to",
     "velo_details",
     "velo_risk_free",
     "velo_testimonials",
+    "velo_included",
     "velo_faq",
     "velo_sticky_atc"
   ]
