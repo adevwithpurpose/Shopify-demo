@@ -1,0 +1,1791 @@
+<div
+      data-same-height-display-contents
+      style="--jc:start"
+      class="gu3D7Y8SHF gp-relative gp-flex gp-flex-col"
+    >
+      <div gp-el-wrapper style="--bs:none;--bw:1px 1px 1px 1px;--bc:var(--g-c-line-3, line-3);--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--pageType:GP_STATIC;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--mb:var(--g-s-l)" class="g78lKtZAin ">
+      {% unless product %}<p>{{ 'gempages.ProductTitle.product_not_found' | t }}</p>{% else %}
+      <gp-product-title
+        gp-data='{"setting":{"linkProduct":false},"uid":"g78lKtZAin"}'
+      >
+        
+    {% assign locationOrigin = request.origin | append: routes.root_url | split: '/' | join: '/' %}
+    <div data-id="g78lKtZAin"
+        class="g78lKtZAin"
+        style="--dynamic-source-color:#F4F4F4"
+      >
+      <div  >
+        <h2
+          data-gp-text
+          class="gp-g-heading-2 gp-text-g-text-2 gp-text-instant"
+          style="--w:100%;--tdt:auto;--ta:left;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset;--c:var(--g-c-text-2, text-2);--tt:none;word-break:break-word;overflow:hidden;--tdl:"
+        >
+          {{ product.title }}
+        </h2>
+      </div>
+    </div>
+    
+      </gp-product-title>
+      <script {% if section.settings.section_preload == "false" %}class="gps-link" delay {% else %}src{% endif %}="https://assets.gemcommerce.com/assets-v2/gp-product-title-v7-5.js?v={{ shop.metafields.GEMPAGES.ASSETS_VERSION }}" defer="defer"></script>
+    {% endunless %}
+      </div>
+    
+
+    
+
+    
+    <gp-row gp-data='{"uid":"gUAebrQJD1"}' data-id="gUAebrQJD1" id="gUAebrQJD1" data-same-height-subgrid-container class="gUAebrQJD1 gp-relative gp-mx-auto gp-mb-0 gp-grid gp-max-w-full gp-transition-colors gp-duration-200 gp-ease-in-out [&_*]:gp-max-w-full gp-grid-rows-[1fr]" style="--bs:none;--bw:1px 1px 1px 1px;--bc:var(--g-c-line-3, line-3);--d:grid;--d-mobile:grid;--d-tablet:grid;--op:100%;--pageType:GP_STATIC;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--mb:var(--g-s-l);--cg:8px;--rg:0px;--gtc:minmax(0, auto) minmax(0, auto);--w:var(--g-ct-w, 1200px);--h:auto;--pc:start">
+      
+
+      <div
+      data-same-height-display-contents
+      style="--jc:center"
+      class="gBMR-Ksm6S gp-relative gp-flex gp-flex-col"
+    >
+      
+      <gp-product-price
+        id="shopify-text-element-gXFT2JBLaV" data-id="gXFT2JBLaV"
+        class="gp-product-price group-data-[state=loading]:gp-invisible data-[hidden=true]:!gp-hidden gXFT2JBLaV"
+        style="--bs:none;--bw:1px 1px 1px 1px;--bc:var(--g-c-line-3, line-3);--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--pageType:GP_STATIC;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px"
+        gp-data='{"priceType":"regular","uid":"gXFT2JBLaV","locale":"{{shop.locale}}","currency":"{{shop.currency}}","moneyFormat":"{{ shop.money_format | replace: '"', '\\"' | escape }}"}'
+      >
+        
+    {% assign locationOrigin = request.origin | append: routes.root_url | split: '/' | join: '/' %}
+    <div id="p-price-gXFT2JBLaV" data-id
+        
+        style="--dynamic-source-color:#F4F4F4"
+      >
+      <div  >
+        <div
+          data-gp-text
+          class="gp-price gp-money gp-decoration-g-text-1 gp-g-paragraph-1  gp-text-instant"
+          style="--w:100%;--tdc:var(--g-c-text-1, text-1);--tdt:2px;--ta:left;--c:#121212;--size:22px;--size-tablet:16px;--size-mobile:14px;word-break:break-word;overflow:hidden;--tdl:"
+        >
+          
+     {% if variant.price %}
+       {{ variant.price | money}}
+     {% endif %}
+   
+        </div>
+      </div>
+    </div>
+    
+      </gp-product-price>
+      <script {% if section.settings.section_preload == "false" %}class="gps-link" delay {% else %}src{% endif %}="https://assets.gemcommerce.com/assets-v2/gp-product-price-v7-5.js?v={{ shop.metafields.GEMPAGES.ASSETS_VERSION }}" defer="defer"></script>
+  
+    </div><div
+      data-same-height-display-contents
+      style="--jc:center"
+      class="gd9YvJrc9a gp-relative gp-flex gp-flex-col"
+    >
+      
+      <gp-product-price
+        id="shopify-text-element-gY2IWOCosk" data-id="gY2IWOCosk" data-hidden="{% if variant.compare_at_price > variant.price and variant.compare_at_price >= 0 %}false{% else %}true{% endif %}"
+        class="gp-product-price group-data-[state=loading]:gp-invisible data-[hidden=true]:!gp-hidden gY2IWOCosk"
+        style="--bs:none;--bw:1px 1px 1px 1px;--bc:var(--g-c-line-3, line-3);--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--pageType:GP_STATIC;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px"
+        gp-data='{"priceType":"compare","uid":"gY2IWOCosk","locale":"{{shop.locale}}","currency":"{{shop.currency}}","moneyFormat":"{{ shop.money_format | replace: '"', '\\"' | escape }}"}'
+      >
+        
+    {% assign locationOrigin = request.origin | append: routes.root_url | split: '/' | join: '/' %}
+    <div id="p-price-gY2IWOCosk" data-id
+        
+        style="--dynamic-source-color:#F4F4F4"
+      >
+      <div  >
+        <div
+          data-gp-text
+          class="gp-price gp-product-compare-price gp-decoration-g-text-1 gp-g-paragraph-1 gp-text-g-text-1 gp-text-instant"
+          style="--w:100%;--tdc:var(--g-c-text-1, text-1);--tdt:2px;--ta:left;--c:var(--g-c-text-1, text-1);word-break:break-word;overflow:hidden;--tdl:line-through"
+        >
+          
+      {% if variant.compare_at_price  %}
+        {{ variant.compare_at_price | money}}
+      {% else %}
+
+      {% endif %}
+    
+        </div>
+      </div>
+    </div>
+    
+      </gp-product-price>
+      <script {% if section.settings.section_preload == "false" %}class="gps-link" delay {% else %}src{% endif %}="https://assets.gemcommerce.com/assets-v2/gp-product-price-v7-5.js?v={{ shop.metafields.GEMPAGES.ASSETS_VERSION }}" defer="defer"></script>
+  
+    </div>
+
+      
+    </gp-row>
+  
+  <div gp-el-wrapper style="--bs:none;--bw:1px 1px 1px 1px;--bc:var(--g-c-line-3, line-3);--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--pageType:GP_STATIC;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--mb:var(--g-s-l)" class="gIHvG-V2-g ">
+      {% if product.description == blank %}{% else %}
+    <gp-product-description
+      data-id="gIHvG-V2-g"
+      class="gp-product-description undefined"
+      gp-data='{"setting":{"lineClamp":{"desktop":3},"hasLineClamp":{"desktop":true},"viewMoreText":"Show more","viewLessText":"Show less","enableViewMoreIcon":true},"textStyle":{"--ta":"left","--c":"var(--g-c-text-1, text-1)","--maxh":"calc(3 * 1lh)","--maxh-tablet":"calc(3 * 1lh)","--maxh-mobile":"calc(3 * 1lh)","--line-clamp":3,"--line-clamp-tablet":3,"--line-clamp-mobile":3}}'
+      data-view-more-text="{{ section.settings.ggIHvG-V2-g_viewMoreText }}"
+      data-view-less-text="{{ section.settings.ggIHvG-V2-g_viewLessText }}"
+    >
+      <style>
+      .p-description-wrapper.gp-p-description-text * {
+        color: inherit;
+        line-height: inherit !important;
+      }</style>
+      <style>
+   .gp-p-description-text > :not(ol, ul, table, div, style, script) {
+      display: inline !important;
+    }
+
+    .gp-p-description-text > :not(ol, ul, table, div, style, script)::after {
+      content: "";
+      display: block; /* đảm bảo xuống dòng trên Safari/iOS */
+    }
+    .gp-p-description-text > table {
+      box-shadow: none;
+    }
+  </style>
+      <div class="gp-rotate-180 gp-hidden" ></div>
+      {% unless product %}<p>Product not found</p>{% else %}<div data-gp-text class="gp-relative  gp-p-description-text gp-break-words safari:[&_p]:gp-inline safari:[&_p]:after:gp-whitespace-pre p-description-wrapper gp-g-paragraph-1 gp-text-g-text-2 data-[browser=safari]:after:gp-content-[' '] data-[browser=safari]:after:gp-absolute data-[browser=safari]:after:gp-left-0 data-[browser=safari]:after:gp-right-0 data-[browser=safari]:after:gp-bottom-0 data-[browser=safari]:after:gp-w-full data-[browser=safari]:after:gp-h-1/2 data-[browser=safari]:after:gp-bg-gradient-to-t data-[browser=safari]:after:gp-from-white" style="--ta:left;--c:var(--g-c-text-1, text-1);--maxh:calc(3 * 1lh);--maxh-tablet:calc(3 * 1lh);--maxh-mobile:calc(3 * 1lh);--line-clamp:3;--line-clamp-tablet:3;--line-clamp-mobile:3">
+          {{product.description}}
+        </div>
+        {% unless product.description == blank %}<button type="button" class="p-description-show-more gp-items-center gp-mt-4 gp-w-full gp-transition-all hover:gp-opacity-80 gp-g-paragraph-1 gp-text-g-text-1" style="--jc:left;--c:var(--g-c-text-1, text-1);--d:inline-flex;--d-mobile:inline-flex;--d-tablet:inline-flex">
+          <span class="gp-show-more-text">
+            {{ section.settings.ggIHvG-V2-g_viewMoreText }}
+          </span>
+          <span class="gp-show-more-icon gp-ml-1"><svg height="1em" width="1em" viewBox="0 0 22 12" fill="none" xmlns="http://www.w3.org/2000/svg" ><path d="M1.70711 0.292893C1.31658 -0.0976311 0.683417 -0.0976311 0.292893 0.292893C-0.0976311 0.683417 -0.0976311 1.31658 0.292893 1.70711L1.70711 0.292893ZM11 11L10.2929 11.7071C10.6834 12.0976 11.3166 12.0976 11.7071 11.7071L11 11ZM21.7071 1.70711C22.0976 1.31658 22.0976 0.683417 21.7071 0.292893C21.3166 -0.0976311 20.6834 -0.0976311 20.2929 0.292893L21.7071 1.70711ZM0.292893 1.70711L10.2929 11.7071L11.7071 10.2929L1.70711 0.292893L0.292893 1.70711ZM11.7071 11.7071L21.7071 1.70711L20.2929 0.292893L10.2929 10.2929L11.7071 11.7071Z"
+              fill="currentColor"/>
+        </svg></span>
+          </button>{% endunless %}{% endunless %}
+    </gp-product-description>
+
+    <script {% if section.settings.section_preload == "false" %}class="gps-link" delay {% else %}src{% endif %}="https://assets.gemcommerce.com/assets-v2/gp-product-description-v7-5.js?v={{ shop.metafields.GEMPAGES.ASSETS_VERSION }}" defer="defer"></script>
+  {% endif %}
+      </div><div gp-el-wrapper style="--bs:none;--bw:1px 1px 1px 1px;--bc:var(--g-c-line-3, line-3);--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--pageType:GP_STATIC;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--mb:var(--g-s-l)" class="g52P8rrhfU ">
+      
+    {%- assign total_combinations = 1 -%}
+    {% for option in product.options_with_values %}{%- assign total_combinations = total_combinations | times: option.values.size -%}{% endfor %}
+    <gp-product-variants
+      data-id="g52P8rrhfU" has-pre-selected="true" class
+      gp-data='{
+        "setting":{"blankText":"Please select an option","column":{"desktop":1},"combineFullWidth":{"desktop":true},"combineHeight":"45px","combineWidth":{"desktop":"100%"},"hasOnlyDefaultVariant":false,"hasPreSelected":true,"label":true,"layout":{"desktop":"vertical"},"optionAlign":{"desktop":"left"},"optionType":"singleOption","price":true,"showAsSwatches":true,"soldOutStyle":"line","variantPresets":[{"isEdited":true,"optionName":"base","optionType":"rectangle_list","presets":{"rectangle_list":{"height":"45px","optionBgColor":{"normal":"#FFFFFF"},"optionBorder":{"active":{"border":"solid","borderType":"style-3","borderWidth":"2px","color":"line-3","isCustom":false,"width":"2px 2px 2px 2px"},"hover":{"border":"solid","borderType":"style-3","borderWidth":"1px","color":"line-3","isCustom":false,"width":"1px 1px 1px 1px"},"normal":{"border":"solid","borderType":"style-2","borderWidth":"1px","color":"line-2","isCustom":false,"width":"1px 1px 1px 1px"}},"optionHasShadow":{"normal":false},"optionRounded":{"normal":{"bblr":"0px","bbrr":"0px","btlr":"0px","btrr":"0px","radiusType":"none"}},"optionShadow":{"normal":{"angle":45,"blur":"4px","color":"rgba(18, 18, 18, 0.20)","distance":"4px","enable":false,"spread":"0px","type":"shadow-1"}},"optionTextColor":{"normal":"text-1"},"spacing":"8px","width":{"desktop":""}}}},{"isEdited":true,"optionName":"Jewelry material","optionType":"rectangle_list","presets":{"rectangle_list":{"height":"45px","optionBgColor":{"normal":"#FFFFFF"},"optionBorder":{"active":{"border":"solid","borderType":"style-3","borderWidth":"2px","color":"line-3","isCustom":false,"width":"2px 2px 2px 2px"},"hover":{"border":"solid","borderType":"style-3","borderWidth":"1px","color":"line-3","isCustom":false,"width":"1px 1px 1px 1px"},"normal":{"border":"dotted","borderType":"style-2","borderWidth":"1px","color":"line-2","isCustom":false,"width":"1px 1px 1px 1px"}},"optionHasShadow":{"active":false,"hover":false,"normal":true},"optionRounded":{"normal":{"bblr":"9999px","bbrr":"9999px","btlr":"9999px","btrr":"9999px","radiusType":"circle"}},"optionShadow":{"normal":{"angle":45,"blur":"4px","color":"rgba(18, 18, 18, 0.20)","distance":"4px","enable":true,"spread":"0px","type":"shadow-1"}},"optionTextColor":{"normal":"text-1"},"spacing":"8px","width":{"desktop":""}}}},{"isEdited":true,"optionName":"Color","optionType":"color","presets":{"color":{"height":"45px","optionBgColor":{"active":"bg-3","hover":"bg-3","normal":"bg-3"},"optionBorder":{"active":{"border":"solid","borderType":"style-3","borderWidth":"2px","color":"line-3","isCustom":false,"width":"2px 2px 2px 2px"},"hover":{"border":"solid","borderType":"style-3","borderWidth":"1px","color":"line-3","isCustom":false,"width":"1px 1px 1px 1px"},"normal":{"border":"solid","borderType":"style-2","borderWidth":"1px","color":"line-2","isCustom":false,"width":"1px 1px 1px 1px"}},"optionHasShadow":{"normal":false},"optionRounded":{"normal":{"bblr":"9999px","bbrr":"9999px","btlr":"9999px","btrr":"9999px","radiusType":"circle"}},"optionShadow":{"normal":{"angle":45,"blur":"4px","color":"rgba(18, 18, 18, 0.20)","distance":"4px","enable":false,"spread":"0px","type":"shadow-1"}},"optionTextColor":{"active":"text-2","hover":"text-2","normal":"text-2"},"spacing":"8px","width":{"desktop":"45px","mobile":"45px","tablet":"45px"}}}}]},
+        "styles":{"align":{"desktop":"left"},"dropdownItemWidth":{"desktop":"fill","mobile":"fill","tablet":"fill"},"fixedDropdownWidth":{"desktop":"240px"},"fullWidth":{"desktop":true},"labelColor":"text-1","labelGap":"8px","labelTypo":{"attrs":{"bold":true,"color":"text-1","italic":false},"custom":{"fontFamily":"Assistant","letterSpacing":{"desktop":"0.6px"}},"latestUpdate":"italic","type":"paragraph-2"},"marginBottom":{"desktop":"14px"},"optionBgColor":{"normal":"#FFFFFF"},"optionBorder":{"active":{"border":"solid","borderType":"style-3","borderWidth":"2px","color":"line-3","isCustom":false,"width":"2px 2px 2px 2px"},"hover":{"border":"solid","borderType":"style-3","borderWidth":"1px","color":"line-3","isCustom":false,"width":"1px 1px 1px 1px"},"normal":{"border":"solid","borderType":"style-2","borderWidth":"1px","color":"line-2","isCustom":false,"width":"1px 1px 1px 1px"}},"optionHasShadow":{"normal":false},"optionRounded":{"normal":{"bblr":"0px","bbrr":"0px","btlr":"0px","btrr":"0px","radiusType":"none"}},"optionShadow":{"normal":{"angle":45,"blur":"4px","color":"rgba(18, 18, 18, 0.20)","distance":"4px","enable":false,"spread":"0px","type":"shadow-1"}},"optionSpacing":"30px","optionTextColor":{"normal":"text-1"},"optionTypo":{"attrs":{"color":"text-1"},"custom":{"fontSize":{"desktop":"12px","mobile":"12px","tablet":"14px"}},"type":"paragraph-2"},"swatchAutoWidth":{"desktop":true},"swatchHeight":{"desktop":"45px"},"swatchItemWidth":{"desktop":"auto"},"swatchSpacing":"var(--g-s-m)","swatchWidth":{"desktop":"80px"},"width":{"desktop":"100%"}},
+        "variants":{{product.variants | json | escape}},
+        "optionsWithValues": {{product.options_with_values | json | escape}},
+        "variantSelected": {{ variant | json | escape }},
+        "variantInventoryQuantity": {{product.variants | map: 'inventory_quantity' | json | escape}},
+        "variantInventoryPolicy": {{product.variants | map: 'inventory_policy' | json | escape}},
+        "moneyFormat": {{shop.money_format | json | escape}},
+        "productId": {{product.id | json | escape}},
+        "productUrl": {{product.url | json | escape}},
+        "productHandle": {{product.handle | json | escape}},
+        "displayState": {"desktop":true,"mobile":true,"tablet":true},
+        "totalVariantCombinations": {{total_combinations}},
+        "firstAvailableVariant": {{product.selected_or_first_available_variant | json | escape}}
+      }
+    '>
+      <div class="gp-hidden" style="--hvr-shadow: none; --hvr-shadow-tablet: none; --hvr-shadow-mobile: none"></div>
+      {%- assign options = product.options_with_values -%}
+      {%- assign variants = product.variants -%}
+      {% if options.size == 0 or options.size == 1 and variants.size == 1 and variants[0].title == 'Default Title' and variants[0].option1 == 'Default Title' %}<div></div>{% else %}<div
+            class="gp-flex gp-flex-col !gp-ml-0"
+            style="--gtc:repeat(1, minmax(0, 1fr));--ta:left;--w:100%;--w-tablet:100%;--w-mobile:100%"
+          >
+          
+      {%- assign presets = "base($2)rectangle_list($1)Jewelry material($2)rectangle_list($1)Color($2)color" | split: '($1)' -%}
+      {% assign hiddenPresetOptions = "" | split: ',' %}
+      
+      {% assign all_option_names = options | map: 'name' %}
+      {% assign filtered_options_string = '' %}
+      {% assign delimiter = '||' %}
+      
+      {% for item_name in all_option_names %}
+        {% assign is_excluded = false %}
+        {% for exclude_name in hiddenPresetOptions %}
+          {% if item_name == exclude_name %}
+            {% assign is_excluded = true %}
+          {% endif %}
+        {% endfor %}
+        
+        {% unless is_excluded %}
+          {% if filtered_options_string == '' %}
+            {% assign filtered_options_string = item_name %}
+          {% else %}
+            {% assign filtered_options_string = filtered_options_string | append: delimiter | append: item_name %}
+          {% endif %}
+        {% endunless %}
+      {% endfor %}
+      
+      {% assign filtered_options_array = filtered_options_string | split: delimiter %}
+      
+      {% assign last_option_name = filtered_options_array | last %}
+      
+      {% for option in options %}
+        <div
+        option-name="{{option.name | escape}}"
+        class="gp-flex variant-inside gp-flex-col gp-items-start {% if hiddenPresetOptions contains option.name %}gp-hidden{% endif %}"
+        style="--mb: 14px;{% if forloop.last or option.name == last_option_name %}--mb:0;--mb-mobile:0;--mb-tablet:0;{% endif %}"
+        >
+          {%- assign showVariantClass = 'variant-display' -%}
+          {%- assign optionName = option.name  -%}
+          {% for preset in presets %}
+            {%- assign presetDetail = preset | split: '($2)' -%}
+            {% if presetDetail[1] == 'dropdown' and presetDetail[0] == optionName %}{%- assign showVariantClass = '' -%} {%- break -%}{% endif %}
+          {% endfor %}
+          
+    {% assign locationOrigin = request.origin | append: routes.root_url | split: '/' | join: '/' %}
+    <div data-id
+        
+        style="--mb:8px;--mr:0px;--mb-tablet:8px;--mr-tablet:0px;--mb-mobile:8px;--mr-mobile:0px;--dynamic-source-color:#F4F4F4"
+      >
+      <div  style="--w:fit-content;--w-tablet:fit-content;--w-mobile:fit-content">
+        <legend
+          data-gp-text
+          class="{{showVariantClass}}  gp-text-instant"
+          style="--w:100%;--tdt:auto;--ff:var(--g-font-Assistant, 'Assistant'), var(--g-font-body, body);--ls:0.6px;--weight:bold;--c:var(--g-c-text-1, text-1);word-break:break-word;overflow:hidden;--tdl:"
+        >
+          {{option.name}}
+        </legend>
+      </div>
+    </div>
+    
+          <div
+              variant-option-name="{{option.name | escape}}"
+              class="variant-option-group gp-flex gp-w-full gp-flex-wrap gp-items-center  gp-justify-start"
+              style="--rg: var(--g-s-m);--cg: var(--g-s-m);"
+            >
+              {%- assign values = option.values -%}
+              {%- assign rootForloop = forloop.index0 -%}
+              
+                {%- if option.position == 1 -%}
+                  {%- assign selectedValue = variant.option1 -%}
+                {%- elsif option.position == 2 -%}
+                  {%- assign selectedValue = variant.option2 -%}
+                {%- else -%}
+                  {%- assign selectedValue = variant.option3 -%}
+                {%- endif -%}
+              
+              
+              
+      {% if shop.metafields.GEMPAGES.swatchesJSONFormat and shop.metafields.GEMPAGES.swatchesJSONFormat != blank %}
+    {%- assign optionRendered = false -%}
+    {%- assign swatches = shop.metafields.GEMPAGES.swatchesJSONFormat.value -%}
+
+    {% for swatch in swatches %}
+      {%- assign optionTitle = swatch.optionTitle -%}
+      {%- assign optionType = swatch.optionType -%}
+      {%- assign labelsString = "" -%}
+      {%- assign colorArraysString = "" -%}
+      {%- assign imageUrlsString = "" -%}
+
+      {% for optionValue in swatch.optionValues %}
+        {%- assign labelsString = labelsString | append: optionValue.label | append: '|||' -%}
+        {%- assign colorsJoined = optionValue.colors | join: '|||' -%}
+        {%- assign colorArraysString = colorArraysString | append: colorsJoined | append: '|||' -%}
+        {%- assign imageUrlsString = imageUrlsString | append: optionValue.imageUrl | append: '|||' -%}
+      {% endfor %}
+
+      {%- assign labels = labelsString | split: '|||' | slice: 0, labelsString.size -%}
+      {%- assign colorStrings = colorArraysString | split: '|||' | slice: 0, colorArraysString.size -%}
+      {%- assign imageUrls = imageUrlsString | split: '|||' | slice: 0, imageUrlsString.size -%}
+
+      {% if optionTitle == option.name %}
+        {%- assign variantPresetString = "base($1)rectangle_list($2)Jewelry material($1)rectangle_list($2)Color($1)color" -%}
+        {%- assign optionName = option.name | replace: "'", "&apos;" | replace: '"', "&quot;" -%}
+        {%- assign items = variantPresetString | split: '($2)' -%}
+        {%- assign type = 'dropdown' -%}
+
+        {% for item in items %}
+          {%- assign itemPreset = item | split: '($1)' -%}
+          {% if itemPreset[0] == optionName %}{%- assign type = itemPreset[1] -%}{% endif %}
+          {% if itemPreset[0] == 'base' %}{%- assign type = itemPreset[1] -%}{% endif %}
+        {% endfor %}
+        {%- assign optionRendered = true -%}
+
+        
+    {% for value in values %}
+    {%- liquid
+      assign option_disabled = true
+      for variantItem in product.variants
+        case option.position
+          when 1
+            if variantItem.available and variantItem.option1 == value
+              assign option_disabled = false
+            endif
+          when 2
+            if variantItem.available and variantItem.option2 == value
+              assign option_disabled = false
+            endif
+          when 3
+            if variantItem.available and variantItem.option3 == value
+              assign option_disabled = false
+            endif
+        endcase
+      endfor
+    -%}
+    {% assign option_disabled = false %}
+    <label
+      id="{{option.name | escape}}-{{value | escape}}"
+      for="{{product.id}}-g52P8rrhfU-{{option.name | escape}}-{{option.position}}-{{ forloop.index }}"
+      class="option-item gp-group gp-relative gp-child-item-g52P8rrhfU"
+      
+    >
+      <div class="gp-hidden !gp-max-w-[150px] gp-left-[50%] gp-translate-x-[-50%] gp-translate-y-0 gp-absolute gp-bottom-[calc(100%+20px)] gp-text-[12px] group-hover:gp-block gp-w-max gp-bg-[#333333] gp-text-[#F9F9F9] gp-px-[8px] gp-py-[4px] gp-rounded-[8px] gp-mb-[-10px] after:gp-content-[''] after:gp-absolute after:gp-p-[7px] after:gp-left-0 after:gp-w-full after:gp-bottom-[-10px]">
+        <p class="gp-text-[#F9F9F9]">{{value | escape}}</p>
+        <svg class="gp-absolute gp-left-[50%] gp-translate-x-[-50%] gp-translate-y-0 gp-z-10 gp-bottom-[-4px]" width="8" height="4" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M8 10L0 0L16 1.41326e-06L8 10Z" fill="#333333"/>
+        </svg>
+      </div>
+      <input
+        checked="{%- if option.selected_value == value -%}true{% else %}false{%- endif -%}"
+        name="{{product.id}}-options-{{option.name | escape}}"
+        id="{{product.id}}-g52P8rrhfU-{{option.name | escape}}-{{option.position}}-{{ forloop.index }}"
+        value="{{value | escape}}"
+        type="radio"
+        class="gp-sr-only gp-absolute gp-bottom-0 gp-right-0"
+      />
+      <span class="gp-sr-only">{{value | escape}}</span>
+      <div
+        option-name="{{option.name | escape}}" option-name-value="{{value | escape}}" data-gp-option-value-id="{{value.id}}"
+        class="option-item-inner gp-w-auto gp-h-auto {% if option_disabled == true %} {% endif %}">
+        
+    {% case type %}
+      {% when "rectangle_list" %}
+      
+    <div
+      id="value-wrapper-{{option.name | escape | strip}}-{{value | escape | strip}}" option-data="{{option.name | escape}}" option-value="{{value | escape}}" option-position="{{option.position}}" data-gp-option-available="{{value.available}}" option-type="rectangle_list" data-disabled="{%- if option_disabled == true -%} disabled  {%- endif -%}" data-hidden="true"
+      class="gp-relative gp-flex gp-cursor-pointer gp-items-center gp-justify-center gp-text-center option-value-wrapper gp-overflow-hidden gp-w-full gp-h-full data-[disabled='disabled']:gp-pointer-events-none data-[disabled='disabled']:!gp-cursor-not-allowed
+  data-[hidden='false']:gp-flex {{option.name | escape}}-{{option.position}}-{{ forloop.index }} gp-g-paragraph-2"
+      style="{% if selectedValue == value %}--size: 12px;--size-tablet: 14px;--size-mobile: 12px;--c: var(--g-c-text-1, text-1);--d: flex;--jc: center;	--ai: center;--w: 100%;--h: 100%;--of: hidden;--hvr-c: unset;--bs: none;--bw: 1px 1px 1px 1px;--hvr-bw: 1px 1px 1px 1px;--bc: var(--g-c-line-2, line-2);--hvr-bc: var(--g-c-line-3, line-3);--bblr: 0px;--bbrr: 0px;--btlr: 0px;--btrr: 0px;--hvr-bblr: 0px;--hvr-bbrr: 0px;--hvr-btlr: 0px;--hvr-btrr: 0px;--focus-bblr: 0px;--focus-bbrr: 0px;--focus-btlr: 0px;--focus-btrr: 0px;-undefined-bblr: 0px;-undefined-bbrr: 0px;-undefined-btlr: 0px;-undefined-btrr: 0px;{% else %}--size: 12px;--size-tablet: 14px;--size-mobile: 12px;--d: flex;--jc: center;	--ai: center;--w: 100%;--h: 100%;--of: hidden;--hvr-c: unset;--bs: solid;--hvr-bs: solid;--bw: 1px 1px 1px 1px;--hvr-bw: 1px 1px 1px 1px;--bc: var(--g-c-line-2, line-2);--hvr-bc: var(--g-c-line-3, line-3);--bblr: 0px;--bbrr: 0px;--btlr: 0px;--btrr: 0px;--hvr-bblr: 0px;--hvr-bbrr: 0px;--hvr-btlr: 0px;--hvr-btrr: 0px;--focus-bblr: 0px;--focus-bbrr: 0px;--focus-btlr: 0px;--focus-btrr: 0px;-undefined-bblr: 0px;-undefined-bbrr: 0px;-undefined-btlr: 0px;-undefined-btrr: 0px;{% endif %}">
+      
+      <div
+        class="option-value gp-overflow-hidden gp-relative"
+        style=" --pl: 16px;--pr: 16px;--pl-tablet: 16px;--pr-tablet: 16px;--pl-mobile: 16px;--pr-mobile: 16px;--pt: 0px;--pb: 0px;">
+         
+        <span class="gp-text-center gp-g-paragraph-2" style="--size:12px;--size-tablet:14px;--size-mobile:12px">{{value}}</span>
+      </div>
+    
+    </div>
+      {% when "color" %}
+      
+    {% assign colorsString = null %}
+    {% assign colors = null %}
+    {% for label in labels %}
+      {% if label == value %}
+        {% assign colorsString = colorStrings[forloop.index0] %}
+      {% endif %}
+    {% endfor %}
+    {% if colorsString != null %}
+      {% assign colors = colorsString | split: '|||' %}
+    {% endif %}
+    
+    <div
+      id="value-wrapper-{{option.name | escape | strip}}-{{value | escape | strip}}" option-data="{{option.name | escape}}" option-value="{{value | escape}}" option-position="{{option.position}}" data-gp-option-available="{{value.available}}" option-type="color" data-disabled="{%- if option_disabled == true -%} disabled  {%- endif -%}" data-hidden="true"
+      class="gp-relative gp-flex gp-cursor-pointer gp-items-center gp-justify-center gp-text-center option-value-wrapper gp-overflow-hidden gp-w-full gp-h-full data-[disabled='disabled']:gp-pointer-events-none data-[disabled='disabled']:!gp-cursor-not-allowed
+  data-[hidden='false']:gp-flex {{option.name | escape}}-{{option.position}}-{{ forloop.index }} gp-g-paragraph-2 gp-p-[4px]"
+      style="{% if selectedValue == value %}--size: 12px;--size-tablet: 14px;--size-mobile: 12px;--c: var(--g-c-text-1, text-1);--minw: 32px;--d: flex;--jc: center;	--ai: center;--w: 100%;--h: 100%;--of: hidden;--hvr-c: unset;--bs: none;--bw: 1px 1px 1px 1px;--hvr-bw: 1px 1px 1px 1px;--bc: var(--g-c-line-2, line-2);--hvr-bc: var(--g-c-line-3, line-3);--bblr: 999999px;--bbrr: 999999px;--btlr: 999999px;--btrr: 999999px;--hvr-bblr: 999999px;--hvr-bbrr: 999999px;--hvr-btlr: 999999px;--hvr-btrr: 999999px;--focus-bblr: 999999px;--focus-bbrr: 999999px;--focus-btlr: 999999px;--focus-btrr: 999999px;-undefined-bblr: 999999px;-undefined-bbrr: 999999px;-undefined-btlr: 999999px;-undefined-btrr: 999999px;{% else %}--size: 12px;--size-tablet: 14px;--size-mobile: 12px;--minw: 32px;--d: flex;--jc: center;	--ai: center;--w: 100%;--h: 100%;--of: hidden;--hvr-c: unset;--bs: solid;--hvr-bs: solid;--bw: 1px 1px 1px 1px;--hvr-bw: 1px 1px 1px 1px;--bc: var(--g-c-line-2, line-2);--hvr-bc: var(--g-c-line-3, line-3);--bblr: 999999px;--bbrr: 999999px;--btlr: 999999px;--btrr: 999999px;--hvr-bblr: 999999px;--hvr-bbrr: 999999px;--hvr-btlr: 999999px;--hvr-btrr: 999999px;--focus-bblr: 999999px;--focus-bbrr: 999999px;--focus-btlr: 999999px;--focus-btrr: 999999px;-undefined-bblr: 999999px;-undefined-bbrr: 999999px;-undefined-btlr: 999999px;-undefined-btrr: 999999px;{% endif %}">
+      {% if colors != null and colors.size > 0 %}
+      {% for color in colors %}
+          {% assign backgroundType = "background-color" %}
+          {% if color contains "linear-gradient" %}{% assign backgroundType = "background-image" %}{% endif %}
+          <div
+            class="color gp-relative gp-h-full gp-w-full gp-overflow-hidden gp-min-w-fit gp-flex gp-color-circle"
+            data-test="{{ backgroundType }}: {{ color }}"
+            style="{{ backgroundType }}: {{ color }}; {% if selectedValue == value %}--d: flex;--jc: center;	--ai: center;--w: 100%;--h: 100%;--of: hidden;--hvr-c: unset;--bs: none;--bw: 1px 1px 1px 1px;--hvr-bw: 1px 1px 1px 1px;--bc: var(--g-c-line-2, line-2);--hvr-bc: var(--g-c-line-3, line-3);--bblr: 999999px;--bbrr: 999999px;--btlr: 999999px;--btrr: 999999px;--hvr-bblr: 999999px;--hvr-bbrr: 999999px;--hvr-btlr: 999999px;--hvr-btrr: 999999px;--focus-bblr: 999999px;--focus-bbrr: 999999px;--focus-btlr: 999999px;--focus-btrr: 999999px;-undefined-bblr: 999999px;-undefined-bbrr: 999999px;-undefined-btlr: 999999px;-undefined-btrr: 999999px;{% else %}--d: flex;--jc: center;	--ai: center;--w: 100%;--h: 100%;--of: hidden;--hvr-c: unset;--bs: solid;--hvr-bs: solid;--bw: 1px 1px 1px 1px;--hvr-bw: 1px 1px 1px 1px;--bc: var(--g-c-line-2, line-2);--hvr-bc: var(--g-c-line-3, line-3);--bblr: 999999px;--bbrr: 999999px;--btlr: 999999px;--btrr: 999999px;--hvr-bblr: 999999px;--hvr-bbrr: 999999px;--hvr-btlr: 999999px;--hvr-btrr: 999999px;--focus-bblr: 999999px;--focus-bbrr: 999999px;--focus-btlr: 999999px;--focus-btrr: 999999px;-undefined-bblr: 999999px;-undefined-bbrr: 999999px;-undefined-btlr: 999999px;-undefined-btrr: 999999px;{% endif %}"></div>
+        {% endfor %}
+      {% else %}
+      <div
+        class="option-value gp-overflow-hidden gp-relative color gp-line-clamp-2 gp-flex gp-h-full gp-w-full gp-items-center gp-justify-center"
+        style="{% if selectedValue == value %}--d: flex;--jc: center;	--ai: center;--w: 100%;--h: 100%;--of: hidden;--hvr-c: unset;--bs: none;--bw: 1px 1px 1px 1px;--hvr-bw: 1px 1px 1px 1px;--bc: var(--g-c-line-2, line-2);--hvr-bc: var(--g-c-line-3, line-3);--bblr: 999999px;--bbrr: 999999px;--btlr: 999999px;--btrr: 999999px;--hvr-bblr: 999999px;--hvr-bbrr: 999999px;--hvr-btlr: 999999px;--hvr-btrr: 999999px;--focus-bblr: 999999px;--focus-bbrr: 999999px;--focus-btlr: 999999px;--focus-btrr: 999999px;-undefined-bblr: 999999px;-undefined-bbrr: 999999px;-undefined-btlr: 999999px;-undefined-btrr: 999999px;{% else %}--d: flex;--jc: center;	--ai: center;--w: 100%;--h: 100%;--of: hidden;--hvr-c: unset;--bs: solid;--hvr-bs: solid;--bw: 1px 1px 1px 1px;--hvr-bw: 1px 1px 1px 1px;--bc: var(--g-c-line-2, line-2);--hvr-bc: var(--g-c-line-3, line-3);--bblr: 999999px;--bbrr: 999999px;--btlr: 999999px;--btrr: 999999px;--hvr-bblr: 999999px;--hvr-bbrr: 999999px;--hvr-btlr: 999999px;--hvr-btrr: 999999px;--focus-bblr: 999999px;--focus-bbrr: 999999px;--focus-btlr: 999999px;--focus-btrr: 999999px;-undefined-bblr: 999999px;-undefined-bbrr: 999999px;-undefined-btlr: 999999px;-undefined-btrr: 999999px;{% endif %} ">
+         
+        <span class="gp-text-center gp-g-paragraph-2 gp-overflow-hidden gp-text-ellipsis gp-px-1" style="--size:12px;--size-tablet:14px;--size-mobile:12px">{{value}}</span>
+      </div>
+    {% endif %}
+    </div>
+  
+      {% when "image_shopify" %}
+      
+      {% assign imageUrl = null %}
+      {% for variant in variants %}
+        {% assign valueIncludesSelectedOption = false %}
+        {% for item in variant.options %}
+          {% if item == value %}
+          {% assign valueIncludesSelectedOption = true %}
+          {% endif %}
+        {% endfor %}
+        {% if valueIncludesSelectedOption and variant.featured_image or variant.featured_media%}
+          {% unless imageUrl %}
+            {% if variant.featured_media %}
+              {% assign imageUrl = variant.featured_media.preview_image.src | product_img_url: '200x'  %}
+            {% else %}
+              {% assign imageUrl = variant.featured_image.src | product_img_url: '200x'  %}
+            {% endif %}
+          {% endunless %}
+        {% endif %}
+      {% endfor %}
+      
+    <div
+      id="value-wrapper-{{option.name | escape | strip}}-{{value | escape | strip}}" option-data="{{option.name | escape}}" option-value="{{value | escape}}" option-position="{{option.position}}" data-gp-option-available="{{value.available}}" option-type="image_shopify" data-disabled="{%- if option_disabled == true -%} disabled  {%- endif -%}" data-hidden="true"
+      class="gp-relative gp-flex gp-cursor-pointer gp-items-center gp-justify-center gp-text-center option-value-wrapper gp-overflow-hidden gp-w-full gp-h-full data-[disabled='disabled']:gp-pointer-events-none data-[disabled='disabled']:!gp-cursor-not-allowed
+  data-[hidden='false']:gp-flex {{option.name | escape}}-{{option.position}}-{{ forloop.index }} gp-g-paragraph-2"
+      style="{% if selectedValue == value %}--size: 12px;--size-tablet: 14px;--size-mobile: 12px;--c: var(--g-c-text-1, text-1);--d: flex;--jc: center;	--ai: center;--w: 100%;--h: 100%;--of: hidden;--hvr-c: unset;--bs: none;--bw: 1px 1px 1px 1px;--hvr-bw: 1px 1px 1px 1px;--bc: var(--g-c-line-2, line-2);--hvr-bc: var(--g-c-line-3, line-3);--bblr: 0px;--bbrr: 0px;--btlr: 0px;--btrr: 0px;--hvr-bblr: 0px;--hvr-bbrr: 0px;--hvr-btlr: 0px;--hvr-btrr: 0px;--focus-bblr: 0px;--focus-bbrr: 0px;--focus-btlr: 0px;--focus-btrr: 0px;-undefined-bblr: 0px;-undefined-bbrr: 0px;-undefined-btlr: 0px;-undefined-btrr: 0px;{% else %}--size: 12px;--size-tablet: 14px;--size-mobile: 12px;--d: flex;--jc: center;	--ai: center;--w: 100%;--h: 100%;--of: hidden;--hvr-c: unset;--bs: solid;--hvr-bs: solid;--bw: 1px 1px 1px 1px;--hvr-bw: 1px 1px 1px 1px;--bc: var(--g-c-line-2, line-2);--hvr-bc: var(--g-c-line-3, line-3);--bblr: 0px;--bbrr: 0px;--btlr: 0px;--btrr: 0px;--hvr-bblr: 0px;--hvr-bbrr: 0px;--hvr-btlr: 0px;--hvr-btrr: 0px;--focus-bblr: 0px;--focus-bbrr: 0px;--focus-btlr: 0px;--focus-btrr: 0px;-undefined-bblr: 0px;-undefined-bbrr: 0px;-undefined-btlr: 0px;-undefined-btrr: 0px;{% endif %}">
+      {% if imageUrl != null and imageUrl != "" %}
+      <img class="gp-object-cover gp-rounded-none" style="width: 64px; height: 64px" src="{{imageUrl}}" alt="" />
+    {% else %}
+      <div
+        class="option-value gp-overflow-hidden gp-relative gp-flex gp-flex-col gp-justify-center gp-items-center gp-gap-[6px"
+        style=" --pl: 16px;--pr: 16px;--pl-tablet: 16px;--pr-tablet: 16px;--pl-mobile: 16px;--pr-mobile: 16px;--pt: 0px;--pb: 0px;">
+        <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="2" cy="2" r="2" fill="#D6D6D6"></circle><path d="M0.196854 10.6453L2.40968 8.05946C2.4846 7.97175 2.57719 7.9008 2.68141 7.85124C2.78562 7.80168 2.89913 7.77461 3.01452 7.77181C3.12991 7.76902 3.2446 7.79055 3.3511 7.835C3.45761 7.87945 3.55353 7.94583 3.63262 8.02981L4.66733 9.12714L8.71205 4.29464C8.79123 4.19995 8.89077 4.1243 9.00325 4.07333C9.11573 4.02236 9.23827 3.99737 9.36176 4.00022C9.48524 4.00307 9.6065 4.03369 9.71651 4.08979C9.82651 4.1459 9.92245 4.22605 9.99717 4.32429L14.8329 10.6772C14.9254 10.7989 14.982 10.9441 14.9964 11.0962C15.0107 11.2484 14.9823 11.4016 14.9144 11.5385C14.8464 11.6754 14.7415 11.7907 14.6115 11.8713C14.4815 11.952 14.3316 11.9948 14.1786 11.995L0.822048 12C0.664945 11.9999 0.511148 11.9549 0.378853 11.8703C0.246557 11.7857 0.141299 11.6649 0.0755311 11.5224C0.00976323 11.3799 -0.013762 11.2216 0.00773837 11.0661C0.0292388 10.9107 0.0948652 10.7646 0.196854 10.6453Z" fill="#D6D6D6"></path></svg>
+        <span class="gp-text-center gp-g-paragraph-2 gp-overflow-hidden gp-text-ellipsis gp-px-1" style="--size:12px;--size-tablet:14px;--size-mobile:12px">{{value}}</span>
+      </div>
+    {% endif %}
+    </div>
+  
+      {% when "image" %}
+      
+    {% assign imageUrl = null %}
+    {% for label in labels %}
+    {% if label == value %}
+      {% assign imageUrl = imageUrls[forloop.index0] %}
+    {% endif %}
+    {% endfor %}
+    
+    <div
+      id="value-wrapper-{{option.name | escape | strip}}-{{value | escape | strip}}" option-data="{{option.name | escape}}" option-value="{{value | escape}}" option-position="{{option.position}}" data-gp-option-available="{{value.available}}" option-type="image" data-disabled="{%- if option_disabled == true -%} disabled  {%- endif -%}" data-hidden="true"
+      class="gp-relative gp-flex gp-cursor-pointer gp-items-center gp-justify-center gp-text-center option-value-wrapper gp-overflow-hidden gp-w-full gp-h-full data-[disabled='disabled']:gp-pointer-events-none data-[disabled='disabled']:!gp-cursor-not-allowed
+  data-[hidden='false']:gp-flex {{option.name | escape}}-{{option.position}}-{{ forloop.index }} gp-g-paragraph-2"
+      style="{% if selectedValue == value %}--size: 12px;--size-tablet: 14px;--size-mobile: 12px;--c: var(--g-c-text-1, text-1);--d: flex;--jc: center;	--ai: center;--w: 100%;--h: 100%;--of: hidden;--hvr-c: unset;--bs: none;--bw: 1px 1px 1px 1px;--hvr-bw: 1px 1px 1px 1px;--bc: var(--g-c-line-2, line-2);--hvr-bc: var(--g-c-line-3, line-3);--bblr: 0px;--bbrr: 0px;--btlr: 0px;--btrr: 0px;--hvr-bblr: 0px;--hvr-bbrr: 0px;--hvr-btlr: 0px;--hvr-btrr: 0px;--focus-bblr: 0px;--focus-bbrr: 0px;--focus-btlr: 0px;--focus-btrr: 0px;-undefined-bblr: 0px;-undefined-bbrr: 0px;-undefined-btlr: 0px;-undefined-btrr: 0px;{% else %}--size: 12px;--size-tablet: 14px;--size-mobile: 12px;--d: flex;--jc: center;	--ai: center;--w: 100%;--h: 100%;--of: hidden;--hvr-c: unset;--bs: solid;--hvr-bs: solid;--bw: 1px 1px 1px 1px;--hvr-bw: 1px 1px 1px 1px;--bc: var(--g-c-line-2, line-2);--hvr-bc: var(--g-c-line-3, line-3);--bblr: 0px;--bbrr: 0px;--btlr: 0px;--btrr: 0px;--hvr-bblr: 0px;--hvr-bbrr: 0px;--hvr-btlr: 0px;--hvr-btrr: 0px;--focus-bblr: 0px;--focus-bbrr: 0px;--focus-btlr: 0px;--focus-btrr: 0px;-undefined-bblr: 0px;-undefined-bbrr: 0px;-undefined-btlr: 0px;-undefined-btrr: 0px;{% endif %}">
+      {% if imageUrl != null and imageUrl != "" %}
+      <img class="gp-object-cover gp-rounded-none" style="width: 64px; height: 64px" src="{{imageUrl}}" alt="" />
+    {% else %}
+      <div
+        class="option-value gp-overflow-hidden gp-relative gp-flex gp-flex-col gp-justify-center gp-items-center gp-gap-[6px"
+        style=" --pl: 16px;--pr: 16px;--pl-tablet: 16px;--pr-tablet: 16px;--pl-mobile: 16px;--pr-mobile: 16px;--pt: 0px;--pb: 0px;">
+        <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="2" cy="2" r="2" fill="#D6D6D6"></circle><path d="M0.196854 10.6453L2.40968 8.05946C2.4846 7.97175 2.57719 7.9008 2.68141 7.85124C2.78562 7.80168 2.89913 7.77461 3.01452 7.77181C3.12991 7.76902 3.2446 7.79055 3.3511 7.835C3.45761 7.87945 3.55353 7.94583 3.63262 8.02981L4.66733 9.12714L8.71205 4.29464C8.79123 4.19995 8.89077 4.1243 9.00325 4.07333C9.11573 4.02236 9.23827 3.99737 9.36176 4.00022C9.48524 4.00307 9.6065 4.03369 9.71651 4.08979C9.82651 4.1459 9.92245 4.22605 9.99717 4.32429L14.8329 10.6772C14.9254 10.7989 14.982 10.9441 14.9964 11.0962C15.0107 11.2484 14.9823 11.4016 14.9144 11.5385C14.8464 11.6754 14.7415 11.7907 14.6115 11.8713C14.4815 11.952 14.3316 11.9948 14.1786 11.995L0.822048 12C0.664945 11.9999 0.511148 11.9549 0.378853 11.8703C0.246557 11.7857 0.141299 11.6649 0.0755311 11.5224C0.00976323 11.3799 -0.013762 11.2216 0.00773837 11.0661C0.0292388 10.9107 0.0948652 10.7646 0.196854 10.6453Z" fill="#D6D6D6"></path></svg>
+        <span class="gp-text-center gp-g-paragraph-2 gp-overflow-hidden gp-text-ellipsis gp-px-1" style="--size:12px;--size-tablet:14px;--size-mobile:12px">{{value}}</span>
+      </div>
+    {% endif %}
+    </div>
+  
+      {% else %}
+    {% endcase %}
+    
+      </div>
+    </label>{% endfor %}
+      {% if type == "dropdown" %}
+    <select
+      aria-label="{{option.name | escape}}" autocomplete="off" id="p-variant-dropdown-{{option.position}}" name="{%- if option -%}{{option.name | escape}}{% else %}Select Option{%- endif -%}" option-data="{{option.name}}" option-type="{{optionType}}" option-renderer="{{optionRendered}}"
+      class="dropdown-option-item gp-truncate gp-bg-auto gp-pl-4 gp-pr-6 gp-outline-none gp-shadow-none gp-g-paragraph-2 gp-border-g-line-2 hover:gp-border-g-line-3 gp-text-g-text-1"
+      style="--w:true;--w-tablet:true;--w-mobile:true;--h:[object Object];--shadow:none;--bs:solid;--bw:1px 1px 1px 1px;--bc:var(--g-c-line-2, line-2);--size:12px;--size-tablet:14px;--size-mobile:12px;--c:var(--g-c-text-1, text-1);--bg:#FFFFFF;--hvr-bs:solid;--hvr-bw:1px 1px 1px 1px;--hvr-bc:var(--g-c-line-3, line-3);--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--hvr-bblr:0px;--hvr-bbrr:0px;--hvr-btlr:0px;--hvr-btrr:0px;--focus-bblr:0px;--focus-bbrr:0px;--focus-btlr:0px;--focus-btrr:0px;-undefined-bblr:0px;-undefined-bbrr:0px;-undefined-btlr:0px;-undefined-btrr:0px;appearance:none;background-image:url(https://cdn.shopify.com/s/files/1/1827/4239/t/1/assets/ico-select.svg?v=155563818344741998551488860031);background-repeat:no-repeat;background-position:right 16px center"
+    >
+      
+      {% for value in values %}{%- liquid
+      assign option_disabled = true
+      for variantItem in product.variants
+        case option.position
+          when 1
+            if variantItem.available and variantItem.option1 == value
+              assign option_disabled = false
+            endif
+          when 2
+            if variantItem.available and variantItem.option2 == value
+              assign option_disabled = false
+            endif
+          when 3
+            if variantItem.available and variantItem.option3 == value
+              assign option_disabled = false
+            endif
+        endcase
+      endfor
+    -%}
+    {% if value == selectedValue %}<option selected 
+  option-data="{{option.name | escape}}"
+  option-value="{{value | escape}}"
+  data-gp-option-value-id="{{value.id}}"
+  data-gp-option-available="{{value.available}}"
+  value="{{value | escape}}"
+  class="option-value-wrapper"
+  key="{{value | escape}}"
+ option-position="{{option.position}}">{{value}}</option>{% else %}<option 
+  option-data="{{option.name | escape}}"
+  option-value="{{value | escape}}"
+  data-gp-option-value-id="{{value.id}}"
+  data-gp-option-available="{{value.available}}"
+  value="{{value | escape}}"
+  class="option-value-wrapper"
+  key="{{value | escape}}"
+ option-position="{{option.position}}">{{value}}</option>{% endif %}{% endfor %}
+    </select>{% endif %}
+      {% endif %}
+    {% endfor %}
+
+    {% if optionRendered == false %}
+    {% for value in values %}
+    {%- liquid
+      assign option_disabled = true
+      for variantItem in product.variants
+        case option.position
+          when 1
+            if variantItem.available and variantItem.option1 == value
+              assign option_disabled = false
+            endif
+          when 2
+            if variantItem.available and variantItem.option2 == value
+              assign option_disabled = false
+            endif
+          when 3
+            if variantItem.available and variantItem.option3 == value
+              assign option_disabled = false
+            endif
+        endcase
+      endfor
+    -%}
+    {% assign option_disabled = false %}
+    <label
+      id="{{option.name | escape}}-{{value | escape}}"
+      for="{{product.id}}-g52P8rrhfU-{{option.name | escape}}-{{option.position}}-{{ forloop.index }}"
+      class="option-item gp-group gp-relative gp-child-item-g52P8rrhfU"
+      
+    >
+      <div class="gp-hidden !gp-max-w-[150px] gp-left-[50%] gp-translate-x-[-50%] gp-translate-y-0 gp-absolute gp-bottom-[calc(100%+20px)] gp-text-[12px] group-hover:gp-block gp-w-max gp-bg-[#333333] gp-text-[#F9F9F9] gp-px-[8px] gp-py-[4px] gp-rounded-[8px] gp-mb-[-10px] after:gp-content-[''] after:gp-absolute after:gp-p-[7px] after:gp-left-0 after:gp-w-full after:gp-bottom-[-10px]">
+        <p class="gp-text-[#F9F9F9]">{{value | escape}}</p>
+        <svg class="gp-absolute gp-left-[50%] gp-translate-x-[-50%] gp-translate-y-0 gp-z-10 gp-bottom-[-4px]" width="8" height="4" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M8 10L0 0L16 1.41326e-06L8 10Z" fill="#333333"/>
+        </svg>
+      </div>
+      <input
+        checked="{%- if option.selected_value == value -%}true{% else %}false{%- endif -%}"
+        name="{{product.id}}-options-{{option.name | escape}}"
+        id="{{product.id}}-g52P8rrhfU-{{option.name | escape}}-{{option.position}}-{{ forloop.index }}"
+        value="{{value | escape}}"
+        type="radio"
+        class="gp-sr-only gp-absolute gp-bottom-0 gp-right-0"
+      />
+      <span class="gp-sr-only">{{value | escape}}</span>
+      <div
+        option-name="{{option.name | escape}}" option-name-value="{{value | escape}}" data-gp-option-value-id="{{value.id}}"
+        class="option-item-inner gp-w-auto gp-h-auto {% if option_disabled == true %} {% endif %}">
+        
+    
+    <div
+      id="value-wrapper-{{option.name | escape | strip}}-{{value | escape | strip}}" option-data="{{option.name | escape}}" option-value="{{value | escape}}" option-position="{{option.position}}" data-gp-option-available="{{value.available}}" option-type="optionType" data-disabled="{%- if option_disabled == true -%} disabled  {%- endif -%}" data-hidden="true"
+      class="gp-relative gp-flex gp-cursor-pointer gp-items-center gp-justify-center gp-text-center option-value-wrapper gp-overflow-hidden gp-w-full gp-h-full data-[disabled='disabled']:gp-pointer-events-none data-[disabled='disabled']:!gp-cursor-not-allowed
+  data-[hidden='false']:gp-flex {{option.name | escape}}-{{option.position}}-{{ forloop.index }} gp-g-paragraph-2"
+      style="{% if selectedValue == value %}--size: 12px;--size-tablet: 14px;--size-mobile: 12px;--c: var(--g-c-text-1, text-1);--d: flex;--jc: center;	--ai: center;--w: 100%;--h: 100%;--of: hidden;--hvr-c: unset;--bs: none;--bw: 1px 1px 1px 1px;--hvr-bw: 1px 1px 1px 1px;--bc: var(--g-c-line-2, line-2);--hvr-bc: var(--g-c-line-3, line-3);--bblr: 0px;--bbrr: 0px;--btlr: 0px;--btrr: 0px;--hvr-bblr: 0px;--hvr-bbrr: 0px;--hvr-btlr: 0px;--hvr-btrr: 0px;--focus-bblr: 0px;--focus-bbrr: 0px;--focus-btlr: 0px;--focus-btrr: 0px;-undefined-bblr: 0px;-undefined-bbrr: 0px;-undefined-btlr: 0px;-undefined-btrr: 0px;{% else %}--size: 12px;--size-tablet: 14px;--size-mobile: 12px;--d: flex;--jc: center;	--ai: center;--w: 100%;--h: 100%;--of: hidden;--hvr-c: unset;--bs: solid;--hvr-bs: solid;--bw: 1px 1px 1px 1px;--hvr-bw: 1px 1px 1px 1px;--bc: var(--g-c-line-2, line-2);--hvr-bc: var(--g-c-line-3, line-3);--bblr: 0px;--bbrr: 0px;--btlr: 0px;--btrr: 0px;--hvr-bblr: 0px;--hvr-bbrr: 0px;--hvr-btlr: 0px;--hvr-btrr: 0px;--focus-bblr: 0px;--focus-bbrr: 0px;--focus-btlr: 0px;--focus-btrr: 0px;-undefined-bblr: 0px;-undefined-bbrr: 0px;-undefined-btlr: 0px;-undefined-btrr: 0px;{% endif %}">
+      
+      <div
+        class="option-value gp-overflow-hidden gp-relative"
+        style=" --pl: 16px;--pr: 16px;--pl-tablet: 16px;--pr-tablet: 16px;--pl-mobile: 16px;--pr-mobile: 16px;--pt: 0px;--pb: 0px;">
+         
+        <span class="gp-text-center gp-g-paragraph-2" style="--size:12px;--size-tablet:14px;--size-mobile:12px">{{value}}</span>
+      </div>
+    
+    </div>
+    
+      </div>
+    </label>{% endfor %}
+      {% if false %}
+    <select
+      aria-label="{{option.name | escape}}" autocomplete="off" id="p-variant-dropdown-{{option.position}}" name="{%- if option -%}{{option.name | escape}}{% else %}Select Option{%- endif -%}" option-data="{{option.name}}" option-type="{{optionType}}" option-renderer="{{optionRendered}}"
+      class="dropdown-option-item gp-truncate gp-bg-auto gp-pl-4 gp-pr-6 gp-outline-none gp-shadow-none gp-g-paragraph-2 gp-border-g-line-2 hover:gp-border-g-line-3 gp-text-g-text-1"
+      style="--w:true;--w-tablet:true;--w-mobile:true;--h:[object Object];--shadow:none;--bs:solid;--bw:1px 1px 1px 1px;--bc:var(--g-c-line-2, line-2);--size:12px;--size-tablet:14px;--size-mobile:12px;--c:var(--g-c-text-1, text-1);--bg:#FFFFFF;--hvr-bs:solid;--hvr-bw:1px 1px 1px 1px;--hvr-bc:var(--g-c-line-3, line-3);--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--hvr-bblr:0px;--hvr-bbrr:0px;--hvr-btlr:0px;--hvr-btrr:0px;--focus-bblr:0px;--focus-bbrr:0px;--focus-btlr:0px;--focus-btrr:0px;-undefined-bblr:0px;-undefined-bbrr:0px;-undefined-btlr:0px;-undefined-btrr:0px;appearance:none;background-image:url(https://cdn.shopify.com/s/files/1/1827/4239/t/1/assets/ico-select.svg?v=155563818344741998551488860031);background-repeat:no-repeat;background-position:right 16px center"
+    >
+      
+      {% for value in values %}{%- liquid
+      assign option_disabled = true
+      for variantItem in product.variants
+        case option.position
+          when 1
+            if variantItem.available and variantItem.option1 == value
+              assign option_disabled = false
+            endif
+          when 2
+            if variantItem.available and variantItem.option2 == value
+              assign option_disabled = false
+            endif
+          when 3
+            if variantItem.available and variantItem.option3 == value
+              assign option_disabled = false
+            endif
+        endcase
+      endfor
+    -%}
+    {% if value == selectedValue %}<option selected 
+  option-data="{{option.name | escape}}"
+  option-value="{{value | escape}}"
+  data-gp-option-value-id="{{value.id}}"
+  data-gp-option-available="{{value.available}}"
+  value="{{value | escape}}"
+  class="option-value-wrapper"
+  key="{{value | escape}}"
+ option-position="{{option.position}}">{{value}}</option>{% else %}<option 
+  option-data="{{option.name | escape}}"
+  option-value="{{value | escape}}"
+  data-gp-option-value-id="{{value.id}}"
+  data-gp-option-available="{{value.available}}"
+  value="{{value | escape}}"
+  class="option-value-wrapper"
+  key="{{value | escape}}"
+ option-position="{{option.position}}">{{value}}</option>{% endif %}{% endfor %}
+    </select>{% endif %}{% endif %}
+  {% else %}
+    {%- assign optionRendered = false -%}
+    {%- assign swatches = shop.metafields.GEMPAGES.swatches -%}
+    {%- assign swatchesItems = swatches | split: '($1)' -%}
+
+    {% for swatchesItem in swatchesItems %}
+      {%- assign colorArraysString = "" -%}
+      {%- assign labelsString = "" -%}
+      {%- assign imageUrlsString = "" -%}
+      {%- assign attrItems = swatchesItem | split: '($3)' -%}
+
+      {% for attrItem in attrItems %}
+          {%- assign attrs = attrItem | split: '($2)' -%}
+          {%- assign optionKey = attrs[0] -%}
+          {%- assign optionValue = attrs[1] -%}
+          
+            {% if optionKey == 'optionTitle' %}
+              {% assign optionTitle = optionValue %}
+            {% elsif optionKey == 'optionType' %}
+              {% assign optionType = optionValue %}
+            {% endif %}
+          
+
+          {% if optionKey == "optionValues" %}
+            {%- assign opValueItems = optionValue | split: '($4)' -%}
+            {% for opValueItem in opValueItems %}
+                {%- assign opValueItemAttrs = opValueItem | split: '($6)' -%}
+                {% for opValueItemAttr in opValueItemAttrs %}
+                    {%- assign attrs = opValueItemAttr | split: '($5)' -%}
+                    {%- assign opValueItemKey = attrs[0] -%}
+                    {%- assign opValueItemValue = attrs[1] -%}
+
+                    {% if opValueItemKey == "label" %}{%- assign labelsString = labelsString | append: opValueItemValue -%}
+                       {%- assign labelsString = labelsString | append: "($8)" -%}{% endif %}
+
+                    {% if opValueItemKey == "colors" %}{%- assign colorArraysString = colorArraysString | append: opValueItemValue -%}
+                       {%- assign colorArraysString = colorArraysString | append: "($8)" -%}{% endif %}
+
+                    {% if opValueItemKey == "imageUrl" %}{%- assign imageUrlsString = imageUrlsString | append: opValueItemValue -%}
+                       {%- assign imageUrlsString = imageUrlsString | append: "($8)" -%}{% endif %}
+                  {% endfor %}
+              {% endfor %}
+            {% endif %}
+        {% endfor %}
+
+      {%- assign labels = labelsString | split: '($8)' -%}
+      {%- assign colorStrings = colorArraysString | split: '($8)' -%}
+      {%- assign imageUrls = imageUrlsString | split: '($8)' -%}
+
+      {% if optionTitle == option.name %}
+        {%- assign variantPresetString = "base($1)rectangle_list($2)Jewelry material($1)rectangle_list($2)Color($1)color" -%}
+        {%- assign optionName = option.name | replace: "'", "&apos;" | replace: '"', "&quot;" -%}
+        {%- assign items = variantPresetString | split:'($2)' -%}
+        {%- assign type = 'dropdown' -%}
+        {% for item in items %}
+            {%- assign itemPreset = item | split:'($1)' -%}
+            {% if itemPreset[0] == optionName %}{%- assign type = itemPreset[1] -%}{% endif %}
+            {% if itemPreset[0] == "base" %}{%- assign type = itemPreset[1] -%}{% endif %}
+          {% endfor %}
+        {%- assign optionRendered = true -%}
+        
+    {% for value in values %}
+    {%- liquid
+      assign option_disabled = true
+      for variantItem in product.variants
+        case option.position
+          when 1
+            if variantItem.available and variantItem.option1 == value
+              assign option_disabled = false
+            endif
+          when 2
+            if variantItem.available and variantItem.option2 == value
+              assign option_disabled = false
+            endif
+          when 3
+            if variantItem.available and variantItem.option3 == value
+              assign option_disabled = false
+            endif
+        endcase
+      endfor
+    -%}
+    {% assign option_disabled = false %}
+    <label
+      id="{{option.name | escape}}-{{value | escape}}"
+      for="{{product.id}}-g52P8rrhfU-{{option.name | escape}}-{{option.position}}-{{ forloop.index }}"
+      class="option-item gp-group gp-relative gp-child-item-g52P8rrhfU"
+      
+    >
+      <div class="gp-hidden !gp-max-w-[150px] gp-left-[50%] gp-translate-x-[-50%] gp-translate-y-0 gp-absolute gp-bottom-[calc(100%+20px)] gp-text-[12px] group-hover:gp-block gp-w-max gp-bg-[#333333] gp-text-[#F9F9F9] gp-px-[8px] gp-py-[4px] gp-rounded-[8px] gp-mb-[-10px] after:gp-content-[''] after:gp-absolute after:gp-p-[7px] after:gp-left-0 after:gp-w-full after:gp-bottom-[-10px]">
+        <p class="gp-text-[#F9F9F9]">{{value | escape}}</p>
+        <svg class="gp-absolute gp-left-[50%] gp-translate-x-[-50%] gp-translate-y-0 gp-z-10 gp-bottom-[-4px]" width="8" height="4" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M8 10L0 0L16 1.41326e-06L8 10Z" fill="#333333"/>
+        </svg>
+      </div>
+      <input
+        checked="{%- if option.selected_value == value -%}true{% else %}false{%- endif -%}"
+        name="{{product.id}}-options-{{option.name | escape}}"
+        id="{{product.id}}-g52P8rrhfU-{{option.name | escape}}-{{option.position}}-{{ forloop.index }}"
+        value="{{value | escape}}"
+        type="radio"
+        class="gp-sr-only gp-absolute gp-bottom-0 gp-right-0"
+      />
+      <span class="gp-sr-only">{{value | escape}}</span>
+      <div
+        option-name="{{option.name | escape}}" option-name-value="{{value | escape}}" data-gp-option-value-id="{{value.id}}"
+        class="option-item-inner gp-w-auto gp-h-auto {% if option_disabled == true %} {% endif %}">
+        
+    {% case type %}
+      {% when "rectangle_list" %}
+      
+    <div
+      id="value-wrapper-{{option.name | escape | strip}}-{{value | escape | strip}}" option-data="{{option.name | escape}}" option-value="{{value | escape}}" option-position="{{option.position}}" data-gp-option-available="{{value.available}}" option-type="rectangle_list" data-disabled="{%- if option_disabled == true -%} disabled  {%- endif -%}" data-hidden="true"
+      class="gp-relative gp-flex gp-cursor-pointer gp-items-center gp-justify-center gp-text-center option-value-wrapper gp-overflow-hidden gp-w-full gp-h-full data-[disabled='disabled']:gp-pointer-events-none data-[disabled='disabled']:!gp-cursor-not-allowed
+  data-[hidden='false']:gp-flex {{option.name | escape}}-{{option.position}}-{{ forloop.index }} gp-g-paragraph-2"
+      style="{% if selectedValue == value %}--size: 12px;--size-tablet: 14px;--size-mobile: 12px;--c: var(--g-c-text-1, text-1);--d: flex;--jc: center;	--ai: center;--w: 100%;--h: 100%;--of: hidden;--hvr-c: unset;--bs: none;--bw: 1px 1px 1px 1px;--hvr-bw: 1px 1px 1px 1px;--bc: var(--g-c-line-2, line-2);--hvr-bc: var(--g-c-line-3, line-3);--bblr: 0px;--bbrr: 0px;--btlr: 0px;--btrr: 0px;--hvr-bblr: 0px;--hvr-bbrr: 0px;--hvr-btlr: 0px;--hvr-btrr: 0px;--focus-bblr: 0px;--focus-bbrr: 0px;--focus-btlr: 0px;--focus-btrr: 0px;-undefined-bblr: 0px;-undefined-bbrr: 0px;-undefined-btlr: 0px;-undefined-btrr: 0px;{% else %}--size: 12px;--size-tablet: 14px;--size-mobile: 12px;--d: flex;--jc: center;	--ai: center;--w: 100%;--h: 100%;--of: hidden;--hvr-c: unset;--bs: solid;--hvr-bs: solid;--bw: 1px 1px 1px 1px;--hvr-bw: 1px 1px 1px 1px;--bc: var(--g-c-line-2, line-2);--hvr-bc: var(--g-c-line-3, line-3);--bblr: 0px;--bbrr: 0px;--btlr: 0px;--btrr: 0px;--hvr-bblr: 0px;--hvr-bbrr: 0px;--hvr-btlr: 0px;--hvr-btrr: 0px;--focus-bblr: 0px;--focus-bbrr: 0px;--focus-btlr: 0px;--focus-btrr: 0px;-undefined-bblr: 0px;-undefined-bbrr: 0px;-undefined-btlr: 0px;-undefined-btrr: 0px;{% endif %}">
+      
+      <div
+        class="option-value gp-overflow-hidden gp-relative"
+        style=" --pl: 16px;--pr: 16px;--pl-tablet: 16px;--pr-tablet: 16px;--pl-mobile: 16px;--pr-mobile: 16px;--pt: 0px;--pb: 0px;">
+         
+        <span class="gp-text-center gp-g-paragraph-2" style="--size:12px;--size-tablet:14px;--size-mobile:12px">{{value}}</span>
+      </div>
+    
+    </div>
+      {% when "color" %}
+      
+    {% assign colorsString = null %}
+    {% assign colors = null %}
+    {% for label in labels %}
+      {% if label == value %}
+        {% assign colorsString = colorStrings[forloop.index0] %}
+      {% endif %}
+    {% endfor %}
+    {% if colorsString != null %}
+      {% assign colors = colorsString | split: '|||' %}
+    {% endif %}
+    
+    <div
+      id="value-wrapper-{{option.name | escape | strip}}-{{value | escape | strip}}" option-data="{{option.name | escape}}" option-value="{{value | escape}}" option-position="{{option.position}}" data-gp-option-available="{{value.available}}" option-type="color" data-disabled="{%- if option_disabled == true -%} disabled  {%- endif -%}" data-hidden="true"
+      class="gp-relative gp-flex gp-cursor-pointer gp-items-center gp-justify-center gp-text-center option-value-wrapper gp-overflow-hidden gp-w-full gp-h-full data-[disabled='disabled']:gp-pointer-events-none data-[disabled='disabled']:!gp-cursor-not-allowed
+  data-[hidden='false']:gp-flex {{option.name | escape}}-{{option.position}}-{{ forloop.index }} gp-g-paragraph-2 gp-p-[4px]"
+      style="{% if selectedValue == value %}--size: 12px;--size-tablet: 14px;--size-mobile: 12px;--c: var(--g-c-text-1, text-1);--minw: 32px;--d: flex;--jc: center;	--ai: center;--w: 100%;--h: 100%;--of: hidden;--hvr-c: unset;--bs: none;--bw: 1px 1px 1px 1px;--hvr-bw: 1px 1px 1px 1px;--bc: var(--g-c-line-2, line-2);--hvr-bc: var(--g-c-line-3, line-3);--bblr: 999999px;--bbrr: 999999px;--btlr: 999999px;--btrr: 999999px;--hvr-bblr: 999999px;--hvr-bbrr: 999999px;--hvr-btlr: 999999px;--hvr-btrr: 999999px;--focus-bblr: 999999px;--focus-bbrr: 999999px;--focus-btlr: 999999px;--focus-btrr: 999999px;-undefined-bblr: 999999px;-undefined-bbrr: 999999px;-undefined-btlr: 999999px;-undefined-btrr: 999999px;{% else %}--size: 12px;--size-tablet: 14px;--size-mobile: 12px;--minw: 32px;--d: flex;--jc: center;	--ai: center;--w: 100%;--h: 100%;--of: hidden;--hvr-c: unset;--bs: solid;--hvr-bs: solid;--bw: 1px 1px 1px 1px;--hvr-bw: 1px 1px 1px 1px;--bc: var(--g-c-line-2, line-2);--hvr-bc: var(--g-c-line-3, line-3);--bblr: 999999px;--bbrr: 999999px;--btlr: 999999px;--btrr: 999999px;--hvr-bblr: 999999px;--hvr-bbrr: 999999px;--hvr-btlr: 999999px;--hvr-btrr: 999999px;--focus-bblr: 999999px;--focus-bbrr: 999999px;--focus-btlr: 999999px;--focus-btrr: 999999px;-undefined-bblr: 999999px;-undefined-bbrr: 999999px;-undefined-btlr: 999999px;-undefined-btrr: 999999px;{% endif %}">
+      {% if colors != null and colors.size > 0 %}
+      {% for color in colors %}
+          {% assign backgroundType = "background-color" %}
+          {% if color contains "linear-gradient" %}{% assign backgroundType = "background-image" %}{% endif %}
+          <div
+            class="color gp-relative gp-h-full gp-w-full gp-overflow-hidden gp-min-w-fit gp-flex gp-color-circle"
+            data-test="{{ backgroundType }}: {{ color }}"
+            style="{{ backgroundType }}: {{ color }}; {% if selectedValue == value %}--d: flex;--jc: center;	--ai: center;--w: 100%;--h: 100%;--of: hidden;--hvr-c: unset;--bs: none;--bw: 1px 1px 1px 1px;--hvr-bw: 1px 1px 1px 1px;--bc: var(--g-c-line-2, line-2);--hvr-bc: var(--g-c-line-3, line-3);--bblr: 999999px;--bbrr: 999999px;--btlr: 999999px;--btrr: 999999px;--hvr-bblr: 999999px;--hvr-bbrr: 999999px;--hvr-btlr: 999999px;--hvr-btrr: 999999px;--focus-bblr: 999999px;--focus-bbrr: 999999px;--focus-btlr: 999999px;--focus-btrr: 999999px;-undefined-bblr: 999999px;-undefined-bbrr: 999999px;-undefined-btlr: 999999px;-undefined-btrr: 999999px;{% else %}--d: flex;--jc: center;	--ai: center;--w: 100%;--h: 100%;--of: hidden;--hvr-c: unset;--bs: solid;--hvr-bs: solid;--bw: 1px 1px 1px 1px;--hvr-bw: 1px 1px 1px 1px;--bc: var(--g-c-line-2, line-2);--hvr-bc: var(--g-c-line-3, line-3);--bblr: 999999px;--bbrr: 999999px;--btlr: 999999px;--btrr: 999999px;--hvr-bblr: 999999px;--hvr-bbrr: 999999px;--hvr-btlr: 999999px;--hvr-btrr: 999999px;--focus-bblr: 999999px;--focus-bbrr: 999999px;--focus-btlr: 999999px;--focus-btrr: 999999px;-undefined-bblr: 999999px;-undefined-bbrr: 999999px;-undefined-btlr: 999999px;-undefined-btrr: 999999px;{% endif %}"></div>
+        {% endfor %}
+      {% else %}
+      <div
+        class="option-value gp-overflow-hidden gp-relative color gp-line-clamp-2 gp-flex gp-h-full gp-w-full gp-items-center gp-justify-center"
+        style="{% if selectedValue == value %}--d: flex;--jc: center;	--ai: center;--w: 100%;--h: 100%;--of: hidden;--hvr-c: unset;--bs: none;--bw: 1px 1px 1px 1px;--hvr-bw: 1px 1px 1px 1px;--bc: var(--g-c-line-2, line-2);--hvr-bc: var(--g-c-line-3, line-3);--bblr: 999999px;--bbrr: 999999px;--btlr: 999999px;--btrr: 999999px;--hvr-bblr: 999999px;--hvr-bbrr: 999999px;--hvr-btlr: 999999px;--hvr-btrr: 999999px;--focus-bblr: 999999px;--focus-bbrr: 999999px;--focus-btlr: 999999px;--focus-btrr: 999999px;-undefined-bblr: 999999px;-undefined-bbrr: 999999px;-undefined-btlr: 999999px;-undefined-btrr: 999999px;{% else %}--d: flex;--jc: center;	--ai: center;--w: 100%;--h: 100%;--of: hidden;--hvr-c: unset;--bs: solid;--hvr-bs: solid;--bw: 1px 1px 1px 1px;--hvr-bw: 1px 1px 1px 1px;--bc: var(--g-c-line-2, line-2);--hvr-bc: var(--g-c-line-3, line-3);--bblr: 999999px;--bbrr: 999999px;--btlr: 999999px;--btrr: 999999px;--hvr-bblr: 999999px;--hvr-bbrr: 999999px;--hvr-btlr: 999999px;--hvr-btrr: 999999px;--focus-bblr: 999999px;--focus-bbrr: 999999px;--focus-btlr: 999999px;--focus-btrr: 999999px;-undefined-bblr: 999999px;-undefined-bbrr: 999999px;-undefined-btlr: 999999px;-undefined-btrr: 999999px;{% endif %} ">
+         
+        <span class="gp-text-center gp-g-paragraph-2 gp-overflow-hidden gp-text-ellipsis gp-px-1" style="--size:12px;--size-tablet:14px;--size-mobile:12px">{{value}}</span>
+      </div>
+    {% endif %}
+    </div>
+  
+      {% when "image_shopify" %}
+      
+      {% assign imageUrl = null %}
+      {% for variant in variants %}
+        {% assign valueIncludesSelectedOption = false %}
+        {% for item in variant.options %}
+          {% if item == value %}
+          {% assign valueIncludesSelectedOption = true %}
+          {% endif %}
+        {% endfor %}
+        {% if valueIncludesSelectedOption and variant.featured_image or variant.featured_media%}
+          {% unless imageUrl %}
+            {% if variant.featured_media %}
+              {% assign imageUrl = variant.featured_media.preview_image.src | product_img_url: '200x'  %}
+            {% else %}
+              {% assign imageUrl = variant.featured_image.src | product_img_url: '200x'  %}
+            {% endif %}
+          {% endunless %}
+        {% endif %}
+      {% endfor %}
+      
+    <div
+      id="value-wrapper-{{option.name | escape | strip}}-{{value | escape | strip}}" option-data="{{option.name | escape}}" option-value="{{value | escape}}" option-position="{{option.position}}" data-gp-option-available="{{value.available}}" option-type="image_shopify" data-disabled="{%- if option_disabled == true -%} disabled  {%- endif -%}" data-hidden="true"
+      class="gp-relative gp-flex gp-cursor-pointer gp-items-center gp-justify-center gp-text-center option-value-wrapper gp-overflow-hidden gp-w-full gp-h-full data-[disabled='disabled']:gp-pointer-events-none data-[disabled='disabled']:!gp-cursor-not-allowed
+  data-[hidden='false']:gp-flex {{option.name | escape}}-{{option.position}}-{{ forloop.index }} gp-g-paragraph-2"
+      style="{% if selectedValue == value %}--size: 12px;--size-tablet: 14px;--size-mobile: 12px;--c: var(--g-c-text-1, text-1);--d: flex;--jc: center;	--ai: center;--w: 100%;--h: 100%;--of: hidden;--hvr-c: unset;--bs: none;--bw: 1px 1px 1px 1px;--hvr-bw: 1px 1px 1px 1px;--bc: var(--g-c-line-2, line-2);--hvr-bc: var(--g-c-line-3, line-3);--bblr: 0px;--bbrr: 0px;--btlr: 0px;--btrr: 0px;--hvr-bblr: 0px;--hvr-bbrr: 0px;--hvr-btlr: 0px;--hvr-btrr: 0px;--focus-bblr: 0px;--focus-bbrr: 0px;--focus-btlr: 0px;--focus-btrr: 0px;-undefined-bblr: 0px;-undefined-bbrr: 0px;-undefined-btlr: 0px;-undefined-btrr: 0px;{% else %}--size: 12px;--size-tablet: 14px;--size-mobile: 12px;--d: flex;--jc: center;	--ai: center;--w: 100%;--h: 100%;--of: hidden;--hvr-c: unset;--bs: solid;--hvr-bs: solid;--bw: 1px 1px 1px 1px;--hvr-bw: 1px 1px 1px 1px;--bc: var(--g-c-line-2, line-2);--hvr-bc: var(--g-c-line-3, line-3);--bblr: 0px;--bbrr: 0px;--btlr: 0px;--btrr: 0px;--hvr-bblr: 0px;--hvr-bbrr: 0px;--hvr-btlr: 0px;--hvr-btrr: 0px;--focus-bblr: 0px;--focus-bbrr: 0px;--focus-btlr: 0px;--focus-btrr: 0px;-undefined-bblr: 0px;-undefined-bbrr: 0px;-undefined-btlr: 0px;-undefined-btrr: 0px;{% endif %}">
+      {% if imageUrl != null and imageUrl != "" %}
+      <img class="gp-object-cover gp-rounded-none" style="width: 64px; height: 64px" src="{{imageUrl}}" alt="" />
+    {% else %}
+      <div
+        class="option-value gp-overflow-hidden gp-relative gp-flex gp-flex-col gp-justify-center gp-items-center gp-gap-[6px"
+        style=" --pl: 16px;--pr: 16px;--pl-tablet: 16px;--pr-tablet: 16px;--pl-mobile: 16px;--pr-mobile: 16px;--pt: 0px;--pb: 0px;">
+        <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="2" cy="2" r="2" fill="#D6D6D6"></circle><path d="M0.196854 10.6453L2.40968 8.05946C2.4846 7.97175 2.57719 7.9008 2.68141 7.85124C2.78562 7.80168 2.89913 7.77461 3.01452 7.77181C3.12991 7.76902 3.2446 7.79055 3.3511 7.835C3.45761 7.87945 3.55353 7.94583 3.63262 8.02981L4.66733 9.12714L8.71205 4.29464C8.79123 4.19995 8.89077 4.1243 9.00325 4.07333C9.11573 4.02236 9.23827 3.99737 9.36176 4.00022C9.48524 4.00307 9.6065 4.03369 9.71651 4.08979C9.82651 4.1459 9.92245 4.22605 9.99717 4.32429L14.8329 10.6772C14.9254 10.7989 14.982 10.9441 14.9964 11.0962C15.0107 11.2484 14.9823 11.4016 14.9144 11.5385C14.8464 11.6754 14.7415 11.7907 14.6115 11.8713C14.4815 11.952 14.3316 11.9948 14.1786 11.995L0.822048 12C0.664945 11.9999 0.511148 11.9549 0.378853 11.8703C0.246557 11.7857 0.141299 11.6649 0.0755311 11.5224C0.00976323 11.3799 -0.013762 11.2216 0.00773837 11.0661C0.0292388 10.9107 0.0948652 10.7646 0.196854 10.6453Z" fill="#D6D6D6"></path></svg>
+        <span class="gp-text-center gp-g-paragraph-2 gp-overflow-hidden gp-text-ellipsis gp-px-1" style="--size:12px;--size-tablet:14px;--size-mobile:12px">{{value}}</span>
+      </div>
+    {% endif %}
+    </div>
+  
+      {% when "image" %}
+      
+    {% assign imageUrl = null %}
+    {% for label in labels %}
+    {% if label == value %}
+      {% assign imageUrl = imageUrls[forloop.index0] %}
+    {% endif %}
+    {% endfor %}
+    
+    <div
+      id="value-wrapper-{{option.name | escape | strip}}-{{value | escape | strip}}" option-data="{{option.name | escape}}" option-value="{{value | escape}}" option-position="{{option.position}}" data-gp-option-available="{{value.available}}" option-type="image" data-disabled="{%- if option_disabled == true -%} disabled  {%- endif -%}" data-hidden="true"
+      class="gp-relative gp-flex gp-cursor-pointer gp-items-center gp-justify-center gp-text-center option-value-wrapper gp-overflow-hidden gp-w-full gp-h-full data-[disabled='disabled']:gp-pointer-events-none data-[disabled='disabled']:!gp-cursor-not-allowed
+  data-[hidden='false']:gp-flex {{option.name | escape}}-{{option.position}}-{{ forloop.index }} gp-g-paragraph-2"
+      style="{% if selectedValue == value %}--size: 12px;--size-tablet: 14px;--size-mobile: 12px;--c: var(--g-c-text-1, text-1);--d: flex;--jc: center;	--ai: center;--w: 100%;--h: 100%;--of: hidden;--hvr-c: unset;--bs: none;--bw: 1px 1px 1px 1px;--hvr-bw: 1px 1px 1px 1px;--bc: var(--g-c-line-2, line-2);--hvr-bc: var(--g-c-line-3, line-3);--bblr: 0px;--bbrr: 0px;--btlr: 0px;--btrr: 0px;--hvr-bblr: 0px;--hvr-bbrr: 0px;--hvr-btlr: 0px;--hvr-btrr: 0px;--focus-bblr: 0px;--focus-bbrr: 0px;--focus-btlr: 0px;--focus-btrr: 0px;-undefined-bblr: 0px;-undefined-bbrr: 0px;-undefined-btlr: 0px;-undefined-btrr: 0px;{% else %}--size: 12px;--size-tablet: 14px;--size-mobile: 12px;--d: flex;--jc: center;	--ai: center;--w: 100%;--h: 100%;--of: hidden;--hvr-c: unset;--bs: solid;--hvr-bs: solid;--bw: 1px 1px 1px 1px;--hvr-bw: 1px 1px 1px 1px;--bc: var(--g-c-line-2, line-2);--hvr-bc: var(--g-c-line-3, line-3);--bblr: 0px;--bbrr: 0px;--btlr: 0px;--btrr: 0px;--hvr-bblr: 0px;--hvr-bbrr: 0px;--hvr-btlr: 0px;--hvr-btrr: 0px;--focus-bblr: 0px;--focus-bbrr: 0px;--focus-btlr: 0px;--focus-btrr: 0px;-undefined-bblr: 0px;-undefined-bbrr: 0px;-undefined-btlr: 0px;-undefined-btrr: 0px;{% endif %}">
+      {% if imageUrl != null and imageUrl != "" %}
+      <img class="gp-object-cover gp-rounded-none" style="width: 64px; height: 64px" src="{{imageUrl}}" alt="" />
+    {% else %}
+      <div
+        class="option-value gp-overflow-hidden gp-relative gp-flex gp-flex-col gp-justify-center gp-items-center gp-gap-[6px"
+        style=" --pl: 16px;--pr: 16px;--pl-tablet: 16px;--pr-tablet: 16px;--pl-mobile: 16px;--pr-mobile: 16px;--pt: 0px;--pb: 0px;">
+        <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="2" cy="2" r="2" fill="#D6D6D6"></circle><path d="M0.196854 10.6453L2.40968 8.05946C2.4846 7.97175 2.57719 7.9008 2.68141 7.85124C2.78562 7.80168 2.89913 7.77461 3.01452 7.77181C3.12991 7.76902 3.2446 7.79055 3.3511 7.835C3.45761 7.87945 3.55353 7.94583 3.63262 8.02981L4.66733 9.12714L8.71205 4.29464C8.79123 4.19995 8.89077 4.1243 9.00325 4.07333C9.11573 4.02236 9.23827 3.99737 9.36176 4.00022C9.48524 4.00307 9.6065 4.03369 9.71651 4.08979C9.82651 4.1459 9.92245 4.22605 9.99717 4.32429L14.8329 10.6772C14.9254 10.7989 14.982 10.9441 14.9964 11.0962C15.0107 11.2484 14.9823 11.4016 14.9144 11.5385C14.8464 11.6754 14.7415 11.7907 14.6115 11.8713C14.4815 11.952 14.3316 11.9948 14.1786 11.995L0.822048 12C0.664945 11.9999 0.511148 11.9549 0.378853 11.8703C0.246557 11.7857 0.141299 11.6649 0.0755311 11.5224C0.00976323 11.3799 -0.013762 11.2216 0.00773837 11.0661C0.0292388 10.9107 0.0948652 10.7646 0.196854 10.6453Z" fill="#D6D6D6"></path></svg>
+        <span class="gp-text-center gp-g-paragraph-2 gp-overflow-hidden gp-text-ellipsis gp-px-1" style="--size:12px;--size-tablet:14px;--size-mobile:12px">{{value}}</span>
+      </div>
+    {% endif %}
+    </div>
+  
+      {% else %}
+    {% endcase %}
+    
+      </div>
+    </label>{% endfor %}
+      {% if type == "dropdown" %}
+    <select
+      aria-label="{{option.name | escape}}" autocomplete="off" id="p-variant-dropdown-{{option.position}}" name="{%- if option -%}{{option.name | escape}}{% else %}Select Option{%- endif -%}" option-data="{{option.name}}" option-type="{{optionType}}" option-renderer="{{optionRendered}}"
+      class="dropdown-option-item gp-truncate gp-bg-auto gp-pl-4 gp-pr-6 gp-outline-none gp-shadow-none gp-g-paragraph-2 gp-border-g-line-2 hover:gp-border-g-line-3 gp-text-g-text-1"
+      style="--w:true;--w-tablet:true;--w-mobile:true;--h:[object Object];--shadow:none;--bs:solid;--bw:1px 1px 1px 1px;--bc:var(--g-c-line-2, line-2);--size:12px;--size-tablet:14px;--size-mobile:12px;--c:var(--g-c-text-1, text-1);--bg:#FFFFFF;--hvr-bs:solid;--hvr-bw:1px 1px 1px 1px;--hvr-bc:var(--g-c-line-3, line-3);--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--hvr-bblr:0px;--hvr-bbrr:0px;--hvr-btlr:0px;--hvr-btrr:0px;--focus-bblr:0px;--focus-bbrr:0px;--focus-btlr:0px;--focus-btrr:0px;-undefined-bblr:0px;-undefined-bbrr:0px;-undefined-btlr:0px;-undefined-btrr:0px;appearance:none;background-image:url(https://cdn.shopify.com/s/files/1/1827/4239/t/1/assets/ico-select.svg?v=155563818344741998551488860031);background-repeat:no-repeat;background-position:right 16px center"
+    >
+      
+      {% for value in values %}{%- liquid
+      assign option_disabled = true
+      for variantItem in product.variants
+        case option.position
+          when 1
+            if variantItem.available and variantItem.option1 == value
+              assign option_disabled = false
+            endif
+          when 2
+            if variantItem.available and variantItem.option2 == value
+              assign option_disabled = false
+            endif
+          when 3
+            if variantItem.available and variantItem.option3 == value
+              assign option_disabled = false
+            endif
+        endcase
+      endfor
+    -%}
+    {% if value == selectedValue %}<option selected 
+  option-data="{{option.name | escape}}"
+  option-value="{{value | escape}}"
+  data-gp-option-value-id="{{value.id}}"
+  data-gp-option-available="{{value.available}}"
+  value="{{value | escape}}"
+  class="option-value-wrapper"
+  key="{{value | escape}}"
+ option-position="{{option.position}}">{{value}}</option>{% else %}<option 
+  option-data="{{option.name | escape}}"
+  option-value="{{value | escape}}"
+  data-gp-option-value-id="{{value.id}}"
+  data-gp-option-available="{{value.available}}"
+  value="{{value | escape}}"
+  class="option-value-wrapper"
+  key="{{value | escape}}"
+ option-position="{{option.position}}">{{value}}</option>{% endif %}{% endfor %}
+    </select>{% endif %}
+      {% endif %}
+    {% endfor %}
+
+    {% if optionRendered == false %}
+    {% for value in values %}
+    {%- liquid
+      assign option_disabled = true
+      for variantItem in product.variants
+        case option.position
+          when 1
+            if variantItem.available and variantItem.option1 == value
+              assign option_disabled = false
+            endif
+          when 2
+            if variantItem.available and variantItem.option2 == value
+              assign option_disabled = false
+            endif
+          when 3
+            if variantItem.available and variantItem.option3 == value
+              assign option_disabled = false
+            endif
+        endcase
+      endfor
+    -%}
+    {% assign option_disabled = false %}
+    <label
+      id="{{option.name | escape}}-{{value | escape}}"
+      for="{{product.id}}-g52P8rrhfU-{{option.name | escape}}-{{option.position}}-{{ forloop.index }}"
+      class="option-item gp-group gp-relative gp-child-item-g52P8rrhfU"
+      
+    >
+      <div class="gp-hidden !gp-max-w-[150px] gp-left-[50%] gp-translate-x-[-50%] gp-translate-y-0 gp-absolute gp-bottom-[calc(100%+20px)] gp-text-[12px] group-hover:gp-block gp-w-max gp-bg-[#333333] gp-text-[#F9F9F9] gp-px-[8px] gp-py-[4px] gp-rounded-[8px] gp-mb-[-10px] after:gp-content-[''] after:gp-absolute after:gp-p-[7px] after:gp-left-0 after:gp-w-full after:gp-bottom-[-10px]">
+        <p class="gp-text-[#F9F9F9]">{{value | escape}}</p>
+        <svg class="gp-absolute gp-left-[50%] gp-translate-x-[-50%] gp-translate-y-0 gp-z-10 gp-bottom-[-4px]" width="8" height="4" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M8 10L0 0L16 1.41326e-06L8 10Z" fill="#333333"/>
+        </svg>
+      </div>
+      <input
+        checked="{%- if option.selected_value == value -%}true{% else %}false{%- endif -%}"
+        name="{{product.id}}-options-{{option.name | escape}}"
+        id="{{product.id}}-g52P8rrhfU-{{option.name | escape}}-{{option.position}}-{{ forloop.index }}"
+        value="{{value | escape}}"
+        type="radio"
+        class="gp-sr-only gp-absolute gp-bottom-0 gp-right-0"
+      />
+      <span class="gp-sr-only">{{value | escape}}</span>
+      <div
+        option-name="{{option.name | escape}}" option-name-value="{{value | escape}}" data-gp-option-value-id="{{value.id}}"
+        class="option-item-inner gp-w-auto gp-h-auto {% if option_disabled == true %} {% endif %}">
+        
+    
+    <div
+      id="value-wrapper-{{option.name | escape | strip}}-{{value | escape | strip}}" option-data="{{option.name | escape}}" option-value="{{value | escape}}" option-position="{{option.position}}" data-gp-option-available="{{value.available}}" option-type="optionType" data-disabled="{%- if option_disabled == true -%} disabled  {%- endif -%}" data-hidden="true"
+      class="gp-relative gp-flex gp-cursor-pointer gp-items-center gp-justify-center gp-text-center option-value-wrapper gp-overflow-hidden gp-w-full gp-h-full data-[disabled='disabled']:gp-pointer-events-none data-[disabled='disabled']:!gp-cursor-not-allowed
+  data-[hidden='false']:gp-flex {{option.name | escape}}-{{option.position}}-{{ forloop.index }} gp-g-paragraph-2"
+      style="{% if selectedValue == value %}--size: 12px;--size-tablet: 14px;--size-mobile: 12px;--c: var(--g-c-text-1, text-1);--d: flex;--jc: center;	--ai: center;--w: 100%;--h: 100%;--of: hidden;--hvr-c: unset;--bs: none;--bw: 1px 1px 1px 1px;--hvr-bw: 1px 1px 1px 1px;--bc: var(--g-c-line-2, line-2);--hvr-bc: var(--g-c-line-3, line-3);--bblr: 0px;--bbrr: 0px;--btlr: 0px;--btrr: 0px;--hvr-bblr: 0px;--hvr-bbrr: 0px;--hvr-btlr: 0px;--hvr-btrr: 0px;--focus-bblr: 0px;--focus-bbrr: 0px;--focus-btlr: 0px;--focus-btrr: 0px;-undefined-bblr: 0px;-undefined-bbrr: 0px;-undefined-btlr: 0px;-undefined-btrr: 0px;{% else %}--size: 12px;--size-tablet: 14px;--size-mobile: 12px;--d: flex;--jc: center;	--ai: center;--w: 100%;--h: 100%;--of: hidden;--hvr-c: unset;--bs: solid;--hvr-bs: solid;--bw: 1px 1px 1px 1px;--hvr-bw: 1px 1px 1px 1px;--bc: var(--g-c-line-2, line-2);--hvr-bc: var(--g-c-line-3, line-3);--bblr: 0px;--bbrr: 0px;--btlr: 0px;--btrr: 0px;--hvr-bblr: 0px;--hvr-bbrr: 0px;--hvr-btlr: 0px;--hvr-btrr: 0px;--focus-bblr: 0px;--focus-bbrr: 0px;--focus-btlr: 0px;--focus-btrr: 0px;-undefined-bblr: 0px;-undefined-bbrr: 0px;-undefined-btlr: 0px;-undefined-btrr: 0px;{% endif %}">
+      
+      <div
+        class="option-value gp-overflow-hidden gp-relative"
+        style=" --pl: 16px;--pr: 16px;--pl-tablet: 16px;--pr-tablet: 16px;--pl-mobile: 16px;--pr-mobile: 16px;--pt: 0px;--pb: 0px;">
+         
+        <span class="gp-text-center gp-g-paragraph-2" style="--size:12px;--size-tablet:14px;--size-mobile:12px">{{value}}</span>
+      </div>
+    
+    </div>
+    
+      </div>
+    </label>{% endfor %}
+      {% if false %}
+    <select
+      aria-label="{{option.name | escape}}" autocomplete="off" id="p-variant-dropdown-{{option.position}}" name="{%- if option -%}{{option.name | escape}}{% else %}Select Option{%- endif -%}" option-data="{{option.name}}" option-type="{{optionType}}" option-renderer="{{optionRendered}}"
+      class="dropdown-option-item gp-truncate gp-bg-auto gp-pl-4 gp-pr-6 gp-outline-none gp-shadow-none gp-g-paragraph-2 gp-border-g-line-2 hover:gp-border-g-line-3 gp-text-g-text-1"
+      style="--w:true;--w-tablet:true;--w-mobile:true;--h:[object Object];--shadow:none;--bs:solid;--bw:1px 1px 1px 1px;--bc:var(--g-c-line-2, line-2);--size:12px;--size-tablet:14px;--size-mobile:12px;--c:var(--g-c-text-1, text-1);--bg:#FFFFFF;--hvr-bs:solid;--hvr-bw:1px 1px 1px 1px;--hvr-bc:var(--g-c-line-3, line-3);--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--hvr-bblr:0px;--hvr-bbrr:0px;--hvr-btlr:0px;--hvr-btrr:0px;--focus-bblr:0px;--focus-bbrr:0px;--focus-btlr:0px;--focus-btrr:0px;-undefined-bblr:0px;-undefined-bbrr:0px;-undefined-btlr:0px;-undefined-btrr:0px;appearance:none;background-image:url(https://cdn.shopify.com/s/files/1/1827/4239/t/1/assets/ico-select.svg?v=155563818344741998551488860031);background-repeat:no-repeat;background-position:right 16px center"
+    >
+      
+      {% for value in values %}{%- liquid
+      assign option_disabled = true
+      for variantItem in product.variants
+        case option.position
+          when 1
+            if variantItem.available and variantItem.option1 == value
+              assign option_disabled = false
+            endif
+          when 2
+            if variantItem.available and variantItem.option2 == value
+              assign option_disabled = false
+            endif
+          when 3
+            if variantItem.available and variantItem.option3 == value
+              assign option_disabled = false
+            endif
+        endcase
+      endfor
+    -%}
+    {% if value == selectedValue %}<option selected 
+  option-data="{{option.name | escape}}"
+  option-value="{{value | escape}}"
+  data-gp-option-value-id="{{value.id}}"
+  data-gp-option-available="{{value.available}}"
+  value="{{value | escape}}"
+  class="option-value-wrapper"
+  key="{{value | escape}}"
+ option-position="{{option.position}}">{{value}}</option>{% else %}<option 
+  option-data="{{option.name | escape}}"
+  option-value="{{value | escape}}"
+  data-gp-option-value-id="{{value.id}}"
+  data-gp-option-available="{{value.available}}"
+  value="{{value | escape}}"
+  class="option-value-wrapper"
+  key="{{value | escape}}"
+ option-position="{{option.position}}">{{value}}</option>{% endif %}{% endfor %}
+    </select>{% endif %}{% endif %}
+  {% endif %}
+      
+          </div>
+      </div>{% endfor %}
+    
+        </div>{% endif %}
+    </gp-product-variants>
+
+    <script {% if section.settings.section_preload == "false" %}class="gps-link" delay {% else %}src{% endif %}="https://assets.gemcommerce.com/assets-v2/gp-product-variant-v7-5.js?v={{ shop.metafields.GEMPAGES.ASSETS_VERSION }}" defer="defer"></script>
+  
+      </div>
+    {% assign locationOrigin = request.origin | append: routes.root_url | split: '/' | join: '/' %}
+    <div data-id="gzkTu0onep"
+        class="gzkTu0onep"
+        style="--ta:left;--bs:none;--bw:1px 1px 1px 1px;--bc:var(--g-c-line-3, line-3);--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--pageType:GP_STATIC;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--mb:var(--g-s-l);--dynamic-source-color:#F4F4F4"
+      >
+      <div class="gp-flex" style="--jc:left">
+        <div
+          data-gp-text
+          class="gp-g-paragraph-1  gp-text-instant gp-text"
+          style="--w:100%;--w-tablet:100%;--w-mobile:100%;--tdt:auto;--b:none;--bc:#121212;--bw:1px 1px 1px 1px;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--shadow:none;--ta:left;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset;--c:var(--g-c-text-1, text-1);--tt:none;word-break:break-word;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;overflow:hidden;--tdl:"
+        >
+          {{ section.settings.ggzkTu0onep_text | replace: '$locationOrigin', locationOrigin }}
+        </div>
+      </div>
+    </div>
+    <div gp-el-wrapper style="--bs:none;--bw:1px 1px 1px 1px;--bc:var(--g-c-line-3, line-3);--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--pageType:GP_STATIC;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--mb:var(--g-s-l)" class="gP8wU-OuaU ">
+      
+    {%- liquid
+      assign current_variant = product.selected_or_first_available_variant
+      assign available = current_variant.available | default: false
+    -%}
+      <gp-product-quantity
+        data-id="gP8wU-OuaU" data-disabled="{%- if available -%} false {%- else -%} true {%- endif -%}"
+        data-price="true"
+        class="quantityClass gp-relative gp-inline-flex gp-h-12 gp-w-full gp-bg-transparent gp-transition-all gp-duration-150 data-[disabled=true]:gp-opacity-60 "
+        style="--h:45px;--jc:left"
+      >
+        <div class="gp-inline-flex gp-w-full gp-overflow-hidden" style="--bg:#FFFFFF;--maxw:160px;--b:solid;--bc:var(--g-c-line-3, line-3);--bw:1px">
+          
+              <button
+              {% if available == false %} disabled {% endif %}
+               title="Decrement" aria-label="decrement" type="button"
+                class="gp-flex gp-aspect-square gp-h-full disabled:gp-cursor-not-allowed gp-cursor-pointer gp-items-center gp-justify-center gp-outline-none gp-minus "
+                style="--w:45px;--c:#121212;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--focus-bblr:0px;--focus-bbrr:0px;--focus-btlr:0px;--focus-btrr:0px;-undefined-bblr:0px;-undefined-bbrr:0px;-undefined-btlr:0px;-undefined-btrr:0px"
+              >
+                <span class="gp-inline-flex gp-items-center gp-justify-center [&>*]:gp-h-full [&>*]:gp-w-full" style="--w:16px;--w-tablet:16px;--w-mobile:16px"
+                >
+                  <svg height="20px" width="20px" data-name="minus-regular" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor" data-id="508817690725712232">
+              <path fill="currentColor" strokelinecap="round" strokelinejoin="round" d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128Z"></path></svg>
+                </span>
+              </button>
+            
+          <input
+            {% if available == false %} disabled {% endif %}
+            type="text" name="quantity" step="1" min="1" aria-label="quantity" inputMode="numeric" quantity="current_variant.quantity" autocomplete="off" value="1"
+            class="gp-flex gp-w-full gp-shrink-[99999] gp-appearance-none gp-items-center gp-text-center gp-outline-none focus-visible:gp-shadow-none focus-visible:gp-outline-none gp-transition-all gp-duration-150 hover:gp-text-black disabled:gp-cursor-not-allowed gp-text-g-text-1 "
+            style="--ff:var(--g-font-Assistant, 'Assistant'), var(--g-font-body, body);--weight:400;--size:16px;--size-tablet:16px;--size-mobile:14px;--lh:120%;--lh-tablet:180%;--lh-mobile:180%;--c:var(--g-c-text-1, text-1);--bg:transparent;--brw:1px;--blw:1px;--brc:var(--g-c-line-3, line-3);--blc:var(--g-c-line-3, line-3);--ts:none"
+            inputMode="numeric"
+          />
+
+          
+            <button
+              {% if available == false %} disabled {% endif %}
+              title="Increment" aria-label="increment" type="button"
+              class="gp-flex gp-aspect-square gp-h-full disabled:gp-cursor-not-allowed gp-cursor-pointer gp-items-center gp-justify-center gp-outline-none gp-plus "
+              style="--w:45px;--c:#121212;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--focus-bblr:0px;--focus-bbrr:0px;--focus-btlr:0px;--focus-btrr:0px;-undefined-bblr:0px;-undefined-bbrr:0px;-undefined-btlr:0px;-undefined-btrr:0px"
+            >
+              <span class="gp-inline-flex gp-items-center gp-justify-center [&>*]:gp-h-full [&>*]:gp-w-full" style="--w:16px;--w-tablet:16px;--w-mobile:16px">
+                <svg height="20px" width="20px" data-name="plus-regular" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor" data-id="508817698760687976">
+              <path fill="currentColor" strokelinecap="round" strokelinejoin="round" d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z"></path></svg>
+              </span>
+            </button>
+          
+          </div>
+        </gp-product-quantity>
+      <script {% if section.settings.section_preload == "false" %}class="gps-link" delay {% else %}src{% endif %}="https://assets.gemcommerce.com/assets-v2/gp-product-quantity-v7-5.js?v={{ shop.metafields.GEMPAGES.ASSETS_VERSION }}" defer="defer"></script>
+      </div>
+    {%- assign total_combinations = 1 -%}
+    {% for option in product.options_with_values %}{%- assign total_combinations = total_combinations | times: option.values.size -%}{% endfor %}
+    {%- liquid
+      assign inventory_quantity = variant.inventory_quantity | default: 0
+      assign is_in_stock = variant.available
+    -%}
+    <gp-product-button
+      
+      gp-data-wrapper="true"
+      gp-href="{{ request.origin }}{{ routes.root_url | split: '/' | join: '/' }}/cart"
+      class="gp-product-button"
+      gp-label-out-of-stock="{{ section.settings.ggTX_TaB4RH_outOfStockLabel }}"
+      gp-label-unavailable="{{ section.settings.ggTX_TaB4RH_unavailableLabel }}"
+      gp-data='{"styles":{"errorTypo":{"attrs":{"color":"error"},"type":"paragraph-2"},"successTypo":{"attrs":{"color":"success"},"type":"paragraph-2"}},"setting":{"errorType":"built-in","actionEffect":"open-cart-drawer","enableMessage":true,"label":"Add to cart","errorMessage":"Cannot add product to cart","successMessage":"Add product to cart successfully","outOfStockLabel":"Out of stock","customURL":{"link":"/cart","target":"_self"}},"variantID":"{{variant.id}}","disabled":"{{variant.available}}","totalVariant":"{{total_combinations}}"}'
+      data-variant-selection-required-message="{{ section.settings.ggTX_TaB4RH_variantSelectionRequiredMessage }}"
+      gp-enable-third-partycart="{{shop.metafields.GEMPAGES.enableThirdPartyCart}}"
+    >
+      
+    <gp-button
+      gp-data='{}'
+      
+      class="gp-flex gp-flex-col"
+    >
+      <div style="--bs:none;--bw:1px 1px 1px 1px;--bc:var(--g-c-line-3, line-3);--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--pageType:GP_STATIC;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--mb:var(--g-s-l);--ta:left" class="{% unless variant.available %} !gp-hidden {% endunless %}">
+        <style>[data-id="gTX_TaB4RH"].gp-button-base::before, [data-id="gTX_TaB4RH-interaction"].gp-button-base::before {
+      
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    border-style: none;
+  border-width: 1px 1px 1px 1px;
+  border-color: #121212;
+  
+    
+      border-bottom-left-radius: 9999px;
+      border-bottom-right-radius: 9999px;
+      border-top-left-radius: 9999px;
+      border-top-right-radius: 9999px;
+      
+  
+    }
+  
+      
+  [data-id="gTX_TaB4RH"]:hover::before, [data-id="gTX_TaB4RH-interaction"]:hover::before {
+    
+    
+  }</style>
+        
+        <button
+          data-id="gTX_TaB4RH" dataId="gTX_TaB4RH" data-state="idle" aria-label="Add to cart"
+          name="add" gp-data-hidden="{% unless variant.available %}true{% endunless %}"
+          type="submit"
+          style="--w:100%;--w-tablet:100%;--w-mobile:100%;--h:Auto;--h-tablet:Auto;--h-mobile:Auto;--pl:24px;--pr:24px;--pt:12px;--pb:12px;--bblr:9999px;--bbrr:9999px;--btlr:9999px;--btrr:9999px;--hvr-bblr:9999px;--hvr-bbrr:9999px;--hvr-btlr:9999px;--hvr-btrr:9999px;--bgi:;--hvr-bgi:;--hvr-bg:var(--g-c-highlight, highlight);--bg:var(--g-c-brand, brand);--c:var(--g-c-text-3, text-3)"
+          class="gp-button-atc tcustomizer-submit-button gTX_TaB4RH gp-button-base gp-group gp-relative gp-inline-flex gp-max-w-full gp-items-center gp-justify-center gp-no-underline gp-transition-colors gp-duration-200 disabled:gp-btn-disabled disabled:gp-opacity-30 gp-text-g-text-3 gp-g-paragraph-1 undefined"
+        >
+        
+  <svg
+    class="gp-invisible gp-absolute gp-h-5 gp-w-5 group-data-[state=loading]:gp-animate-spin group-data-[state=loading]:gp-visible"
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 24 24"
+  >
+    <circle
+      class="gp-opacity-25"
+      cx="12"
+      cy="12"
+      r="10"
+      stroke="currentColor"
+      stroke-width="4"
+    ></circle>
+    <path
+      class="gp-opacity-75"
+      fill="currentColor"
+      d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+    ></path>
+  </svg>
+
+        <div class="gp-inline-flex">
+          
+    <span
+      style="word-break:break-word;--mr:8px;--height-desktop:1em;--height-tablet:1em;--height-mobile:1em"
+      class="gp-button-icon gp-z-1 gp-inline-flex gp-shrink-0 gp-items-center gp-justify-center group-data-[state=loading]:gp-invisible [&>svg]:!gp-h-[var(--height-desktop)] [&>svg]:!gp-w-auto tablet:[&>svg]:!gp-h-[var(--height-tablet)] mobile:[&>svg]:!gp-h-[var(--height-mobile)]"
+    >
+      <svg height="20" width="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor" data-id="508414779109605736">
+            <path fill="currentColor" strokelinecap="round" strokelinejoin="round" d="M233.21,56.31A12,12,0,0,0,224,52H66L60.53,21.85A12,12,0,0,0,48.73,12H24a12,12,0,0,0,0,24H38.71L63.62,173a28,28,0,0,0,4.07,10.21A32,32,0,1,0,123,196h34a32,32,0,1,0,31-24H91.17a4,4,0,0,1-3.93-3.28L84.92,156H196.1a28,28,0,0,0,27.55-23l12.16-66.86A12,12,0,0,0,233.21,56.31ZM100,204a8,8,0,1,1-8-8A8,8,0,0,1,100,204Zm88,8a8,8,0,1,1,8-8A8,8,0,0,1,188,212Zm12-83.28A4,4,0,0,1,196.1,132H80.56L70.38,76H209.62Z"></path></svg>
+    </span>
+  
+          
+    <span
+      data-gp-text
+      style="word-break:break-word"
+      class="gp-content-product-button group-active/button:!gp-text-inherit gp-relative gp-flex gp-h-full gp-items-center gp-overflow-hidden gp-break-words group-data-[state=loading]:gp-invisible [&_p]:gp-whitespace-pre-line gp-text button-text"
+    >
+      {{ section.settings.ggTX_TaB4RH_label }}
+    </span>
+        </div>
+        
+    
+    
+  
+        </button>
+      </div>
+      <script {% if section.settings.section_preload == "false" %}class="gps-link" delay {% else %}src{% endif %}="https://assets.gemcommerce.com/assets-v2/gp-button-v7-5.js?v={{ shop.metafields.GEMPAGES.ASSETS_VERSION }}" defer="defer"></script>
+    </gp-button>
+  
+      
+    <gp-button
+      gp-data='{}'
+      
+      class="gp-flex gp-flex-col"
+    >
+      <div style="--bs:none;--bw:1px 1px 1px 1px;--bc:var(--g-c-line-3, line-3);--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--pageType:GP_STATIC;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--mb:var(--g-s-l);--ta:left" class="{% if variant.available %} !gp-hidden {% endif %}">
+        <style>[data-id="gTX_TaB4RH-sold-out"].gp-button-base::before, [data-id="gTX_TaB4RH-sold-out-interaction"].gp-button-base::before {
+      
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    
+    
+  
+    }
+  
+      
+  [data-id="gTX_TaB4RH-sold-out"]:hover::before, [data-id="gTX_TaB4RH-sold-out-interaction"]:hover::before {
+    
+    
+  }</style>
+        
+        <button
+          data-id="gTX_TaB4RH-sold-out" dataId="gTX_TaB4RH-sold-out" data-state="idle" aria-label="{{ section.settings.ggTX_TaB4RH_outOfStockLabel }}"
+          gp-data-hidden="{% if variant.available %}true{% endif %}"
+          type="button"
+          style="--w:100%;--w-tablet:100%;--w-mobile:100%;--h:Auto;--h-tablet:Auto;--h-mobile:Auto;--pl:24px;--pr:24px;--pt:12px;--pb:12px;--bgi:;--hvr-bgi:;--bg:#B7B7B7;--hvr-bg:#B7B7B7;--c:var(--g-c-text-3, text-3)"
+          class="gp-cursor-default gp-opacity-30 btn-disabled gp-button-sold-out gTX_TaB4RH-sold-out gp-button-base gp-group gp-relative gp-inline-flex gp-max-w-full gp-items-center gp-justify-center gp-no-underline gp-transition-colors gp-duration-200 disabled:gp-btn-disabled disabled:gp-opacity-30  gp-g-paragraph-1"
+        >
+        
+        <div class="gp-inline-flex">
+          
+    <span
+      style="word-break:break-word;--mr:8px;--height-desktop:1em;--height-tablet:1em;--height-mobile:1em"
+      class="gp-button-icon gp-z-1 gp-inline-flex gp-shrink-0 gp-items-center gp-justify-center group-data-[state=loading]:gp-invisible [&>svg]:!gp-h-[var(--height-desktop)] [&>svg]:!gp-w-auto tablet:[&>svg]:!gp-h-[var(--height-tablet)] mobile:[&>svg]:!gp-h-[var(--height-mobile)]"
+    >
+      <svg height="20" width="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor" data-id="508414779109605736">
+            <path fill="currentColor" strokelinecap="round" strokelinejoin="round" d="M233.21,56.31A12,12,0,0,0,224,52H66L60.53,21.85A12,12,0,0,0,48.73,12H24a12,12,0,0,0,0,24H38.71L63.62,173a28,28,0,0,0,4.07,10.21A32,32,0,1,0,123,196h34a32,32,0,1,0,31-24H91.17a4,4,0,0,1-3.93-3.28L84.92,156H196.1a28,28,0,0,0,27.55-23l12.16-66.86A12,12,0,0,0,233.21,56.31ZM100,204a8,8,0,1,1-8-8A8,8,0,0,1,100,204Zm88,8a8,8,0,1,1,8-8A8,8,0,0,1,188,212Zm12-83.28A4,4,0,0,1,196.1,132H80.56L70.38,76H209.62Z"></path></svg>
+    </span>
+  
+          
+    <span
+      data-gp-text
+      style="word-break:break-word"
+      class="gp-content-product-button group-active/button:!gp-text-inherit gp-relative gp-flex gp-h-full gp-items-center gp-overflow-hidden gp-break-words group-data-[state=loading]:gp-invisible [&_p]:gp-whitespace-pre-line gp-text button-text"
+    >
+      {{ section.settings.ggTX_TaB4RH_outOfStockLabel }}
+    </span>
+        </div>
+        
+    
+    
+  
+        </button>
+      </div>
+      <script {% if section.settings.section_preload == "false" %}class="gps-link" delay {% else %}src{% endif %}="https://assets.gemcommerce.com/assets-v2/gp-button-v7-5.js?v={{ shop.metafields.GEMPAGES.ASSETS_VERSION }}" defer="defer"></script>
+    </gp-button>
+  
+    </gp-product-button>
+    <script {% if section.settings.section_preload == "false" %}class="gps-link" delay {% else %}src{% endif %}="https://assets.gemcommerce.com/assets-v2/gp-product-button-v7-5.js?v={{ shop.metafields.GEMPAGES.ASSETS_VERSION }}" defer="defer"></script>
+  <div gp-el-wrapper style="--bs:none;--bw:1px 1px 1px 1px;--bc:var(--g-c-line-3, line-3);--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--pageType:GP_STATIC;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--mb:var(--g-s-l)" class="gmONh6FlpP ">
+      
+    {%- assign total_combinations = 1 -%}
+    {% for option in product.options_with_values %}{%- assign total_combinations = total_combinations | times: option.values.size -%}{% endfor %}
+    
+      {%- liquid
+        assign inventory_quantity = variant.inventory_quantity | default: 0
+        assign supported_payment_methods = shop.enabled_payment_types
+      -%}
+    
+    <gp-product-dynamic data-id="gmONh6FlpP" data-translate-label='Buy it now'  gp-data='{"setting":{"label":"Buy it now"},"totalVariant":"{{total_combinations}}"}
+    '>
+    <div class="gp-block wrap__button--unbranded__gmONh6FlpP [&_.shopify-payment-button\_\_button--unbranded]:gp-min-h-fit disabled:[&_.shopify-payment-button\_\_button--unbranded]:gp-pointer-events-none [&_.shopify-payment-button\_\_button--unbranded]:!gp-g-paragraph-1 [&_.shopify-payment-button\_\_button--unbranded]:!gp-g-s-medium [&_.shopify-payment-button\_\_button--unbranded]:gp-text-g-text-3">
+        {{ form | payment_button }}
+    </div>
+    {% style %}
+      
+    .wrap__button--unbranded__gmONh6FlpP .shopify-payment-button {
+      display: inline-block;
+      min-height: unset !important;
+    }
+
+    .wrap__button--unbranded__gmONh6FlpP .shopify-payment-button div {
+      width: 100%;
+      margin-top: 0px !important;
+    }
+
+    .wrap__button--unbranded__gmONh6FlpP .shopify-payment-button .shopify-payment-button__more-options {
+      display: none;
+    }
+
+    .wrap__button--unbranded__gmONh6FlpP .shopify-payment-button .shopify-payment-button__button--unbranded {
+      max-width: 100%;
+      min-width: unset;
+      min-height: unset !important;
+      background-color: unset !important;
+      position: relative;
+      border: none !important;
+      margin: 0;
+      z-index: 0;
+      border-radius: unset;
+      width: 100%;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .wrap__button--unbranded__gmONh6FlpP .shopify-payment-button .shopify-payment-button__button--unbranded::before {
+      content: "";
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+      z-index: -1;
+      transition-duration: 0.2s;
+    }
+
+    .wrap__button--unbranded__gmONh6FlpP .shopify-payment-button .shopify-payment-button__button--unbranded::after {
+      border-radius: 0;
+      box-shadow: none;
+    }
+
+    .wrap__button--unbranded__gmONh6FlpP .shopify-payment-button .shopify-payment-button__button--unbranded::after:hover {
+      border-radius: 0;
+      box-shadow: none;
+    }
+
+    .wrap__button--unbranded__gmONh6FlpP .shopify-payment-button > div {
+      max-width: 100%;
+    }
+
+    .wrap__button--unbranded__gmONh6FlpP .shopify-payment-button > div > div {
+      max-width: 100%;
+    }
+
+    
+    .wrap__button--unbranded__gmONh6FlpP {
+      text-align: left !important;
+    }
+
+    .wrap__button--unbranded__gmONh6FlpP .shopify-payment-button {
+      width: 100%;
+    }
+
+    .wrap__button--unbranded__gmONh6FlpP .shopify-payment-button .shopify-payment-button__button--unbranded {
+      width: 100%;
+      text-transform: unset;
+      
+      
+    padding-top: 12px !important;;
+    padding-bottom: 12px !important;;
+    padding-left: 24px !important;;
+    padding-right: 24px !important;;
+  
+      
+    width: 100%;
+    height: Auto;
+  
+      
+      
+      border-bottom-left-radius: 9999px !important;
+      border-bottom-right-radius: 9999px !important;
+      border-top-left-radius: 9999px !important;
+      border-top-right-radius: 9999px !important;
+      
+      
+  ;
+  ;
+  color: var(--g-c-text-3, text-3) !important;
+  ;
+  ;
+  ;
+  ;
+  ;
+  ;
+  none;
+  
+    }
+
+    .wrap__button--unbranded__gmONh6FlpP .shopify-payment-button .shopify-payment-button__button--unbranded:hover {
+      
+      ;
+      
+    }
+
+    .wrap__button--unbranded__gmONh6FlpP .shopify-payment-button .shopify-payment-button__button--unbranded::before {
+      border-style: solid;
+  border-width: 1px;
+  border-color: var(--g-c-line-3, line-3);
+  
+      
+      border-bottom-left-radius: 9999px;
+      border-bottom-right-radius: 9999px;
+      border-top-left-radius: 9999px;
+      border-top-right-radius: 9999px;
+      
+      background-color: var(--g-c-brand, brand);
+      undefined
+      
+
+
+    }
+
+    .wrap__button--unbranded__gmONh6FlpP .shopify-payment-button .shopify-payment-button__button--unbranded:hover::before {
+      background-image : unset;
+      
+      
+      background-color: var(--g-c-highlight, highlight);
+      
+      
+    }
+  
+
+    @media only screen and (max-width: 1024px) and (min-width: 768px) {
+      
+    .wrap__button--unbranded__gmONh6FlpP {
+      
+    }
+
+    .wrap__button--unbranded__gmONh6FlpP .shopify-payment-button {
+      width: 100%;
+    }
+
+    .wrap__button--unbranded__gmONh6FlpP .shopify-payment-button .shopify-payment-button__button--unbranded {
+      width: 100%;
+      text-transform: unset;
+      
+        
+        
+        
+      
+      
+    padding-top: ;
+    padding-bottom: ;
+    padding-left: ;
+    padding-right: ;
+  
+      
+    width: 100%;
+    height: Auto;
+  
+      
+      
+      border-bottom-left-radius: 9999px !important;
+      border-bottom-right-radius: 9999px !important;
+      border-top-left-radius: 9999px !important;
+      border-top-right-radius: 9999px !important;
+      
+      
+    }
+
+    .wrap__button--unbranded__gmONh6FlpP .shopify-payment-button .shopify-payment-button__button--unbranded:hover {
+      
+      ;
+      
+    }
+
+    .wrap__button--unbranded__gmONh6FlpP .shopify-payment-button .shopify-payment-button__button--unbranded::before {
+      border-style: solid;
+  border-width: 1px;
+  border-color: var(--g-c-line-3, line-3);
+  
+      
+      border-bottom-left-radius: 9999px;
+      border-bottom-right-radius: 9999px;
+      border-top-left-radius: 9999px;
+      border-top-right-radius: 9999px;
+      
+      background-color: var(--g-c-brand, brand);
+      undefined
+      
+
+
+    }
+
+    .wrap__button--unbranded__gmONh6FlpP .shopify-payment-button .shopify-payment-button__button--unbranded:hover::before {
+      background-image : unset;
+      
+      
+      background-color: var(--g-c-highlight, highlight);
+      
+      
+    }
+  
+    }
+
+    @media only screen and (max-width: 767px) {
+      
+    .wrap__button--unbranded__gmONh6FlpP {
+      
+    }
+
+    .wrap__button--unbranded__gmONh6FlpP .shopify-payment-button {
+      width: 100%;
+    }
+
+    .wrap__button--unbranded__gmONh6FlpP .shopify-payment-button .shopify-payment-button__button--unbranded {
+      width: 100%;
+      text-transform: unset;
+      
+        
+        
+        
+      
+      
+    padding-top: ;
+    padding-bottom: ;
+    padding-left: ;
+    padding-right: ;
+  
+      
+    width: 100%;
+    height: Auto;
+  
+      
+      
+      border-bottom-left-radius: 9999px !important;
+      border-bottom-right-radius: 9999px !important;
+      border-top-left-radius: 9999px !important;
+      border-top-right-radius: 9999px !important;
+      
+      
+    }
+
+    .wrap__button--unbranded__gmONh6FlpP .shopify-payment-button .shopify-payment-button__button--unbranded:hover {
+      
+      ;
+      
+    }
+
+    .wrap__button--unbranded__gmONh6FlpP .shopify-payment-button .shopify-payment-button__button--unbranded::before {
+      border-style: solid;
+  border-width: 1px;
+  border-color: var(--g-c-line-3, line-3);
+  
+      
+      border-bottom-left-radius: 9999px;
+      border-bottom-right-radius: 9999px;
+      border-top-left-radius: 9999px;
+      border-top-right-radius: 9999px;
+      
+      background-color: var(--g-c-brand, brand);
+      undefined
+      
+
+
+    }
+
+    .wrap__button--unbranded__gmONh6FlpP .shopify-payment-button .shopify-payment-button__button--unbranded:hover::before {
+      background-image : unset;
+      
+      
+      background-color: var(--g-c-highlight, highlight);
+      
+      
+    }
+  
+    }
+  
+    {% endstyle %}
+    </gp-product-dynamic>
+    <script {% if section.settings.section_preload == "false" %}class="gps-link" delay {% else %}src{% endif %}="https://assets.gemcommerce.com/assets-v2/gp-product-dynamic-v7-5.js?v={{ shop.metafields.GEMPAGES.ASSETS_VERSION }}" defer="defer"></script>
+  
+      </div><div gp-el-wrapper  class="gOy8XrkL5q ">
+      
+    
+    <div class="gp-flex" style="--jc:left">
+    <div
+      data-id="gOy8XrkL5q"
+       style="--bs:none;--bw:1px 1px 1px 1px;--bc:var(--g-c-line-3, line-3);--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--pageType:GP_STATIC;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--mb:104px;--mb-mobile:40px;--mb-tablet:104px;--w:100%;--w-tablet:100%;--w-mobile:100%;--ta:left;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll">
+     
+     <ul
+        class="gp-inline-flex gp-flex-col"
+        style="--gg:12px"
+        >
+        
+    <li
+      data-index="0" data-id="gw5x0UnUKT"
+      class="gp-icon-list-item gp-flex gp-w-full gp-items-center gp-child-item-gOy8XrkL5q"
+      style="--bgc:transparent;--bgi:transparent;--cg:12px"
+    >
+    <div
+      data-same-height-display-contents
+      
+      class="g9hmClsRAl gp-relative gp-flex gp-flex-col"
+    >
+      
+    <div
+      role="presentation"
+      data-id="gbJupI6Ffw"
+      style="--bs:none;--bw:1px 1px 1px 1px;--bc:var(--g-c-line-3, line-3);--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--pageType:GP_STATIC;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--ta:center"
+      class="gp-group/image gp-relative force-publish-1771991999933 gp-flex-none gp-h-auto mobile:gp-flex-none mobile:gp-h-auto tablet:gp-flex-none tablet:gp-h-auto gbJupI6Ffw"
+    >
+      <div
+        
+        style="border-radius:inherit;--jc:center"
+        class="gp-h-full gp-w-full gp-flex pointer-events-auto"
+      >
+        
+    <picture style="border-radius:inherit" class="gp-contents">
+      
+      <source media="(max-width: 767px)" data-srcSet="https://cdn.shopify.com/s/files/1/2005/9307/files/image_demo_768x.jpg" srcset="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjIzNyIgaGVpZ2h0PSIxNjc4IiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPgogICAgPGRlZnM+CiAgICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iZy0yMjM3LTE2NzgiPgogICAgICAgIDxzdG9wIHN0b3AtY29sb3I9InJnYmEoNTEsIDUxLCA1MSwgMCkiIG9mZnNldD0iMjAlIiAvPgogICAgICAgIDxzdG9wIHN0b3AtY29sb3I9InJnYmEoNTEsIDUxLCA1MSwgMCkiIG9mZnNldD0iNTAlIiAvPgogICAgICAgIDxzdG9wIHN0b3AtY29sb3I9InJnYmEoNTEsIDUxLCA1MSwgMCkiIG9mZnNldD0iNzAlIiAvPgogICAgICA8L2xpbmVhckdyYWRpZW50PgogICAgPC9kZWZzPgogICAgPHJlY3Qgd2lkdGg9IjIyMzciIGhlaWdodD0iMTY3OCIgZmlsbD0icmdiYSg1MSwgNTEsIDUxLCAwKSIgLz4KICAgIDxyZWN0IGlkPSJyIiB3aWR0aD0iMjIzNyIgaGVpZ2h0PSIxNjc4IiBmaWxsPSJ1cmwoI2ctMjIzNy0xNjc4KSIgLz4KICAgIDxhbmltYXRlIHhsaW5rOmhyZWY9IiNyIiBhdHRyaWJ1dGVOYW1lPSJ4IiBmcm9tPSItMjIzNyIgdG89IjIyMzciIGR1cj0iMXMiIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIiAgLz4KICA8L3N2Zz4=" />
+      <source media="(max-width: 1024px)" data-srcSet="https://cdn.shopify.com/s/files/1/2005/9307/files/image_demo_1024x.jpg" srcset="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjIzNyIgaGVpZ2h0PSIxNjc4IiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPgogICAgPGRlZnM+CiAgICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iZy0yMjM3LTE2NzgiPgogICAgICAgIDxzdG9wIHN0b3AtY29sb3I9InJnYmEoNTEsIDUxLCA1MSwgMCkiIG9mZnNldD0iMjAlIiAvPgogICAgICAgIDxzdG9wIHN0b3AtY29sb3I9InJnYmEoNTEsIDUxLCA1MSwgMCkiIG9mZnNldD0iNTAlIiAvPgogICAgICAgIDxzdG9wIHN0b3AtY29sb3I9InJnYmEoNTEsIDUxLCA1MSwgMCkiIG9mZnNldD0iNzAlIiAvPgogICAgICA8L2xpbmVhckdyYWRpZW50PgogICAgPC9kZWZzPgogICAgPHJlY3Qgd2lkdGg9IjIyMzciIGhlaWdodD0iMTY3OCIgZmlsbD0icmdiYSg1MSwgNTEsIDUxLCAwKSIgLz4KICAgIDxyZWN0IGlkPSJyIiB3aWR0aD0iMjIzNyIgaGVpZ2h0PSIxNjc4IiBmaWxsPSJ1cmwoI2ctMjIzNy0xNjc4KSIgLz4KICAgIDxhbmltYXRlIHhsaW5rOmhyZWY9IiNyIiBhdHRyaWJ1dGVOYW1lPSJ4IiBmcm9tPSItMjIzNyIgdG89IjIyMzciIGR1cj0iMXMiIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIiAgLz4KICA8L3N2Zz4=" />
+    
+      
+      <img
+        base-src="https://cdn.shopify.com/s/files/1/2005/9307/files/image_demo.jpg" quality-type="{&quot;desktop&quot;:&quot;high&quot;}" quality-percent="{&quot;desktop&quot;:100}"
+        src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjIzNyIgaGVpZ2h0PSIxNjc4IiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPgogICAgPGRlZnM+CiAgICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iZy0yMjM3LTE2NzgiPgogICAgICAgIDxzdG9wIHN0b3AtY29sb3I9InJnYmEoNTEsIDUxLCA1MSwgMCkiIG9mZnNldD0iMjAlIiAvPgogICAgICAgIDxzdG9wIHN0b3AtY29sb3I9InJnYmEoNTEsIDUxLCA1MSwgMCkiIG9mZnNldD0iNTAlIiAvPgogICAgICAgIDxzdG9wIHN0b3AtY29sb3I9InJnYmEoNTEsIDUxLCA1MSwgMCkiIG9mZnNldD0iNzAlIiAvPgogICAgICA8L2xpbmVhckdyYWRpZW50PgogICAgPC9kZWZzPgogICAgPHJlY3Qgd2lkdGg9IjIyMzciIGhlaWdodD0iMTY3OCIgZmlsbD0icmdiYSg1MSwgNTEsIDUxLCAwKSIgLz4KICAgIDxyZWN0IGlkPSJyIiB3aWR0aD0iMjIzNyIgaGVpZ2h0PSIxNjc4IiBmaWxsPSJ1cmwoI2ctMjIzNy0xNjc4KSIgLz4KICAgIDxhbmltYXRlIHhsaW5rOmhyZWY9IiNyIiBhdHRyaWJ1dGVOYW1lPSJ4IiBmcm9tPSItMjIzNyIgdG89IjIyMzciIGR1cj0iMXMiIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIiAgLz4KICA8L3N2Zz4=" data-src="https://cdn.shopify.com/s/files/1/2005/9307/files/image_demo.jpg"
+        alt=""
+        width="100%"
+        style="--aspect:1/1;--aspect-tablet:1/1;--aspect-mobile:1/1;--objf:cover;--w:40px;--w-tablet:40px;--w-mobile:40px;--h:auto;--h-tablet:auto;--h-mobile:auto;--b:none;--bc:#000000;--bw:1px 1px 1px 1px;--radiusType:none;--shadow:none"
+        class="gp-inline-block gp-w-full gp-max-w-full gp_lazyload"
+      />
+    
+    </picture>
+  
+      </div>
+    </div>
+  
+    </div><div
+      data-same-height-display-contents
+      
+      class="gyBS8n0QgJ gp-relative gp-flex gp-flex-col gp-w-full"
+    >
+      
+    {% assign locationOrigin = request.origin | append: routes.root_url | split: '/' | join: '/' %}
+    <div data-id="gBfLX9-b5D"
+        class="gBfLX9-b5D"
+        style="--ta:left;--bs:none;--bw:1px 1px 1px 1px;--bc:var(--g-c-line-3, line-3);--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--pageType:GP_STATIC;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--dynamic-source-color:#F4F4F4"
+      >
+      <div class="gp-flex" style="--jc:left">
+        <div
+          data-gp-text
+          class="gp-g-paragraph-1  gp-text-instant gp-text"
+          style="--w:100%;--w-tablet:100%;--w-mobile:100%;--tdt:auto;--b:none;--bc:#121212;--bw:1px 1px 1px 1px;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--shadow:none;--ta:left;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset;--c:var(--g-c-text-1, text-1);--tt:none;word-break:break-word;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;overflow:hidden;--tdl:"
+        >
+          {{ section.settings.ggBfLX9-b5D_text | replace: '$locationOrigin', locationOrigin }}
+        </div>
+      </div>
+    </div>
+    
+    </div>
+  </li>
+    <li
+      data-index="1" data-id="gga07MDV29"
+      class="gp-icon-list-item gp-flex gp-w-full gp-items-center gp-child-item-gOy8XrkL5q"
+      style="--bgc:transparent;--bgi:transparent;--cg:12px"
+    >
+    <div
+      data-same-height-display-contents
+      
+      class="g0wJa1ErPz gp-relative gp-flex gp-flex-col"
+    >
+      
+    <div
+      role="presentation"
+      data-id="gFtHQrJrvN"
+      style="--bs:none;--bw:1px 1px 1px 1px;--bc:var(--g-c-line-3, line-3);--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--pageType:GP_STATIC;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--mb:0px;--mb-mobile:0px;--mb-tablet:0px;--ta:center"
+      class="gp-group/image gp-relative force-publish-1771991999934 gp-flex-none gp-h-auto mobile:gp-flex-none mobile:gp-h-auto tablet:gp-flex-none tablet:gp-h-auto gFtHQrJrvN"
+    >
+      <div
+        
+        style="border-radius:inherit;--jc:center"
+        class="gp-h-full gp-w-full gp-flex pointer-events-auto"
+      >
+        
+    <picture style="border-radius:inherit" class="gp-contents">
+      
+      <source media="(max-width: 767px)" data-srcSet="https://cdn.shopify.com/s/files/1/2005/9307/files/image_demo_768x.jpg" srcset="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjIzNyIgaGVpZ2h0PSIxNjc4IiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPgogICAgPGRlZnM+CiAgICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iZy0yMjM3LTE2NzgiPgogICAgICAgIDxzdG9wIHN0b3AtY29sb3I9InJnYmEoNTEsIDUxLCA1MSwgMCkiIG9mZnNldD0iMjAlIiAvPgogICAgICAgIDxzdG9wIHN0b3AtY29sb3I9InJnYmEoNTEsIDUxLCA1MSwgMCkiIG9mZnNldD0iNTAlIiAvPgogICAgICAgIDxzdG9wIHN0b3AtY29sb3I9InJnYmEoNTEsIDUxLCA1MSwgMCkiIG9mZnNldD0iNzAlIiAvPgogICAgICA8L2xpbmVhckdyYWRpZW50PgogICAgPC9kZWZzPgogICAgPHJlY3Qgd2lkdGg9IjIyMzciIGhlaWdodD0iMTY3OCIgZmlsbD0icmdiYSg1MSwgNTEsIDUxLCAwKSIgLz4KICAgIDxyZWN0IGlkPSJyIiB3aWR0aD0iMjIzNyIgaGVpZ2h0PSIxNjc4IiBmaWxsPSJ1cmwoI2ctMjIzNy0xNjc4KSIgLz4KICAgIDxhbmltYXRlIHhsaW5rOmhyZWY9IiNyIiBhdHRyaWJ1dGVOYW1lPSJ4IiBmcm9tPSItMjIzNyIgdG89IjIyMzciIGR1cj0iMXMiIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIiAgLz4KICA8L3N2Zz4=" />
+      <source media="(max-width: 1024px)" data-srcSet="https://cdn.shopify.com/s/files/1/2005/9307/files/image_demo_1024x.jpg" srcset="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjIzNyIgaGVpZ2h0PSIxNjc4IiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPgogICAgPGRlZnM+CiAgICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iZy0yMjM3LTE2NzgiPgogICAgICAgIDxzdG9wIHN0b3AtY29sb3I9InJnYmEoNTEsIDUxLCA1MSwgMCkiIG9mZnNldD0iMjAlIiAvPgogICAgICAgIDxzdG9wIHN0b3AtY29sb3I9InJnYmEoNTEsIDUxLCA1MSwgMCkiIG9mZnNldD0iNTAlIiAvPgogICAgICAgIDxzdG9wIHN0b3AtY29sb3I9InJnYmEoNTEsIDUxLCA1MSwgMCkiIG9mZnNldD0iNzAlIiAvPgogICAgICA8L2xpbmVhckdyYWRpZW50PgogICAgPC9kZWZzPgogICAgPHJlY3Qgd2lkdGg9IjIyMzciIGhlaWdodD0iMTY3OCIgZmlsbD0icmdiYSg1MSwgNTEsIDUxLCAwKSIgLz4KICAgIDxyZWN0IGlkPSJyIiB3aWR0aD0iMjIzNyIgaGVpZ2h0PSIxNjc4IiBmaWxsPSJ1cmwoI2ctMjIzNy0xNjc4KSIgLz4KICAgIDxhbmltYXRlIHhsaW5rOmhyZWY9IiNyIiBhdHRyaWJ1dGVOYW1lPSJ4IiBmcm9tPSItMjIzNyIgdG89IjIyMzciIGR1cj0iMXMiIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIiAgLz4KICA8L3N2Zz4=" />
+    
+      
+      <img
+        base-src="https://cdn.shopify.com/s/files/1/2005/9307/files/image_demo.jpg" quality-type="{&quot;desktop&quot;:&quot;high&quot;}" quality-percent="{&quot;desktop&quot;:100}"
+        src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjIzNyIgaGVpZ2h0PSIxNjc4IiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPgogICAgPGRlZnM+CiAgICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iZy0yMjM3LTE2NzgiPgogICAgICAgIDxzdG9wIHN0b3AtY29sb3I9InJnYmEoNTEsIDUxLCA1MSwgMCkiIG9mZnNldD0iMjAlIiAvPgogICAgICAgIDxzdG9wIHN0b3AtY29sb3I9InJnYmEoNTEsIDUxLCA1MSwgMCkiIG9mZnNldD0iNTAlIiAvPgogICAgICAgIDxzdG9wIHN0b3AtY29sb3I9InJnYmEoNTEsIDUxLCA1MSwgMCkiIG9mZnNldD0iNzAlIiAvPgogICAgICA8L2xpbmVhckdyYWRpZW50PgogICAgPC9kZWZzPgogICAgPHJlY3Qgd2lkdGg9IjIyMzciIGhlaWdodD0iMTY3OCIgZmlsbD0icmdiYSg1MSwgNTEsIDUxLCAwKSIgLz4KICAgIDxyZWN0IGlkPSJyIiB3aWR0aD0iMjIzNyIgaGVpZ2h0PSIxNjc4IiBmaWxsPSJ1cmwoI2ctMjIzNy0xNjc4KSIgLz4KICAgIDxhbmltYXRlIHhsaW5rOmhyZWY9IiNyIiBhdHRyaWJ1dGVOYW1lPSJ4IiBmcm9tPSItMjIzNyIgdG89IjIyMzciIGR1cj0iMXMiIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIiAgLz4KICA8L3N2Zz4=" data-src="https://cdn.shopify.com/s/files/1/2005/9307/files/image_demo.jpg"
+        alt=""
+        width="100%"
+        style="--aspect:1/1;--aspect-tablet:1/1;--aspect-mobile:1/1;--objf:cover;--w:40px;--w-tablet:40px;--w-mobile:40px;--h:auto;--h-tablet:auto;--h-mobile:auto;--b:none;--bc:#000000;--bw:1px 1px 1px 1px;--radiusType:none;--shadow:none"
+        class="gp-inline-block gp-w-full gp-max-w-full gp_lazyload"
+      />
+    
+    </picture>
+  
+      </div>
+    </div>
+  
+    </div><div
+      data-same-height-display-contents
+      
+      class="gjW8ZhuniY gp-relative gp-flex gp-flex-col gp-w-full"
+    >
+      
+    {% assign locationOrigin = request.origin | append: routes.root_url | split: '/' | join: '/' %}
+    <div data-id="gpOrUAjnTz"
+        class="gpOrUAjnTz"
+        style="--ta:left;--bs:none;--bw:1px 1px 1px 1px;--bc:var(--g-c-line-3, line-3);--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--pageType:GP_STATIC;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--dynamic-source-color:#F4F4F4"
+      >
+      <div class="gp-flex" style="--jc:left">
+        <div
+          data-gp-text
+          class="gp-g-paragraph-1  gp-text-instant gp-text"
+          style="--w:100%;--w-tablet:100%;--w-mobile:100%;--tdt:auto;--b:none;--bc:#121212;--bw:1px 1px 1px 1px;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--shadow:none;--ta:left;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset;--c:var(--g-c-text-1, text-1);--tt:none;word-break:break-word;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;overflow:hidden;--tdl:"
+        >
+          {{ section.settings.ggpOrUAjnTz_text | replace: '$locationOrigin', locationOrigin }}
+        </div>
+      </div>
+    </div>
+    
+    </div>
+  </li>
+    <li
+      data-index="2" data-id="gQZx-kql3z"
+      class="gp-icon-list-item gp-flex gp-w-full gp-items-center gp-child-item-gOy8XrkL5q"
+      style="--bgc:transparent;--bgi:transparent;--cg:12px"
+    >
+    <div
+      data-same-height-display-contents
+      
+      class="g2MMZD3LBU gp-relative gp-flex gp-flex-col"
+    >
+      
+    <div
+      role="presentation"
+      data-id="gROGc-psDH"
+      style="--bs:none;--bw:1px 1px 1px 1px;--bc:var(--g-c-line-3, line-3);--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--pageType:GP_STATIC;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--ta:center"
+      class="gp-group/image gp-relative force-publish-1771991999935 gp-flex-none gp-h-auto mobile:gp-flex-none mobile:gp-h-auto tablet:gp-flex-none tablet:gp-h-auto gROGc-psDH"
+    >
+      <div
+        
+        style="border-radius:inherit;--jc:center"
+        class="gp-h-full gp-w-full gp-flex pointer-events-auto"
+      >
+        
+    <picture style="border-radius:inherit" class="gp-contents">
+      
+      <source media="(max-width: 767px)" data-srcSet="https://cdn.shopify.com/s/files/1/2005/9307/files/image_demo_768x.jpg" srcset="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjIzNyIgaGVpZ2h0PSIxNjc4IiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPgogICAgPGRlZnM+CiAgICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iZy0yMjM3LTE2NzgiPgogICAgICAgIDxzdG9wIHN0b3AtY29sb3I9InJnYmEoNTEsIDUxLCA1MSwgMCkiIG9mZnNldD0iMjAlIiAvPgogICAgICAgIDxzdG9wIHN0b3AtY29sb3I9InJnYmEoNTEsIDUxLCA1MSwgMCkiIG9mZnNldD0iNTAlIiAvPgogICAgICAgIDxzdG9wIHN0b3AtY29sb3I9InJnYmEoNTEsIDUxLCA1MSwgMCkiIG9mZnNldD0iNzAlIiAvPgogICAgICA8L2xpbmVhckdyYWRpZW50PgogICAgPC9kZWZzPgogICAgPHJlY3Qgd2lkdGg9IjIyMzciIGhlaWdodD0iMTY3OCIgZmlsbD0icmdiYSg1MSwgNTEsIDUxLCAwKSIgLz4KICAgIDxyZWN0IGlkPSJyIiB3aWR0aD0iMjIzNyIgaGVpZ2h0PSIxNjc4IiBmaWxsPSJ1cmwoI2ctMjIzNy0xNjc4KSIgLz4KICAgIDxhbmltYXRlIHhsaW5rOmhyZWY9IiNyIiBhdHRyaWJ1dGVOYW1lPSJ4IiBmcm9tPSItMjIzNyIgdG89IjIyMzciIGR1cj0iMXMiIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIiAgLz4KICA8L3N2Zz4=" />
+      <source media="(max-width: 1024px)" data-srcSet="https://cdn.shopify.com/s/files/1/2005/9307/files/image_demo_1024x.jpg" srcset="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjIzNyIgaGVpZ2h0PSIxNjc4IiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPgogICAgPGRlZnM+CiAgICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iZy0yMjM3LTE2NzgiPgogICAgICAgIDxzdG9wIHN0b3AtY29sb3I9InJnYmEoNTEsIDUxLCA1MSwgMCkiIG9mZnNldD0iMjAlIiAvPgogICAgICAgIDxzdG9wIHN0b3AtY29sb3I9InJnYmEoNTEsIDUxLCA1MSwgMCkiIG9mZnNldD0iNTAlIiAvPgogICAgICAgIDxzdG9wIHN0b3AtY29sb3I9InJnYmEoNTEsIDUxLCA1MSwgMCkiIG9mZnNldD0iNzAlIiAvPgogICAgICA8L2xpbmVhckdyYWRpZW50PgogICAgPC9kZWZzPgogICAgPHJlY3Qgd2lkdGg9IjIyMzciIGhlaWdodD0iMTY3OCIgZmlsbD0icmdiYSg1MSwgNTEsIDUxLCAwKSIgLz4KICAgIDxyZWN0IGlkPSJyIiB3aWR0aD0iMjIzNyIgaGVpZ2h0PSIxNjc4IiBmaWxsPSJ1cmwoI2ctMjIzNy0xNjc4KSIgLz4KICAgIDxhbmltYXRlIHhsaW5rOmhyZWY9IiNyIiBhdHRyaWJ1dGVOYW1lPSJ4IiBmcm9tPSItMjIzNyIgdG89IjIyMzciIGR1cj0iMXMiIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIiAgLz4KICA8L3N2Zz4=" />
+    
+      
+      <img
+        base-src="https://cdn.shopify.com/s/files/1/2005/9307/files/image_demo.jpg" quality-type="{&quot;desktop&quot;:&quot;high&quot;}" quality-percent="{&quot;desktop&quot;:100}"
+        src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjIzNyIgaGVpZ2h0PSIxNjc4IiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPgogICAgPGRlZnM+CiAgICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iZy0yMjM3LTE2NzgiPgogICAgICAgIDxzdG9wIHN0b3AtY29sb3I9InJnYmEoNTEsIDUxLCA1MSwgMCkiIG9mZnNldD0iMjAlIiAvPgogICAgICAgIDxzdG9wIHN0b3AtY29sb3I9InJnYmEoNTEsIDUxLCA1MSwgMCkiIG9mZnNldD0iNTAlIiAvPgogICAgICAgIDxzdG9wIHN0b3AtY29sb3I9InJnYmEoNTEsIDUxLCA1MSwgMCkiIG9mZnNldD0iNzAlIiAvPgogICAgICA8L2xpbmVhckdyYWRpZW50PgogICAgPC9kZWZzPgogICAgPHJlY3Qgd2lkdGg9IjIyMzciIGhlaWdodD0iMTY3OCIgZmlsbD0icmdiYSg1MSwgNTEsIDUxLCAwKSIgLz4KICAgIDxyZWN0IGlkPSJyIiB3aWR0aD0iMjIzNyIgaGVpZ2h0PSIxNjc4IiBmaWxsPSJ1cmwoI2ctMjIzNy0xNjc4KSIgLz4KICAgIDxhbmltYXRlIHhsaW5rOmhyZWY9IiNyIiBhdHRyaWJ1dGVOYW1lPSJ4IiBmcm9tPSItMjIzNyIgdG89IjIyMzciIGR1cj0iMXMiIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIiAgLz4KICA8L3N2Zz4=" data-src="https://cdn.shopify.com/s/files/1/2005/9307/files/image_demo.jpg"
+        alt=""
+        width="100%"
+        style="--aspect:1/1;--aspect-tablet:1/1;--aspect-mobile:1/1;--objf:cover;--w:40px;--w-tablet:40px;--w-mobile:40px;--h:auto;--h-tablet:auto;--h-mobile:auto;--b:none;--bc:#000000;--bw:1px 1px 1px 1px;--radiusType:none;--shadow:none"
+        class="gp-inline-block gp-w-full gp-max-w-full gp_lazyload"
+      />
+    
+    </picture>
+  
+      </div>
+    </div>
+  
+    </div><div
+      data-same-height-display-contents
+      
+      class="g0QU6QICTN gp-relative gp-flex gp-flex-col gp-w-full"
+    >
+      
+    {% assign locationOrigin = request.origin | append: routes.root_url | split: '/' | join: '/' %}
+    <div data-id="g_39URjZLW"
+        class="g_39URjZLW"
+        style="--ta:left;--bs:none;--bw:1px 1px 1px 1px;--bc:var(--g-c-line-3, line-3);--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--pageType:GP_STATIC;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--dynamic-source-color:#F4F4F4"
+      >
+      <div class="gp-flex" style="--jc:left">
+        <div
+          data-gp-text
+          class="gp-g-paragraph-1  gp-text-instant gp-text"
+          style="--w:100%;--w-tablet:100%;--w-mobile:100%;--tdt:auto;--b:none;--bc:#121212;--bw:1px 1px 1px 1px;--bblr:0px;--bbrr:0px;--btlr:0px;--btrr:0px;--shadow:none;--ta:left;--line-clamp:unset;--line-clamp-tablet:unset;--line-clamp-mobile:unset;--c:var(--g-c-text-1, text-1);--tt:none;word-break:break-word;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;overflow:hidden;--tdl:"
+        >
+          {{ section.settings.gg_39URjZLW_text | replace: '$locationOrigin', locationOrigin }}
+        </div>
+      </div>
+    </div>
+    
+    </div>
+  </li>
+      </ul>
+  </div>
+  </div>
+  
+      </div>
+    </div>

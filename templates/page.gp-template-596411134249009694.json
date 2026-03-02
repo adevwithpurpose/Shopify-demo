@@ -1,0 +1,44 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "gp_section_596412926273782764": {
+      "settings": {
+        "checksum": "0b46e7fb953596288ba9b8b41ec2604377c8788fd4a94e3208679222189c0531_1_1_0_0__1",
+        "ggBfLX9-b5D_text": "Your custom text goes here",
+        "ggCHd55gAhq_childItem_0": "Accordion 1",
+        "ggCHd55gAhq_childItem_1": "Accordion 2",
+        "ggCHd55gAhq_childItem_2": "Accordion 3",
+        "ggIHvG-V2-g_viewLessText": "Show less",
+        "ggIHvG-V2-g_viewMoreText": "Show more",
+        "ggTX_TaB4RH_label": "Add to cart",
+        "ggTX_TaB4RH_outOfStockLabel": "Out of stock",
+        "ggTX_TaB4RH_unavailableLabel": "Unavailable",
+        "ggTX_TaB4RH_variantSelectionRequiredMessage": "Please select a variant to add product to cart",
+        "gg_39URjZLW_text": "Your custom text goes here",
+        "ggmONh6FlpP_label": "Buy it now",
+        "ggpOrUAjnTz_text": "Your custom text goes here",
+        "ggzkTu0onep_text": "Quantity",
+        "section_preload": "true"
+      },
+      "type": "gp-section-596412926273782764"
+    },
+    "gp_section_596415868729033702": {
+      "settings": {
+        "checksum": "18b0cb807307a3751dc4337a2c006593e432a89365a18fa09fa65fc3308afbe9_1_1_0_0__1"
+      },
+      "type": "gp-section-596415868729033702"
+    }
+  },
+  "order": [
+    "gp_section_596412926273782764",
+    "gp_section_596415868729033702"
+  ]
+}
