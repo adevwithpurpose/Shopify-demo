@@ -1,12 +1,3 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
 {
   "name": "t:sections.footer.name",
   "type": "footer",
@@ -14,9 +5,9 @@
     "newsletter": {
       "type": "newsletter",
       "settings": {
-        "color_scheme": "scheme-3",
+        "color_scheme": "scheme-2",
         "full_width": true,
-        "padding_top": 40,
+        "padding_top": 60,
         "padding_bottom": 40
       }
     },
@@ -26,35 +17,51 @@
         "footer-links": {
           "type": "link_list",
           "settings": {
-            "heading": "Quick links",
+            "heading": "Shop",
             "menu": "footer"
+          }
+        },
+        "footer-support": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Assistenza Clienti",
+            "menu": "main-menu"
           }
         },
         "footer-info": {
           "type": "text",
           "settings": {
-            "heading": "Chi è Amanotte",
-            "subtext": "<p>Progettiamo un comfort di lusso per il tuo sonno.<br/>Amanotte nasce con l'intenzione di tornare a farti amare la notte per ciò per cui esiste... Dormire. </p>"
+            "heading": "Dove Siamo",
+            "subtext": "<p>Amanotte Topper Topper<br/>Via Roma 123, 00100 Roma<br/>info@amanotte.it</p>"
+          }
+        },
+        "footer-brand": {
+          "type": "text",
+          "settings": {
+            "heading": "Perché Amanotte",
+            "subtext": "<p>Offriamo la massima qualità al miglior prezzo possibile. Notte dopo notte garantiamo il miglior riposo degli italiani.</p>"
           }
         }
       },
       "block_order": [
         "footer-links",
-        "footer-info"
+        "footer-support",
+        "footer-info",
+        "footer-brand"
       ],
       "settings": {
-        "color_scheme": "scheme-3",
-        "newsletter_enable": false,
-        "newsletter_heading": "Subscribe to our emails",
-        "enable_follow_on_shop": true,
+        "color_scheme": "scheme-2",
+        "newsletter_enable": true,
+        "newsletter_heading": "Iscriviti per Offerte Esclusive",
+        "enable_follow_on_shop": false,
         "show_social": true,
         "enable_country_selector": false,
         "enable_language_selector": false,
         "payment_enable": true,
         "show_policy": true,
         "margin_top": 0,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 60,
+        "padding_bottom": 60
       }
     }
   },
