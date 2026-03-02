@@ -157,6 +157,52 @@
       "submit": "Reset password"
     }
   },
+  "gempages": {
+    "Carousel": {
+      "no_slider": "No Slider"
+    },
+    "CarouselV3": {
+      "no_slider": "No Slider"
+    },
+    "Newsletter": {
+      "err_msg_default": "Can’t send email. Please try again later.",
+      "success_msg_default": "Thanks for subscribing"
+    },
+    "IconListV2": {
+      "icons_not_found": "Icons not found"
+    },
+    "IconList": {
+      "icons_not_found": "Icons not found"
+    },
+    "IconListHoz": {
+      "icons_not_found": "Icons not found"
+    },
+    "Product": {
+      "product_not_found": "Product not found"
+    },
+    "ProductList": {
+      "product_not_found": "Product Not Found!",
+      "no_products_found": "No products found!",
+      "no_related_products": "No related products!"
+    },
+    "ProductListV3": {
+      "product_not_found": "Product Not Found!",
+      "no_products_found": "No products found!",
+      "no_related_products": "No related products!"
+    },
+    "ProductTitle": {
+      "product_not_found": "Product Not Found"
+    },
+    "ProductVariants": {
+      "please_select": "Please select an option"
+    },
+    "StockCounter": {
+      "let_buy_now": "<mark>HURRY!</mark> LET BUY NOW"
+    },
+    "Breadcrumb": {
+      "home": "Home"
+    }
+  },
   "general": {
     "password_page": {
       "login_form_heading": "Enter store using password:",
@@ -534,52 +580,6 @@
         "post_success": "Thanks for contacting us. We'll get back to you as soon as possible.",
         "error_heading": "Please adjust the following:"
       }
-    }
-  },
-  "gempages": {
-    "Carousel": {
-      "no_slider": "No Slider"
-    },
-    "CarouselV3": {
-      "no_slider": "No Slider"
-    },
-    "Newsletter": {
-      "err_msg_default": "Can’t send email. Please try again later.",
-      "success_msg_default": "Thanks for subscribing"
-    },
-    "IconListV2": {
-      "icons_not_found": "Icons not found"
-    },
-    "IconList": {
-      "icons_not_found": "Icons not found"
-    },
-    "IconListHoz": {
-      "icons_not_found": "Icons not found"
-    },
-    "Product": {
-      "product_not_found": "Product not found"
-    },
-    "ProductList": {
-      "product_not_found": "Product Not Found!",
-      "no_products_found": "No products found!",
-      "no_related_products": "No related products!"
-    },
-    "ProductListV3": {
-      "product_not_found": "Product Not Found!",
-      "no_products_found": "No products found!",
-      "no_related_products": "No related products!"
-    },
-    "ProductTitle": {
-      "product_not_found": "Product Not Found"
-    },
-    "ProductVariants": {
-      "please_select": "Please select an option"
-    },
-    "StockCounter": {
-      "let_buy_now": "<mark>HURRY!</mark> LET BUY NOW"
-    },
-    "Breadcrumb": {
-      "home": "Home"
     }
   }
 }
