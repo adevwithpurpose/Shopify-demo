@@ -17,9 +17,9 @@
           "settings": {
             "image": "shopify://shop_images/APS-Fulfillment-Inc-j.jpg",
             "icon": "truck",
-            "free_text": "FREE",
-            "title": "Spedizione GRATUITA",
-            "value": "(€14)"
+            "free_text": "Spedizione",
+            "title": "GRATUITA",
+            "value": ""
           }
         },
         "gift_2": {
@@ -37,8 +37,8 @@
           "settings": {
             "image": "shopify://shop_images/extended-warranty-lifetime-assurance-label-with-shield-sign_1017-56382.avif",
             "icon": "shield",
-            "free_text": "FREE",
-            "title": "Garanzia Estesa",
+            "free_text": "Garanzia",
+            "title": "Estesa",
             "value": "(€49)"
           }
         },
@@ -47,8 +47,8 @@
           "settings": {
             "image": "shopify://shop_images/istockphoto-1135795506-612x612.jpg",
             "icon": "check",
-            "free_text": "FREE",
-            "title": "Soddisfazione GARANTITA",
+            "free_text": "GARANTITA",
+            "title": "Soddisfazione",
             "value": "(€29)"
           }
         },
