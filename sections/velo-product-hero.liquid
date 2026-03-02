@@ -10,7 +10,11 @@
       {% if current_product != blank and current_product.media.size > 0 %}
         <div class="velo-media-grid">
           {% for media in current_product.media %}
-            <div class="velo-media-item {% if forloop.first %}velo-media-item--featured{% endif %}" data-media-id="{{ media.id }}">
+            {% if forloop.index == 4 %}
+              <div class="velo-media-slider">
+            {% endif %}
+            
+            <div class="velo-media-item {% if forloop.first %}velo-media-item--featured{% endif %} {% if forloop.index >= 4 %}velo-slider-slide{% endif %}" data-media-id="{{ media.id }}">
               {% case media.media_type %}
                 {% when 'image' %}
                   <img
@@ -36,6 +40,10 @@
                   </div>
               {% endcase %}
             </div>
+            
+            {% if forloop.last and forloop.index >= 4 %}
+              </div>
+            {% endif %}
           {% endfor %}
         </div>
       {% else %}
@@ -101,7 +109,7 @@
 
         <!-- Product Description / Bullets -->
         <div class="velo-description-text">
-          {{ section.settings.hero_desc | default: "The only chair that supports your body's natural need for movement - working with your body, not against it." }}
+          {{ section.settings.hero_desc | default: "The only topper that supports your body's natural need for absolute comfort - working with your body, not against it." }}
         </div>
         
         {% if section.settings.bullet_1 != blank or section.settings.bullet_2 != blank or section.settings.bullet_3 != blank or section.settings.bullet_4 != blank %}
@@ -314,7 +322,7 @@
       "type": "textarea",
       "id": "hero_desc",
       "label": "Product Description Snippet",
-      "default": "The only chair that supports your body's natural need for movement - working with your body, not against it."
+      "default": "The only topper that supports your body's natural need for absolute comfort - working with your body, not against it."
     },
     {
       "type": "text",

@@ -48,7 +48,7 @@
           "type": "accordion",
           "settings": {
             "title": "Benefits",
-            "content": "<p>VELO is made for people who need more than a standard chair. Experience reduced fatigue, better posture, and improved focus through natural movement support.</p>"
+            "content": "<p>Il topper è perfetto per chi cerca un vero comfort e non vuole accontentarsi. Prova una riduzione dell'affaticamento e un riposo migliore grazie al nostro design innovativo.</p>"
           }
         },
         "acc_assemble": {
@@ -107,7 +107,7 @@
         "atc_text": "ADD TO CART +",
         "trust_1": "Ships Today",
         "trust_2": "90-Day Easy Returns",
-        "sub_desc": "<p>VELO is made for people who need more than a standard chair. It's ideal for remote workers, creatives, people with ADHD, and anyone who feels 'stuck' in their seat. <a href=\"#\">Read More</a></p>"
+        "sub_desc": "<p>Il topper è incredibilmente morbido. Perfetto per chi soffre di dolori. <a href=\"#\">Scopri di Più</a></p>"
       }
     },
     "velo_body_built": {
@@ -229,7 +229,7 @@
         "inc_1": {
           "type": "item",
           "settings": {
-            "title": "VELO Freedom Chair",
+            "title": "Topper Materasso Premium",
             "original_price": "$600.00",
             "final_price": "$397",
             "is_free": false
@@ -256,7 +256,7 @@
         "inc_4": {
           "type": "item",
           "settings": {
-            "title": "Transparent Chair Mat",
+            "title": "Federe Premium",
             "original_price": "$49.00",
             "final_price": "FREE",
             "is_free": true
