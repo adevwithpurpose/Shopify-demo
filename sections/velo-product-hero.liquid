@@ -14,15 +14,15 @@
               {% case media.media_type %}
                 {% when 'image' %}
                   <img
-                    src="{{ media | image_url: width: 800 }}"
+                    src="{{ media | image_url: width: 600 }}"
                     alt="{{ media.alt | escape }}"
                     loading="{% if forloop.first %}eager{% else %}lazy{% endif %}"
                     width="{{ media.width }}"
                     height="{{ media.height }}"
                     srcset="
-                      {{ media | image_url: width: 400 }} 400w,
-                      {{ media | image_url: width: 600 }} 600w,
-                      {{ media | image_url: width: 800 }} 800w
+                      {{ media | image_url: width: 300 }} 300w,
+                      {{ media | image_url: width: 450 }} 450w,
+                      {{ media | image_url: width: 600 }} 600w
                     "
                     sizes="(min-width: 990px) 50vw, 100vw"
                   >
@@ -32,28 +32,16 @@
                   </div>
                 {% when 'external_video' %}
                   <div class="velo-video-wrapper">
-                    {{ media | external_video_url: autoplay: true, loop: true, mute: true | external_video_tag }}
+                    {{ media | external_video_url: autoplay: true, loop: true, mute: true, playlist: media.external_id | external_video_tag }}
                   </div>
               {% endcase %}
             </div>
           {% endfor %}
         </div>
       {% else %}
-        <!-- Placeholder images when no product selected (Demo Setup) -->
-        <div class="velo-media-grid">
-          {% for i in (1..8) %}
-            {% capture image_key %}image_{{ i }}{% endcapture %}
-            {% assign demo_image = section.settings[image_key] %}
-            {% if demo_image != blank or forloop.index <= 3 %}
-              <div class="velo-media-item {% if forloop.first %}velo-media-item--featured{% endif %}">
-                {% if demo_image != blank %}
-                  <img src="{{ demo_image | image_url: width: 800 }}" alt="{{ demo_image.alt }}" width="800" height="800" loading="{% if forloop.first %}eager{% else %}lazy{% endif %}" />
-                {% else %}
-                  <img src="https://images.unsplash.com/photo-1505693314120-0d443867891c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Mattress Topper Placeholder" width="800" height="800" loading="lazy" />
-                {% endif %}
-              </div>
-            {% endif %}
-          {% endfor %}
+        <!-- No product selected in Customizer -->
+        <div class="velo-media-placeholder" style="aspect-ratio:1/1;display:flex;align-items:center;justify-content:center;background:#f5f5f5;border-radius:8px;">
+          <p style="color:#999;font-size:1.4rem;">Seleziona un prodotto nelle impostazioni della sezione.</p>
         </div>
       {% endif %}
     </div>
@@ -87,31 +75,21 @@
         {% endif %}
 
         <!-- Product Title -->
-        <h1 class="velo-product-title">
-          {% if current_product != blank %}
-            {{ current_product.title }}
-          {% else %}
-            {{ section.settings.title_fallback | default: 'West Month Mattress Topper' }}
-          {% endif %}
-        </h1>
+        <h1 class="velo-product-title">{{ current_product.title }}</h1>
 
         <!-- Pricing -->
-        <div class="velo-pricing">
-          {% if current_product != blank %}
-            {% if current_product.compare_at_price > current_product.price %}
-              <span class="velo-price-compare">{{ current_product.compare_at_price | money }}</span>
-            {% endif %}
+        {% if current_product.compare_at_price > current_product.price %}
+          <div class="velo-pricing">
+            <span class="velo-price-compare">{{ current_product.compare_at_price | money }}</span>
             <span class="velo-price-current" id="veloPrice-{{ section.id }}">{{ current_product.price | money }}</span>
-            {% if current_product.compare_at_price > current_product.price %}
-              {%- assign savings = current_product.compare_at_price | minus: current_product.price -%}
-              <span class="velo-save-badge">SAVE {{ savings | money }}</span>
-            {% endif %}
-          {% else %}
-            <span class="velo-price-compare">{{ section.settings.compare_price_fallback | default: '$600.00' }}</span>
-            <span class="velo-price-current">{{ section.settings.price_fallback | default: '$397.00' }}</span>
-            <span class="velo-save-badge">SAVE {{ section.settings.save_amount_fallback | default: '$203' }}</span>
-          {% endif %}
-        </div>
+            {%- assign save_pct = current_product.compare_at_price | minus: current_product.price | times: 100 | divided_by: current_product.compare_at_price -%}
+            <span class="velo-save-badge">SALVA {{ save_pct }}%</span>
+          </div>
+        {% else %}
+          <div class="velo-pricing">
+            <span class="velo-price-current" id="veloPrice-{{ section.id }}">{{ current_product.price | money }}</span>
+          </div>
+        {% endif %}
 
         <!-- Trust Note -->
         {% if section.settings.trust_note != blank %}
@@ -156,10 +134,18 @@
                   <div class="velo-option-group">
                     <label class="velo-option-label">{{ option.name }}: <span id="veloOptionLabel-{{ section.id }}-{{ forloop.index0 }}">{{ option.selected_value }}</span></label>
                     <div class="velo-option-values">
+                      {% assign opt_idx = forloop.index0 %}
                       {% for value in option.values %}
-                        <label class="velo-swatch {% if option.selected_value == value %}velo-swatch--active{% endif %}" data-color="{{ value | escape }}">
-                          <input type="radio" name="option-{{ option.name | handleize }}" value="{{ value | escape }}" {% if option.selected_value == value %}checked{% endif %} data-option-index="{{ forloop.parentloop.index0 }}" class="velo-swatch-input">
-                          <span class="velo-swatch-inner"></span>
+                        {%- assign swatch_image = blank -%}
+                        {%- for variant in current_product.variants -%}
+                          {%- if variant.options[opt_idx] == value and variant.image -%}
+                            {%- assign swatch_image = variant.image -%}
+                            {%- break -%}
+                          {%- endif -%}
+                        {%- endfor -%}
+                        <label class="velo-swatch {% if option.selected_value == value %}velo-swatch--active{% endif %}" data-color="{{ value | escape }}" title="{{ value | escape }}">
+                          <input type="radio" name="option-{{ option.name | handleize }}" value="{{ value | escape }}" {% if option.selected_value == value %}checked{% endif %} data-option-index="{{ opt_idx }}" class="velo-swatch-input">
+                          <span class="velo-swatch-inner" style="{% if swatch_image %}background-image: url('{{ swatch_image | image_url: width: 100 }}'); background-size: cover; background-position: center;{% else %}background-color: {{ value | handle }};{% endif %}"></span>
                         </label>
                       {% endfor %}
                     </div>
@@ -176,8 +162,15 @@
                 <div class="velo-hero-gifts-grid">
                   {% for block in gift_blocks %}
                     <div class="velo-hero-gift-card" {{ block.shopify_attributes }}>
-                      <div class="velo-hero-gift-image">{% render 'velo-icons', icon: block.settings.icon %}</div>
-                      <div class="velo-hero-gift-title"><strong>FREE</strong> {{ block.settings.title }}</div>
+                      <div class="velo-hero-gift-badge">{{ block.settings.value }} {{ block.settings.free_text | default: 'FREE' }}</div>
+                      <div class="velo-hero-gift-image-box">
+                        {% if block.settings.image != blank %}
+                          <img src="{{ block.settings.image | image_url: width: 150 }}" alt="{{ block.settings.title }}" width="150" loading="lazy">
+                        {% else %}
+                          {% render 'velo-icons', icon: block.settings.icon %}
+                        {% endif %}
+                      </div>
+                      <div class="velo-hero-gift-title"><strong>{{ block.settings.free_text | default: 'FREE' }}</strong> {{ block.settings.title }}</div>
                     </div>
                   {% endfor %}
                 </div>
@@ -271,50 +264,6 @@
     },
     {
       "type": "header",
-      "content": "Demo Images (used if no product selected)"
-    },
-    {
-      "type": "image_picker",
-      "id": "image_1",
-      "label": "Demo Image 1 (Featured)"
-    },
-    {
-      "type": "image_picker",
-      "id": "image_2",
-      "label": "Demo Image 2"
-    },
-    {
-      "type": "image_picker",
-      "id": "image_3",
-      "label": "Demo Image 3"
-    },
-    {
-      "type": "image_picker",
-      "id": "image_4",
-      "label": "Demo Image 4"
-    },
-    {
-      "type": "image_picker",
-      "id": "image_5",
-      "label": "Demo Image 5"
-    },
-    {
-      "type": "image_picker",
-      "id": "image_6",
-      "label": "Demo Image 6"
-    },
-    {
-      "type": "image_picker",
-      "id": "image_7",
-      "label": "Demo Image 7"
-    },
-    {
-      "type": "image_picker",
-      "id": "image_8",
-      "label": "Demo Image 8"
-    },
-    {
-      "type": "header",
       "content": "Badges"
     },
     {
@@ -350,39 +299,6 @@
       "id": "review_count",
       "label": "Review count",
       "default": "140"
-    },
-    {
-      "type": "header",
-      "content": "Fallback Text (no product selected)"
-    },
-    {
-      "type": "text",
-      "id": "title_fallback",
-      "label": "Product Title Fallback",
-      "default": "West Month Mattress Topper"
-    },
-    {
-      "type": "url",
-      "id": "product_url",
-      "label": "Product URL (for homepage ATC button)"
-    },
-    {
-      "type": "text",
-      "id": "compare_price_fallback",
-      "label": "Compare Price Fallback",
-      "default": "$600.00"
-    },
-    {
-      "type": "text",
-      "id": "price_fallback",
-      "label": "Sale Price Fallback",
-      "default": "$397.00"
-    },
-    {
-      "type": "text",
-      "id": "save_amount_fallback",
-      "label": "Save Amount Fallback",
-      "default": "$203"
     },
     {
       "type": "header",
@@ -477,6 +393,11 @@
       "name": "Free Gift",
       "settings": [
         {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Custom Image (Overrides Icon)"
+        },
+        {
           "type": "select",
           "id": "icon",
           "label": "Icon",
@@ -504,6 +425,12 @@
             { "value": "sliders", "label": "Sliders / Settings" }
           ],
           "default": "package"
+        },
+        {
+          "type": "text",
+          "id": "free_text",
+          "label": "'Free' word override",
+          "default": "FREE"
         },
         {
           "type": "text",
