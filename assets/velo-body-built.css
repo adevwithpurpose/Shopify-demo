@@ -57,11 +57,13 @@
     width: 100%;
 }
 
-.velo-bb-image-col img {
+.velo-bb-image-col img,
+.velo-bb-product-video {
     width: 100%;
     height: auto;
     border-radius: 12px;
     display: block;
+    object-fit: cover;
 }
 
 .velo-bb-item {
