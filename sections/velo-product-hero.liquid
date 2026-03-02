@@ -73,15 +73,16 @@
 
         <!-- Review Stars -->
         {% if section.settings.show_reviews %}
+          {%- assign rating_num = section.settings.rating_value | times: 1.0 -%}
           <div class="velo-rating">
             <div class="velo-stars">
               {% for i in (1..5) %}
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="{% if i <= section.settings.rating_value %}#DDA75B{% else %}#E0E0E0{% endif %}">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="{% if i <= rating_num %}#DDA75B{% else %}#E0E0E0{% endif %}">
                   <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
                 </svg>
               {% endfor %}
             </div>
-            <span class="velo-rating-text">{{ section.settings.rating_value }} | {{ section.settings.review_count }} reviews</span>
+            <span class="velo-rating-text">{{ section.settings.rating_value }} | {{ section.settings.review_count }} recensioni</span>
           </div>
         {% endif %}
 
@@ -182,9 +183,7 @@
                 </div>
               {% endif %}
               {% if section.settings.urgency_text != blank %}
-                {%- assign today_day = 'now' | date: "%d" -%}
-                {%- assign today_month = 'now' | date: "%B" -%}
-                {%- assign today_date_str = "<strong>" | append: today_day | append: " " | append: today_month | append: "</strong>" -%}
+                {%- assign today_date_str = 'now' | date: "%d %B" -%}
                 <div class="velo-urgency-pill">
                   <span class="velo-urgency-dot"></span>
                   <span>{{ section.settings.urgency_text | replace: '[date]', today_date_str }}</span>
@@ -216,9 +215,7 @@
               </div>
             {% endif %}
             {% if section.settings.urgency_text != blank %}
-              {%- assign today_day = 'now' | date: "%d" -%}
-              {%- assign today_month = 'now' | date: "%B" -%}
-              {%- assign today_date_str = "<strong>" | append: today_day | append: " " | append: today_month | append: "</strong>" -%}
+              {%- assign today_date_str = 'now' | date: "%d %B" -%}
               <div class="velo-urgency-pill">
                 <span class="velo-urgency-dot"></span>
                 <span>{{ section.settings.urgency_text | replace: '[date]', today_date_str }}</span>
@@ -471,8 +468,7 @@
     {
       "type": "richtext",
       "id": "sub_desc",
-      "label": "Description below trust symbols",
-      "default": "<p>VELO is made for people who need more than a standard chair. It's ideal for remote workers, creatives, people with ADHD, and... <a href=\"#\">Read More</a></p>"
+      "label": "Description below trust symbols"
     }
   ],
   "blocks": [
