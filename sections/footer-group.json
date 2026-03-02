@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "name": "t:sections.footer.name",
   "type": "footer",
@@ -7,8 +16,6 @@
       "settings": {
         "color_scheme": "scheme-3",
         "full_width": true,
-        "heading": "Subscribe to Our Newsletter",
-        "paragraph": "Get a chance to win $100 in cashback",
         "padding_top": 40,
         "padding_bottom": 40
       }
@@ -26,8 +33,8 @@
         "footer-info": {
           "type": "text",
           "settings": {
-            "heading": "About VELO",
-            "subtext": "<p>Designing freedom with every move. VELO supports your body's natural need for movement — working with your body, not against it.</p>"
+            "heading": "Chi è Amanotte",
+            "subtext": "<p>Progettiamo un comfort di lusso per il tuo sonno.<br/>Amanotte nasce con l'intenzione di tornare a farti amare la notte per ciò per cui esiste... Dormire. </p>"
           }
         }
       },
@@ -38,6 +45,8 @@
       "settings": {
         "color_scheme": "scheme-3",
         "newsletter_enable": false,
+        "newsletter_heading": "Subscribe to our emails",
+        "enable_follow_on_shop": true,
         "show_social": true,
         "enable_country_selector": false,
         "enable_language_selector": false,

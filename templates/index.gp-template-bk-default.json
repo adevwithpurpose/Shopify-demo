@@ -1,0 +1,591 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "order": [
+    "velo_hero",
+    "velo_rich_text",
+    "velo_trust",
+    "velo_features",
+    "velo_body_built",
+    "velo_comparison",
+    "velo_how_to",
+    "velo_details",
+    "velo_risk_free",
+    "velo_testimonials",
+    "velo_included",
+    "velo_faq",
+    "velo_sticky_atc"
+  ],
+  "sections": {
+    "velo_body_built": {
+      "block_order": [
+        "p1",
+        "p2",
+        "p3",
+        "p4"
+      ],
+      "blocks": {
+        "p1": {
+          "settings": {
+            "description": "<p>Reinforced corners keep the topper locked in place.</p>",
+            "icon": "lock",
+            "title": "Stays Secure All Night"
+          },
+          "type": "point"
+        },
+        "p2": {
+          "settings": {
+            "description": "<p>1000GSM padding forms exactly to your body.</p>",
+            "icon": "check",
+            "title": "Effortless Cloud Comfort"
+          },
+          "type": "point"
+        },
+        "p3": {
+          "settings": {
+            "description": "<p>No memory foam heat traps - sleeps cool.</p>",
+            "icon": "thermometer",
+            "title": "Temperature Control"
+          },
+          "type": "point"
+        },
+        "p4": {
+          "settings": {
+            "description": "<p>Deep pocket skirts fit 8-21\" effortlessly.</p>",
+            "icon": "sliders",
+            "title": "Fits Any Mattress Depth"
+          },
+          "type": "point"
+        }
+      },
+      "settings": {
+        "heading_bold": "Actually Sleep",
+        "heading_prefix": "Built for How You",
+        "subheading": "Supporting your natural resting positions"
+      },
+      "type": "velo-body-built"
+    },
+    "velo_comparison": {
+      "block_order": [
+        "feat_1",
+        "feat_2",
+        "feat_3",
+        "feat_4",
+        "feat_5",
+        "feat_6"
+      ],
+      "blocks": {
+        "feat_1": {
+          "settings": {
+            "title": "3X Thicker Padding"
+          },
+          "type": "feature"
+        },
+        "feat_2": {
+          "settings": {
+            "title": "Stays Cool All Night"
+          },
+          "type": "feature"
+        },
+        "feat_3": {
+          "settings": {
+            "title": "Machine Washable"
+          },
+          "type": "feature"
+        },
+        "feat_4": {
+          "settings": {
+            "title": "Fits Deep Mattresses"
+          },
+          "type": "feature"
+        },
+        "feat_5": {
+          "settings": {
+            "title": "Pain Targeting Comfort"
+          },
+          "type": "feature"
+        },
+        "feat_6": {
+          "settings": {
+            "title": "Won't Compress or Flatten"
+          },
+          "type": "feature"
+        }
+      },
+      "settings": {
+        "full_width": true,
+        "heading_bold": "1000GSM",
+        "heading_italic": "Luxury",
+        "heading_light": "Standard Toppers vs",
+        "image_position": "left",
+        "subheading": "The West Month Topper supports your natural sleep positions, keeping you cool and preventing stiffness."
+      },
+      "type": "velo-comparison"
+    },
+    "velo_details": {
+      "block_order": [
+        "d1",
+        "d2",
+        "d3"
+      ],
+      "blocks": {
+        "d1": {
+          "settings": {
+            "icon": "move",
+            "title": "1000GSM Luxury Fill"
+          },
+          "type": "detail"
+        },
+        "d2": {
+          "settings": {
+            "icon": "thermometer",
+            "title": "Cooling Quilt Pattern"
+          },
+          "type": "detail"
+        },
+        "d3": {
+          "settings": {
+            "icon": "sliders",
+            "title": "Deep Skirt Fit (8-21\")"
+          },
+          "type": "detail"
+        }
+      },
+      "settings": {},
+      "type": "velo-details-grid"
+    },
+    "velo_faq": {
+      "block_order": [
+        "f1",
+        "f2",
+        "f3",
+        "f4",
+        "f5"
+      ],
+      "blocks": {
+        "f1": {
+          "settings": {
+            "content": "<p>Yes, absolutely. It is 100% machine washable for easy care.</p>",
+            "title": "Is this machine washable?"
+          },
+          "type": "faq"
+        },
+        "f2": {
+          "settings": {
+            "content": "<p>Yes, the skirt stretches to accommodate mattresses from 8 to 21 inches deep.</p>",
+            "title": "Will it fit my deep mattress?"
+          },
+          "type": "faq"
+        },
+        "f3": {
+          "settings": {
+            "content": "<p>Yes! We offer a 30-day money-back guarantee.</p>",
+            "title": "Can I return it if I don't like it?"
+          },
+          "type": "faq"
+        },
+        "f4": {
+          "settings": {
+            "content": "<p>Not at all! Unlike traditional memory foam that traps heat, our 1000GSM topper features a breathable quilted design that promotes air circulation, keeping you cool and comfortable all night long.</p>",
+            "title": "Will it make me sweat at night?"
+          },
+          "type": "faq"
+        },
+        "f5": {
+          "settings": {
+            "content": "<p>It provides about 2 inches of ultra-plush, hotel-quality loft. Because of the high density (1000GSM), it won't flatten out quickly like cheaper alternatives.</p>",
+            "title": "How thick is the 1000GSM padding?"
+          },
+          "type": "faq"
+        }
+      },
+      "settings": {},
+      "type": "velo-faq"
+    },
+    "velo_features": {
+      "block_order": [
+        "card_1",
+        "card_2",
+        "card_3",
+        "card_4",
+        "card_5",
+        "card_6"
+      ],
+      "blocks": {
+        "card_1": {
+          "settings": {
+            "icon": "thermometer",
+            "text": "<p>Breathable design regulates temperature.</p>",
+            "title": "Hot Sleepers"
+          },
+          "type": "card"
+        },
+        "card_2": {
+          "settings": {
+            "icon": "bandage",
+            "text": "<p>Provides instant pressure point relief.</p>",
+            "title": "Back & Hip Pain"
+          },
+          "type": "card"
+        },
+        "card_3": {
+          "settings": {
+            "icon": "sparkles",
+            "text": "<p>Adds luxury hotel plushness instantly.</p>",
+            "title": "Old Mattress Owners"
+          },
+          "type": "card"
+        },
+        "card_4": {
+          "settings": {
+            "icon": "bed",
+            "text": "<p>Reduces tossing and turning.</p>",
+            "title": "Restless Sleepers"
+          },
+          "type": "card"
+        },
+        "card_5": {
+          "settings": {
+            "icon": "clock",
+            "text": "<p>Plush support for late night reading.</p>",
+            "title": "Deep Stretch Readers"
+          },
+          "type": "card"
+        },
+        "card_6": {
+          "settings": {
+            "icon": "check",
+            "text": "<p>Wake up feeling totally energized.</p>",
+            "title": "Everyone"
+          },
+          "type": "card"
+        }
+      },
+      "settings": {
+        "columns": "3",
+        "subheading": "Designed for people who want to wake up refreshed (and pain-free)"
+      },
+      "type": "velo-feature-grid"
+    },
+    "velo_hero": {
+      "block_order": [
+        "gift_1",
+        "gift_2",
+        "gift_3",
+        "gift_4",
+        "acc_benefits",
+        "acc_assemble",
+        "acc_specs",
+        "acc_shipping",
+        "acc_contact"
+      ],
+      "blocks": {
+        "acc_assemble": {
+          "settings": {
+            "content": "<p>Installation takes less than a minute. Simply stretch the reinforced elastic corners over your mattress. Fits any depth from 8-21 inches securely.</p>",
+            "title": "How To Fit"
+          },
+          "type": "accordion"
+        },
+        "acc_benefits": {
+          "settings": {
+            "content": "<p>Experience ultimate comfort with our 1000GSM mattress topper. Reduces tossing and turning, provides immediate pressure point relief, and keeps you cool all night long.</p>",
+            "title": "Benefits"
+          },
+          "type": "accordion"
+        },
+        "acc_contact": {
+          "settings": {
+            "content": "<p>Have a question? Email us at support@velochair.com and we'll reply within 24 hours (Mon-Fri, 9am-5pm EST).</p>",
+            "title": "Contact Us"
+          },
+          "type": "accordion"
+        },
+        "acc_shipping": {
+          "settings": {
+            "content": "<ul><li>Free US Shipping — Orders arrive in 2-4 business days.</li><li>30-Day Money Back Guarantee.</li><li>Premium Quality included.</li></ul>",
+            "title": "Shipping & Returns"
+          },
+          "type": "accordion"
+        },
+        "acc_specs": {
+          "settings": {
+            "content": "<p><strong>Filling:</strong> 1000GSM Premium Padding<br/><strong>Fit:</strong> 8-21 inch deep pocket skirts<br/><strong>Care:</strong> 100% Machine Washable<br/><strong>Cooling:</strong> Breathable quilted air movement design</p>",
+            "title": "Specifications"
+          },
+          "type": "accordion"
+        },
+        "gift_1": {
+          "settings": {
+            "icon": "truck",
+            "title": "Shipping",
+            "value": "($14)"
+          },
+          "type": "gift"
+        },
+        "gift_2": {
+          "settings": {
+            "icon": "gift",
+            "title": "Free Pillowcases",
+            "value": "($23)"
+          },
+          "type": "gift"
+        },
+        "gift_3": {
+          "settings": {
+            "icon": "shield",
+            "title": "Extended Warranty",
+            "value": "($49)"
+          },
+          "type": "gift"
+        },
+        "gift_4": {
+          "settings": {
+            "icon": "shield",
+            "title": "Guarantee",
+            "value": "($29)"
+          },
+          "type": "gift"
+        }
+      },
+      "settings": {
+        "atc_text": "ADD TO CART +",
+        "badge_1": "BESTSELLER",
+        "badge_2": "#1 LUXURY MATTRESS TOPPER",
+        "bullet_1": "Comfort: 3X thicker than standard toppers",
+        "bullet_2": "Cooling: Breathable design prevents night sweats",
+        "bullet_3": "Secure: Deep pocket fits mattresses 8-21\"",
+        "compare_price_fallback": "$199.00",
+        "gifts_heading": "Limited Sale! Unlock FREE Gifts With Your Order",
+        "hero_desc": "1000GSM ultra-thick padding, breathable quilted design, and deep-pocket fit. Transform your sleep quality starting tonight.",
+        "price_fallback": "$89.99",
+        "product_url": "/products/west-month-luxury-topper",
+        "rating_value": 5,
+        "review_count": "14,200",
+        "save_amount_fallback": "$109.01",
+        "show_reviews": true,
+        "sub_desc": "<p>West Month is made for people who need more than a standard topper. It is ideal for hot sleepers, back pain sufferers, and anyone wanting hotel luxury... <a href=\"#\">Read More</a></p>",
+        "title_fallback": "West Month Luxury Mattress Topper",
+        "trust_1": "Ships Today",
+        "trust_2": "90-Day Easy Returns",
+        "trust_note": "Only available at usewestmonth.com",
+        "urgency_text": "Order by [date] for guaranteed FREE Gifts"
+      },
+      "type": "velo-product-hero"
+    },
+    "velo_how_to": {
+      "block_order": [
+        "step_1",
+        "step_2",
+        "step_3"
+      ],
+      "blocks": {
+        "step_1": {
+          "settings": {
+            "text": "<p>Unbox and shake slightly to fluff the 1000GSM padding</p>",
+            "title": "Step 01"
+          },
+          "type": "step"
+        },
+        "step_2": {
+          "settings": {
+            "text": "<p>Stretch the elastic skirt over your mattress corners</p>",
+            "title": "Step 02"
+          },
+          "type": "step"
+        },
+        "step_3": {
+          "settings": {
+            "text": "<p>Put your fitted sheet over it and sleep on a cloud</p>",
+            "title": "Step 03"
+          },
+          "type": "step"
+        }
+      },
+      "settings": {
+        "heading_bold": "West Month Topper",
+        "heading_light": "How to Use The",
+        "subheading": "As easy as making your bed."
+      },
+      "type": "velo-how-to-steps"
+    },
+    "velo_included": {
+      "block_order": [
+        "i1",
+        "i2",
+        "i3",
+        "i4",
+        "i5"
+      ],
+      "blocks": {
+        "i1": {
+          "settings": {
+            "final_price": "$89.99",
+            "is_free": false,
+            "original_price": "$199.00",
+            "title": "West Month Mattress Topper"
+          },
+          "type": "item"
+        },
+        "i2": {
+          "settings": {
+            "is_free": true,
+            "original_price": "$14.00",
+            "title": "Fast U.S. Shipping"
+          },
+          "type": "item"
+        },
+        "i3": {
+          "settings": {
+            "is_free": true,
+            "original_price": "$23.00",
+            "title": "2x Premium Pillowcases"
+          },
+          "type": "item"
+        },
+        "i4": {
+          "settings": {
+            "is_free": true,
+            "original_price": "$49.00",
+            "title": "Night Sleep Guide"
+          },
+          "type": "item"
+        },
+        "i5": {
+          "settings": {
+            "is_free": true,
+            "original_price": "$29.00",
+            "title": "3-Year Warranty"
+          },
+          "type": "item"
+        }
+      },
+      "settings": {
+        "annotation_1": "FREE Pillowcases",
+        "annotation_2": "Night Sleep Guide",
+        "badge_text": "FREE Gifts Included ($115 value)",
+        "cta_text": "SHOP NOW",
+        "free_gifts_count": "4",
+        "heading": "What's Included with",
+        "heading_bold": "Your West Month Topper",
+        "order_today_label": "IF YOU ORDER TODAY:",
+        "savings_label": "Savings",
+        "savings_value": "You Save $203",
+        "total_label": "Subtotal",
+        "total_price": "$89.99"
+      },
+      "type": "velo-whats-included"
+    },
+    "velo_rich_text": {
+      "block_order": [
+        "heading",
+        "text"
+      ],
+      "blocks": {
+        "heading": {
+          "settings": {
+            "heading_bold": "Better Sleep",
+            "heading_light": "Ultimate Comfort ="
+          },
+          "type": "heading"
+        },
+        "text": {
+          "settings": {
+            "text": "<p>West Month effortlessly adapts to your body, improves comfort, and regulates temperature throughout the night.</p>"
+          },
+          "type": "text"
+        }
+      },
+      "settings": {
+        "padding_bottom": 40,
+        "padding_top": 80
+      },
+      "type": "velo-rich-text"
+    },
+    "velo_risk_free": {
+      "settings": {},
+      "type": "velo-risk-free-card"
+    },
+    "velo_sticky_atc": {
+      "settings": {
+        "btn_text": "CLAIM OFFER +",
+        "show_for_demo": true
+      },
+      "type": "velo-sticky-atc"
+    },
+    "velo_testimonials": {
+      "block_order": [
+        "t1",
+        "t2",
+        "t3"
+      ],
+      "blocks": {
+        "t1": {
+          "settings": {
+            "author_name": "Sarah J.",
+            "quote": "The West Month topper changed how I sleep. I no longer wake up with hip pain."
+          },
+          "type": "testimonial"
+        },
+        "t2": {
+          "settings": {
+            "author_name": "Michael R.",
+            "quote": "I've tried memory foam, but it was too hot. This is perfectly plush and sleeps extremely cool."
+          },
+          "type": "testimonial"
+        },
+        "t3": {
+          "settings": {
+            "author_name": "Emily L.",
+            "quote": "Perfect for my old mattress! Saved me $1000 from having to buy a completely new bed."
+          },
+          "type": "testimonial"
+        }
+      },
+      "settings": {},
+      "type": "velo-testimonials"
+    },
+    "velo_trust": {
+      "block_order": [
+        "t1",
+        "t2",
+        "t3"
+      ],
+      "blocks": {
+        "t1": {
+          "settings": {
+            "icon": "truck",
+            "subtitle": "2-4 day delivery",
+            "title": "FREE U.S. Shipping"
+          },
+          "type": "trust"
+        },
+        "t2": {
+          "settings": {
+            "icon": "refresh",
+            "subtitle": "Sleep on it first",
+            "title": "90-Day Easy Returns"
+          },
+          "type": "trust"
+        },
+        "t3": {
+          "settings": {
+            "icon": "shield",
+            "subtitle": "1000GSM Construction",
+            "title": "Premium Quality"
+          },
+          "type": "trust"
+        }
+      },
+      "settings": {},
+      "type": "velo-trust-strip"
+    }
+  }
+}

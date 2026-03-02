@@ -1,0 +1,26 @@
+
+  {%- assign options_json = '' -%}
+  {%- for option in product.options_with_values -%}
+    {%- for value in option.values -%}
+      {%- capture value_json -%}
+        "{{ value.id | escape }}": {
+          "checked": {{ value.selected | json }},
+          "available": {{ value.available | json }},
+          "name": {{ value.name | json }}
+        }
+      {%- endcapture -%}
+
+      {%- if options_json != '' -%}
+        {%- assign options_json = options_json | append: ',' | append: value_json -%}
+      {%- else -%}
+        {%- assign options_json = options_json | append: value_json -%}
+      {%- endif -%}
+    {%- endfor -%}
+  {%- endfor -%}
+
+  {%- assign options_json = '{' | append: options_json | append: '}' -%}
+
+  {
+    "currentShopifyVariant": {{ product.selected_or_first_available_variant | json }},
+    "shopifyProductOptionValues": {{ options_json | raw }}
+  }
