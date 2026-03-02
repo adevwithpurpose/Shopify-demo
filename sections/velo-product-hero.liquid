@@ -41,27 +41,19 @@
       {% else %}
         <!-- Placeholder images when no product selected (Demo Setup) -->
         <div class="velo-media-grid">
-          <div class="velo-media-item velo-media-item--featured">
-            {% if section.settings.image_1 != blank %}
-              <img src="{{ section.settings.image_1 | image_url: width: 800 }}" alt="{{ section.settings.image_1.alt }}" width="800" height="800" loading="eager" />
-            {% else %}
-              <img src="https://images.unsplash.com/photo-1505693314120-0d443867891c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Mattress Topper 1" width="800" height="800" loading="eager" />
+          {% for i in (1..8) %}
+            {% capture image_key %}image_{{ i }}{% endcapture %}
+            {% assign demo_image = section.settings[image_key] %}
+            {% if demo_image != blank or forloop.index <= 3 %}
+              <div class="velo-media-item {% if forloop.first %}velo-media-item--featured{% endif %}">
+                {% if demo_image != blank %}
+                  <img src="{{ demo_image | image_url: width: 800 }}" alt="{{ demo_image.alt }}" width="800" height="800" loading="{% if forloop.first %}eager{% else %}lazy{% endif %}" />
+                {% else %}
+                  <img src="https://images.unsplash.com/photo-1505693314120-0d443867891c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Mattress Topper Placeholder" width="800" height="800" loading="lazy" />
+                {% endif %}
+              </div>
             {% endif %}
-          </div>
-          <div class="velo-media-item">
-            {% if section.settings.image_2 != blank %}
-              <img src="{{ section.settings.image_2 | image_url: width: 400 }}" alt="{{ section.settings.image_2.alt }}" width="400" height="400" loading="lazy" />
-            {% else %}
-              <img src="https://images.unsplash.com/photo-1631679706909-1844bbd07221?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Mattress Topper 2" width="400" height="400" loading="lazy" />
-            {% endif %}
-          </div>
-          <div class="velo-media-item">
-            {% if section.settings.image_3 != blank %}
-              <img src="{{ section.settings.image_3 | image_url: width: 400 }}" alt="{{ section.settings.image_3.alt }}" width="400" height="400" loading="lazy" />
-            {% else %}
-              <img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Mattress Topper 3" width="400" height="400" loading="lazy" />
-            {% endif %}
-          </div>
+          {% endfor %}
         </div>
       {% endif %}
     </div>

@@ -15,22 +15,22 @@
 {%- endstyle -%}
 
 <div class="velo-trust-section section-{{ section.id }}-padding color-{{ section.settings.color_scheme }} gradient">
-  <div class="page-width">
-    <div class="velo-trust-grid">
-      {% for block in section.blocks %}
-        <div class="velo-trust-item" {{ block.shopify_attributes }}>
-          {% if block.settings.icon != 'none' %}
-            <span class="velo-trust-item-icon">
-              {% render 'velo-icons', icon: block.settings.icon %}
-            </span>
-          {% endif %}
-          <div class="velo-trust-item-content">
+  <div class="velo-trust-marquee">
+    <div class="velo-trust-marquee-track">
+      {% for i in (1..8) %}
+        {% for block in section.blocks %}
+          <div class="velo-trust-item" {{ block.shopify_attributes }}>
+            {% if block.settings.icon != 'none' %}
+              <span class="velo-trust-item-icon">
+                {% render 'velo-icons', icon: block.settings.icon %}
+              </span>
+            {% endif %}
             <strong class="velo-trust-item-title">{{ block.settings.title }}</strong>
             {% if block.settings.subtitle != blank %}
               <span class="velo-trust-item-subtitle">{{ block.settings.subtitle }}</span>
             {% endif %}
           </div>
-        </div>
+        {% endfor %}
       {% endfor %}
     </div>
   </div>
@@ -126,9 +126,9 @@
     {
       "name": "VELO Trust Strip",
       "blocks": [
-        { "type": "trust", "settings": { "icon": "truck", "title": "FREE U.S. Shipping", "subtitle": "24-48h delivery" } },
-        { "type": "trust", "settings": { "icon": "refresh", "title": "90 Day Easy Returns", "subtitle": "Love it, or send it back" } },
-        { "type": "trust", "settings": { "icon": "shield", "title": "3 Year Warranty", "subtitle": "Built to Last" } }
+        { "type": "trust", "settings": { "icon": "truck", "title": "Spedizione GRATUITA in Italia", "subtitle": "" } },
+        { "type": "trust", "settings": { "icon": "shield", "title": "Qualità Premium", "subtitle": "" } },
+        { "type": "trust", "settings": { "icon": "refresh", "title": "Reso facile entro 30 giorni", "subtitle": "" } }
       ]
     }
   ]

@@ -84,17 +84,17 @@
     position: relative;
 }
 
-/* ---- Buy Box ---- */
-.velo-buy-box {
-    position: relative;
-}
-
 @media screen and (min-width: 990px) {
-    .velo-buy-box {
+    .velo-media-gallery {
         position: sticky;
         top: 2rem;
         align-self: start;
     }
+}
+
+/* ---- Buy Box ---- */
+.velo-buy-box {
+    position: relative;
 }
 
 .velo-buy-box-inner {
@@ -177,8 +177,9 @@
 
 .velo-price-compare {
     font-size: 1.8rem;
-    color: #999;
+    color: #E53935;
     text-decoration: line-through;
+    opacity: 0.9;
 }
 
 .velo-price-current {
@@ -188,13 +189,15 @@
 }
 
 .velo-save-badge {
-    display: inline-block;
-    background: var(--velo-navy);
-    color: #fff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #e6f6eb;
+    color: #1a9544;
     font-size: 1.2rem;
-    font-weight: 700;
-    padding: 0.35rem 0.75rem;
-    border-radius: 4px;
+    font-weight: 800;
+    padding: 0.35rem 0.8rem;
+    border-radius: 100px;
     text-transform: uppercase;
     margin-left: 0.5rem;
 }

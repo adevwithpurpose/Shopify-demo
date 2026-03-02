@@ -14,75 +14,72 @@
     background: #fff;
 }
 
-.velo-trust-grid {
+.velo-trust-marquee {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
     display: flex;
-    justify-content: center;
+    white-space: nowrap;
+}
+
+.velo-trust-marquee-track {
+    display: flex;
     align-items: center;
-    gap: 5rem;
-    flex-wrap: wrap;
+    gap: 4rem;
+    animation: velo-marquee 25s linear infinite;
+    padding-right: 4rem;
+    /* Match gap */
+}
+
+@keyframes velo-marquee {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
 }
 
 .velo-trust-item {
     display: flex;
     align-items: center;
-    gap: 1.5rem;
+    gap: 1rem;
     text-align: left;
+    flex-shrink: 0;
 }
 
 .velo-trust-item-icon {
-    font-size: 2.8rem;
-    color: var(--velo-navy);
+    color: #fff;
     display: flex;
     align-items: center;
 }
 
 .velo-trust-item-icon svg {
-    width: 32px;
-    height: 32px;
-    stroke-width: 2.5;
-}
-
-.velo-trust-item-content {
-    display: flex;
-    flex-direction: column;
+    width: 20px;
+    height: 20px;
+    stroke-width: 2;
 }
 
 .velo-trust-item-title {
-    font-size: 1.6rem;
-    font-weight: 800;
-    color: var(--velo-navy);
-    font-family: 'Jost', sans-serif !important;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #fff;
+    font-family: inherit;
     text-transform: uppercase;
-    letter-spacing: 0.03em;
-    margin-bottom: 0.1rem;
-    line-height: 1.2;
+    letter-spacing: 0.05em;
+    margin: 0;
+    line-height: 1;
 }
 
 .velo-trust-item-subtitle {
-    font-size: 1.4rem;
-    color: #666;
-    font-weight: 500;
+    display: none;
 }
 
-@media screen and (max-width: 989px) {
-    .velo-trust-grid {
-        gap: 3rem;
-    }
-}
-
-@media screen and (max-width: 749px) {
-    .velo-trust-grid {
-        flex-direction: column;
-        gap: 2rem;
-    }
-
-    .velo-trust-item {
-        text-align: center;
-        flex-direction: column;
-        gap: 0.5rem;
-    }
-
-    .velo-trust-item-content {
-        align-items: center;
-    }
+/* Base override for section background */
+.velo-trust-section {
+    padding: 1.5rem 0;
+    background: #1A335D !important;
+    /* Dark Navy to match client */
+    border: none;
 }
