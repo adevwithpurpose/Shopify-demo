@@ -24,7 +24,7 @@
           "type": "gift",
           "settings": {
             "icon": "gift",
-            "title": "Free Pillowcases",
+            "title": "Pillowcases",
             "value": "($23)"
           }
         },
@@ -263,7 +263,7 @@
           "settings": {
             "icon": "lock",
             "title": "Stays Secure All Night",
-            "description": "<p>Reinforced corners keep the topper locked in place.</p>"
+            "description": "Reinforced corners keep the topper locked in place."
           }
         },
         "p2": {
