@@ -25,6 +25,21 @@
     animation: stickyFloat 4s ease-in-out infinite;
 }
 
+/* Fix footer overlap: add room at the bottom of the page */
+:root {
+    --sticky-atc-height: 110px;
+}
+
+body.sticky-atc-active {
+    padding-bottom: var(--sticky-atc-height);
+}
+
+@media screen and (max-width: 749px) {
+    body.sticky-atc-active {
+        padding-bottom: calc(var(--sticky-atc-height) + 20px);
+    }
+}
+
 @keyframes stickyFloat {
 
     0%,

@@ -24,13 +24,16 @@ document.addEventListener('DOMContentLoaded', function () {
                 if (entry.isIntersecting) {
                     // Main ATC is visible, hide sticky
                     stickyAtc.classList.remove('velo-sticky-atc--visible');
+                    document.body.classList.remove('sticky-atc-active');
                 } else {
                     // Main ATC is hidden (scrolled past), show sticky
                     // But only if we are below the main ATC (not above it at page top)
                     if (window.scrollY > entry.boundingClientRect.top + window.scrollY) {
                         stickyAtc.classList.add('velo-sticky-atc--visible');
+                        document.body.classList.add('sticky-atc-active');
                     } else {
                         stickyAtc.classList.remove('velo-sticky-atc--visible');
+                        document.body.classList.remove('sticky-atc-active');
                     }
                 }
             });
@@ -46,8 +49,10 @@ document.addEventListener('DOMContentLoaded', function () {
             const mainAtcRect = mainAtcBtn.getBoundingClientRect();
             if (mainAtcRect.bottom < 0) {
                 stickyAtc.classList.add('velo-sticky-atc--visible');
+                document.body.classList.add('sticky-atc-active');
             } else {
                 stickyAtc.classList.remove('velo-sticky-atc--visible');
+                document.body.classList.remove('sticky-atc-active');
             }
         });
     }
