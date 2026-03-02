@@ -416,10 +416,10 @@
 .velo-hero-gifts-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 0.5rem;
+    gap: 0.6rem;
     margin-bottom: 2rem;
     padding-top: 1.2rem;
-    max-width: 440px;
+    max-width: 500px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -430,7 +430,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0.4rem;
+    gap: 0.5rem;
 }
 
 .velo-hero-gift-badge {
@@ -474,7 +474,7 @@
 }
 
 .velo-hero-gift-title {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     color: var(--velo-navy);
     line-height: 1.2;
     font-weight: 500;
@@ -499,7 +499,7 @@
     margin-top: 1.5rem;
     margin-bottom: 2rem;
     font-weight: 500;
-    max-width: 440px;
+    max-width: 500px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -532,7 +532,7 @@
 /* ATC Button (Ultra Premium Pill) */
 .velo-atc-wrapper {
     margin-bottom: 1.5rem;
-    max-width: 440px;
+    max-width: 500px;
     margin-left: auto;
     margin-right: auto;
 }

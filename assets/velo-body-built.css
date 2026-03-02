@@ -53,7 +53,8 @@
 .velo-bb-list {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 0;
+    /* Removing gap to use padding-bottom for better consistency */
     width: 100%;
 }
 
@@ -69,7 +70,13 @@
 .velo-bb-item {
     display: flex;
     align-items: flex-start;
-    gap: 2rem;
+    gap: 2.5rem;
+    padding-bottom: 3.5rem;
+    /* Consistent spacing between points */
+}
+
+.velo-bb-item:last-child {
+    padding-bottom: 0;
 }
 
 /* Dashed circle icon container */
@@ -93,7 +100,7 @@
 }
 
 .velo-bb-content {
-    padding-top: 0.5rem;
+    padding-top: 0.4rem;
 }
 
 .velo-bb-item-title {
