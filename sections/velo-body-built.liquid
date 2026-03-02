@@ -31,23 +31,14 @@
         </div>
       </div>
       <div class="velo-bb-image-col velo-reveal">
-        {% if section.settings.side_video != blank %}
-          {{ section.settings.side_video | video_tag: image_size: '800x', autoplay: true, loop: true, muted: true, controls: false, class: 'velo-bb-product-video', playsinline: true }}
-        {% elsif section.settings.side_image != blank %}
-          <img
-            src="{{ section.settings.side_image | image_url: width: 800 }}"
-            alt="{{ section.settings.side_image.alt | default: 'VELO Life' }}"
-            loading="lazy"
-            width="800"
-          >
-        {% else %}
-          <img
-            src="https://images.unsplash.com/photo-1631679706909-1844bbd07221?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-            alt="Person sitting in VELO chair"
-            loading="lazy"
-            width="800"
-          >
-        {% endif %}
+        <video class="velo-bb-product-video" 
+               src="{{ 'compressed_video.mp4' | asset_url }}" 
+               width="800"
+               autoplay 
+               loop 
+               muted 
+               playsinline>
+        </video>
       </div>
     </div>
   </div>
