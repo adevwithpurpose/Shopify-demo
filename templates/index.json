@@ -330,7 +330,7 @@
             "svg_icon": "",
             "icon": "check",
             "title": "Machine Washable",
-            "description": "Move naturally without thinking about it"
+            "description": "Lavabile in Lavatrice"
           }
         },
         "feat_4": {
@@ -338,8 +338,8 @@
           "settings": {
             "svg_icon": "",
             "icon": "check",
-            "title": "Fits Deep Mattresses",
-            "description": "Move naturally without thinking about it"
+            "title": "Si Adatta ai Materassi Alti",
+            "description": ""
           }
         },
         "feat_5": {
