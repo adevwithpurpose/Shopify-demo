@@ -76,7 +76,7 @@
           "type": "accordion",
           "settings": {
             "title": "Contact Us",
-            "content": "<p>Have a question? Email us at support@velochair.com and we'll reply within 24 hours (Mon-Fri, 9am-5pm EST).</p>"
+            "content": "<p>Hai una domanda? Scrivici, ti risponderemo entro 24 ore lavorative.</p>"
           }
         }
       },
@@ -97,8 +97,8 @@
         "show_reviews": true,
         "rating_value": 5,
         "review_count": "14,200",
-        "trust_note": "Only available at velochair.com",
-        "hero_desc": "The only chair that supports your body's natural need for movement - working with your body, not against it.",
+        "trust_note": "Disponibile esclusivamente su Amanotte.com",
+        "hero_desc": "Il topper definitivo progettato per un riposo perfetto e per sostenere il tuo corpo per tutta la notte.",
         "bullet_1": "Energy: Prevents all-day sitting fatigue",
         "bullet_2": "Focus: Boosts concentration and clarity",
         "bullet_3": "Productivity: Increases daily work output",
