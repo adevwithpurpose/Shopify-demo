@@ -92,7 +92,7 @@
         "acc_contact"
       ],
       "settings": {
-        "product": "shopify://products/topper-materasso-premium-trapuntato",
+        "product": "topper-materasso-premium-trapuntato",
         "image_1": "shopify://shop_images/2_1060x_646209e8-9a8c-4b12-951f-2c827def31a2.webp",
         "image_2": "shopify://shop_images/3_1060x_27d5f2ec-6e7a-4912-bd7c-d7b6b36a93f6.webp",
         "image_3": "shopify://shop_images/8_1060x_ee347b1a-2570-4c85-a13d-3cf5a980cbe4.webp",
@@ -102,6 +102,7 @@
         "rating_value": "4.9",
         "review_count": "9700+",
         "title_fallback": "Topper Materasso Premium Trapuntato Extra Spesso 1000 GSM - Traspirante e Ultra Soffice",
+        "product_url": "",
         "compare_price_fallback": "€399",
         "price_fallback": "€199",
         "save_amount_fallback": "50%",
@@ -115,7 +116,8 @@
         "urgency_text": "Quasi esaurito - aggiornato all [date]",
         "atc_text": "Acquista ora",
         "trust_1": "Spedizione Rapida in tutta Italia",
-        "trust_2": "Reso facile entro 30 giorni"
+        "trust_2": "Reso facile entro 30 giorni",
+        "sub_desc": ""
       }
     },
     "velo_rich_text": {
@@ -123,7 +125,6 @@
       "blocks": {
         "heading": {
           "type": "heading",
-          "disabled": false,
           "settings": {
             "heading_light": "Comfort Assoluto =",
             "heading_bold": "Sonno Migliore"
@@ -381,6 +382,47 @@
         "full_width": true
       }
     },
+    "velo_how_to": {
+      "type": "velo-how-to-steps",
+      "blocks": {
+        "step_1": {
+          "type": "step",
+          "settings": {
+            "title": "Step 01",
+            "text": "<p>Unbox and shake slightly to fluff the 1000GSM padding</p>"
+          }
+        },
+        "step_2": {
+          "type": "step",
+          "settings": {
+            "title": "Step 02",
+            "text": "<p>Stretch the elastic skirt over your mattress corners</p>"
+          }
+        },
+        "step_3": {
+          "type": "step",
+          "settings": {
+            "title": "Step 03",
+            "text": "<p>Put your fitted sheet over it and sleep on a cloud</p>"
+          }
+        }
+      },
+      "block_order": [
+        "step_1",
+        "step_2",
+        "step_3"
+      ],
+      "disabled": true,
+      "settings": {
+        "color_scheme": "",
+        "heading_light": "Come usare il",
+        "heading_bold": "Topper Amanotte",
+        "subheading": "Semplice come rifare il letto.",
+        "full_width": false,
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    },
     "velo_details": {
       "type": "velo-details-grid",
       "blocks": {
@@ -468,6 +510,58 @@
         "padding_bottom": 80
       }
     },
+    "velo_included": {
+      "type": "velo-whats-included",
+      "blocks": {
+        "i1": {
+          "type": "item",
+          "settings": {
+            "title": "Amanotte Topper Materasso",
+            "original_price": "€399",
+            "final_price": "€199",
+            "is_free": false
+          }
+        },
+        "i2": {
+          "type": "item",
+          "settings": {
+            "title": "Spedizione Rapida",
+            "original_price": "€14.00",
+            "final_price": "$397",
+            "is_free": true
+          }
+        }
+      },
+      "block_order": [
+        "i1",
+        "i2"
+      ],
+      "disabled": true,
+      "settings": {
+        "color_scheme": "",
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "heading": "Incluso nel tuo",
+        "heading_bold": "Ordine Amanotte",
+        "order_today_label": "IF YOU ORDER TODAY:",
+        "savings_label": "Savings",
+        "savings_value": "You Save $203",
+        "total_label": "Subtotal",
+        "total_price": "$397",
+        "free_gifts_count": "4",
+        "cta_text": "SHOP NOW",
+        "cta_link": "",
+        "badge_text": "Spedizione GRATUITA Inclusa",
+        "annotation_1": "FREE Mouse Pad",
+        "anno_1_top": 25,
+        "anno_1_left": 15,
+        "anno_1_rotate": 0,
+        "annotation_2": "FREE Chair Mat",
+        "anno_2_top": 65,
+        "anno_2_left": 70,
+        "anno_2_rotate": 0
+      }
+    },
     "velo_faq": {
       "type": "velo-faq",
       "blocks": {
@@ -520,75 +614,6 @@
         "subheading": "Everything you need to know about the West Month Mattress Topper.",
         "padding_top": 80,
         "padding_bottom": 80
-      }
-    },
-    "velo_how_to": {
-      "type": "velo-how-to-steps",
-      "disabled": true,
-      "blocks": {
-        "step_1": {
-          "type": "step",
-          "settings": {
-            "title": "Step 01",
-            "text": "<p>Unbox and shake slightly to fluff the 1000GSM padding</p>"
-          }
-        },
-        "step_2": {
-          "type": "step",
-          "settings": {
-            "title": "Step 02",
-            "text": "<p>Stretch the elastic skirt over your mattress corners</p>"
-          }
-        },
-        "step_3": {
-          "type": "step",
-          "settings": {
-            "title": "Step 03",
-            "text": "<p>Put your fitted sheet over it and sleep on a cloud</p>"
-          }
-        }
-      },
-      "block_order": [
-        "step_1",
-        "step_2",
-        "step_3"
-      ],
-      "settings": {
-        "subheading": "Semplice come rifare il letto.",
-        "heading_light": "Come usare il",
-        "heading_bold": "Topper Amanotte"
-      }
-    },
-    "velo_included": {
-      "type": "velo-whats-included",
-      "disabled": true,
-      "blocks": {
-        "i1": {
-          "type": "item",
-          "settings": {
-            "title": "Amanotte Topper Materasso",
-            "original_price": "\u20ac399",
-            "final_price": "\u20ac199",
-            "is_free": false
-          }
-        },
-        "i2": {
-          "type": "item",
-          "settings": {
-            "title": "Spedizione Rapida",
-            "original_price": "\u20ac14.00",
-            "is_free": true
-          }
-        }
-      },
-      "block_order": [
-        "i1",
-        "i2"
-      ],
-      "settings": {
-        "heading": "Incluso nel tuo",
-        "heading_bold": "Ordine Amanotte",
-        "badge_text": "Spedizione GRATUITA Inclusa"
       }
     },
     "velo_sticky_atc": {
