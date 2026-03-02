@@ -329,8 +329,8 @@
           "settings": {
             "svg_icon": "",
             "icon": "check",
-            "title": "Machine Washable",
-            "description": "Lavabile in Lavatrice"
+            "title": "Lavabile in Lavatrice",
+            "description": ""
           }
         },
         "feat_4": {
@@ -347,8 +347,8 @@
           "settings": {
             "svg_icon": "",
             "icon": "check",
-            "title": "Pain Targeting Comfort",
-            "description": "Move naturally without thinking about it"
+            "title": "Comfort Mirato Contro il Dolore",
+            "description": ""
           }
         },
         "feat_6": {
@@ -356,8 +356,8 @@
           "settings": {
             "svg_icon": "",
             "icon": "check",
-            "title": "Won't Compress or Flatten",
-            "description": "Move naturally without thinking about it"
+            "title": "Non Si Comprime Né Si Appiattisce",
+            "description": ""
           }
         }
       },
