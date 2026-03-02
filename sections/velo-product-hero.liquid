@@ -189,10 +189,11 @@
                 </div>
               {% endif %}
               {% if section.settings.urgency_text != blank %}
-                {%- assign today_date_str = 'now' | date: "%d %B" -%}
+                {%- assign seven_days_in_seconds = 7 | times: 24 | times: 3600 -%}
+                {%- assign future_date_str = 'now' | date: '%s' | plus: seven_days_in_seconds | date: "%d %B" -%}
                 <div class="velo-urgency-pill">
                   <span class="velo-urgency-dot"></span>
-                  <span>{{ section.settings.urgency_text | replace: '[date]', today_date_str }}</span>
+                  <span>{{ section.settings.urgency_text | replace: '[date]', future_date_str }}</span>
                 </div>
               {% endif %}
               <div class="velo-atc-wrapper">
@@ -221,10 +222,11 @@
               </div>
             {% endif %}
             {% if section.settings.urgency_text != blank %}
-              {%- assign today_date_str = 'now' | date: "%d %B" -%}
+              {%- assign seven_days_in_seconds = 7 | times: 24 | times: 3600 -%}
+              {%- assign future_date_str = 'now' | date: '%s' | plus: seven_days_in_seconds | date: "%d %B" -%}
               <div class="velo-urgency-pill">
                 <span class="velo-urgency-dot"></span>
-                <span>{{ section.settings.urgency_text | replace: '[date]', today_date_str }}</span>
+                <span>{{ section.settings.urgency_text | replace: '[date]', future_date_str }}</span>
               </div>
             {% endif %}
             <div class="velo-atc-wrapper">
