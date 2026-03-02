@@ -92,7 +92,6 @@
         "acc_contact"
       ],
       "settings": {
-        "product": "",
         "image_1": "shopify://shop_images/2_1060x_646209e8-9a8c-4b12-951f-2c827def31a2.webp",
         "image_2": "shopify://shop_images/3_1060x_27d5f2ec-6e7a-4912-bd7c-d7b6b36a93f6.webp",
         "image_3": "shopify://shop_images/8_1060x_ee347b1a-2570-4c85-a13d-3cf5a980cbe4.webp",
@@ -102,7 +101,6 @@
         "rating_value": "4.9",
         "review_count": "9700+",
         "title_fallback": "Topper Materasso Premium Trapuntato Extra Spesso 1000 GSM - Traspirante e Ultra Soffice",
-        "product_url": "/products/west-month-luxury-topper",
         "compare_price_fallback": "€399",
         "price_fallback": "€199",
         "save_amount_fallback": "50%",
@@ -116,8 +114,7 @@
         "urgency_text": "Quasi esaurito - aggiornato all [date]",
         "atc_text": "Acquista ora",
         "trust_1": "Spedizione Rapida in tutta Italia",
-        "trust_2": "Reso facile entro 30 giorni",
-        "sub_desc": ""
+        "trust_2": "Reso facile entro 30 giorni"
       }
     },
     "velo_rich_text": {
