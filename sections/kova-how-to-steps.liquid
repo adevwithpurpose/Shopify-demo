@@ -1,0 +1,169 @@
+{{ 'kova-how-to-steps.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+<div class="kova-steps-section section-{{ section.id }}-padding color-{{ section.settings.color_scheme }} gradient">
+  <div class="{% unless section.settings.full_width %}page-width{% endunless %}">
+    {% if section.settings.heading_bold != blank or section.settings.heading_light != blank %}
+      <div class="kova-steps-header kova-reveal">
+        <h2 class="kova-steps-heading">
+          {{ section.settings.heading_light }}<br>
+          <strong>{{ section.settings.heading_bold }}</strong>
+        </h2>
+        {% if section.settings.subheading != blank %}
+          <div class="kova-steps-subheading">{{ section.settings.subheading }}</div>
+        {% endif %}
+      </div>
+    {% endif %}
+
+    <div class="kova-steps-grid">
+      {% for block in section.blocks %}
+        <div class="kova-step-card kova-card-hover kova-reveal kova-reveal-delay-{{ forloop.index | at_most: 4 }}" {{ block.shopify_attributes }}>
+          <div class="kova-step-image">
+            {% if block.settings.image != blank %}
+              <img
+                src="{{ block.settings.image | image_url: width: 600 }}"
+                alt="{{ block.settings.title | escape }}"
+                loading="lazy"
+                width="600"
+                height="450"
+              >
+            {% else %}
+               {%- capture placeholder_url -%}
+                 {%- case forloop.index -%}
+                   {%- when 1 -%}https://images.unsplash.com/photo-1593062096033-9a26b09da705?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80
+                   {%- when 2 -%}https://images.unsplash.com/photo-1524758631624-e2822e304c36?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80
+                   {%- when 3 -%}https://images.unsplash.com/photo-1497215728101-856f4ea42174?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80
+                   {%- else -%}https://images.unsplash.com/photo-1540518614846-7eded433c457?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80
+                 {%- endcase -%}
+               {%- endcapture -%}
+               <img src="{{ placeholder_url | strip }}" alt="Demo Step {{ forloop.index }}" width="600" height="450" />
+            {% endif %}
+          </div>
+          <div class="kova-step-content">
+            <span class="kova-step-number">{{ forloop.index }}</span>
+            <h3 class="kova-step-title">{{ block.settings.title }}</h3>
+            {% if block.settings.text != blank %}
+              <div class="kova-step-desc">{{ block.settings.text }}</div>
+            {% endif %}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "KÖVA How-To Steps",
+  "tag": "section",
+  "class": "kova-section",
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "text",
+      "id": "heading_light",
+      "label": "Heading (light)",
+      "default": "How to Use The"
+    },
+    {
+      "type": "text",
+      "id": "heading_bold",
+      "label": "Heading (bold)",
+      "default": "KÖVA Freedom Chair"
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "KÖVA effortlessly adapts to your changing postures."
+    },
+    {
+      "type": "checkbox",
+      "id": "full_width",
+      "label": "Full width",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": "Spacing"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Top padding",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Bottom padding",
+      "default": 80
+    }
+  ],
+  "blocks": [
+    {
+      "type": "step",
+      "name": "Step",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Step Image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Step Title",
+          "default": "Traditional Seating"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Step Description",
+          "default": "<p>Supportive and upright for focused work sessions.</p>"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "KÖVA How-To Steps",
+      "blocks": [
+        { "type": "step", "settings": { "title": "Traditional Seating" } },
+        { "type": "step", "settings": { "title": "Cross-Legged Flow" } },
+        { "type": "step", "settings": { "title": "Kneeling Support" } }
+      ]
+    }
+  ]
+}
+{% endschema %}

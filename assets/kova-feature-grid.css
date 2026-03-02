@@ -1,0 +1,150 @@
+/* KÖVA Feature Grid */
+:root {
+    --kova-navy: #122442;
+    --kova-gray-light: #F4F6F8;
+    --kova-gray-border: #E5E5E5;
+}
+
+.kova-feature-grid-section {
+    padding: 8rem 0;
+    background: var(--kova-gray-light);
+    font-family: var(--font-body-family), sans-serif;
+    font-size: 1.6rem;
+}
+
+.kova-fg-header {
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto 5rem;
+}
+
+.kova-fg-heading {
+    font-size: 5.2rem;
+    font-weight: 300 !important;
+    line-height: 1.1;
+    color: var(--kova-navy, #122442);
+    margin-bottom: 2rem;
+    letter-spacing: -0.01em;
+    font-family: 'Jost', sans-serif !important;
+}
+
+.kova-fg-heading strong {
+    font-weight: 800 !important;
+}
+
+.kova-fg-subheading {
+    font-size: 1.8rem;
+    color: #555;
+    margin: 0;
+    line-height: 1.4;
+}
+
+.kova-fg-grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: 1fr;
+}
+
+.kova-fg-grid--2 {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.kova-fg-grid--3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+@media screen and (max-width: 989px) {
+
+    .kova-fg-grid--3,
+    .kova-fg-grid--2 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 749px) {
+
+    .kova-fg-grid--3,
+    .kova-fg-grid--2 {
+        grid-template-columns: 1fr;
+    }
+
+    .kova-fg-heading {
+        font-size: 2rem;
+    }
+}
+
+.kova-fg-card {
+    background: #fff;
+    border-radius: 8px;
+    border: 1px solid var(--kova-gray-border);
+    padding: 2rem 2rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.5rem;
+    text-align: left;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.kova-fg-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.kova-fg-card-left {
+    flex-shrink: 0;
+}
+
+.kova-fg-card-icon {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    background: #EDF2F9;
+    color: var(--kova-navy);
+    border-radius: 50%;
+}
+
+.kova-fg-card-icon svg {
+    width: 26px;
+    height: 26px;
+}
+
+.kova-fg-card-title {
+    font-size: 1.7rem;
+    font-weight: 700 !important;
+    color: var(--kova-navy);
+    margin: 0 0 0.4rem 0;
+    font-family: 'Jost', sans-serif !important;
+    text-align: left;
+}
+
+.kova-fg-card-image img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.kova-fg-card-right {
+    flex: 1;
+}
+
+.kova-fg-card-title {
+    font-size: 1.8rem;
+    font-weight: 700 !important;
+    color: var(--kova-navy);
+    margin: 0 0 0.5rem 0;
+    font-family: 'Jost', sans-serif !important;
+}
+
+.kova-fg-card-text {
+    font-size: 1.5rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+.kova-fg-card-text p {
+    margin: 0;
+}

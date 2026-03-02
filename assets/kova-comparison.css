@@ -1,0 +1,147 @@
+.kova-comparison-section {
+    padding: 0;
+    font-family: 'Jost', sans-serif !important;
+    overflow: hidden;
+}
+
+.kova-comp--full .page-width {
+    padding: 0;
+    max-width: none;
+    margin: 0;
+}
+
+.kova-comp-grid {
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (min-width: 990px) {
+    .kova-comp-grid {
+        flex-direction: row;
+        min-height: 80vh;
+    }
+
+    .kova-comp-grid--right {
+        flex-direction: row-reverse;
+    }
+}
+
+.kova-comp-media-col,
+.kova-comp-text-col {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+}
+
+.kova-comp-media-col {
+    background: #E5E5E5;
+    min-height: 400px;
+}
+
+.kova-comp-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.kova-comp-text-col {
+    background: var(--kova-navy, #122442);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6rem 4rem;
+}
+
+@media screen and (min-width: 990px) {
+    .kova-comp-text-col {
+        padding: 8rem 6rem;
+    }
+}
+
+.kova-comp-content-inner {
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+}
+
+.kova-comp-heading {
+    font-size: 6.4rem;
+    line-height: 1.05;
+    margin-bottom: 2.5rem;
+    color: #fff !important;
+    letter-spacing: -0.02em;
+}
+
+.kova-comp-light {
+    font-weight: 300;
+    display: block;
+    font-size: 3.6rem;
+    margin-bottom: 0.5rem;
+}
+
+.kova-comp-bold {
+    font-weight: 800;
+}
+
+.kova-comp-italic {
+    font-style: italic;
+    font-weight: 800;
+}
+
+@media screen and (max-width: 749px) {
+    .kova-comp-heading {
+        font-size: 3.2rem;
+    }
+
+    .kova-comp-heading .kova-comp-light {
+        font-size: 2.4rem;
+    }
+}
+
+.kova-comp-subheading {
+    font-size: 1.6rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 4rem;
+    line-height: 1.5;
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.kova-comp-features-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+    justify-content: center;
+}
+
+.kova-comp-tag {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 0.8rem 1.6rem;
+    border-radius: 50px;
+    font-size: 1.4rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+}
+
+.kova-comp-tag:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+    border-color: #fff;
+}
+
+.kova-tag-check {
+    color: #fff;
+    opacity: 0.8;
+}
+
+.kova-comp-placeholder {
+    height: 100%;
+}

@@ -1,0 +1,87 @@
+/* KÖVA Trust Strip */
+:root {
+    --kova-navy: #122442;
+    --kova-text: #555;
+    --kova-gray-light: #F4F6F8;
+    --kova-gray-border: #E5E5E5;
+}
+
+.kova-trust-section {
+    padding: 3rem 0;
+    border-top: 1px solid var(--kova-gray-border);
+    border-bottom: 1px solid var(--kova-gray-border);
+    font-family: var(--font-body-family), sans-serif;
+    background: #fff;
+}
+
+.kova-trust-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    flex-wrap: wrap;
+}
+
+.kova-trust-item {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    text-align: left;
+}
+
+.kova-trust-item-icon {
+    font-size: 2.8rem;
+    color: var(--kova-navy);
+    display: flex;
+    align-items: center;
+}
+
+.kova-trust-item-icon svg {
+    width: 32px;
+    height: 32px;
+}
+
+.kova-trust-item-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.kova-trust-item-title {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--kova-navy);
+    font-family: 'Jost', sans-serif !important;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    margin-bottom: 0.1rem;
+    line-height: 1.2;
+}
+
+.kova-trust-item-subtitle {
+    font-size: 1.4rem;
+    color: #666;
+    font-weight: 500;
+}
+
+@media screen and (max-width: 989px) {
+    .kova-trust-grid {
+        gap: 3rem;
+    }
+}
+
+@media screen and (max-width: 749px) {
+    .kova-trust-grid {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .kova-trust-item {
+        text-align: center;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .kova-trust-item-content {
+        align-items: center;
+    }
+}

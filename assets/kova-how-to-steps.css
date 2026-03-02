@@ -1,0 +1,108 @@
+.kova-steps-section {
+    background: #fdfdfd;
+}
+
+.kova-steps-header {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 5rem;
+}
+
+.kova-steps-heading {
+    font-family: 'Jost', sans-serif !important;
+    font-size: 5.2rem;
+    font-weight: 300 !important;
+    line-height: 1.1;
+    color: var(--kova-navy, #122442);
+    margin-bottom: 2rem;
+    letter-spacing: -0.01em;
+}
+
+.kova-steps-heading strong {
+    font-weight: 800 !important;
+    display: block;
+}
+
+.kova-steps-subheading {
+    font-size: 1.6rem;
+    color: #666;
+    margin-bottom: 3rem;
+    font-weight: 500;
+}
+
+.kova-steps-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4rem;
+}
+
+.kova-step-card {
+    background: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.kova-step-card:hover {
+    transform: translateY(-10px);
+}
+
+.kova-step-image {
+    position: relative;
+    aspect-ratio: 4/3;
+    overflow: hidden;
+}
+
+.kova-step-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.kova-step-content {
+    padding: 2.5rem;
+    position: relative;
+}
+
+.kova-step-number {
+    position: absolute;
+    top: -20px;
+    left: 25px;
+    width: 40px;
+    height: 40px;
+    background: var(--kova-navy, #122442);
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.6rem;
+    box-shadow: 0 4px 10px rgba(18, 36, 66, 0.3);
+}
+
+.kova-step-title {
+    font-family: 'Jost', sans-serif !important;
+    font-size: 2rem;
+    font-weight: 700 !important;
+    color: var(--kova-navy, #122442);
+    margin: 0.5rem 0 1rem;
+}
+
+.kova-step-desc {
+    font-size: 1.6rem;
+    color: #555;
+    line-height: 1.5;
+}
+
+@media screen and (max-width: 989px) {
+    .kova-steps-grid {
+        grid-template-columns: 1fr;
+        gap: 4rem;
+    }
+
+    .kova-steps-heading {
+        font-size: 2.8rem;
+    }
+}

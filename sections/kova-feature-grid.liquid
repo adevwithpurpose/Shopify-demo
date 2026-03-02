@@ -1,0 +1,201 @@
+{{ 'kova-feature-grid.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+<div class="kova-feature-grid-section section-{{ section.id }}-padding color-{{ section.settings.color_scheme }} gradient">
+  <div class="page-width">
+    {% if section.settings.heading_bold != blank or section.settings.heading_light != blank %}
+      <div class="kova-fg-header kova-reveal">
+        <h2 class="kova-fg-heading">
+          {{ section.settings.heading_light }}
+          <strong>{{ section.settings.heading_bold }}</strong>
+        </h2>
+        {% if section.settings.subheading != blank %}
+          <p class="kova-fg-subheading">{{ section.settings.subheading }}</p>
+        {% endif %}
+      </div>
+    {% endif %}
+
+    <div class="kova-fg-grid kova-fg-grid--{{ section.settings.columns }}">
+      {% for block in section.blocks %}
+        <div class="kova-fg-card kova-card-hover kova-reveal kova-reveal-delay-{{ forloop.index | at_most: 4 }}" {{ block.shopify_attributes }}>
+          <div class="kova-fg-card-left">
+            {% if block.settings.image != blank %}
+              <div class="kova-fg-card-image">
+                <img
+                  src="{{ block.settings.image | image_url: width: 100 }}"
+                  alt="{{ block.settings.title }}"
+                  width="50"
+                  height="50"
+                  loading="lazy"
+                >
+              </div>
+            {% elsif block.settings.icon != 'none' %}
+              <div class="kova-fg-card-icon">
+                {% render 'kova-icons', icon: block.settings.icon %}
+              </div>
+            {% endif %}
+          </div>
+          <div class="kova-fg-card-right">
+            <h3 class="kova-fg-card-title">{{ block.settings.title }}</h3>
+            {% if block.settings.text != blank %}
+              <div class="kova-fg-card-text">{{ block.settings.text }}</div>
+            {% endif %}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "KÖVA Feature Grid",
+  "tag": "section",
+  "class": "kova-section",
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "header",
+      "content": "Spacing"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Top padding",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Bottom padding",
+      "default": 80
+    },
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "text",
+      "id": "heading_light",
+      "label": "Heading (light)",
+      "default": "Who"
+    },
+    {
+      "type": "text",
+      "id": "heading_bold",
+      "label": "Heading (bold)",
+      "default": "KÖVA Is For?"
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "Designed for people who can't sit still (and shouldn't have to)"
+    },
+    {
+      "type": "select",
+      "id": "columns",
+      "label": "Columns (desktop)",
+      "options": [
+        { "value": "2", "label": "2 columns" },
+        { "value": "3", "label": "3 columns" }
+      ],
+      "default": "3"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "card",
+      "name": "Feature Card",
+      "settings": [
+        {
+          "type": "select",
+          "id": "icon",
+          "label": "Icon",
+          "options": [
+            { "value": "none", "label": "None" },
+            { "value": "truck", "label": "Truck" },
+            { "value": "package", "label": "Package" },
+            { "value": "refresh", "label": "Returns / Refresh" },
+            { "value": "shield", "label": "Shield / Guarantee" },
+            { "value": "star", "label": "Star" },
+            { "value": "thermometer", "label": "Temperature" },
+            { "value": "bandage", "label": "Relief / Bandage" },
+            { "value": "bed", "label": "Bed / Sleep" },
+            { "value": "palette", "label": "Palette / Creative" },
+            { "value": "sparkles", "label": "Sparkles / New" },
+            { "value": "move", "label": "Move / Arrows" },
+            { "value": "brain", "label": "Brain / Focus" },
+            { "value": "monitor", "label": "Monitor / Desk" },
+            { "value": "check", "label": "Check" },
+            { "value": "lock", "label": "Lock / Secure" },
+            { "value": "gift", "label": "Gift" },
+            { "value": "mouse", "label": "Mouse Pad" },
+            { "value": "mat", "label": "Chair Mat" },
+            { "value": "clock", "label": "Clock / Speed" },
+            { "value": "sliders", "label": "Sliders / Settings" }
+          ],
+          "default": "monitor"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Icon Image (overrides icon)"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Long-Hour Desk Workers"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Description",
+          "default": "<p>Stay comfortable through long sessions</p>"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "KÖVA Feature Grid",
+      "blocks": [
+        { "type": "card", "settings": { "icon": "monitor", "title": "Long-Hour Desk Workers", "text": "<p>Stay comfortable through long sessions</p>" } },
+        { "type": "card", "settings": { "icon": "palette", "title": "Creative Professionals", "text": "<p>Keeps body & mind engaged.</p>" } },
+        { "type": "card", "settings": { "icon": "move", "title": "Fidgety People", "text": "<p>Lets you move freely.</p>" } },
+        { "type": "card", "settings": { "icon": "brain", "title": "Neurodiverse Individuals", "text": "<p>Helps improve focus.</p>" } },
+        { "type": "card", "settings": { "icon": "bandage", "title": "Chronic Pain Sufferers", "text": "<p>Reduces pressure and stiffness.</p>" } },
+        { "type": "card", "settings": { "icon": "sparkles", "title": "Meditation Practitioners", "text": "<p>Supports relaxed sitting</p>" } }
+      ]
+    }
+  ]
+}
+{% endschema %}
+

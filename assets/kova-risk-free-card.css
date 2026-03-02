@@ -1,0 +1,132 @@
+.kova-risk-card-section {
+    padding: 6rem 0 0;
+    margin-bottom: -10rem;
+    /* Compact floating effect */
+    position: relative;
+    z-index: 10;
+}
+
+.kova-risk-card {
+    background: var(--kova-navy, #122442);
+    background-image: radial-gradient(circle at 50% -20%, rgba(255, 255, 255, 0.08) 0%, transparent 70%);
+    border-radius: 24px;
+    padding: 6rem 4rem 5rem;
+    position: relative;
+    text-align: center;
+    color: #fff;
+    box-shadow: 0 40px 100px rgba(18, 36, 66, 0.2);
+    overflow: hidden;
+}
+
+.kova-risk-icon-floating {
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 80px;
+    background: var(--kova-navy, #122442);
+    border: 5px solid #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    z-index: 2;
+}
+
+.kova-risk-icon-floating svg {
+    width: 32px;
+    height: 32px;
+    color: #fff;
+}
+
+.kova-risk-heading {
+    font-family: 'Jost', sans-serif !important;
+    font-size: 4.2rem;
+    font-weight: 800 !important;
+    color: #fff !important;
+    margin: 0 0 1.25rem 0;
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+}
+
+.kova-risk-subheading {
+    font-size: 1.7rem;
+    color: rgba(255, 255, 255, 0.75);
+    max-width: 580px;
+    margin: 0 auto 3rem;
+    line-height: 1.5;
+    font-weight: 400;
+}
+
+.kova-risk-badges {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2.5rem;
+}
+
+.kova-risk-badge {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+.kova-risk-badge-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    opacity: 0.9;
+}
+
+.kova-risk-badge-icon svg {
+    width: 18px;
+    height: 18px;
+    stroke-width: 3.5;
+}
+
+@media screen and (max-width: 749px) {
+    .kova-risk-card-section {
+        margin-bottom: -8rem;
+    }
+
+    .kova-risk-card {
+        padding: 5rem 2rem 4rem;
+        border-radius: 20px;
+    }
+
+    .kova-risk-heading {
+        font-size: 3.2rem;
+    }
+
+    .kova-risk-subheading {
+        font-size: 1.5rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .kova-risk-badges {
+        flex-direction: column;
+        gap: 1.2rem;
+    }
+}
+
+.kova-risk-social-proof {
+    text-align: center;
+    font-size: 1.4rem;
+    color: #666;
+    margin-top: 2rem;
+    font-weight: 500;
+    opacity: 0.8;
+}
+
+@media screen and (max-width: 749px) {
+    .kova-risk-social-proof {
+        font-size: 1.2rem;
+        margin-top: 1.5rem;
+    }
+}

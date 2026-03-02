@@ -1,0 +1,106 @@
+.kova-hero-banner {
+    position: relative;
+    background: var(--kova-navy, #122442);
+    color: #fff;
+    overflow: hidden;
+    padding: 8rem 0;
+}
+
+.kova-hero-banner .page-width {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 6rem;
+}
+
+.kova-banner-media {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.kova-banner-media video,
+.kova-banner-media img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.kova-banner-content {
+    max-width: 550px;
+}
+
+.kova-banner-heading {
+    font-family: 'Jost', sans-serif !important;
+    font-size: 6.4rem;
+    line-height: 1.05;
+    margin-bottom: 2.5rem;
+    color: #fff;
+    letter-spacing: -0.02em;
+}
+
+.kova-banner-light {
+    font-weight: 300;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.kova-banner-bold {
+    font-weight: 800;
+}
+
+.kova-banner-italic {
+    font-style: italic;
+    font-weight: 800;
+}
+
+.kova-banner-subtitle {
+    font-size: 1.8rem;
+    line-height: 1.6;
+    margin-bottom: 3rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.kova-banner-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+}
+
+.kova-banner-tag {
+    padding: 0.75rem 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 100px;
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.05);
+    white-space: nowrap;
+}
+
+@media screen and (max-width: 989px) {
+    .kova-hero-banner .page-width {
+        grid-template-columns: 1fr;
+        gap: 4rem;
+        text-align: center;
+    }
+
+    .kova-banner-content {
+        max-width: 100%;
+        order: 1;
+    }
+
+    .kova-banner-media {
+        order: 2;
+    }
+
+    .kova-banner-heading {
+        font-size: 3.6rem;
+    }
+
+    .kova-banner-tags {
+        justify-content: center;
+    }
+}

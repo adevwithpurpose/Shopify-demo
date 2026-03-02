@@ -1,0 +1,347 @@
+/* KÖVA What's Included — Reference-accurate two-column layout */
+:root {
+    --kova-navy: #122442;
+    --kova-blue: #2F5AC7;
+    --kova-gray-light: #F4F6F8;
+    --kova-gray-border: #E5E5E5;
+}
+
+.kova-included-section {
+    padding: 8rem 0;
+    background: #fff;
+    font-family: var(--font-body-family), sans-serif;
+    font-size: 1.6rem;
+}
+
+/* Two-column layout */
+.kova-inc-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+    align-items: center;
+}
+
+/* ---- Left column ---- */
+.kova-inc-table-col {
+    max-width: 520px;
+}
+
+.kova-inc-heading {
+    font-size: 5.2rem;
+    font-weight: 300;
+    line-height: 1.05;
+    color: var(--kova-navy);
+    font-family: var(--font-heading-family), 'Jost', sans-serif;
+    margin: 0 0 3.5rem 0;
+    letter-spacing: -0.01em;
+}
+
+.kova-inc-heading strong {
+    font-weight: 800;
+    display: block;
+}
+
+.kova-inc-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.kova-inc-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.kova-inc-item:first-child {
+    border-top: 1px solid #f0f0f0;
+}
+
+.kova-inc-item--main .kova-inc-name {
+    font-weight: 700;
+    font-size: 1.7rem;
+}
+
+.kova-inc-name {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--kova-navy);
+}
+
+.kova-inc-name--free {
+    color: #444;
+    font-weight: 500;
+}
+
+.kova-inc-order-today-label {
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #999;
+    padding: 1.25rem 0 0.25rem;
+}
+
+.kova-inc-item-right {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    flex-shrink: 0;
+}
+
+.kova-inc-original {
+    font-size: 1.6rem;
+    color: #999;
+    text-decoration: line-through;
+    opacity: 0.8;
+}
+
+.kova-inc-final {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--kova-navy);
+    font-family: 'Jost', sans-serif;
+}
+
+.kova-inc-free-badge {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: #3B82F6;
+    /* KÖVA Blue */
+    text-transform: uppercase;
+}
+
+/* Divider */
+.kova-inc-divider {
+    height: 1px;
+    background: #eee;
+    margin: 2rem 0;
+}
+
+/* Savings row */
+.kova-inc-savings-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 0;
+}
+
+.kova-inc-savings-label {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--kova-navy);
+}
+
+.kova-inc-savings-value {
+    font-size: 1.8rem;
+    color: #3B82F6;
+    font-weight: 600;
+}
+
+/* Total row */
+.kova-inc-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0 3rem;
+}
+
+.kova-inc-total-label {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: var(--kova-navy);
+}
+
+.kova-inc-total-right {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.kova-inc-gifts-badge {
+    display: inline-block;
+    background: #1E293B;
+    /* Dark navy */
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 800;
+    padding: 0.6rem 1.2rem;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.kova-inc-total-price {
+    font-size: 3.4rem;
+    font-weight: 900;
+    color: var(--kova-navy);
+    font-family: 'Jost', sans-serif;
+}
+
+/* CTA Button */
+.kova-inc-cta {
+    display: block;
+    width: 100%;
+    text-align: center;
+    background: var(--kova-navy) !important;
+    color: #fff !important;
+    padding: 1.5rem 2.5rem;
+    border-radius: 100px;
+    font-weight: 700 !important;
+    font-size: 1.8rem;
+    text-decoration: none;
+    transition: background 0.2s ease, transform 0.2s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-family: 'Jost', sans-serif !important;
+    margin-bottom: 1.5rem;
+}
+
+.kova-inc-cta:hover {
+    background: #1A335D !important;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 15px rgba(18, 36, 66, 0.15);
+}
+
+.kova-inc-cta::before,
+.kova-inc-cta::after {
+    content: none !important;
+    display: none !important;
+    box-shadow: none !important;
+}
+
+/* Mini trust strip */
+.kova-inc-trust {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    font-size: 1.3rem;
+    color: #777;
+}
+
+.kova-inc-trust span {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* ---- Right column ---- */
+.kova-inc-image-col {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.kova-inc-product-image {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
+
+/* Starburst seal badge */
+.kova-inc-starburst {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    width: 140px;
+    height: 140px;
+    background: var(--kova-navy);
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 800;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    line-height: 1.2;
+    border-radius: 50%;
+    z-index: 5;
+    text-transform: uppercase;
+    box-shadow: 0 15px 35px rgba(18, 36, 66, 0.2);
+    border: 2px dashed rgba(255, 255, 255, 0.3);
+    outline: 8px solid var(--kova-navy);
+    letter-spacing: 0.02em;
+}
+
+/* Annotations */
+.kova-inc-anno {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    pointer-events: none;
+    z-index: 10;
+    animation: kova-float 3s ease-in-out infinite;
+}
+
+.kova-inc-anno--2 {
+    animation-delay: 1.5s;
+}
+
+@keyframes kova-float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.kova-inc-anno-text {
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: var(--kova-navy);
+    background: #fff;
+    padding: 6px 14px;
+    border-radius: 50px;
+    border: 2px solid var(--kova-navy);
+    white-space: nowrap;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.kova-inc-anno-arrow {
+    color: var(--kova-navy);
+    opacity: 0.8;
+    margin-top: -5px;
+}
+
+/* Responsive */
+@media screen and (max-width: 989px) {
+    .kova-inc-anno {
+        display: none;
+    }
+
+    .kova-inc-layout {
+        grid-template-columns: 1fr;
+        gap: 4rem;
+    }
+
+    .kova-inc-table-col {
+        max-width: 100%;
+    }
+
+    .kova-inc-image-col {
+        order: -1;
+    }
+
+    .kova-inc-heading {
+        font-size: 2.6rem;
+    }
+}
+
+@media screen and (max-width: 749px) {
+    .kova-inc-heading {
+        font-size: 2.2rem;
+    }
+}

@@ -1,0 +1,121 @@
+/* KÖVA Body Built Section */
+:root {
+    --kova-navy: #122442;
+    --kova-gray-border: #E5E5E5;
+}
+
+.kova-body-built-section {
+    padding: 8rem 0;
+    background: #fff;
+    font-family: var(--font-body-family), sans-serif;
+}
+
+.kova-bb-header {
+    margin-bottom: 4rem;
+}
+
+.kova-bb-heading {
+    font-size: 5.6rem;
+    font-weight: 300;
+    line-height: 1.05;
+    color: var(--kova-navy);
+    font-family: var(--font-heading-family), 'Jost', sans-serif;
+    margin: 0 0 1.5rem 0;
+    letter-spacing: -0.01em;
+}
+
+.kova-bb-heading strong {
+    font-weight: 800;
+    display: block;
+}
+
+.kova-bb-subheading {
+    font-size: 1.6rem;
+    color: #666;
+    margin: 0;
+    line-height: 1.5;
+}
+
+.kova-bb-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+@media screen and (min-width: 990px) {
+    .kova-bb-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 8rem;
+    }
+}
+
+.kova-bb-list {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    width: 100%;
+}
+
+.kova-bb-image-col img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    display: block;
+}
+
+.kova-bb-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 2.5rem;
+}
+
+/* Dashed circle icon container */
+.kova-bb-icon-wrap {
+    flex-shrink: 0;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    border: 2px dashed #b0b8c9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--kova-navy);
+    background: transparent;
+}
+
+.kova-bb-icon-wrap svg {
+    width: 22px;
+    height: 22px;
+    stroke-width: 1.5;
+}
+
+.kova-bb-content {
+    padding-top: 0.5rem;
+}
+
+.kova-bb-item-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--kova-navy);
+    margin: 0 0 0.4rem 0;
+    font-family: var(--font-heading-family), 'Jost', sans-serif;
+    line-height: 1.2;
+}
+
+.kova-bb-item-desc {
+    font-size: 1.5rem;
+    color: #666;
+    margin: 0;
+    line-height: 1.5;
+}
+
+@media screen and (max-width: 749px) {
+    .kova-bb-heading {
+        font-size: 2.8rem;
+    }
+
+    .kova-bb-list {
+        max-width: 100%;
+    }
+}

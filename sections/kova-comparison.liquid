@@ -1,0 +1,218 @@
+{{ 'kova-comparison.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+<div class="kova-comparison-section section-{{ section.id }}-padding color-{{ section.settings.color_scheme }} gradient {% if section.settings.full_width %}kova-comp--full{% endif %}">
+  <div class="{% unless section.settings.full_width %}page-width{% endunless %}">
+    <div class="kova-comp-grid kova-comp-grid--{{ section.settings.image_position }}">
+      
+      <div class="kova-comp-media-col kova-reveal">
+        {% if section.settings.image != blank %}
+          <img
+            src="{{ section.settings.image | image_url: width: 1200 }}"
+            alt="{{ section.settings.heading_bold }}"
+            loading="lazy"
+            class="kova-comp-image"
+          >
+        {% else %}
+          <div class="kova-comp-placeholder">
+            <img src="https://images.unsplash.com/photo-1593062096033-9a26b09da705?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Comparison Desk" class="kova-comp-image" />
+          </div>
+        {% endif %}
+      </div>
+
+      <div class="kova-comp-text-col kova-reveal">
+        <div class="kova-comp-content-inner">
+          <h2 class="kova-comp-heading">
+            <span class="kova-comp-light">{{ section.settings.heading_light }}</span>
+            <span class="kova-comp-bold">{{ section.settings.heading_bold }}</span>
+            {% if section.settings.heading_italic != blank %}
+              <em class="kova-comp-italic">{{ section.settings.heading_italic }}</em>
+            {% endif %}
+          </h2>
+          {% if section.settings.subheading != blank %}
+             <p class="kova-comp-subheading">{{ section.settings.subheading }}</p>
+          {% endif %}
+
+          <div class="kova-comp-features-tags">
+            {% for block in section.blocks %}
+              <div class="kova-comp-tag" {{ block.shopify_attributes }}>
+                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="kova-tag-check"><polyline points="20 6 9 17 4 12"/></svg>
+                 <span>{{ block.settings.title }}</span>
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "KÖVA Feature List",
+  "tag": "section",
+  "class": "kova-section",
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "header",
+      "content": "Spacing"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Top padding",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Bottom padding",
+      "default": 80
+    },
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "text",
+      "id": "heading_light",
+      "label": "Heading (light)",
+      "default": "Sitting Still vs"
+    },
+    {
+      "type": "text",
+      "id": "heading_bold",
+      "label": "Heading (bold)",
+      "default": "Sitting"
+    },
+    {
+      "type": "text",
+      "id": "heading_italic",
+      "label": "Heading (italic)",
+      "default": "Smart"
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "The KÖVA Chair supports your natural need to move and adjust, keeping you focused and preventing fatigue"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Media Image"
+    },
+    {
+      "type": "select",
+      "id": "image_position",
+      "label": "Image position",
+      "options": [
+        { "value": "left", "label": "Left" },
+        { "value": "right", "label": "Right" }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "checkbox",
+      "id": "full_width",
+      "label": "Full width",
+      "default": true
+    }
+  ],
+  "blocks": [
+    {
+      "type": "feature",
+      "name": "Feature",
+      "settings": [
+        {
+          "type": "html",
+          "id": "svg_icon",
+          "label": "SVG Icon (Optional)",
+          "info": "Paste SVG code here"
+        },
+        {
+          "type": "select",
+          "id": "icon",
+          "label": "Icon",
+          "options": [
+            { "value": "none", "label": "None" },
+            { "value": "truck", "label": "Truck" },
+            { "value": "package", "label": "Package" },
+            { "value": "refresh", "label": "Returns / Refresh" },
+            { "value": "shield", "label": "Shield / Guarantee" },
+            { "value": "star", "label": "Star" },
+            { "value": "thermometer", "label": "Temperature" },
+            { "value": "bandage", "label": "Relief / Bandage" },
+            { "value": "bed", "label": "Bed / Sleep" },
+            { "value": "palette", "label": "Palette / Creative" },
+            { "value": "sparkles", "label": "Sparkles / New" },
+            { "value": "move", "label": "Move / Arrows" },
+            { "value": "brain", "label": "Brain / Focus" },
+            { "value": "monitor", "label": "Monitor / Desk" },
+            { "value": "check", "label": "Check" },
+            { "value": "lock", "label": "Lock / Secure" },
+            { "value": "gift", "label": "Gift" },
+            { "value": "mouse", "label": "Mouse Pad" },
+            { "value": "mat", "label": "Chair Mat" },
+            { "value": "clock", "label": "Clock / Speed" },
+            { "value": "sliders", "label": "Sliders / Settings" }
+          ],
+          "default": "check"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Allows for Movement"
+        },
+        {
+          "type": "text",
+          "id": "description",
+          "label": "Description",
+          "default": "Move naturally without thinking about it"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "KÖVA Feature List",
+      "blocks": [
+        { "type": "feature", "settings": { "svg_icon": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"><path d=\"M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7\"/></svg>", "title": "Allows for Movement", "description": "Move naturally without thinking about it" } },
+        { "type": "feature", "settings": { "svg_icon": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"><path d=\"M20 6L9 17l-5-5\"/></svg>", "title": "Effortless Posture", "description": "Supports alignment as you shift positions" } },
+        { "type": "feature", "settings": { "svg_icon": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"><circle cx=\"12\" cy=\"12\" r=\"10\"/><polyline points=\"12 6 12 12 16 14\"/></svg>", "title": "All-Day Comfort", "description": "Stays comfortable longer - without feeling \"stuck\"" } },
+        { "type": "feature", "settings": { "svg_icon": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"><path d=\"M4 10V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v4M4 14v4a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-4M12 4v16M2 12h20\"/></svg>", "title": "Fits Every Body & Desk", "description": "Adjusts to any height and desk setup" } }
+      ]
+    }
+  ]
+}
+{% endschema %}
+

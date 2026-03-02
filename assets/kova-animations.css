@@ -1,0 +1,89 @@
+/* KÖVA Global Animations & Hover Effects */
+
+/* Scroll Reveal Utility */
+.kova-reveal {
+    opacity: 0.1;
+    transform: translateY(20px);
+    transition: opacity 1s cubic-bezier(0.2, 0.8, 0.2, 1),
+        transform 1s cubic-bezier(0.2, 0.8, 0.2, 1);
+    will-change: opacity, transform;
+}
+
+.kova-reveal--visible {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+/* Staggered Delay Utilities */
+.kova-reveal-delay-1 {
+    transition-delay: 0.1s;
+}
+
+.kova-reveal-delay-2 {
+    transition-delay: 0.2s;
+}
+
+.kova-reveal-delay-3 {
+    transition-delay: 0.3s;
+}
+
+.kova-reveal-delay-4 {
+    transition-delay: 0.4s;
+}
+
+/* Global Card Hover Effect (Premium Lift) */
+.kova-card-hover {
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1),
+        box-shadow 0.3s ease-in-out !important;
+}
+
+.kova-card-hover:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(18, 36, 66, 0.12) !important;
+}
+
+/* ATC Button "Press" Feedback */
+.kova-atc-btn:active {
+    transform: scale(0.96);
+    transition: transform 0.1s ease;
+}
+
+/* Star Shimmer Animation (Subtle) */
+@keyframes kova-star-shimmer {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.7;
+        transform: scale(1.05);
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.kova-stars svg {
+    transition: transform 0.2s ease;
+}
+
+.kova-rating:hover .kova-stars svg {
+    animation: kova-star-shimmer 1.5s ease-in-out infinite;
+}
+
+.kova-rating:hover .kova-stars svg:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.kova-rating:hover .kova-stars svg:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+.kova-rating:hover .kova-stars svg:nth-child(4) {
+    animation-delay: 0.3s;
+}
+
+.kova-rating:hover .kova-stars svg:nth-child(5) {
+    animation-delay: 0.4s;
+}

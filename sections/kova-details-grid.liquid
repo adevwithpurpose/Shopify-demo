@@ -1,0 +1,136 @@
+{{ 'kova-details-grid.css' | asset_url | stylesheet_tag }}
+
+<div class="kova-details-section">
+  <div class="{% unless section.settings.full_width %}page-width{% endunless %}">
+    <div class="kova-det-header kova-reveal">
+      <h2 class="kova-det-heading">
+        <span>{{ section.settings.heading_light | default: 'Designed' }}</span>
+        <strong>{{ section.settings.heading_bold | default: 'Down to Every Detail' }}</strong>
+      </h2>
+      {% if section.settings.subheading != blank %}
+        <p class="kova-det-subheading">{{ section.settings.subheading }}</p>
+      {% endif %}
+    </div>
+
+    <div class="kova-det-layout">
+      <div class="kova-det-grid">
+        {% for block in section.blocks %}
+          {% if block.type == 'detail' %}
+            <div class="kova-det-card kova-reveal kova-reveal-delay-{{ forloop.index | modulo: 4 | plus: 1 }}" {{ block.shopify_attributes }}>
+              <div class="kova-det-card-icon-wrap">
+                {% render 'kova-icons', icon: block.settings.icon %}
+              </div>
+              <div class="kova-det-card-body">
+                <h3 class="kova-det-card-title">{{ block.settings.title }}</h3>
+                {% if block.settings.description != blank %}
+                  <p class="kova-det-card-desc">{{ block.settings.description }}</p>
+                {% endif %}
+              </div>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "KÖVA Details Grid",
+  "tag": "section",
+  "class": "kova-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading_light",
+      "label": "Heading (light part)",
+      "default": "Designed"
+    },
+    {
+      "type": "text",
+      "id": "heading_bold",
+      "label": "Heading (bold part)",
+      "default": "Down to Every Detail"
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "Smart features, comfort-focused materials, and maximum adjustability"
+    },
+    {
+      "type": "checkbox",
+      "id": "full_width",
+      "label": "Full width",
+      "default": false
+    },
+    {
+      "type": "image_picker",
+      "id": "product_image",
+      "label": "Center Product Image"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "detail",
+      "name": "Detail Card",
+      "settings": [
+        {
+          "type": "select",
+          "id": "icon",
+          "label": "Icon",
+          "options": [
+            { "value": "none", "label": "None" },
+            { "value": "truck", "label": "Truck" },
+            { "value": "package", "label": "Package" },
+            { "value": "refresh", "label": "Returns / Refresh" },
+            { "value": "shield", "label": "Shield / Guarantee" },
+            { "value": "star", "label": "Star" },
+            { "value": "thermometer", "label": "Temperature" },
+            { "value": "bandage", "label": "Relief / Bandage" },
+            { "value": "bed", "label": "Bed / Sleep" },
+            { "value": "palette", "label": "Palette / Creative" },
+            { "value": "sparkles", "label": "Sparkles / New" },
+            { "value": "move", "label": "Move / Arrows" },
+            { "value": "brain", "label": "Brain / Focus" },
+            { "value": "monitor", "label": "Monitor / Desk" },
+            { "value": "check", "label": "Check" },
+            { "value": "lock", "label": "Lock / Secure" },
+            { "value": "gift", "label": "Gift" },
+            { "value": "mouse", "label": "Mouse Pad" },
+            { "value": "mat", "label": "Chair Mat" },
+            { "value": "clock", "label": "Clock / Speed" },
+            { "value": "sliders", "label": "Sliders / Settings" }
+          ],
+          "default": "move"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Pressure-Relief Seat"
+        },
+        {
+          "type": "text",
+          "id": "description",
+          "label": "Description",
+          "default": "12cm extra-thick high-density foam"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "KÖVA Details Grid",
+      "blocks": [
+        { "type": "detail", "settings": { "icon": "move", "title": "Pressure-Relief Seat", "description": "12cm extra-thick high-density foam" } },
+        { "type": "detail", "settings": { "icon": "thermometer", "title": "Breathable Fabric", "description": "Soft-touch material that stays cool" } },
+        { "type": "detail", "settings": { "icon": "sliders", "title": "Fully Adjustable Fit", "description": "Adjustable from top to bottom" } },
+        { "type": "detail", "settings": { "icon": "refresh", "title": "360° Smooth Rotating", "description": "For effortless position changes" } },
+        { "type": "detail", "settings": { "icon": "lock", "title": "Lockable Wheels", "description": "Stable when you need it" } },
+        { "type": "detail", "settings": { "icon": "shield", "title": "Built to Last", "description": "Reinforced steel frame" } }
+      ]
+    }
+  ]
+}
+{% endschema %}

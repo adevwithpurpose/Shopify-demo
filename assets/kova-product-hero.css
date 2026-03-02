@@ -1,0 +1,671 @@
+/* ============================
+   KÖVA Product Hero Section
+   ============================ */
+:root {
+    --kova-navy: #122442;
+    --kova-navy-light: #1A335D;
+    --kova-blue: #2F5AC7;
+    --kova-blue-badge: #34465B;
+    --kova-gray-light: #F4F6F8;
+    --kova-gray-border: #E5E5E5;
+    --kova-text: rgba(0, 0, 0, 0.81);
+}
+
+.kova-hero-wrapper {
+    padding: 0;
+    font-family: var(--font-body-family), sans-serif;
+    font-size: 1.6rem;
+    color: var(--kova-text);
+}
+
+.kova-hero-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 0 1.5rem;
+}
+
+@media screen and (min-width: 990px) {
+    .kova-hero-container {
+        grid-template-columns: 55% 45%;
+        gap: 4rem;
+        padding: 2rem 0;
+    }
+}
+
+/* ---- Media Gallery ---- */
+.kova-media-gallery {
+    position: relative;
+}
+
+.kova-media-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+}
+
+.kova-media-item {
+    border-radius: 8px;
+    overflow: hidden;
+    background: #f7f7f7;
+    aspect-ratio: 1/1;
+}
+
+.kova-media-item img,
+.kova-media-item video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.kova-media-item--featured {
+    grid-column: 1 / -1;
+    aspect-ratio: 1/1;
+    /* Square on desktop like reference */
+}
+
+@media screen and (max-width: 989px) {
+    .kova-media-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.kova-media-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f0f0f0;
+}
+
+.kova-video-wrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+/* ---- Buy Box ---- */
+.kova-buy-box {
+    position: relative;
+}
+
+@media screen and (min-width: 990px) {
+    .kova-buy-box {
+        position: sticky;
+        top: 2rem;
+        align-self: start;
+        max-height: calc(100vh - 4rem);
+        overflow-y: auto;
+        scrollbar-width: none;
+        /* Firefox */
+    }
+
+    .kova-buy-box::-webkit-scrollbar {
+        display: none;
+        /* Safari and Chrome */
+    }
+}
+
+.kova-buy-box-inner {
+    padding: 0;
+}
+
+/* ---- Badges ---- */
+.kova-badges {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.kova-badge {
+    display: inline-block;
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+}
+
+.kova-badge--primary {
+    background: var(--kova-navy);
+    color: #fff;
+}
+
+.kova-badge--secondary {
+    background: #EDF2F9;
+    color: var(--kova-navy);
+}
+
+/* ---- Rating ---- */
+.kova-rating {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.kova-stars {
+    display: flex;
+    gap: 2px;
+}
+
+.kova-rating-text {
+    font-size: 1.4rem;
+    color: #666;
+    font-weight: 500;
+}
+
+/* ---- Title ---- */
+.kova-product-title {
+    font-family: 'Jost', sans-serif !important;
+    font-size: 4.8rem;
+    font-weight: 800 !important;
+    line-height: 1.05;
+    margin-bottom: 2rem;
+    color: var(--kova-navy);
+    margin-top: 0;
+    letter-spacing: -0.02em;
+}
+
+@media screen and (min-width: 990px) {
+    .kova-product-title {
+        font-size: 5.6rem;
+    }
+}
+
+/* ---- Pricing ---- */
+.kova-pricing {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+}
+
+.kova-price-compare {
+    font-size: 1.8rem;
+    color: #999;
+    text-decoration: line-through;
+}
+
+.kova-price-current {
+    font-size: 2.6rem;
+    font-weight: 800;
+    color: var(--kova-navy);
+}
+
+.kova-save-badge {
+    display: inline-block;
+    background: var(--kova-navy);
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 700;
+    padding: 0.35rem 0.75rem;
+    border-radius: 4px;
+    text-transform: uppercase;
+    margin-left: 0.5rem;
+}
+
+/* ---- Trust Note ---- */
+.kova-trust-note {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 1.3rem;
+    color: #666;
+    margin-bottom: 2rem;
+    opacity: 0.8;
+}
+
+.kova-trust-note svg {
+    color: #DDA75B;
+    width: 14px;
+    height: 14px;
+}
+
+/* ---- Description & Bullets ---- */
+.kova-description-text {
+    font-family: 'Mulish', sans-serif !important;
+    font-size: 1.6rem;
+    line-height: 1.6;
+    color: var(--kova-text);
+    margin-bottom: 1.5rem;
+}
+
+.kova-bullets {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.kova-bullets li {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: var(--kova-navy);
+}
+
+.kova-bullet-check {
+    flex-shrink: 0;
+    width: 22px;
+    height: 22px;
+    background: var(--kova-navy);
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.kova-bullet-check svg {
+    width: 12px;
+    height: 12px;
+    stroke-width: 4;
+}
+
+/* ---- Variants ---- */
+.kova-variants {
+    margin: 1.5rem 0;
+}
+
+.kova-option-group {
+    margin-bottom: 1rem;
+}
+
+.kova-option-label {
+    display: block;
+    font-size: 1.4rem;
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+    color: var(--kova-navy);
+}
+
+.kova-option-label span {
+    font-weight: 400;
+    color: #555;
+    margin-left: 0.25rem;
+}
+
+.kova-option-values {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.kova-swatch {
+    position: relative;
+    cursor: pointer;
+    display: block;
+    width: 50px;
+    height: 50px;
+    border-radius: 4px;
+    border: 2px solid #ddd;
+    padding: 2px;
+}
+
+.kova-swatch[data-color="Soft Sand"] .kova-swatch-inner {
+    background: #fdf5e6;
+}
+
+.kova-swatch-inner {
+    width: 100%;
+    height: 100%;
+    border-radius: 2px;
+    display: block;
+}
+
+.kova-swatch-input {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.kova-swatch-input:checked+.kova-swatch-inner,
+.kova-swatch--active {
+    border-color: var(--kova-navy);
+}
+
+/* ---- Consistently displayed Selling/Trust elements (Modernized) ---- */
+.kova-hero-buy-elements {
+    margin-top: 2rem;
+}
+
+/* Gifts Row (4 Boxes) */
+.kova-hero-gifts-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.kova-hero-gift-card {
+    background: #F8F9FA;
+    border: 1px solid #E9ECEF;
+    border-radius: 12px;
+    padding: 1.5rem 0.5rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.kova-hero-gift-image {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--kova-navy);
+}
+
+.kova-hero-gift-image svg {
+    width: 24px;
+    height: 24px;
+}
+
+.kova-hero-gift-title {
+    font-size: 1.2rem;
+    color: var(--kova-navy);
+    line-height: 1.2;
+    font-weight: 500;
+}
+
+.kova-hero-gift-title strong {
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+/* Urgency Pill (Pill Shape) */
+.kova-urgency-pill {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    background: #FFF5F5;
+    color: #122442;
+    border-radius: 100px;
+    padding: 1rem 2rem;
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+    font-weight: 500;
+}
+
+.kova-urgency-dot {
+    width: 10px;
+    height: 10px;
+    background: #FF4D4D;
+    border-radius: 50%;
+    animation: kova-pulse-red 2s infinite;
+}
+
+@keyframes kova-pulse-red {
+    0% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(255, 77, 77, 0.7);
+    }
+
+    70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 10px rgba(255, 77, 77, 0);
+    }
+
+    100% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(255, 77, 77, 0);
+    }
+}
+
+/* ATC Button (Ultra Premium Pill) */
+.kova-atc-wrapper {
+    margin-bottom: 1.5rem;
+}
+
+.kova-atc-btn {
+    appearance: none;
+    width: 100%;
+    background-color: var(--kova-navy, #122442) !important;
+    color: #ffffff !important;
+    border: none !important;
+    border-radius: 100px !important;
+    padding: 1.8rem 3rem !important;
+    font-size: 2.2rem;
+    font-weight: 800 !important;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-family: 'Jost', sans-serif !important;
+    transition: all 0.3s ease;
+    display: block;
+    text-align: center;
+    line-height: 1;
+}
+
+.kova-atc-btn:hover:not(:disabled) {
+    background-color: #1A335D !important;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(18, 36, 66, 0.25);
+}
+
+.kova-atc-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Trust Strip (Centered) */
+.kova-hero-trust-strip {
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.kova-hero-trust-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 1.4rem;
+    color: var(--kova-navy);
+}
+
+.kova-hero-trust-item svg {
+    width: 18px;
+    height: 18px;
+    color: #122442;
+}
+
+.kova-hero-trust-item strong {
+    font-weight: 800;
+}
+
+/* Payment Icons (Boxes) */
+.kova-hero-payment-icons {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-bottom: 2.5rem;
+    flex-wrap: wrap;
+}
+
+.kova-payment-box {
+    background: #fff;
+    border: 1px solid #EDEDED;
+    border-radius: 6px;
+    padding: 0.4rem 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 32px;
+}
+
+.kova-payment-box svg {
+    height: 18px;
+    width: auto;
+}
+
+/* Description & Read More */
+.kova-hero-description {
+    text-align: center;
+    font-size: 1.6rem;
+    line-height: 1.6;
+    color: #4A4A4A;
+    margin-bottom: 2.5rem;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.kova-read-more {
+    color: var(--kova-navy);
+    font-weight: 700;
+    text-decoration: underline;
+    margin-left: 0.5rem;
+    cursor: pointer;
+}
+
+/* Accordions (Clean) */
+.kova-hero-accordions {
+    border-top: 1px solid #EEE;
+}
+
+.kova-hero-accordion {
+    border-bottom: 1px solid #EEE;
+}
+
+.kova-hero-accordion-trigger {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 0.5rem;
+    cursor: pointer;
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: var(--kova-navy);
+    list-style: none;
+}
+
+.kova-hero-accordion-trigger::-webkit-details-marker {
+    display: none;
+}
+
+.kova-accordion-icon {
+    width: 24px;
+    height: 24px;
+    background: #F4F6F8;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #122442;
+    transition: transform 0.3s ease;
+}
+
+.kova-hero-accordion[open] .kova-accordion-icon {
+    transform: rotate(45deg);
+}
+
+.kova-hero-accordion-content {
+    padding: 0 0.5rem 2rem;
+    font-size: 1.5rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+@media screen and (max-width: 749px) {
+    .kova-hero-gifts-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .kova-hero-trust-strip {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+}
+
+.kova-sub-desc {
+    font-size: 1.7rem;
+    color: #555;
+    line-height: 1.5;
+    margin-bottom: 2.5rem;
+    text-align: center;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.kova-sub-desc a {
+    color: var(--kova-navy);
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+.kova-sub-desc a {
+    color: var(--kova-navy);
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+/* ---- Accordions ---- */
+.kova-accordions {
+    border-top: 1px solid var(--kova-gray-border);
+}
+
+.kova-accordion {
+    border-bottom: 1px solid var(--kova-gray-border);
+    background: #FAFAFA;
+    margin-bottom: -1px;
+    /* border collapse */
+}
+
+.kova-accordion-trigger {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 1.5rem 1.25rem;
+    cursor: pointer;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--kova-navy);
+    list-style: none;
+}
+
+.kova-accordion-trigger::-webkit-details-marker {
+    display: none;
+}
+
+.kova-accordion-trigger svg {
+    transition: transform 0.2s ease;
+    flex-shrink: 0;
+    color: #999;
+}
+
+.kova-accordion[open] .kova-accordion-trigger svg {
+    transform: rotate(45deg);
+    /* + to x */
+}
+
+.kova-accordion-content {
+    padding: 0 1.25rem 1.5rem;
+    font-size: 1.5rem;
+    line-height: 1.6;
+    color: var(--kova-text);
+    background: #FAFAFA;
+}
+
+.kova-accordion-content ul {
+    padding-left: 1.25rem;
+}
+
+.kova-accordion-content li {
+    margin-bottom: 0.35rem;
+}
