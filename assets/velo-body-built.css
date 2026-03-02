@@ -5,22 +5,22 @@
 }
 
 .velo-body-built-section {
-    padding: 8rem 0;
+    padding: 6rem 0;
     background: #fff;
     font-family: var(--font-body-family), sans-serif;
 }
 
 .velo-bb-header {
-    margin-bottom: 4rem;
+    margin-bottom: 3rem;
 }
 
 .velo-bb-heading {
-    font-size: 5.6rem;
+    font-size: 4.8rem;
     font-weight: 300;
     line-height: 1.05;
     color: var(--velo-navy);
     font-family: var(--font-heading-family), 'Jost', sans-serif;
-    margin: 0 0 1.5rem 0;
+    margin: 0 0 1rem 0;
     letter-spacing: -0.01em;
 }
 
@@ -39,21 +39,21 @@
 .velo-bb-grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 4rem;
+    gap: 3rem;
     align-items: center;
 }
 
 @media screen and (min-width: 990px) {
     .velo-bb-grid {
         grid-template-columns: 1fr 1fr;
-        gap: 8rem;
+        gap: 6rem;
     }
 }
 
 .velo-bb-list {
     display: flex;
     flex-direction: column;
-    gap: 3rem;
+    gap: 2rem;
     width: 100%;
 }
 
@@ -69,14 +69,14 @@
 .velo-bb-item {
     display: flex;
     align-items: flex-start;
-    gap: 2.5rem;
+    gap: 2rem;
 }
 
 /* Dashed circle icon container */
 .velo-bb-icon-wrap {
     flex-shrink: 0;
-    width: 56px;
-    height: 56px;
+    width: 48px;
+    height: 48px;
     border-radius: 50%;
     border: 2px dashed #b0b8c9;
     display: flex;
