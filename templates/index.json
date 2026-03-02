@@ -99,7 +99,7 @@
         "badge_1": "BESTSELLER",
         "badge_2": "TOPPER #1 NEGLI HOTEL di lusso",
         "show_reviews": true,
-        "rating_value": 5,
+        "rating_value": "4.9",
         "review_count": "9700+",
         "title_fallback": "Topper Materasso Premium Trapuntato Extra Spesso 1000 GSM - Traspirante e Ultra Soffice",
         "product_url": "/products/west-month-luxury-topper",
@@ -111,6 +111,7 @@
         "bullet_1": "Comfort di Lusso: Qualità da hotel a 5 stelle, 3 volte più spesso dei topper standard",
         "bullet_2": "Effetto Fresco: Design traspirante che aiuta a prevenire la sudorazione notturna",
         "bullet_3": "Ipoallergenico: Certificato OEKO-TEX® Standard 100, anti-acaro e protezione contro allergeni",
+        "bullet_4": "Vestibilità Perfetta: Fascia elastica con tasche profonde per una tenuta stabile senza spostamenti.",
         "gifts_heading": "",
         "urgency_text": "Quasi esaurito - aggiornato all [date]",
         "atc_text": "Acquista ora",
@@ -124,16 +125,16 @@
       "blocks": {
         "heading": {
           "type": "heading",
-          "disabled": true,
+          "disabled": false,
           "settings": {
-            "heading_light": "Ultimate Comfort =",
-            "heading_bold": "Better Sleep"
+            "heading_light": "Comfort Assoluto =",
+            "heading_bold": "Sonno Migliore"
           }
         },
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p>West Month effortlessly adapts to your body, improves comfort, and regulates temperature throughout the night.</p>"
+            "text": "<p>Amanotte si adatta perfettamente al tuo corpo, migliora il comfort e regola la temperatura durante tutta la notte.</p>"
           }
         }
       },
@@ -660,11 +661,9 @@
     "velo_features",
     "velo_body_built",
     "velo_comparison",
-    "velo_how_to",
     "velo_details",
     "velo_risk_free",
     "velo_testimonials",
-    "velo_included",
     "velo_faq",
     "velo_sticky_atc"
   ]

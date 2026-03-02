@@ -89,7 +89,7 @@
                 </svg>
               {% endfor %}
             </div>
-            <span class="velo-rating-text">{{ section.settings.rating_value | append: ".0" }} | {{ section.settings.review_count }} reviews</span>
+            <span class="velo-rating-text">{{ section.settings.rating_value }} | {{ section.settings.review_count }} reviews</span>
           </div>
         {% endif %}
 
@@ -133,26 +133,25 @@
           {{ section.settings.hero_desc | default: "The only chair that supports your body's natural need for movement - working with your body, not against it." }}
         </div>
         
-        {% if section.settings.bullet_1 != blank or section.settings.bullet_2 != blank or section.settings.bullet_3 != blank %}
+        {% if section.settings.bullet_1 != blank or section.settings.bullet_2 != blank or section.settings.bullet_3 != blank or section.settings.bullet_4 != blank %}
           <ul class="velo-bullets">
-            {% if section.settings.bullet_1 != blank %}
-              <li>
-                <div class="velo-bullet-check">{% render 'velo-icons', icon: 'check' %}</div>
-                <span>{{ section.settings.bullet_1 }}</span>
-              </li>
-            {% endif %}
-            {% if section.settings.bullet_2 != blank %}
-              <li>
-                <div class="velo-bullet-check">{% render 'velo-icons', icon: 'check' %}</div>
-                <span>{{ section.settings.bullet_2 }}</span>
-              </li>
-            {% endif %}
-            {% if section.settings.bullet_3 != blank %}
-              <li>
-                <div class="velo-bullet-check">{% render 'velo-icons', icon: 'check' %}</div>
-                <span>{{ section.settings.bullet_3 }}</span>
-              </li>
-            {% endif %}
+            {% for i in (1..4) %}
+              {% capture bullet_key %}bullet_{{ i }}{% endcapture %}
+              {% assign bullet_text = section.settings[bullet_key] %}
+              {% if bullet_text != blank %}
+                <li>
+                  <div class="velo-bullet-check">{% render 'velo-icons', icon: 'check' %}</div>
+                  <span>
+                    {% if bullet_text contains ':' %}
+                      {% assign first_part = bullet_text | split: ':' | first %}
+                      <strong>{{ first_part }}:</strong> {{ bullet_text | remove_first: first_part | remove_first: ':' | strip }}
+                    {% else %}
+                      {{ bullet_text }}
+                    {% endif %}
+                  </span>
+                </li>
+              {% endif %}
+            {% endfor %}
           </ul>
         {% endif %}
 
@@ -193,9 +192,10 @@
               {% if section.settings.urgency_text != blank %}
                 {%- assign today_day = 'now' | date: "%d" -%}
                 {%- assign today_month = 'now' | date: "%B" -%}
+                {%- assign today_date_str = "<strong>" | append: today_day | append: " " | append: today_month | append: "</strong>" -%}
                 <div class="velo-urgency-pill">
                   <span class="velo-urgency-dot"></span>
-                  <span>Order by <strong>{{ today_month }} {{ today_day }}th</strong> for guaranteed FREE Gifts</span>
+                  <span>{{ section.settings.urgency_text | replace: '[date]', today_date_str }}</span>
                 </div>
               {% endif %}
               <div class="velo-atc-wrapper">
@@ -204,15 +204,8 @@
                 </button>
               </div>
               <div class="velo-hero-trust-strip">
-                <div class="velo-hero-trust-item">{% render 'velo-icons', icon: 'truck' %}<span>Ships <strong>Today</strong></span></div>
-                <div class="velo-hero-trust-item">{% render 'velo-icons', icon: 'refresh' %}<span><strong>90-Day</strong> Easy Returns</span></div>
-              </div>
-              <div class="velo-hero-payment-icons">
-                {%- assign enabled_payment_types = 'visa,master,american_express,apple_pay,paypal,google_pay,shopify_pay' | split: ',' -%}
-                {% for type in enabled_payment_types %}<div class="velo-payment-box">{{ type | payment_type_svg_tag: class: 'icon icon--full-color' }}</div>{% endfor %}
-              </div>
-              <div class="velo-hero-description">
-                <p>{{ section.settings.hero_desc | default: "VELO is made for people who need more than a standard chair." }}<a href="#" class="velo-read-more">Read More</a></p>
+                <div class="velo-hero-trust-item">{% render 'velo-icons', icon: 'truck' %}<span>{{ section.settings.trust_1 }}</span></div>
+                <div class="velo-hero-trust-item">{% render 'velo-icons', icon: 'refresh' %}<span>{{ section.settings.trust_2 }}</span></div>
               </div>
             </div>
           {%- endform -%}
@@ -233,9 +226,10 @@
             {% if section.settings.urgency_text != blank %}
               {%- assign today_day = 'now' | date: "%d" -%}
               {%- assign today_month = 'now' | date: "%B" -%}
+              {%- assign today_date_str = "<strong>" | append: today_day | append: " " | append: today_month | append: "</strong>" -%}
               <div class="velo-urgency-pill">
                 <span class="velo-urgency-dot"></span>
-                <span>Order by <strong>{{ today_month }} {{ today_day }}th</strong> for guaranteed FREE Gifts</span>
+                <span>{{ section.settings.urgency_text | replace: '[date]', today_date_str }}</span>
               </div>
             {% endif %}
             <div class="velo-atc-wrapper">
@@ -244,15 +238,8 @@
               </a>
             </div>
             <div class="velo-hero-trust-strip">
-              <div class="velo-hero-trust-item">{% render 'velo-icons', icon: 'truck' %}<span>Ships <strong>Today</strong></span></div>
-              <div class="velo-hero-trust-item">{% render 'velo-icons', icon: 'refresh' %}<span><strong>90-Day</strong> Easy Returns</span></div>
-            </div>
-            <div class="velo-hero-payment-icons">
-              {%- assign enabled_payment_types = 'visa,master,american_express,apple_pay,paypal,google_pay,shopify_pay' | split: ',' -%}
-              {% for type in enabled_payment_types %}<div class="velo-payment-box">{{ type | payment_type_svg_tag: class: 'icon icon--full-color' }}</div>{% endfor %}
-            </div>
-            <div class="velo-hero-description">
-              <p>{{ section.settings.hero_desc | default: "VELO is made for people who need more than a standard chair." }}<a href="#" class="velo-read-more">Read More</a></p>
+              <div class="velo-hero-trust-item">{% render 'velo-icons', icon: 'truck' %}<span>{{ section.settings.trust_1 }}</span></div>
+              <div class="velo-hero-trust-item">{% render 'velo-icons', icon: 'refresh' %}<span>{{ section.settings.trust_2 }}</span></div>
             </div>
           </div>
         {% endif %}
@@ -313,6 +300,31 @@
       "label": "Demo Image 3"
     },
     {
+      "type": "image_picker",
+      "id": "image_4",
+      "label": "Demo Image 4"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_5",
+      "label": "Demo Image 5"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_6",
+      "label": "Demo Image 6"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_7",
+      "label": "Demo Image 7"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_8",
+      "label": "Demo Image 8"
+    },
+    {
       "type": "header",
       "content": "Badges"
     },
@@ -339,13 +351,10 @@
       "default": true
     },
     {
-      "type": "range",
+      "type": "text",
       "id": "rating_value",
-      "min": 1,
-      "max": 5,
-      "step": 1,
-      "label": "Rating (stars)",
-      "default": 5
+      "label": "Rating (text, e.g. 4.9)",
+      "default": "4.9"
     },
     {
       "type": "text",
@@ -419,6 +428,11 @@
       "id": "bullet_3",
       "label": "Bullet Point 3",
       "default": "Productivity: Increases daily work output"
+    },
+    {
+      "type": "text",
+      "id": "bullet_4",
+      "label": "Bullet Point 4"
     },
     {
       "type": "header",
