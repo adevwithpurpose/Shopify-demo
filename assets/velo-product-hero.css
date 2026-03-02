@@ -27,7 +27,7 @@
 
 @media screen and (min-width: 990px) {
     .velo-hero-container {
-        grid-template-columns: 55% 45%;
+        grid-template-columns: 45% 55%;
         gap: 4rem;
         padding: 2rem 0;
     }
