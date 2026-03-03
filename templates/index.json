@@ -114,6 +114,8 @@
         "bullet_4": "Vestibilità Perfetta: Fascia elastica con tasche profonde per una tenuta stabile senza spostamenti.",
         "gifts_heading": "",
         "urgency_text": "Quasi esaurito - aggiornato all [date]",
+        "cta_bg_color": "#ff6b00",
+        "cta_text_color": "#ffffff",
         "atc_text": "Acquista ora",
         "sold_out_text": "ESAURITO",
         "save_text": "SALVA",
@@ -184,6 +186,7 @@
       ],
       "settings": {
         "color_scheme": "",
+        "marquee_speed": 70,
         "padding_top": 32,
         "padding_bottom": 32
       }
