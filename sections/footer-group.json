@@ -2,15 +2,6 @@
   "name": "t:sections.footer.name",
   "type": "footer",
   "sections": {
-    "newsletter": {
-      "type": "newsletter",
-      "settings": {
-        "color_scheme": "scheme-2",
-        "full_width": true,
-        "padding_top": 60,
-        "padding_bottom": 40
-      }
-    },
     "footer": {
       "type": "footer",
       "blocks": {
@@ -50,8 +41,8 @@
         "footer-brand"
       ],
       "settings": {
-        "color_scheme": "scheme-2",
-        "newsletter_enable": true,
+        "color_scheme": "scheme-3",
+        "newsletter_enable": false,
         "newsletter_heading": "Iscriviti per Offerte Esclusive",
         "enable_follow_on_shop": false,
         "show_social": true,
@@ -66,7 +57,6 @@
     }
   },
   "order": [
-    "newsletter",
     "footer"
   ]
 }

@@ -96,7 +96,7 @@
             <span class="velo-price-compare">{{ current_product.compare_at_price | money }}</span>
             <span class="velo-price-current" id="veloPrice-{{ section.id }}">{{ current_product.price | money }}</span>
             {%- assign save_pct = current_product.compare_at_price | minus: current_product.price | times: 100 | divided_by: current_product.compare_at_price -%}
-            <span class="velo-save-badge">SALVA {{ save_pct }}%</span>
+            <span class="velo-save-badge">{{ section.settings.save_text | default: 'SALVA' }} {{ save_pct }}%</span>
           </div>
         {% else %}
           <div class="velo-pricing">
@@ -183,7 +183,7 @@
                           {% render 'velo-icons', icon: block.settings.icon %}
                         {% endif %}
                       </div>
-                      <div class="velo-hero-gift-title"><strong>{{ block.settings.free_text | default: 'FREE' }}</strong> {{ block.settings.title }}</div>
+                      <div class="velo-hero-gift-title"><strong>{{ block.settings.free_text | default: section.settings.free_label | default: 'GRATIS' }}</strong> {{ block.settings.title }}</div>
                     </div>
                   {% endfor %}
                 </div>
@@ -198,7 +198,7 @@
               {% endif %}
               <div class="velo-atc-wrapper">
                 <button type="submit" class="velo-atc-btn">
-                  {% if current_product.available %}{{ section.settings.atc_text | default: 'ADD TO CART +' }}{% else %}SOLD OUT{% endif %}
+                  {% if current_product.available %}{{ section.settings.atc_text | default: 'ACQUISTA ORA' }}{% else %}{{ section.settings.sold_out_text | default: 'ESAURITO' }}{% endif %}
                 </button>
               </div>
               <div class="velo-hero-trust-strip">
@@ -376,13 +376,31 @@
     },
     {
       "type": "header",
-      "content": "Button & Trust"
+      "content": "Add to Cart & Status"
     },
     {
       "type": "text",
       "id": "atc_text",
       "label": "Add to Cart Button Text",
-      "default": "ADD TO CART +"
+      "default": "ACQUISTA ORA"
+    },
+    {
+      "type": "text",
+      "id": "sold_out_text",
+      "label": "Sold Out Text",
+      "default": "ESAURITO"
+    },
+    {
+      "type": "text",
+      "id": "save_text",
+      "label": "Save Badge Text",
+      "default": "SALVA"
+    },
+    {
+      "type": "text",
+      "id": "free_label",
+      "label": "Free Label (Gifts)",
+      "default": "GRATIS"
     },
     {
       "type": "text",
