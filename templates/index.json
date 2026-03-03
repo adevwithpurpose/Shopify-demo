@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "velo_hero": {
@@ -106,6 +115,9 @@
         "gifts_heading": "",
         "urgency_text": "Quasi esaurito - aggiornato all [date]",
         "atc_text": "Acquista ora",
+        "sold_out_text": "ESAURITO",
+        "save_text": "SALVA",
+        "free_label": "GRATIS",
         "trust_1": "Spedizione Rapida in tutta Italia",
         "trust_2": "Reso facile entro 30 giorni",
         "sub_desc": ""
@@ -363,8 +375,8 @@
       ],
       "settings": {
         "color_scheme": "",
-        "padding_top": 80,
-        "padding_bottom": 80,
+        "padding_top": 24,
+        "padding_bottom": 32,
         "heading_light": "",
         "heading_bold": "Perché Amanotte",
         "heading_italic": "è diverso",
@@ -540,8 +552,10 @@
         "savings_value": "Risparmi €200",
         "total_label": "Totale",
         "total_price": "€199",
-        "free_gifts_count": "4",
-        "cta_text": "ACQUISTA ORA",
+        "free_label": "GRATIS",
+        "free_gifts_label": "REGALI GRATUITI",
+        "trust_1": "Spedizione Oggi",
+        "trust_2": "30 Giorni Prova",
         "cta_link": "",
         "badge_text": "Spedizione GRATUITA Inclusa",
         "annotation_1": "OMAGGIO Federe",

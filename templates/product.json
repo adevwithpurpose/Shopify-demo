@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -156,9 +165,7 @@
         "heading_prefix": "Pensato Per Chi Vuole",
         "heading_bold": "Riposarsi Davvero",
         "subheading": "Supporta le tue posizioni naturali di riposo",
-        "side_video": "shopify://files/videos/compressed_video.mp4",
-        "padding_top": 80,
-        "padding_bottom": 80
+        "side_video": "shopify://files/videos/compressed_video.mp4"
       }
     },
     "velo_details": {
@@ -291,8 +298,6 @@
         "savings_value": "Risparmi €200",
         "total_label": "Totale",
         "total_price": "€199",
-        "free_gifts_count": "4",
-        "cta_text": "ACQUISTA ORA",
         "badge_text": "Regali GRATUITI Inclusi (valore €115)"
       }
     },
@@ -356,12 +361,12 @@
         "heading": "Potrebbe Piacerti Anche",
         "heading_size": "h2",
         "columns_desktop": 4,
+        "columns_mobile": "2",
         "color_scheme": "scheme-1",
         "image_ratio": "square",
         "show_secondary_image": true,
         "show_vendor": false,
         "show_rating": false,
-        "columns_mobile": "2",
         "padding_top": 36,
         "padding_bottom": 28
       }
