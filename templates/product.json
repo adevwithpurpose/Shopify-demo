@@ -100,6 +100,7 @@
         "acc_contact"
       ],
       "settings": {
+        "product": "",
         "badge_1": "BESTSELLER",
         "badge_2": "TOPPER #1 NEGLI HOTEL di lusso",
         "show_reviews": true,
@@ -113,7 +114,12 @@
         "bullet_4": "Vestibilità Perfetta: Fascia elastica con tasche profonde per una tenuta stabile senza spostamenti.",
         "gifts_heading": "",
         "urgency_text": "Quasi esaurito - aggiornato all [date]",
+        "cta_bg_color": "#ff6b00",
+        "cta_text_color": "#ffffff",
         "atc_text": "Acquista ora",
+        "sold_out_text": "ESAURITO",
+        "save_text": "SALVA",
+        "free_label": "GRATIS",
         "trust_1": "Spedizione Rapida in tutta Italia",
         "trust_2": "Reso facile entro 30 giorni",
         "sub_desc": ""
@@ -231,7 +237,8 @@
       "settings": {
         "heading_light": "Progettato Nei",
         "heading_bold": "Minimi Dettagli",
-        "subheading": "Materiali focalizzati sul comfort e vestibilità ultra stabile"
+        "subheading": "Materiali focalizzati sul comfort e vestibilità ultra stabile",
+        "full_width": false
       }
     },
     "velo_included": {
@@ -290,7 +297,11 @@
         "inc_4",
         "inc_5"
       ],
+      "disabled": true,
       "settings": {
+        "color_scheme": "",
+        "padding_top": 80,
+        "padding_bottom": 80,
         "heading": "Tutto Quello che Ti Serve per",
         "heading_bold": "Dormire Davvero",
         "order_today_label": "SE ORDINI OGGI:",
@@ -298,7 +309,20 @@
         "savings_value": "Risparmi €200",
         "total_label": "Totale",
         "total_price": "€199",
-        "badge_text": "Regali GRATUITI Inclusi (valore €115)"
+        "free_label": "GRATIS",
+        "free_gifts_label": "REGALI GRATUITI",
+        "trust_1": "Spedizione Oggi",
+        "trust_2": "30 Giorni Prova",
+        "cta_link": "",
+        "badge_text": "Regali GRATUITI Inclusi (valore €115)",
+        "annotation_1": "FREE Mouse Pad",
+        "anno_1_top": 25,
+        "anno_1_left": 15,
+        "anno_1_rotate": 0,
+        "annotation_2": "FREE Chair Mat",
+        "anno_2_top": 65,
+        "anno_2_left": 70,
+        "anno_2_rotate": 0
       }
     },
     "velo_faq": {
@@ -360,10 +384,12 @@
       "settings": {
         "heading": "Potrebbe Piacerti Anche",
         "heading_size": "h2",
+        "products_to_show": 4,
         "columns_desktop": 4,
         "columns_mobile": "2",
         "color_scheme": "scheme-1",
         "image_ratio": "square",
+        "image_shape": "default",
         "show_secondary_image": true,
         "show_vendor": false,
         "show_rating": false,
