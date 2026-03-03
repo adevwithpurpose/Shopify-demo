@@ -130,18 +130,7 @@
             });
         });
 
-        // --- Dynamic Urgency Date ---
-        const urgencyEl = section.querySelector('.velo-urgency');
-        if (urgencyEl) {
-            const now = new Date();
-            // Next business day (if today is Fri/Sat/Sun, jump to Monday)
-            const daysToAdd = now.getDay() === 5 ? 3 : now.getDay() === 6 ? 2 : 1;
-            const nextDay = new Date(now);
-            nextDay.setDate(now.getDate() + daysToAdd);
-            const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-            const dateStr = months[nextDay.getMonth()] + ' ' + nextDay.getDate();
-            urgencyEl.innerHTML = urgencyEl.innerHTML.replace(/\[date\]/g, '<strong>' + dateStr + '</strong>');
-        }
+
         // --- Media Slider Navigation ---
         const slider = section.querySelector('.velo-media-slider');
         const prevBtn = section.querySelector('.velo-slider-prev');
