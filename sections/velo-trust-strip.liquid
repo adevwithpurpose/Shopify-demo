@@ -12,6 +12,10 @@
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
   }
+
+  .section-{{ section.id }}-padding .velo-trust-marquee-track {
+    animation-duration: {{ section.settings.marquee_speed }}s;
+  }
 {%- endstyle -%}
 
 <div class="velo-trust-section section-{{ section.id }}-padding color-{{ section.settings.color_scheme }} gradient">
@@ -47,6 +51,16 @@
       "id": "color_scheme",
       "label": "Color scheme",
       "default": "scheme-1"
+    },
+    {
+      "type": "range",
+      "id": "marquee_speed",
+      "min": 10,
+      "max": 100,
+      "step": 5,
+      "unit": "s",
+      "label": "Marquee Speed (Slowest = 100s)",
+      "default": 40
     },
     {
       "type": "header",

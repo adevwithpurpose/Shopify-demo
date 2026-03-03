@@ -185,7 +185,7 @@
     display: block;
     width: 100%;
     text-align: center;
-    background: var(--velo-navy) !important;
+    background: #FF6B00 !important;
     color: #fff !important;
     padding: 1.5rem 2.5rem;
     border-radius: 100px;
@@ -200,9 +200,9 @@
 }
 
 .velo-inc-cta:hover {
-    background: #1A335D !important;
+    background: #E65A00 !important;
     transform: translateY(-2px);
-    box-shadow: 0 8px 15px rgba(18, 36, 66, 0.15);
+    box-shadow: 0 8px 15px rgba(255, 107, 0, 0.25);
 }
 
 .velo-inc-cta::before,
@@ -251,7 +251,7 @@
     right: 5%;
     width: 140px;
     height: 140px;
-    background: var(--velo-navy);
+    background: #FF6B00;
     color: #fff;
     font-size: 1.2rem;
     font-weight: 800;
@@ -267,7 +267,7 @@
     text-transform: uppercase;
     box-shadow: 0 15px 35px rgba(18, 36, 66, 0.2);
     border: 2px dashed rgba(255, 255, 255, 0.3);
-    outline: 8px solid var(--velo-navy);
+    outline: 8px solid #FF6B00;
     letter-spacing: 0.02em;
 }
 

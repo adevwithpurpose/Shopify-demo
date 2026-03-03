@@ -122,7 +122,7 @@ body.sticky-atc-active {
 }
 
 .velo-sticky-atc-btn {
-    background: var(--velo-navy, #122442);
+    background: #FF6B00;
     color: #fff;
     border: none;
     border-radius: 12px;
@@ -135,7 +135,7 @@ body.sticky-atc-active {
     align-items: center;
     gap: 0.8rem;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(18, 36, 66, 0.3);
+    box-shadow: 0 4px 15px rgba(255, 107, 0, 0.3);
 }
 
 .velo-sticky-atc-btn svg {
@@ -143,9 +143,9 @@ body.sticky-atc-active {
 }
 
 .velo-sticky-atc-btn:hover {
-    background: #1a345e;
+    background: #E65A00;
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(18, 36, 66, 0.4);
+    box-shadow: 0 6px 20px rgba(255, 107, 0, 0.4);
 }
 
 .velo-sticky-atc-btn:hover svg {
@@ -153,7 +153,7 @@ body.sticky-atc-active {
 }
 
 .velo-sticky-atc-btn:hover {
-    background: #1a345e;
+    background: #E65A00;
 }
 
 /* Hide on Desktop by default if requested, but site is mobile-first landing, so usually keep for both or just mobile */

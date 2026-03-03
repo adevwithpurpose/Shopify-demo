@@ -9,6 +9,8 @@
     --velo-gray-light: #F4F6F8;
     --velo-gray-border: #E5E5E5;
     --velo-text: rgba(0, 0, 0, 0.81);
+    --velo-orange: #FF6B00;
+    --velo-orange-hover: #E65A00;
 }
 
 .velo-hero-wrapper {
@@ -540,7 +542,7 @@
 .velo-atc-btn {
     appearance: none;
     width: 100%;
-    background-color: var(--velo-navy, #122442) !important;
+    background-color: var(--velo-orange, #FF6B00) !important;
     color: #ffffff !important;
     border: none !important;
     border-radius: 100px !important;
@@ -558,9 +560,9 @@
 }
 
 .velo-atc-btn:hover:not(:disabled) {
-    background-color: #1A335D !important;
+    background-color: var(--velo-orange-hover, #E65A00) !important;
     transform: translateY(-2px);
-    box-shadow: 0 10px 25px rgba(18, 36, 66, 0.25);
+    box-shadow: 0 10px 25px rgba(255, 107, 0, 0.25);
 }
 
 .velo-atc-btn:disabled {

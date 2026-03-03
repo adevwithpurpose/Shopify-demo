@@ -3,6 +3,16 @@
 
 {%- assign current_product = section.settings.product | default: product -%}
 
+{%- style -%}
+  #veloBuyBox-{{ section.id }} .velo-atc-btn {
+    background-color: {{ section.settings.cta_bg_color | default: '#FF6B00' }} !important;
+    color: {{ section.settings.cta_text_color | default: '#ffffff' }} !important;
+  }
+  #veloBuyBox-{{ section.id }} .velo-atc-btn:hover {
+     filter: brightness(0.9);
+  }
+{%- endstyle -%}
+
 <div class="velo-hero-wrapper">
   <div class="velo-hero-container page-width">
     <!-- Left Column: Media Gallery -->
@@ -376,7 +386,19 @@
     },
     {
       "type": "header",
-      "content": "Add to Cart & Status"
+      "content": "Add to Cart & Colors"
+    },
+    {
+      "type": "color",
+      "id": "cta_bg_color",
+      "label": "CTA Button Background",
+      "default": "#FF6B00"
+    },
+    {
+      "type": "color",
+      "id": "cta_text_color",
+      "label": "CTA Button Text",
+      "default": "#ffffff"
     },
     {
       "type": "text",
