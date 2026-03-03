@@ -14,10 +14,16 @@
 }
 
 .velo-hero-wrapper {
-    padding: 0;
+    padding: 2rem 0 0;
     font-family: var(--font-body-family), sans-serif;
     font-size: 1.6rem;
     color: var(--velo-text);
+}
+
+@media screen and (min-width: 990px) {
+    .velo-hero-wrapper {
+        padding: 0;
+    }
 }
 
 .velo-hero-container {
@@ -691,7 +697,39 @@
 
 @media screen and (max-width: 749px) {
     .velo-hero-gifts-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(4, 1fr);
+        gap: 0.4rem;
+        margin-bottom: 1.2rem;
+        max-width: 100%;
+    }
+
+    .velo-hero-gift-card {
+        gap: 0.3rem;
+    }
+
+    .velo-hero-gift-image-box {
+        padding: 8%;
+        border-radius: 5px;
+    }
+
+    .velo-hero-gift-image-box img {
+        max-height: 52px;
+    }
+
+    .velo-hero-gift-image-box svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .velo-hero-gift-badge {
+        font-size: 0.65rem;
+        padding: 0.1rem 0.3rem;
+        top: -6px;
+    }
+
+    .velo-hero-gift-title {
+        font-size: 0.72rem;
+        line-height: 1.15;
     }
 
     .velo-hero-trust-strip {
@@ -781,26 +819,32 @@
 }
 
 /* ================================
-   LIGHTBOX
+   LIGHTBOX — Production Grade
    ================================ */
 .velo-lightbox {
-    display: none;
     position: fixed;
     inset: 0;
     z-index: 99999;
+    display: flex;
     align-items: center;
     justify-content: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.28s ease, visibility 0.28s ease;
 }
 
 .velo-lightbox.is-open {
-    display: flex;
+    visibility: visible;
+    opacity: 1;
 }
 
 .velo-lightbox-backdrop {
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.92);
-    cursor: pointer;
+    background: rgba(8, 8, 12, 0.94);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    cursor: zoom-out;
 }
 
 .velo-lightbox-inner {
@@ -809,77 +853,127 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    max-width: 94vw;
-    max-height: 94vh;
-    gap: 1rem;
+    gap: 1.4rem;
+    padding: 0 0.8rem;
 }
 
 .velo-lightbox-img {
     display: block;
-    max-width: 88vw;
-    max-height: 90vh;
+    max-width: min(88vw, 1100px);
+    max-height: 86vh;
+    width: auto;
+    height: auto;
     object-fit: contain;
-    border-radius: 6px;
-    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5);
-    animation: veloLbFadeIn 0.2s ease;
+    border-radius: 8px;
+    box-shadow: 0 28px 80px rgba(0, 0, 0, 0.65);
+    transform: scale(0.92);
+    opacity: 0;
+    transition: transform 0.32s cubic-bezier(0.34, 1.42, 0.64, 1),
+        opacity 0.22s ease;
+    will-change: transform, opacity;
 }
 
-@keyframes veloLbFadeIn {
-    from {
-        opacity: 0;
-        transform: scale(0.96);
-    }
-
-    to {
-        opacity: 1;
-        transform: scale(1);
-    }
+.velo-lightbox.is-open .velo-lightbox-img {
+    transform: scale(1);
+    opacity: 1;
 }
 
+/* Close button */
 .velo-lightbox-close {
     position: fixed;
-    top: 1.6rem;
-    right: 2rem;
-    background: rgba(255, 255, 255, 0.15);
-    border: none;
-    color: #fff;
-    font-size: 2.8rem;
-    line-height: 1;
-    width: 44px;
-    height: 44px;
+    top: 1.4rem;
+    right: 1.6rem;
+    z-index: 10;
+    width: 46px;
+    height: 46px;
     border-radius: 50%;
+    border: 1.5px solid rgba(255, 255, 255, 0.28);
+    background: rgba(255, 255, 255, 0.12);
+    color: #fff;
+    font-size: 0;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: background 0.2s;
-    z-index: 2;
+    transition: background 0.18s ease, border-color 0.18s ease,
+        transform 0.22s cubic-bezier(0.34, 1.56, 0.64, 1);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+}
+
+.velo-lightbox-close::before {
+    content: '\00d7';
+    font-size: 2.2rem;
+    line-height: 1;
+    font-weight: 300;
 }
 
 .velo-lightbox-close:hover {
-    background: rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.24);
+    border-color: rgba(255, 255, 255, 0.5);
+    transform: rotate(90deg) scale(1.05);
 }
 
+/* Arrow navigation */
 .velo-lightbox-arrow {
-    background: rgba(255, 255, 255, 0.15);
-    border: none;
-    color: #fff;
-    font-size: 4rem;
-    line-height: 1;
-    width: 48px;
-    height: 48px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
+    border: 1.5px solid rgba(255, 255, 255, 0.22);
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    font-size: 2.8rem;
+    line-height: 1;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
-    transition: background 0.2s;
-    z-index: 2;
+    transition: background 0.18s ease, border-color 0.18s ease,
+        transform 0.18s ease;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    user-select: none;
 }
 
 .velo-lightbox-arrow:hover {
-    background: rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.22);
+    border-color: rgba(255, 255, 255, 0.45);
+}
+
+.velo-lightbox-prev:hover {
+    transform: translateX(-4px);
+}
+
+.velo-lightbox-next:hover {
+    transform: translateX(4px);
+}
+
+/* Counter indicator */
+.velo-lightbox-counter {
+    position: fixed;
+    bottom: 1.6rem;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgba(255, 255, 255, 0.55);
+    font-size: 1.2rem;
+    letter-spacing: 0.1em;
+    z-index: 10;
+    pointer-events: none;
+    font-family: sans-serif;
+}
+
+@media screen and (max-width: 749px) {
+    .velo-lightbox-arrow {
+        width: 38px;
+        height: 38px;
+        font-size: 2rem;
+    }
+
+    .velo-lightbox-img {
+        max-width: 96vw;
+        max-height: 80vh;
+    }
 }
 
 /* ================================
