@@ -262,7 +262,7 @@
           "settings": {
             "icon": "check",
             "title": "Comfort Effetto Nuvola",
-            "description": "<p>L'imbottitura da 1000GSM si adatta esattamente al tuo corpo.</p>"
+            "description": "L'imbottitura da 1000GSM si adatta esattamente al tuo corpo."
           }
         },
         "p3": {
@@ -270,7 +270,7 @@
           "settings": {
             "icon": "thermometer",
             "title": "Controllo Temperatura",
-            "description": "<p>Nessun accumulo di calore come il memory foam - fresco tutta la notte.</p>"
+            "description": "Nessun accumulo di calore come il memory foam - fresco tutta la notte."
           }
         },
         "p4": {
@@ -278,7 +278,7 @@
           "settings": {
             "icon": "sliders",
             "title": "Per Ogni Materasso",
-            "description": "<p>Le tasche profonde si adattano a materassi da 20 a 53 cm.</p>"
+            "description": "Le tasche profonde si adattano a materassi da 20 a 53 cm."
           }
         }
       },

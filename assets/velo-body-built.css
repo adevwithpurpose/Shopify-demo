@@ -101,13 +101,16 @@
 
 .velo-bb-content {
     padding-top: 0.4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
 }
 
 .velo-bb-item-title {
     font-size: 1.8rem;
     font-weight: 700;
     color: var(--velo-navy);
-    margin: 0 0 0.4rem 0;
+    margin: 0;
     font-family: var(--font-heading-family), 'Jost', sans-serif;
     line-height: 1.2;
 }
