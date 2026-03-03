@@ -162,7 +162,9 @@
                       {% for value in option.values %}
                         {%- assign custom_color = blank -%}
                         {%- for swatch in color_swatches -%}
-                          {%- if swatch.settings.title | handle == value | handle -%}
+                          {%- assign swatch_title_handle = swatch.settings.title | handle -%}
+                          {%- assign value_handle = value | handle -%}
+                          {%- if swatch_title_handle == value_handle -%}
                             {%- assign custom_color = swatch.settings.color -%}
                             {%- break -%}
                           {%- endif -%}
