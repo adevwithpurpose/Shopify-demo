@@ -159,3 +159,67 @@
     });
 })();
 
+/* =============================================
+   VELO Lightbox — Clickable Image Enlargement
+   ============================================= */
+(function () {
+    'use strict';
+
+    const lightbox = document.getElementById('veloLightbox');
+    if (!lightbox) return;
+
+    const backdrop = lightbox.querySelector('.velo-lightbox-backdrop');
+    const closeBtn = lightbox.querySelector('.velo-lightbox-close');
+    const prevBtn = lightbox.querySelector('.velo-lightbox-prev');
+    const nextBtn = lightbox.querySelector('.velo-lightbox-next');
+    const img = lightbox.querySelector('.velo-lightbox-img');
+
+    let images = [];
+    let current = 0;
+
+    function collectImages() {
+        images = Array.from(document.querySelectorAll('.velo-lightbox-trigger'));
+    }
+
+    function openAt(index) {
+        collectImages();
+        if (!images.length) return;
+        current = ((index % images.length) + images.length) % images.length;
+        const trigger = images[current];
+        img.src = trigger.dataset.src || trigger.href;
+        img.alt = trigger.dataset.alt || '';
+        lightbox.classList.add('is-open');
+        document.body.style.overflow = 'hidden';
+        img.focus();
+    }
+
+    function close() {
+        lightbox.classList.remove('is-open');
+        document.body.style.overflow = '';
+        img.src = '';
+    }
+
+    // Attach click listeners (delegated for dynamic content)
+    document.addEventListener('click', function (e) {
+        const trigger = e.target.closest('.velo-lightbox-trigger');
+        if (trigger) {
+            e.preventDefault();
+            collectImages();
+            const idx = images.indexOf(trigger);
+            openAt(idx >= 0 ? idx : 0);
+        }
+    });
+
+    if (closeBtn) closeBtn.addEventListener('click', close);
+    if (backdrop) backdrop.addEventListener('click', close);
+    if (prevBtn) prevBtn.addEventListener('click', function () { openAt(current - 1); });
+    if (nextBtn) nextBtn.addEventListener('click', function () { openAt(current + 1); });
+
+    document.addEventListener('keydown', function (e) {
+        if (!lightbox.classList.contains('is-open')) return;
+        if (e.key === 'Escape') close();
+        if (e.key === 'ArrowLeft') openAt(current - 1);
+        if (e.key === 'ArrowRight') openAt(current + 1);
+    });
+})();
+

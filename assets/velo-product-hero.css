@@ -779,3 +779,174 @@
 .velo-accordion-content li {
     margin-bottom: 0.35rem;
 }
+
+/* ================================
+   LIGHTBOX
+   ================================ */
+.velo-lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+    align-items: center;
+    justify-content: center;
+}
+
+.velo-lightbox.is-open {
+    display: flex;
+}
+
+.velo-lightbox-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.92);
+    cursor: pointer;
+}
+
+.velo-lightbox-inner {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 94vw;
+    max-height: 94vh;
+    gap: 1rem;
+}
+
+.velo-lightbox-img {
+    display: block;
+    max-width: 88vw;
+    max-height: 90vh;
+    object-fit: contain;
+    border-radius: 6px;
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5);
+    animation: veloLbFadeIn 0.2s ease;
+}
+
+@keyframes veloLbFadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.96);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.velo-lightbox-close {
+    position: fixed;
+    top: 1.6rem;
+    right: 2rem;
+    background: rgba(255, 255, 255, 0.15);
+    border: none;
+    color: #fff;
+    font-size: 2.8rem;
+    line-height: 1;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+    z-index: 2;
+}
+
+.velo-lightbox-close:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.velo-lightbox-arrow {
+    background: rgba(255, 255, 255, 0.15);
+    border: none;
+    color: #fff;
+    font-size: 4rem;
+    line-height: 1;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: background 0.2s;
+    z-index: 2;
+}
+
+.velo-lightbox-arrow:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* ================================
+   ZOOM ICON ON IMAGES
+   ================================ */
+.velo-media-item a.velo-lightbox-trigger {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    cursor: zoom-in;
+}
+
+.velo-zoom-icon {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    pointer-events: none;
+}
+
+.velo-media-item:hover .velo-zoom-icon {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* ================================
+   MOBILE / DESKTOP GALLERY ORDER
+   ================================ */
+
+/* Desktop: show left-column gallery, hide mobile duplicate */
+@media screen and (min-width: 990px) {
+    .velo-media-gallery--mobile {
+        display: none !important;
+    }
+}
+
+/* Mobile: hide left-column gallery, show the one after buy box */
+@media screen and (max-width: 989px) {
+    .velo-media-gallery:not(.velo-media-gallery--mobile) {
+        display: none;
+    }
+
+    .velo-hero-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .velo-media-gallery--mobile {
+        display: block;
+        margin-top: 2.4rem;
+    }
+
+    .velo-media-gallery--mobile .velo-media-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .velo-media-gallery--mobile .velo-media-item--featured {
+        grid-column: 1 / -1;
+    }
+}
