@@ -91,14 +91,14 @@
           "type": "swatch_color",
           "settings": {
             "title": "Grigio",
-            "color": "#808080"
+            "color": "#94999d"
           }
         },
         "swatch_bianco": {
           "type": "swatch_color",
           "settings": {
             "title": "Bianco",
-            "color": "#d9dbd6"
+            "color": "#f2f2f2"
           }
         }
       },
