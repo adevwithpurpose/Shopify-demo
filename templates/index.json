@@ -86,6 +86,20 @@
             "title": "Contattaci",
             "content": "<p>Hai una domanda? Scrivici a supporto@amanotte.com e risponderemo entro 24 ore (Lun-Ven, 9:00-18:00).</p>"
           }
+        },
+        "swatch_grigio": {
+          "type": "swatch_color",
+          "settings": {
+            "title": "Grigio",
+            "color": "#808080"
+          }
+        },
+        "swatch_bianco": {
+          "type": "swatch_color",
+          "settings": {
+            "title": "Bianco",
+            "color": "#FFFFFF"
+          }
         }
       },
       "block_order": [
@@ -97,7 +111,9 @@
         "acc_assemble",
         "acc_specs",
         "acc_shipping",
-        "acc_contact"
+        "acc_contact",
+        "swatch_grigio",
+        "swatch_bianco"
       ],
       "settings": {
         "product": "topper-materasso-premium-trapuntato",

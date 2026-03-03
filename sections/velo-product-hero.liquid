@@ -158,17 +158,29 @@
                     <label class="velo-option-label">{{ option.name }}: <span id="veloOptionLabel-{{ section.id }}-{{ forloop.index0 }}">{{ option.selected_value }}</span></label>
                     <div class="velo-option-values">
                       {% assign opt_idx = forloop.index0 %}
+                      {% assign color_swatches = section.blocks | where: 'type', 'swatch_color' %}
                       {% for value in option.values %}
-                        {%- assign swatch_image = blank -%}
-                        {%- for variant in current_product.variants -%}
-                          {%- if variant.options[opt_idx] == value and variant.image -%}
-                            {%- assign swatch_image = variant.image -%}
+                        {%- assign custom_color = blank -%}
+                        {%- for swatch in color_swatches -%}
+                          {%- if swatch.settings.title | handle == value | handle -%}
+                            {%- assign custom_color = swatch.settings.color -%}
                             {%- break -%}
                           {%- endif -%}
                         {%- endfor -%}
+
+                        {%- assign swatch_image = blank -%}
+                        {%- if custom_color == blank -%}
+                          {%- for variant in current_product.variants -%}
+                            {%- if variant.options[opt_idx] == value and variant.image -%}
+                              {%- assign swatch_image = variant.image -%}
+                              {%- break -%}
+                            {%- endif -%}
+                          {%- endfor -%}
+                        {%- endif -%}
+
                         <label class="velo-swatch {% if option.selected_value == value %}velo-swatch--active{% endif %}" data-color="{{ value | escape }}" title="{{ value | escape }}">
                           <input type="radio" name="option-{{ option.name | handleize }}" value="{{ value | escape }}" {% if option.selected_value == value %}checked{% endif %} data-option-index="{{ opt_idx }}" class="velo-swatch-input">
-                          <span class="velo-swatch-inner" style="{% if swatch_image %}background-image: url('{{ swatch_image | image_url: width: 100 }}'); background-size: cover; background-position: center;{% else %}background-color: {{ value | handle }};{% endif %}"></span>
+                          <span class="velo-swatch-inner" style="{% if custom_color != blank %}background-color: {{ custom_color }};{% elsif swatch_image %}background-image: url('{{ swatch_image | image_url: width: 100 }}'); background-size: cover; background-position: center;{% else %}background-color: {{ value | handle }};{% endif %}"></span>
                         </label>
                       {% endfor %}
                     </div>
@@ -518,6 +530,23 @@
           "default": "<p>Experience the health benefits of active sitting.</p>"
         }
       ]
+    },
+    {
+      "type": "swatch_color",
+      "name": "Color Swatch",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Color Name",
+          "info": "Exact name of the variant option (e.g., 'Grigio')"
+        },
+        {
+          "type": "color",
+          "id": "color",
+          "label": "Swatch Color"
+        }
+      ]
     }
   ],
   "presets": [
@@ -526,7 +555,9 @@
       "blocks": [
         { "type": "gift", "settings": { "icon": "package", "title": "Shipping", "value": "($14)" } },
         { "type": "gift", "settings": { "icon": "monitor", "title": "Mouse Pad", "value": "($23)" } },
-        { "type": "gift", "settings": { "icon": "shield", "title": "Guarantee", "value": "($29)" } }
+        { "type": "gift", "settings": { "icon": "shield", "title": "Guarantee", "value": "($29)" } },
+        { "type": "swatch_color", "settings": { "title": "Grigio", "color": "#808080" } },
+        { "type": "swatch_color", "settings": { "title": "Bianco", "color": "#FFFFFF" } }
       ]
     }
   ]
