@@ -108,8 +108,21 @@
           <div class="velo-rating">
             <div class="velo-stars">
               {% for i in (1..5) %}
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="{% if i <= rating_num %}#DDA75B{% else %}#E0E0E0{% endif %}">
-                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                {%- assign i_minus_1 = i | minus: 1 -%}
+                {%- assign star_fill = 0 -%}
+                {%- if rating_num >= i -%}
+                  {%- assign star_fill = 100 -%}
+                {%- elsif rating_num > i_minus_1 -%}
+                  {%- assign star_fill = rating_num | minus: i_minus_1 | times: 100 -%}
+                {%- endif -%}
+                <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true">
+                  <defs>
+                    <linearGradient id="star-grad-{{ i }}-{{ section.id }}">
+                      <stop offset="{{ star_fill }}%" stop-color="#DDA75B" />
+                      <stop offset="{{ star_fill }}%" stop-color="#E0E0E0" />
+                    </linearGradient>
+                  </defs>
+                  <path fill="url(#star-grad-{{ i }}-{{ section.id }})" d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
                 </svg>
               {% endfor %}
             </div>
