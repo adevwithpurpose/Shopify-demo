@@ -28,19 +28,37 @@
 
     {%- if section.settings.layout == 'static' -%}
       <div class="velo-announcement-static">
-        {%- for block in section.blocks -%}
-          <div class="velo-announcement-item" {{ block.shopify_attributes }}>
-            {%- if block.settings.icon != 'none' -%}
-               <div class="velo-announcement-icon">
-                 {% render 'velo-icons', icon: block.settings.icon %}
-               </div>
-            {%- endif -%}
-            <span class="velo-announcement-text">{{ block.settings.text }}</span>
-          </div>
-          {%- unless forloop.last -%}
-            <div class="velo-announcement-divider">|</div>
-          {%- endunless -%}
-        {%- endfor -%}
+        <div class="velo-marquee-content">
+          {%- for block in section.blocks -%}
+            <div class="velo-announcement-item" {{ block.shopify_attributes }}>
+              {%- if block.settings.icon != 'none' -%}
+                 <div class="velo-announcement-icon">
+                   {% render 'velo-icons', icon: block.settings.icon %}
+                 </div>
+              {%- endif -%}
+              <span class="velo-announcement-text">{{ block.settings.text }}</span>
+            </div>
+            {%- unless forloop.last -%}
+              <div class="velo-announcement-divider">|</div>
+            {%- endunless -%}
+          {%- endfor -%}
+        </div>
+        <!-- Duplicate for infinite seamless scroll on mobile -->
+        <div class="velo-marquee-content velo-marquee-duplicate" aria-hidden="true">
+          {%- for block in section.blocks -%}
+            <div class="velo-announcement-item">
+              {%- if block.settings.icon != 'none' -%}
+                 <div class="velo-announcement-icon">
+                   {% render 'velo-icons', icon: block.settings.icon %}
+                 </div>
+              {%- endif -%}
+              <span class="velo-announcement-text">{{ block.settings.text }}</span>
+            </div>
+            {%- unless forloop.last -%}
+              <div class="velo-announcement-divider">|</div>
+            {%- endunless -%}
+          {%- endfor -%}
+        </div>
       </div>
     {%- else -%}
       {%- if section.blocks.size == 1 -%}
@@ -175,23 +193,27 @@
 
 <style>
   .velo-announcement-static {
+    padding: 1rem 0;
+    width: 100%;
+    overflow: hidden; /* Hide anything outside */
+    display: flex; /* Crucial for marquee */
+    white-space: nowrap;
+  }
+  .velo-marquee-content {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 2rem;
-    padding: 1rem 0;
-    width: 100%;
-    overflow-x: auto;
-    scrollbar-width: none;
+    flex-shrink: 0;
+    min-width: 100%; /* Ensure it spans the page width at minimum */
   }
-  .velo-announcement-static::-webkit-scrollbar {
-    display: none;
+  .velo-marquee-duplicate {
+    display: none; /* Hide on desktop */
   }
   .velo-announcement-item {
     display: flex;
     align-items: center;
     gap: 0.8rem;
-    white-space: nowrap;
     color: currentColor;
     font-size: 1.2rem;
     font-weight: 500;
@@ -217,21 +239,29 @@
   @media screen and (max-width: 749px) {
     .velo-announcement-static {
       justify-content: flex-start;
-      padding: 1rem 1.5rem;
-      gap: 1.5rem;
+      padding: 1rem 0; /* Remove horizontal padding so scroll is smooth */
+      gap: 0;
+    }
+    .velo-marquee-content {
+      gap: 3rem; /* Increase gap between items for marquee breathing room */
+      padding-right: 3rem; /* Spacing before the duplicate begins */
+      justify-content: flex-start;
+      animation: velo-marquee-scroll 18s linear infinite;
+    }
+    .velo-marquee-duplicate {
+      display: flex; /* Show duplicate on mobile */
     }
     .velo-announcement-divider {
       display: none;
     }
     
-    /* Marquee effect for long announcement text on mobile */
+    /* Carousel specific layout handling */
     .announcement-bar__message {
       overflow: hidden;
       white-space: nowrap;
       position: relative;
       display: flex;
     }
-    
     .announcement-bar__message span {
       display: inline-block;
       padding-left: 100%; /* Start off-screen right */
