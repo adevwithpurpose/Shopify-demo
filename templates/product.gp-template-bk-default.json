@@ -8,15 +8,100 @@
  * ------------------------------------------------------------
  */
 {
-  "order": [
-    "main",
-    "velo_body_built",
-    "velo_details",
-    "velo_included",
-    "related-products"
-  ],
   "sections": {
     "main": {
+      "type": "velo-product-hero",
+      "blocks": {
+        "gift_1": {
+          "type": "gift",
+          "settings": {
+            "image": "shopify://shop_images/APS-Fulfillment-Inc-j.jpg",
+            "icon": "truck",
+            "free_text": "Spedizione",
+            "title": "GRATUITA",
+            "value": ""
+          }
+        },
+        "gift_2": {
+          "type": "gift",
+          "settings": {
+            "image": "shopify://shop_images/81yslK0H7zL._AC_UF1000_1000_QL80.jpg",
+            "icon": "sparkles",
+            "free_text": "OMAGGIO",
+            "title": "Federe Premium",
+            "value": "(€23)"
+          }
+        },
+        "gift_3": {
+          "type": "gift",
+          "settings": {
+            "image": "shopify://shop_images/extended-warranty-lifetime-assurance-label-with-shield-sign_1017-56382.avif",
+            "icon": "shield",
+            "free_text": "Garanzia",
+            "title": "Estesa",
+            "value": "(€49)"
+          }
+        },
+        "gift_4": {
+          "type": "gift",
+          "settings": {
+            "image": "shopify://shop_images/istockphoto-1135795506-612x612.jpg",
+            "icon": "check",
+            "free_text": "GARANTITA",
+            "title": "Soddisfazione",
+            "value": "(€29)"
+          }
+        },
+        "acc_benefits": {
+          "type": "accordion",
+          "settings": {
+            "title": "Vantaggi",
+            "content": "<p>Goditi il massimo comfort con il nostro topper da 1000GSM. Riduce i risvegli notturni, allevia i punti di pressione e ti mantiene fresco per tutta la notte.</p>"
+          }
+        },
+        "acc_assemble": {
+          "type": "accordion",
+          "settings": {
+            "title": "Come Si Installa",
+            "content": "<p>L'installazione richiede meno di un minuto. Stendi semplicemente gli angoli elastici rinforzati sul tuo materasso. Si adatta a qualsiasi profondità da 20 a 53 cm.</p>"
+          }
+        },
+        "acc_specs": {
+          "type": "accordion",
+          "settings": {
+            "title": "Specifiche",
+            "content": "<p><strong>Imbottitura:</strong> 1000GSM Premium<br/><strong>Vestibilità:</strong> Tasche profonde universali<br/><strong>Lavaggio:</strong> 100% Lavabile in lavatrice<br/><strong>Termoregolazione:</strong> Design trapuntato con movimento d'aria</p>"
+          }
+        },
+        "acc_shipping": {
+          "type": "accordion",
+          "settings": {
+            "title": "Spedizione e Resi",
+            "content": "<ul><li>Spedizione GRATUITA in tutta Italia — consegna in 2-4 giorni lavorativi.</li><li>Garanzia Soddisfatti o Rimborsati 30 Giorni.</li><li>Qualità Premium garantita.</li></ul>"
+          }
+        },
+        "acc_contact": {
+          "type": "accordion",
+          "settings": {
+            "title": "Contattaci",
+            "content": "<p>Hai una domanda? Scrivici a supporto@amanotte.com e risponderemo entro 24 ore (Lun-Ven, 9:00-18:00).</p>"
+          }
+        },
+        "swatch_grigio": {
+          "type": "swatch_color",
+          "settings": {
+            "title": "Grigio",
+            "color": "#808080"
+          }
+        },
+        "swatch_bianco": {
+          "type": "swatch_color",
+          "settings": {
+            "title": "Bianco",
+            "color": "#FFFFFF"
+          }
+        }
+      },
       "block_order": [
         "gift_1",
         "gift_2",
@@ -26,161 +111,137 @@
         "acc_assemble",
         "acc_specs",
         "acc_shipping",
-        "acc_contact"
+        "acc_contact",
+        "swatch_grigio",
+        "swatch_bianco"
       ],
-      "blocks": {
-        "acc_assemble": {
-          "settings": {
-            "content": "<p>Assembly takes less than 15 minutes. Attach the base, insert the pneumatic cylinder, place the seat cushion, and adjust the backrest. All tools and a simple 4-step guide are included.</p>",
-            "title": "How to Assemble"
-          },
-          "type": "accordion"
-        },
-        "acc_benefits": {
-          "settings": {
-            "content": "<p>VELO is made for people who need more than a standard chair. Experience reduced fatigue, better posture, and improved focus through natural movement support.</p>",
-            "title": "Benefits"
-          },
-          "type": "accordion"
-        },
-        "acc_contact": {
-          "settings": {
-            "content": "<p>Have a question? Email us at support@velochair.com and we'll reply within 24 hours (Mon-Fri, 9am-5pm EST).</p>",
-            "title": "Contact Us"
-          },
-          "type": "accordion"
-        },
-        "acc_shipping": {
-          "settings": {
-            "content": "<ul><li>Free US Shipping — Orders arrive in 2-4 business days.</li><li>90-Day Risk-Free Trial — Love it or return it.</li><li>10-Year Warranty included free.</li></ul>",
-            "title": "Shipping & Returns"
-          },
-          "type": "accordion"
-        },
-        "acc_specs": {
-          "settings": {
-            "content": "<ul><li><strong>Seat Cushion:</strong> 12cm High-density open-cell foam</li><li><strong>Frame:</strong> Reinforced industrial steel</li><li><strong>Weight Capacity:</strong> 300 lbs (136 kg)</li><li><strong>Height Adjustment:</strong> Pneumatic gas lift</li><li><strong>Warranty:</strong> 10 Years</li></ul>",
-            "title": "Specifications"
-          },
-          "type": "accordion"
-        },
-        "gift_1": {
-          "settings": {
-            "icon": "truck",
-            "title": "FREE Shipping",
-            "value": "($14)"
-          },
-          "type": "gift"
-        },
-        "gift_2": {
-          "settings": {
-            "icon": "mouse",
-            "title": "Mouse Pad",
-            "value": "($23)"
-          },
-          "type": "gift"
-        },
-        "gift_3": {
-          "settings": {
-            "icon": "mat",
-            "title": "Chair Mat",
-            "value": "($49)"
-          },
-          "type": "gift"
-        },
-        "gift_4": {
-          "settings": {
-            "icon": "shield",
-            "title": "3-Year Warranty",
-            "value": "($29)"
-          },
-          "type": "gift"
-        }
-      },
       "settings": {
-        "atc_text": "ADD TO CART +",
+        "product": "",
         "badge_1": "BESTSELLER",
-        "badge_2": "#1 ACTIVE SITTING CHAIR",
-        "bullet_1": "Energy: Prevents all-day sitting fatigue",
-        "bullet_2": "Focus: Boosts concentration and clarity",
-        "bullet_3": "Productivity: Increases daily work output",
-        "gifts_heading": "Limited Sale! Unlock FREE Gifts With Your Order",
-        "hero_desc": "The only chair that supports your body's natural need for movement - working with your body, not against it.",
-        "rating_value": 5,
-        "review_count": "14,200",
+        "badge_2": "TOPPER #1 NEGLI HOTEL di lusso",
         "show_reviews": true,
-        "sub_desc": "<p>VELO is made for people who need more than a standard chair. It's ideal for remote workers, creatives, people with ADHD, and anyone who feels 'stuck' in their seat. <a href=\"#\">Read More</a></p>",
-        "trust_1": "Ships Today",
-        "trust_2": "90-Day Easy Returns",
-        "trust_note": "Only available at velochair.com",
-        "urgency_text": "Order by [date] for guaranteed FREE Gifts"
-      },
-      "type": "velo-product-hero"
-    },
-    "related-products": {
-      "settings": {
-        "color_scheme": "scheme-1",
-        "columns_desktop": 4,
-        "columns_mobile": "2",
-        "heading": "You may also like",
-        "heading_size": "h2",
-        "image_ratio": "square",
-        "padding_bottom": 28,
-        "padding_top": 36,
-        "show_rating": false,
-        "show_secondary_image": true,
-        "show_vendor": false
-      },
-      "type": "related-products"
+        "rating_value": "4.9",
+        "review_count": "9700+",
+        "trust_note": "Disponibile esclusivamente su Amanotte.com",
+        "hero_desc": "Lasciati avvolgere da un’imbottitura ultra spessa da 1000 GSM, un comfort trapuntato traspirante e una vestibilità sicura con tasche profonde — progettato per migliorare immediatamente la tua esperienza di riposo.",
+        "bullet_1": "Comfort di Lusso: Qualità da hotel a 5 stelle, 3 volte più spesso dei topper standard",
+        "bullet_2": "Effetto Fresco: Design traspirante che aiuta a prevenire la sudorazione notturna",
+        "bullet_3": "Ipoallergenico: Certificato OEKO-TEX® Standard 100, anti-acaro e protezione contro allergeni",
+        "bullet_4": "Vestibilità Perfetta: Fascia elastica con tasche profonde per una tenuta stabile senza spostamenti.",
+        "gifts_heading": "",
+        "urgency_text": "Quasi esaurito - aggiornato all [date]",
+        "cta_bg_color": "#ff6b00",
+        "cta_text_color": "#ffffff",
+        "atc_text": "Acquista ora",
+        "sold_out_text": "ESAURITO",
+        "save_text": "SALVA",
+        "free_label": "GRATIS",
+        "trust_1": "Spedizione Rapida in tutta Italia",
+        "trust_2": "Reso facile entro 30 giorni",
+        "sub_desc": ""
+      }
     },
     "velo_body_built": {
+      "type": "velo-body-built",
+      "blocks": {
+        "p1": {
+          "type": "point",
+          "settings": {
+            "icon": "lock",
+            "title": "Stabile Tutta La Notte",
+            "description": "Gli angoli rinforzati mantengono il topper bloccato in posizione."
+          }
+        },
+        "p2": {
+          "type": "point",
+          "settings": {
+            "icon": "check",
+            "title": "Comfort Effetto Nuvola",
+            "description": "L'imbottitura da 1000GSM si adatta esattamente al tuo corpo."
+          }
+        },
+        "p3": {
+          "type": "point",
+          "settings": {
+            "icon": "thermometer",
+            "title": "Controllo Temperatura",
+            "description": "Nessun accumulo di calore come il memory foam - fresco tutta la notte."
+          }
+        },
+        "p4": {
+          "type": "point",
+          "settings": {
+            "icon": "sliders",
+            "title": "Per Ogni Materasso",
+            "description": "Le tasche profonde si adattano a materassi da 20 a 53 cm."
+          }
+        }
+      },
       "block_order": [
         "p1",
         "p2",
         "p3",
         "p4"
       ],
-      "blocks": {
-        "p1": {
-          "settings": {
-            "description": "<p>Move naturally without thinking about it</p>",
-            "icon": "move",
-            "title": "Allows for Movement"
-          },
-          "type": "point"
-        },
-        "p2": {
-          "settings": {
-            "description": "<p>Supports alignment as you shift positions</p>",
-            "icon": "check",
-            "title": "Effortless Posture"
-          },
-          "type": "point"
-        },
-        "p3": {
-          "settings": {
-            "description": "<p>Stays comfortable longer - without feeling \"stuck\"</p>",
-            "icon": "clock",
-            "title": "All-Day Comfort"
-          },
-          "type": "point"
-        },
-        "p4": {
-          "settings": {
-            "description": "<p>Adjusts to any height and desk setup</p>",
-            "icon": "sliders",
-            "title": "Fits Every Body & Desk"
-          },
-          "type": "point"
-        }
-      },
       "settings": {
-        "heading_bold": "Body Actually Works",
-        "heading_prefix": "Built for How Your"
-      },
-      "type": "velo-body-built"
+        "heading_prefix": "Pensato Per Chi Vuole",
+        "heading_bold": "Riposarsi Davvero",
+        "subheading": "Supporta le tue posizioni naturali di riposo",
+        "side_video": "shopify://files/videos/compressed_video.mp4"
+      }
     },
     "velo_details": {
+      "type": "velo-details-grid",
+      "blocks": {
+        "d1": {
+          "type": "detail",
+          "settings": {
+            "icon": "move",
+            "title": "Imbottitura da 1000GSM",
+            "description": "<p>Oltre 6cm di spessore extra ultra-plush</p>"
+          }
+        },
+        "d2": {
+          "type": "detail",
+          "settings": {
+            "icon": "thermometer",
+            "title": "Tessuto Traspirante",
+            "description": "<p>Materiale soft-touch che resta fresco</p>"
+          }
+        },
+        "d3": {
+          "type": "detail",
+          "settings": {
+            "icon": "sliders",
+            "title": "Vestibilità Universale",
+            "description": "<p>Tasche profonde elasticizzate (20-53cm)</p>"
+          }
+        },
+        "d4": {
+          "type": "detail",
+          "settings": {
+            "icon": "refresh",
+            "title": "Lavabile in Lavatrice",
+            "description": "<p>Igiene perfetta notte dopo notte</p>"
+          }
+        },
+        "d5": {
+          "type": "detail",
+          "settings": {
+            "icon": "lock",
+            "title": "Sostegno Sicuro",
+            "description": "<p>Resta bloccato senza spostarsi mai</p>"
+          }
+        },
+        "d6": {
+          "type": "detail",
+          "settings": {
+            "icon": "shield",
+            "title": "Costruito per Durare",
+            "description": "<p>Cuciture rinforzate e materiali premium</p>"
+          }
+        }
+      },
       "block_order": [
         "d1",
         "d2",
@@ -189,64 +250,62 @@
         "d5",
         "d6"
       ],
-      "blocks": {
-        "d1": {
-          "settings": {
-            "description": "<p>12cm extra-thick high-density foam</p>",
-            "icon": "move",
-            "title": "Pressure-Relief Seat"
-          },
-          "type": "detail"
-        },
-        "d2": {
-          "settings": {
-            "description": "<p>Soft-touch material that stays cool</p>",
-            "icon": "thermometer",
-            "title": "Breathable Fabric"
-          },
-          "type": "detail"
-        },
-        "d3": {
-          "settings": {
-            "description": "<p>Adjustable from top to bottom</p>",
-            "icon": "sliders",
-            "title": "Fully Adjustable Fit"
-          },
-          "type": "detail"
-        },
-        "d4": {
-          "settings": {
-            "description": "<p>For effortless position changes</p>",
-            "icon": "refresh",
-            "title": "360° Smooth Rotating"
-          },
-          "type": "detail"
-        },
-        "d5": {
-          "settings": {
-            "description": "<p>Stable when you need it</p>",
-            "icon": "lock",
-            "title": "Lockable Wheels"
-          },
-          "type": "detail"
-        },
-        "d6": {
-          "settings": {
-            "description": "<p>Reinforced steel frame</p>",
-            "icon": "shield",
-            "title": "Built to Last"
-          },
-          "type": "detail"
-        }
-      },
       "settings": {
-        "heading_bold": "Down to Every Detail",
-        "heading_light": "Designed",
-        "subheading": "Smart features, comfort-focused materials, and maximum adjustability"
-      },
-      "type": "velo-details-grid"
+        "heading_light": "Progettato Nei",
+        "heading_bold": "Minimi Dettagli",
+        "subheading": "Materiali focalizzati sul comfort e vestibilità ultra stabile",
+        "full_width": false
+      }
     },
     "velo_included": {
+      "type": "velo-whats-included",
+      "blocks": {
+        "inc_1": {
+          "type": "item",
+          "settings": {
+            "title": "Topper Materasso Premium",
+            "original_price": "€399",
+            "final_price": "€199",
+            "is_free": false
+          }
+        },
+        "inc_2": {
+          "type": "item",
+          "settings": {
+            "title": "Spedizione Rapida Italia",
+            "original_price": "€14.00",
+            "final_price": "GRATIS",
+            "is_free": true
+          }
+        },
+        "inc_3": {
+          "type": "item",
+          "settings": {
+            "title": "Mascherina per Dormire",
+            "original_price": "€23.00",
+            "final_price": "GRATIS",
+            "is_free": true
+          }
+        },
+        "inc_4": {
+          "type": "item",
+          "settings": {
+            "title": "Federe Premium",
+            "original_price": "€49.00",
+            "final_price": "GRATIS",
+            "is_free": true
+          }
+        },
+        "inc_5": {
+          "type": "item",
+          "settings": {
+            "title": "Garanzia Estesa 10 Anni",
+            "original_price": "€29.00",
+            "final_price": "GRATIS",
+            "is_free": true
+          }
+        }
+      },
       "block_order": [
         "inc_1",
         "inc_2",
@@ -254,66 +313,113 @@
         "inc_4",
         "inc_5"
       ],
+      "disabled": true,
+      "settings": {
+        "color_scheme": "",
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "heading": "Tutto Quello che Ti Serve per",
+        "heading_bold": "Dormire Davvero",
+        "order_today_label": "SE ORDINI OGGI:",
+        "savings_label": "Risparmio",
+        "savings_value": "Risparmi €200",
+        "total_label": "Totale",
+        "total_price": "€199",
+        "free_label": "GRATIS",
+        "free_gifts_label": "REGALI GRATUITI",
+        "trust_1": "Spedizione Oggi",
+        "trust_2": "30 Giorni Prova",
+        "cta_link": "",
+        "badge_text": "Regali GRATUITI Inclusi (valore €115)",
+        "annotation_1": "FREE Mouse Pad",
+        "anno_1_top": 25,
+        "anno_1_left": 15,
+        "anno_1_rotate": 0,
+        "annotation_2": "FREE Chair Mat",
+        "anno_2_top": 65,
+        "anno_2_left": 70,
+        "anno_2_rotate": 0
+      }
+    },
+    "velo_faq": {
+      "type": "velo-faq",
       "blocks": {
-        "inc_1": {
+        "f1": {
+          "type": "faq",
           "settings": {
-            "final_price": "$397",
-            "is_free": false,
-            "original_price": "$600.00",
-            "title": "VELO Freedom Chair"
-          },
-          "type": "item"
+            "title": "È lavabile in lavatrice?",
+            "content": "<p>Sì, assolutamente. È lavabile in lavatrice al 100% per una facile manutenzione.</p>"
+          }
         },
-        "inc_2": {
+        "f2": {
+          "type": "faq",
           "settings": {
-            "final_price": "FREE",
-            "is_free": true,
-            "original_price": "$14.00",
-            "title": "Fast U.S. Shipping"
-          },
-          "type": "item"
+            "title": "Si adatterà al mio materasso alto?",
+            "content": "<p>Sì, la fascia elastica è progettata per adattarsi a materassi profondi fino a 53 cm.</p>"
+          }
         },
-        "inc_3": {
+        "f3": {
+          "type": "faq",
           "settings": {
-            "final_price": "FREE",
-            "is_free": true,
-            "original_price": "$23.00",
-            "title": "Mouse Pad Attachment"
-          },
-          "type": "item"
+            "title": "Posso restituirlo se non mi piace?",
+            "content": "<p>Certamente! Offriamo una garanzia di rimborso di 30 giorni.</p>"
+          }
         },
-        "inc_4": {
+        "f4": {
+          "type": "faq",
           "settings": {
-            "final_price": "FREE",
-            "is_free": true,
-            "original_price": "$49.00",
-            "title": "Transparent Chair Mat"
-          },
-          "type": "item"
+            "title": "Mi farà sudare di notte?",
+            "content": "<p>Assolutamente no! A differenza del memory foam tradizionale che intrappola il calore, il nostro topper da 1000GSM presenta un design trapuntato traspirante che favorisce la circolazione dell'aria.</p>"
+          }
         },
-        "inc_5": {
+        "f5": {
+          "type": "faq",
           "settings": {
-            "final_price": "FREE",
-            "is_free": true,
-            "original_price": "$29.00",
-            "title": "3-Year Warranty"
-          },
-          "type": "item"
+            "title": "Quanto è alto il topper da 1000GSM?",
+            "content": "<p>Fornisce circa 5-6 cm di morbidezza ultra-plush, come negli hotel a 5 stelle.</p>"
+          }
         }
       },
+      "block_order": [
+        "f1",
+        "f2",
+        "f3",
+        "f4",
+        "f5"
+      ],
       "settings": {
-        "badge_text": "FREE Gifts Included ($115 value)",
-        "cta_text": "SHOP NOW",
-        "free_gifts_count": "4",
-        "heading": "Everything You Need for",
-        "heading_bold": "Active Work",
-        "order_today_label": "IF YOU ORDER TODAY:",
-        "savings_label": "Savings",
-        "savings_value": "You Save $203",
-        "total_label": "Subtotal",
-        "total_price": "$397"
-      },
-      "type": "velo-whats-included"
+        "color_scheme": "",
+        "heading": "Domande Frequenti",
+        "subheading": "Tutto quello che devi sapere sul Topper Amanotte.",
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "settings": {
+        "heading": "Potrebbe Piacerti Anche",
+        "heading_size": "h2",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "columns_mobile": "2",
+        "color_scheme": "scheme-1",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
     }
-  }
+  },
+  "order": [
+    "main",
+    "velo_body_built",
+    "velo_details",
+    "velo_included",
+    "velo_faq",
+    "related-products"
+  ]
 }
