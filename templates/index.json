@@ -590,48 +590,80 @@
     "velo_faq": {
       "type": "velo-faq",
       "blocks": {
+        "faq_nbgxAP": {
+          "type": "faq",
+          "settings": {
+            "title": "Hai domande?",
+            "content": "<p>Siamo qui per te.</p>"
+          }
+        },
         "f1": {
           "type": "faq",
           "settings": {
-            "title": "È lavabile in lavatrice?",
-            "content": "<p>Sì, assolutamente. È lavabile in lavatrice al 100% per una facile manutenzione.</p>"
+            "title": "In cosa è diverso dai topper economici?",
+            "content": "<p>La maggior parte dei topper ha solo 300–500 GSM e si appiattisce dopo poche settimane. Il nostro, con imbottitura ultra spessa da 1000 GSM, offre fino a 3 volte più comfort e mantiene volume e sostegno nel tempo. È lo stesso standard di densità utilizzato negli hotel di lusso per i loro letti.</p>"
           }
         },
         "f2": {
           "type": "faq",
           "settings": {
-            "title": "Si adatterà al mio materasso alto?",
-            "content": "<p>Sì, la fascia elastica è progettata per adattarsi a materassi profondi fino a 53 cm.</p>"
+            "title": "Si adatta al mio materasso?",
+            "content": "<p>Sì! Il nostro design con tasche profonde si adatta a materassi con altezza da 20 a 53 cm, inclusi pillow-top, memory foam e materassi ibridi. Gli angoli con elastico rinforzato garantiscono una tenuta stabile per tutta la notte — senza scivolare né formare pieghe.</p>"
           }
         },
         "f3": {
+          "type": "faq",
+          "settings": {
+            "title": "Come scegliere la misura?",
+            "content": "<p>Scegli la stessa misura del tuo materasso per una vestibilità perfetta.</p><ul><li>Singolo: 90 × 200 cm</li><li>Matrimoniale: 140 × 200 cm</li><li>King: 160 × 200 cm</li><li>Super King: 180 × 200 cm</li></ul><p>Se il tuo materasso ha un’altezza tra 20 e 53 cm, il design con tasche profonde garantirà una tenuta stabile e sicura.</p>"
+          }
+        },
+        "f4": {
+          "type": "faq",
+          "settings": {
+            "title": "Posso lavarlo?",
+            "content": "<p>Assolutamente sì. È lavabile in lavatrice per una manutenzione semplice e pratica. Non serve il lavaggio a secco: basta metterlo in lavatrice per mantenere la superficie del tuo letto fresca e pulita.</p>"
+          }
+        },
+        "f5": {
+          "type": "faq",
+          "settings": {
+            "title": "In quanto tempo sentirò la differenza?",
+            "content": "<p>La maggior parte dei clienti nota un miglioramento già dalla prima notte. L’imbottitura ultra spessa offre un sollievo immediato dai punti di pressione su fianchi, spalle e schiena — così ti svegli riposato, non indolenzito.</p>"
+          }
+        },
+        "faq_3gQLyy": {
           "type": "faq",
           "settings": {
             "title": "Posso restituirlo se non mi piace?",
             "content": "<p>Certamente! Offriamo una garanzia di rimborso di 30 giorni.</p>"
           }
         },
-        "f4": {
+        "faq_Jqyhtg": {
           "type": "faq",
           "settings": {
             "title": "Mi farà sudare di notte?",
             "content": "<p>Assolutamente no! A differenza del memory foam tradizionale che intrappola il calore, il nostro topper da 1000GSM presenta un design trapuntato traspirante che favorisce la circolazione dell'aria, mantenendoti fresco e comodo per tutta la notte.</p>"
           }
         },
-        "f5": {
+        "faq_TdkNc7": {
           "type": "faq",
           "settings": {
             "title": "Quanto è alto il topper da 1000GSM?",
-            "content": "<p>Fornisce circa 5-6 cm di morbidezza ultra-plush, come negli hotel a 5 stelle. Grazie all'alta densità (1000GSM), non si appiattisce velocemente come le alternative più economiche.</p>"
+            "content": "<p>Il topper da <strong>1000 GSM</strong> ha uno spessore di circa <strong>5–7 cm</strong>, creando un effetto soffice e avvolgente simile ai letti degli hotel di lusso.</p>"
           }
         }
       },
       "block_order": [
+        "faq_nbgxAP",
         "f1",
         "f2",
         "f3",
         "f4",
-        "f5"
+        "f5",
+        "faq_3gQLyy",
+        "faq_Jqyhtg",
+        "faq_TdkNc7"
       ],
       "settings": {
         "color_scheme": "",
