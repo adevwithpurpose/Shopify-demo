@@ -2319,6 +2319,11 @@ input[type='checkbox'] {
   top: 0;
 }
 
+.scrolled-past-header .header-wrapper {
+  box-shadow: 0 4px 28px rgba(0, 0, 0, 0.06);
+  transition: box-shadow 0.3s ease;
+}
+
 .shopify-section-header-hidden {
   top: calc(-1 * var(--header-height));
 }

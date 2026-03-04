@@ -426,8 +426,11 @@
     grid-template-columns: repeat(4, 1fr);
     gap: 0.6rem;
     margin-bottom: 2rem;
-    padding-top: 1.2rem;
+    padding: 1.5rem 1rem 1rem;
     width: 100%;
+    background: #f8f9fa;
+    border: 1px solid #ECEFF1;
+    border-radius: 8px;
 }
 
 .velo-hero-gift-card {

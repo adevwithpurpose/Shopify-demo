@@ -156,14 +156,10 @@ body.sticky-atc-active {
     background: #E65A00;
 }
 
-/* Hide on Desktop by default if requested, but site is mobile-first landing, so usually keep for both or just mobile */
+/* Hide on Desktop, only show on mobile */
 @media screen and (min-width: 990px) {
-    /* If you want to hide on desktop, uncomment below: */
-    /* .velo-sticky-atc { display: none; } */
-
-    /* On desktop, maybe make it slightly more compact */
     .velo-sticky-atc {
-        padding: 1.5rem 10%;
+        display: none !important;
     }
 }
 
