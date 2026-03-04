@@ -55,8 +55,8 @@
         "acc_benefits": {
           "type": "accordion",
           "settings": {
-            "title": "Vantaggi",
-            "content": "<p>Goditi il massimo comfort con il nostro topper da 1000GSM. Riduce i risvegli notturni, allevia i punti di pressione e ti mantiene fresco per tutta la notte.</p>"
+            "title": "Benefici Principali",
+            "content": "<ul><li><strong>Comfort da hotel immediato</strong> — trasforma qualsiasi materasso senza comprarne uno nuovo</li><li><strong>Imbottitura ultra-spessa 1000 GSM</strong> — riduce la pressione su fianchi, spalle e schiena</li><li><strong>Fresco e traspirante</strong> — niente più notti sudate</li><li><strong>Rimane perfettamente in posizione</strong> — tasche profonde per materassi alti</li><li><strong>Lavabile in lavatrice e igienico</strong> — facile da mantenere pulito</li><li><strong>Prova senza rischi di 30 giorni</strong> — dormi meglio o rimborso completo</li></ul>"
           }
         },
         "acc_assemble": {
@@ -77,7 +77,7 @@
           "type": "accordion",
           "settings": {
             "title": "Spedizione e Resi",
-            "content": "<ul><li>Spedizione GRATUITA in tutta Italia — consegna in 2-4 giorni lavorativi.</li><li>Garanzia Soddisfatti o Rimborsati 30 Giorni.</li><li>Qualità Premium garantita.</li></ul>"
+            "content": "<p>🚚 Spedizione gratuita<br/>📦 Consegna 2–4 giorni<br/>🛡 30 giorni soddisfatti o rimborsati</p>"
           }
         },
         "acc_contact": {
