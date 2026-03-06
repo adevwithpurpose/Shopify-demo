@@ -7,6 +7,7 @@
 Built on top of **Shopify Dawn v15.4.1**, this theme inherits all of Dawn's production-ready features while adding custom VELO-specific sections for the landing page funnel.
 
 ### What Dawn Provides (Out of the Box)
+
 - ✅ Full cart page with AJAX cart drawer
 - ✅ Product page with media gallery, variant picker
 - ✅ Collection & collection list pages
@@ -26,6 +27,7 @@ Built on top of **Shopify Dawn v15.4.1**, this theme inherits all of Dawn's prod
 - ✅ Localization (20+ languages)
 
 ### Custom VELO Sections (Added)
+
 | Section | File | Purpose |
 |---------|------|---------|
 | **VELO Product Hero** | `velo-product-hero.liquid` | Split-screen product landing with sticky buy box, gift bundles, urgency, accordions |
@@ -36,6 +38,7 @@ Built on top of **Shopify Dawn v15.4.1**, this theme inherits all of Dawn's prod
 | **VELO Trust Strip** | `velo-trust-strip.liquid` | Shipping/Returns/Warranty trust bar |
 
 ### Design Tokens
+
 - **Heading Font:** Jost
 - **Body Font:** Muli
 - **Primary Color:** #000000 (Black)
@@ -45,15 +48,18 @@ Built on top of **Shopify Dawn v15.4.1**, this theme inherits all of Dawn's prod
 ## Deployment
 
 ### Using Shopify CLI
+
 ```bash
 shopify theme dev --store your-store.myshopify.com
 ```
 
 ### Using GitHub Integration
+
 1. Connect this repo to your Shopify store
 2. Push to `main` branch → auto-deploys
 
 ## Next Steps
+
 1. Connect to Shopify store and create the product
 2. Upload product images and videos
 3. Replace placeholder content with actual client data
@@ -62,3 +68,8 @@ shopify theme dev --store your-store.myshopify.com
 6. Install Judge.me for reviews
 7. Test checkout flow
 
+## Configuration Notes
+
+- **Shop Name**: The theme now dynamically uses `{{ shop.name }}` for social media previews and page titles. Ensure your store name is set correctly in Shopify Settings > Store Details.
+- **Currency & Localization**: The `velo-product-hero` section dynamically uses your store's currency format and configured text. Ensure `shop.money_format` includes the `{{amount}}` placeholder.
+- **Save Text**: The "Save" badge text on the product hero can be customized in the section settings (default: "SALVA").
