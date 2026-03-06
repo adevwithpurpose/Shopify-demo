@@ -22,6 +22,48 @@
             return;
         }
 
+        // Helper to format money using Liquid settings
+        function formatMoney(cents, id) {
+            const settings = (window.veloSettings && window.veloSettings[id]) || {};
+            const format = settings.moneyFormat || '${{amount}}';
+
+            if (typeof cents === 'string') {
+                cents = cents.replace('.', '');
+            }
+            let value = '';
+            const placeholderRegex = /\{\{\s*(\w+)\s*\}\}/;
+
+            function formatWithDelimiters(number, precision, thousands, decimal) {
+                precision = (typeof precision == 'undefined' ? 2 : precision);
+                thousands = (typeof thousands == 'undefined' ? ',' : thousands);
+                decimal = (typeof decimal == 'undefined' ? '.' : decimal);
+
+                if (isNaN(number) || number == null) { return 0; }
+
+                number = (number / 100.0).toFixed(precision);
+                const parts = number.split('.');
+                const dollars = parts[0].replace(/(\d)(?=(\d\d\d)+(?!\d))/g, '$1' + thousands);
+                const centsVal = parts[1] ? (decimal + parts[1]) : '';
+                return dollars + centsVal;
+            }
+
+            switch (format.match(placeholderRegex)[1]) {
+                case 'amount':
+                    value = formatWithDelimiters(cents, 2);
+                    break;
+                case 'amount_no_decimals':
+                    value = formatWithDelimiters(cents, 0);
+                    break;
+                case 'amount_with_comma_separator':
+                    value = formatWithDelimiters(cents, 2, '.', ',');
+                    break;
+                case 'amount_no_decimals_with_comma_separator':
+                    value = formatWithDelimiters(cents, 0, '.', ',');
+                    break;
+            }
+            return format.replace(placeholderRegex, value);
+        }
+
         // --- Variant Switching ---
         const swatchInputs = section.querySelectorAll('.velo-swatch-input');
         swatchInputs.forEach(function (input) {
@@ -56,30 +98,28 @@
 
                     // Update price
                     if (priceEl) {
-                        const formatted = Shopify.formatMoney
-                            ? Shopify.formatMoney(matchedVariant.price)
-                            : '$' + (matchedVariant.price / 100).toFixed(2);
-                        priceEl.textContent = formatted;
+                        priceEl.textContent = formatMoney(matchedVariant.price, id);
                     }
 
                     // Update compare price & save badge
                     const compareEl = section.querySelector('.velo-price-compare');
                     const saveEl = section.querySelector('.velo-save-badge');
+
                     if (matchedVariant.compare_at_price && matchedVariant.compare_at_price > matchedVariant.price) {
-                        const compareFormatted = Shopify.formatMoney
-                            ? Shopify.formatMoney(matchedVariant.compare_at_price)
-                            : '$' + (matchedVariant.compare_at_price / 100).toFixed(2);
-                        const savings = matchedVariant.compare_at_price - matchedVariant.price;
-                        const savingsFormatted = Shopify.formatMoney
-                            ? Shopify.formatMoney(savings)
-                            : '$' + (savings / 100).toFixed(2);
+                        const compareFormatted = formatMoney(matchedVariant.compare_at_price, id);
+
+                        // Calculate percentage savings (to match Liquid implementation)
+                        const savePct = Math.round(((matchedVariant.compare_at_price - matchedVariant.price) * 100) / matchedVariant.compare_at_price);
+
+                        const settings = (window.veloSettings && window.veloSettings[id]) || {};
+                        const saveText = settings.saveText || 'SALVA';
 
                         if (compareEl) {
                             compareEl.textContent = compareFormatted;
                             compareEl.style.display = '';
                         }
                         if (saveEl) {
-                            saveEl.textContent = 'SAVE ' + savingsFormatted;
+                            saveEl.textContent = saveText + ' ' + savePct + '%';
                             saveEl.style.display = '';
                         }
                     } else {
@@ -90,10 +130,7 @@
                     // Update ATC button price
                     const atcPrice = section.querySelector('.velo-atc-price');
                     if (atcPrice) {
-                        const priceFormatted = Shopify.formatMoney
-                            ? Shopify.formatMoney(matchedVariant.price)
-                            : '$' + (matchedVariant.price / 100).toFixed(2);
-                        atcPrice.textContent = '— ' + priceFormatted;
+                        atcPrice.textContent = '— ' + formatMoney(matchedVariant.price, id);
                     }
 
                     // Update ATC availability

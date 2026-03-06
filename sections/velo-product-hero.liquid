@@ -134,16 +134,16 @@
         <h1 class="velo-product-title">{{ current_product.title }}</h1>
 
         <!-- Pricing -->
-        {% if current_product.compare_at_price > current_product.price %}
+        {% if current_product.selected_or_first_available_variant.compare_at_price > current_product.selected_or_first_available_variant.price %}
           <div class="velo-pricing">
-            <span class="velo-price-compare">{{ current_product.compare_at_price | money }}</span>
-            <span class="velo-price-current" id="veloPrice-{{ section.id }}">{{ current_product.price | money }}</span>
-            {%- assign save_pct = current_product.compare_at_price | minus: current_product.price | times: 100 | divided_by: current_product.compare_at_price -%}
+            <span class="velo-price-compare">{{ current_product.selected_or_first_available_variant.compare_at_price | money }}</span>
+            <span class="velo-price-current" id="veloPrice-{{ section.id }}">{{ current_product.selected_or_first_available_variant.price | money }}</span>
+            {%- assign save_pct = current_product.selected_or_first_available_variant.compare_at_price | minus: current_product.selected_or_first_available_variant.price | times: 100 | divided_by: current_product.selected_or_first_available_variant.compare_at_price -%}
             <span class="velo-save-badge">{{ section.settings.save_text | default: 'SALVA' }} {{ save_pct }}%</span>
           </div>
         {% else %}
           <div class="velo-pricing">
-            <span class="velo-price-current" id="veloPrice-{{ section.id }}">{{ current_product.price | money }}</span>
+            <span class="velo-price-current" id="veloPrice-{{ section.id }}">{{ current_product.selected_or_first_available_variant.price | money }}</span>
           </div>
         {% endif %}
 
@@ -225,6 +225,13 @@
             {%- endunless -%}
             <input type="hidden" name="id" id="veloVariantId-{{ section.id }}" value="{{ current_product.selected_or_first_available_variant.id }}">
             <script type="application/json" id="veloVariantJson-{{ section.id }}">{{ current_product.variants | json }}</script>
+            <script>
+              window.veloSettings = window.veloSettings || {};
+              window.veloSettings['{{ section.id }}'] = {
+                moneyFormat: {{ shop.money_format | json }},
+                saveText: {{ section.settings.save_text | default: 'SALVA' | json }}
+              };
+            </script>
 
             <div class="velo-hero-buy-elements">
               {%- assign gift_blocks = section.blocks | where: 'type', 'gift' -%}
