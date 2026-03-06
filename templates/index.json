@@ -62,7 +62,7 @@
         "acc_assemble": {
           "type": "accordion",
           "settings": {
-            "title": "Come Si Installa",
+            "title": "Installazione in Pochi Secondi",
             "content": "<p>L'installazione richiede meno di un minuto. Stendi semplicemente gli angoli elastici rinforzati sul tuo materasso. Si adatta a qualsiasi profondità da 20 a 53 cm.</p>"
           }
         },
@@ -122,14 +122,14 @@
         "show_reviews": true,
         "rating_value": "4.9",
         "review_count": "9700+",
-        "trust_note": "Disponibile esclusivamente su Amanotte.com",
+        "trust_note": "Disponibile Solo su Amanotte.com",
         "hero_desc": "Lasciati avvolgere da un’imbottitura ultra spessa da 1000 GSM, un comfort trapuntato traspirante e una vestibilità sicura con tasche profonde — progettato per migliorare immediatamente la tua esperienza di riposo.",
         "bullet_1": "Comfort di Lusso: Qualità da hotel a 5 stelle, 3 volte più spesso dei topper standard",
         "bullet_2": "Effetto Fresco: Design traspirante che aiuta a prevenire la sudorazione notturna",
         "bullet_3": "Ipoallergenico: Certificato OEKO-TEX® Standard 100, anti-acaro e protezione contro allergeni",
-        "bullet_4": "Vestibilità Perfetta: Fascia elastica con tasche profonde per una tenuta stabile senza spostamenti.",
+        "bullet_4": "Vestibilità Perfetta: Fascia elastica con tasche profonde per una tenuta stabile senza spostamenti",
         "gifts_heading": "",
-        "urgency_text": "Quasi esaurito - aggiornato all [date]",
+        "urgency_text": "Quasi esaurito - Aggiornato Al [date]",
         "cta_bg_color": "#ff6b00",
         "cta_text_color": "#ffffff",
         "atc_text": "Acquista ora",
