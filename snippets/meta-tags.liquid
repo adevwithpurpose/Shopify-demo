@@ -19,11 +19,16 @@
 <meta property="og:type" content="{{ og_type }}">
 <meta property="og:description" content="{{ og_description | escape }}">
 
-{%- if page_image -%}
-  <meta property="og:image" content="http:{{ page_image | image_url }}">
-  <meta property="og:image:secure_url" content="https:{{ page_image | image_url }}">
-  <meta property="og:image:width" content="{{ page_image.width }}">
-  <meta property="og:image:height" content="{{ page_image.height }}">
+{%- assign og_image = page_image -%}
+{%- if request.page_type == 'product' and product.featured_media -%}
+  {%- assign og_image = product.featured_media -%}
+{%- endif -%}
+
+{%- if og_image -%}
+  <meta property="og:image" content="http:{{ og_image | image_url }}">
+  <meta property="og:image:secure_url" content="https:{{ og_image | image_url }}">
+  <meta property="og:image:width" content="{{ og_image.width }}">
+  <meta property="og:image:height" content="{{ og_image.height }}">
 {%- endif -%}
 
 {%- if request.page_type == 'product' -%}
