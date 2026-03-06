@@ -15,9 +15,9 @@
         "gift_1": {
           "type": "gift",
           "settings": {
-            "image": "shopify://shop_images/APS-Fulfillment-Inc-j.jpg",
+            "image": "shopify://shop_images/ChatGPT_Image_Mar_6_2026_04_09_26_PM.png",
             "icon": "truck",
-            "free_text": "Spedizione",
+            "free_text": "SPEDIZIONE",
             "title": "GRATUITA",
             "value": ""
           }
@@ -25,31 +25,31 @@
         "gift_2": {
           "type": "gift",
           "settings": {
-            "image": "shopify://shop_images/81yslK0H7zL._AC_UF1000_1000_QL80.jpg",
+            "image": "shopify://shop_images/ChatGPT_Image_Mar_6_2026_04_13_56_PM.png",
             "icon": "sparkles",
-            "free_text": "OMAGGIO",
-            "title": "Federe Premium",
-            "value": "(€23)"
+            "free_text": "QUALITA",
+            "title": "Premium",
+            "value": ""
           }
         },
         "gift_3": {
           "type": "gift",
           "settings": {
-            "image": "shopify://shop_images/extended-warranty-lifetime-assurance-label-with-shield-sign_1017-56382.avif",
+            "image": "shopify://shop_images/ChatGPT_Image_Mar_6_2026_04_10_48_PM.png",
             "icon": "shield",
-            "free_text": "Garanzia",
-            "title": "Estesa",
-            "value": "(€49)"
+            "free_text": "GARANTITA",
+            "title": "di Soddisfazione",
+            "value": ""
           }
         },
         "gift_4": {
           "type": "gift",
           "settings": {
-            "image": "shopify://shop_images/istockphoto-1135795506-612x612.jpg",
+            "image": "shopify://shop_images/ChatGPT_Image_Mar_6_2026_04_17_31_PM.png",
             "icon": "check",
-            "free_text": "GARANTITA",
-            "title": "Soddisfazione",
-            "value": "(€29)"
+            "free_text": "PROVA",
+            "title": "Senza Rischi",
+            "value": ""
           }
         },
         "acc_benefits": {
