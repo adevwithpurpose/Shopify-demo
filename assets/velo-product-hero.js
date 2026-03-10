@@ -195,12 +195,21 @@
 
         function collectImages() {
             const seen = new Set();
-            images = Array.from(document.querySelectorAll('.velo-lightbox-trigger')).filter(function (el) {
+            images = Array.from(document.querySelectorAll('.velo-media-gallery:not([aria-hidden="true"]) .velo-lightbox-trigger')).filter(function (el) {
                 const src = el.dataset.src || el.href;
                 if (seen.has(src)) return false;
                 seen.add(src);
                 return true;
             });
+            if (images.length === 0) {
+                // Fallback if the above selector fails
+                images = Array.from(document.querySelectorAll('.velo-lightbox-trigger')).filter(function (el) {
+                    const src = el.dataset.src || el.href;
+                    if (seen.has(src)) return false;
+                    seen.add(src);
+                    return true;
+                });
+            }
         }
 
         function updateCounter() {
