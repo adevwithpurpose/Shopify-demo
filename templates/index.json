@@ -17,8 +17,8 @@
           "settings": {
             "image": "shopify://shop_images/ChatGPT_Image_Mar_6_2026_04_09_26_PM.png",
             "icon": "truck",
-            "free_text": "SPEDIZIONE",
-            "title": "GRATUITA",
+            "free_text": "Spedizione",
+            "title": "<strong>GRATUITA</strong>",
             "value": ""
           }
         },
@@ -27,8 +27,8 @@
           "settings": {
             "image": "shopify://shop_images/ChatGPT_Image_Mar_6_2026_04_13_56_PM.png",
             "icon": "sparkles",
-            "free_text": "QUALITA",
-            "title": "Premium",
+            "free_text": "Qualia",
+            "title": "<strong>PREMIUM</strong>",
             "value": ""
           }
         },
