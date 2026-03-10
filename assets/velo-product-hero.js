@@ -92,30 +92,47 @@
 
         section.addEventListener('click', function (e) {
             const trigger = e.target.closest('.velo-lightbox-trigger');
-            if (!trigger) return;
-            e.preventDefault();
-            collectImages();
-            let idx = images.findIndex(el => (el.dataset.src || el.href) === (trigger.dataset.src || trigger.href));
+            if (trigger) {
+                e.preventDefault();
+                collectImages();
+                let idx = images.findIndex(el => (el.dataset.src || el.href) === (trigger.dataset.src || trigger.href));
 
-            if (idx === -1) {
-                // Find by href if strict equality failed
-                const targetHref = trigger.dataset.src || trigger.href;
-                idx = images.findIndex(el => (el.dataset.src || el.href) === targetHref);
+                if (idx === -1) {
+                    // Find by href if strict equality failed
+                    const targetHref = trigger.dataset.src || trigger.href;
+                    idx = images.findIndex(el => (el.dataset.src || el.href) === targetHref);
+                }
+
+                // If the clicked image is somehow not in the collected visible images list,
+                // open the lightbox at index 0 or find by mediaId if possible.
+                if (idx === -1) {
+                    const parentItem = trigger.closest('.velo-media-main-item');
+                    if (parentItem) {
+                        const mediaId = parentItem.dataset.mediaId;
+                        idx = images.findIndex(el => {
+                            const elParent = el.closest('.velo-media-main-item');
+                            return elParent && elParent.dataset.mediaId === mediaId;
+                        });
+                    }
+                }
+                openAt(idx >= 0 ? idx : 0);
             }
 
-            // If the clicked image is somehow not in the collected visible images list,
-            // open the lightbox at index 0 or find by mediaId if possible.
-            if (idx === -1) {
-                const parentItem = trigger.closest('.velo-media-main-item');
-                if (parentItem) {
-                    const mediaId = parentItem.dataset.mediaId;
-                    idx = images.findIndex(el => {
-                        const elParent = el.closest('.velo-media-main-item');
-                        return elParent && elParent.dataset.mediaId === mediaId;
+            // Thumbnail click logic
+            const thumb = e.target.closest('.velo-thumbnail-item');
+            if (thumb) {
+                const gallery = thumb.closest('.velo-media-gallery');
+                if (gallery) {
+                    const mediaId = thumb.dataset.mediaId;
+
+                    gallery.querySelectorAll('.velo-media-main-item').forEach(item => {
+                        item.style.display = item.dataset.mediaId === mediaId ? 'block' : 'none';
                     });
+
+                    gallery.querySelectorAll('.velo-thumbnail-item').forEach(t => t.classList.remove('velo-thumbnail--active'));
+                    thumb.classList.add('velo-thumbnail--active');
                 }
             }
-            openAt(idx >= 0 ? idx : 0);
         });
 
         if (closeBtn) closeBtn.addEventListener('click', close);
@@ -152,27 +169,8 @@
             return;
         }
 
-        function setupThumbnailClicks(gallery) {
-            const thumbnails = gallery.querySelectorAll('.velo-thumbnail-item');
-            thumbnails.forEach(thumb => {
-                thumb.addEventListener('click', () => {
-                    const mediaId = thumb.dataset.mediaId;
-
-                    gallery.querySelectorAll('.velo-media-main-item').forEach(item => {
-                        item.style.display = item.dataset.mediaId === mediaId ? 'block' : 'none';
-                    });
-
-                    thumbnails.forEach(t => t.classList.remove('velo-thumbnail--active'));
-                    thumb.classList.add('velo-thumbnail--active');
-                });
-            });
-        }
-
         const desktopGallery = document.getElementById('veloMediaGallery-' + id);
         const mobileGallery = section.querySelector('.velo-media-gallery--mobile');
-
-        if (desktopGallery) setupThumbnailClicks(desktopGallery);
-        if (mobileGallery) setupThumbnailClicks(mobileGallery);
 
         function formatMoney(cents, id) {
             const settings = (window.veloSettings && window.veloSettings[id]) || {};
