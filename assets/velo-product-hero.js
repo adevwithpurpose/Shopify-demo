@@ -87,7 +87,20 @@
             if (!trigger) return;
             e.preventDefault();
             collectImages();
-            const idx = images.findIndex(el => (el.dataset.src || el.href) === (trigger.dataset.src || trigger.href));
+            let idx = images.findIndex(el => (el.dataset.src || el.href) === (trigger.dataset.src || trigger.href));
+
+            // If the clicked image is somehow not in the collected visible images list,
+            // open the lightbox at index 0 or find by mediaId if possible.
+            if (idx === -1) {
+                const parentItem = trigger.closest('.velo-media-main-item');
+                if (parentItem) {
+                    const mediaId = parentItem.dataset.mediaId;
+                    idx = images.findIndex(el => {
+                        const elParent = el.closest('.velo-media-main-item');
+                        return elParent && elParent.dataset.mediaId === mediaId;
+                    });
+                }
+            }
             openAt(idx >= 0 ? idx : 0);
         });
 
