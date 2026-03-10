@@ -8,16 +8,18 @@
     <meta name="theme-color" content="">
     <link rel="canonical" href="{{ canonical_url }}">
 
-    {%- if settings.favicon != blank -%}
-      <link rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 32, height: 32 }}">
+    {%- if settings.logo != blank -%}
+      <link rel="icon" type="image/png" href="{{ settings.logo | image_url: width: 32, height: 32 }}">
+    {%- else -%}
+        {%- if settings.favicon != blank -%}
+            <link rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 32, height: 32 }}">
+        {%- endif -%}
     {%- endif -%}
 
     {%- unless settings.type_header_font.system? and settings.type_body_font.system? -%}
       <link rel="preconnect" href="https://fonts.shopifycdn.com" crossorigin>
     {%- endunless -%}
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700;800&family=Mulish:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
 
     <title>
       {{ page_title }}
@@ -108,12 +110,12 @@
       }
 
       :root {
-        --font-body-family: 'Mulish', {{ settings.type_body_font.fallback_families }};
+        --font-body-family: {{ settings.type_body_font.family }}, {{ settings.type_body_font.fallback_families }};
         --font-body-style: {{ settings.type_body_font.style }};
         --font-body-weight: 400;
         --font-body-weight-bold: 700;
 
-        --font-heading-family: 'Jost', {{ settings.type_header_font.fallback_families }};
+        --font-heading-family: {{ settings.type_header_font.family }}, {{ settings.type_header_font.fallback_families }};
         --font-heading-style: {{ settings.type_header_font.style }};
         --font-heading-weight: {{ settings.type_header_font.weight }};
 

@@ -31,14 +31,9 @@
     <!-- Left Column: Media Gallery (hidden on mobile, shown after buy-box via order) -->
     <div class="velo-media-gallery" id="veloMediaGallery-{{ section.id }}">
       {% if current_product != blank and gallery_images.size > 0 %}
-        <div class="velo-media-grid">
-          {% for media in gallery_images %}
-            {% if forloop.index == 4 %}
-              <div class="velo-media-slider-wrapper">
-                <div class="velo-media-slider">
-            {% endif %}
-
-            <div class="velo-media-item {% if forloop.first %}velo-media-item--featured{% endif %} {% if forloop.index >= 4 %}velo-slider-slide{% endif %}" data-media-id="{{ media.id }}">
+        <div class="velo-media-main-wrapper">
+          {%- for media in gallery_images -%}
+            <div class="velo-media-main-item" data-media-id="{{ media.id }}" {% if forloop.first %}style="display: block;"{% else %}style="display: none;"{% endif %}>
               {% case media.media_type %}
                 {% when 'image' %}
                   <a href="{{ media | image_url: width: 1800 }}"
@@ -47,15 +42,15 @@
                      data-alt="{{ media.alt | escape }}"
                      aria-label="Visualizza immagine ingrandita">
                     <img
-                      src="{{ media | image_url: width: 600 }}"
+                      src="{{ media | image_url: width: 800 }}"
                       alt="{{ media.alt | escape }}"
-                      loading="{% if forloop.first %}eager{% else %}lazy{% endif %}"
+                      loading="eager"
                       width="{{ media.width }}"
                       height="{{ media.height }}"
                       srcset="
-                        {{ media | image_url: width: 300 }} 300w,
-                        {{ media | image_url: width: 450 }} 450w,
-                        {{ media | image_url: width: 600 }} 600w
+                        {{ media | image_url: width: 600 }} 600w,
+                        {{ media | image_url: width: 800 }} 800w,
+                        {{ media | image_url: width: 1200 }} 1200w
                       "
                       sizes="(min-width: 990px) 50vw, 100vw"
                     >
@@ -73,13 +68,14 @@
                   </div>
               {% endcase %}
             </div>
+          {%- endfor -%}
+        </div>
 
-            {% if forloop.last and forloop.index >= 4 %}
-                </div>
-                <button class="velo-slider-nav velo-slider-prev" aria-label="Previous">{% render 'velo-icons', icon: 'chevron-left' %}</button>
-                <button class="velo-slider-nav velo-slider-next" aria-label="Next">{% render 'velo-icons', icon: 'chevron-right' %}</button>
-              </div>
-            {% endif %}
+        <div class="velo-media-thumbnails">
+          {% for media in gallery_images %}
+            <div class="velo-thumbnail-item {% if forloop.first %}velo-thumbnail--active{% endif %}" data-media-id="{{ media.id }}">
+              <img src="{{ media.preview_image | image_url: width: 100 }}" alt="{{ media.alt | escape }}" loading="lazy" width="100" height="100">
+            </div>
           {% endfor %}
         </div>
       {% else %}
@@ -247,7 +243,7 @@
                           {% render 'velo-icons', icon: block.settings.icon %}
                         {% endif %}
                       </div>
-                      <div class="velo-hero-gift-title"><strong>{{ block.settings.free_text | default: section.settings.free_label | default: 'GRATIS' }}</strong> {{ block.settings.title }}</div>
+                      <div class="velo-hero-gift-title">{{ block.settings.free_text | default: section.settings.free_label | default: 'GRATIS' }} {{ block.settings.title }}</div>
                     </div>
                   {% endfor %}
                 </div>
@@ -324,34 +320,51 @@
       </div>
 
       <!-- Mobile-only Gallery (rendered after buy box for mobile UX) -->
-      {% if current_product != blank and gallery_images.size > 0 %}
-        <div class="velo-media-gallery velo-media-gallery--mobile" aria-hidden="true">
-          <div class="velo-media-grid">
-            {% for media in gallery_images limit: 6 %}
-              <div class="velo-media-item {% if forloop.first %}velo-media-item--featured{% endif %}">
-                {% if media.media_type == 'image' %}
-                  <a href="{{ media | image_url: width: 1800 }}"
-                     class="velo-lightbox-trigger"
-                     data-src="{{ media | image_url: width: 1800 }}"
-                     data-alt="{{ media.alt | escape }}"
-                     aria-label="Visualizza immagine ingrandita">
-                    <img
-                      src="{{ media | image_url: width: 600 }}"
-                      alt="{{ media.alt | escape }}"
-                      loading="lazy"
-                      width="{{ media.width }}"
-                      height="{{ media.height }}"
-                    >
-                    <span class="velo-zoom-icon" aria-hidden="true">
-                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
-                    </span>
-                  </a>
-                {% endif %}
+      <div class="velo-media-gallery velo-media-gallery--mobile" aria-hidden="true">
+        {% if current_product != blank and gallery_images.size > 0 %}
+          <div class="velo-media-main-wrapper">
+            {%- for media in gallery_images -%}
+              <div class="velo-media-main-item" data-media-id="{{ media.id }}" {% if forloop.first %}style="display: block;"{% else %}style="display: none;"{% endif %}>
+                {% case media.media_type %}
+                  {% when 'image' %}
+                    <a href="{{ media | image_url: width: 1800 }}"
+                       class="velo-lightbox-trigger"
+                       data-src="{{ media | image_url: width: 1800 }}"
+                       data-alt="{{ media.alt | escape }}"
+                       aria-label="Visualizza immagine ingrandita">
+                      <img
+                        src="{{ media | image_url: width: 600 }}"
+                        alt="{{ media.alt | escape }}"
+                        loading="lazy"
+                        width="{{ media.width }}"
+                        height="{{ media.height }}"
+                      >
+                      <span class="velo-zoom-icon" aria-hidden="true">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                      </span>
+                    </a>
+                  {% when 'video' %}
+                    <div class="velo-video-wrapper">
+                      {{ media | video_tag: autoplay: true, muted: true, loop: true, playsinline: true, controls: false }}
+                    </div>
+                  {% when 'external_video' %}
+                    <div class="velo-video-wrapper">
+                      {{ media | external_video_url: autoplay: true, loop: true, mute: true, playlist: media.external_id | external_video_tag }}
+                    </div>
+                {% endcase %}
+              </div>
+            {%- endfor -%}
+          </div>
+
+          <div class="velo-media-thumbnails">
+            {% for media in gallery_images %}
+              <div class="velo-thumbnail-item {% if forloop.first %}velo-thumbnail--active{% endif %}" data-media-id="{{ media.id }}">
+                <img src="{{ media.preview_image | image_url: width: 100 }}" alt="{{ media.alt | escape }}" loading="lazy" width="100" height="100">
               </div>
             {% endfor %}
           </div>
-        </div>
-      {% endif %}
+        {% endif %}
+      </div>
     </div>
   </div>
 </div>
@@ -564,13 +577,13 @@
           "default": "package"
         },
         {
-          "type": "text",
+          "type": "inline_richtext",
           "id": "free_text",
           "label": "'Free' word override",
           "default": "FREE"
         },
         {
-          "type": "text",
+          "type": "inline_richtext",
           "id": "title",
           "label": "Item Name",
           "default": "Shipping"
