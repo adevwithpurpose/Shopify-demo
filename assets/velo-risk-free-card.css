@@ -40,7 +40,7 @@
 }
 
 .velo-risk-heading {
-    font-family: 'Jost', sans-serif !important;
+    font-family: var(--font-heading-family);
     font-size: 4.2rem;
     font-weight: 800 !important;
     color: #fff !important;

@@ -33,7 +33,7 @@
 }
 
 .kova-banner-heading {
-    font-family: 'Jost', sans-serif !important;
+    font-family: var(--font-heading-family);
     font-size: 6.4rem;
     line-height: 1.05;
     margin-bottom: 2.5rem;

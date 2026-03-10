@@ -9,7 +9,7 @@
 }
 
 .velo-steps-heading {
-    font-family: 'Jost', sans-serif !important;
+    font-family: var(--font-heading-family);
     font-size: 5.2rem;
     font-weight: 300 !important;
     line-height: 1.1;
@@ -83,7 +83,7 @@
 }
 
 .velo-step-title {
-    font-family: 'Jost', sans-serif !important;
+    font-family: var(--font-heading-family);
     font-size: 2rem;
     font-weight: 700 !important;
     color: var(--velo-navy, #122442);

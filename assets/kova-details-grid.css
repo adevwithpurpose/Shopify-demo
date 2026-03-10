@@ -23,7 +23,7 @@
     font-weight: 800;
     line-height: 1.05;
     color: var(--kova-navy, #122442);
-    font-family: 'Jost', sans-serif !important;
+    font-family: var(--font-heading-family);
     margin: 0 0 1.5rem 0;
     letter-spacing: -0.02em;
 }
@@ -121,7 +121,7 @@
     font-weight: 700;
     color: var(--kova-navy);
     margin: 0 0 1rem 0;
-    font-family: 'Jost', sans-serif !important;
+    font-family: var(--font-heading-family);
     line-height: 1.2;
 }
 

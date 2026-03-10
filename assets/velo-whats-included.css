@@ -31,7 +31,7 @@
     font-weight: 300;
     line-height: 1.05;
     color: var(--velo-navy);
-    font-family: var(--font-heading-family), 'Jost', sans-serif;
+    font-family: var(--font-heading-family);
     margin: 0 0 3.5rem 0;
     letter-spacing: -0.01em;
 }
@@ -102,7 +102,7 @@
     font-size: 1.8rem;
     font-weight: 800;
     color: var(--velo-navy);
-    font-family: 'Jost', sans-serif;
+    font-family: var(--font-heading-family);
 }
 
 .velo-inc-free-badge {
@@ -177,7 +177,7 @@
     font-size: 3.4rem;
     font-weight: 900;
     color: var(--velo-navy);
-    font-family: 'Jost', sans-serif;
+    font-family: var(--font-heading-family);
 }
 
 /* CTA Button */

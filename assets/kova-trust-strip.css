@@ -50,7 +50,7 @@
     font-size: 1.6rem;
     font-weight: 800;
     color: var(--kova-navy);
-    font-family: 'Jost', sans-serif !important;
+    font-family: var(--font-heading-family);
     text-transform: uppercase;
     letter-spacing: 0.03em;
     margin-bottom: 0.1rem;

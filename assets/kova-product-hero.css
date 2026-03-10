@@ -159,7 +159,7 @@
 
 /* ---- Title ---- */
 .kova-product-title {
-    font-family: 'Jost', sans-serif !important;
+    font-family: var(--font-heading-family);
     font-size: 4.8rem;
     font-weight: 800 !important;
     line-height: 1.05;
@@ -227,7 +227,7 @@
 
 /* ---- Description & Bullets ---- */
 .kova-description-text {
-    font-family: 'Mulish', sans-serif !important;
+    font-family: var(--font-body-family);
     font-size: 1.6rem;
     line-height: 1.6;
     color: var(--kova-text);
@@ -442,7 +442,7 @@
     cursor: pointer;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    font-family: 'Jost', sans-serif !important;
+    font-family: var(--font-heading-family);
     transition: all 0.3s ease;
     display: block;
     text-align: center;

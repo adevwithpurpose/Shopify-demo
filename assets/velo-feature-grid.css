@@ -25,7 +25,7 @@
     color: var(--velo-navy, #122442);
     margin-bottom: 2rem;
     letter-spacing: -0.01em;
-    font-family: 'Jost', sans-serif !important;
+    font-family: var(--font-heading-family);
 }
 
 .velo-fg-heading strong {
@@ -118,7 +118,7 @@
     font-weight: 700 !important;
     color: var(--velo-navy);
     margin: 0 0 0.4rem 0;
-    font-family: 'Jost', sans-serif !important;
+    font-family: var(--font-heading-family);
     text-align: left;
 }
 
@@ -137,7 +137,7 @@
     font-weight: 700 !important;
     color: var(--velo-navy);
     margin: 0 0 0.5rem 0;
-    font-family: 'Jost', sans-serif !important;
+    font-family: var(--font-heading-family);
 }
 
 .velo-fg-card-text {

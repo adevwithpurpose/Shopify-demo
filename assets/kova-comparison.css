@@ -1,6 +1,6 @@
 .kova-comparison-section {
     padding: 0;
-    font-family: 'Jost', sans-serif !important;
+    font-family: var(--font-heading-family);
     overflow: hidden;
 }
 
