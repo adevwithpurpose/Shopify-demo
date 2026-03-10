@@ -15,8 +15,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
             });
         }, {
-            threshold: 0.1, // Trigger when 10% visible
-            rootMargin: '0px 0px -50px 0px' // Slightly before bottom of screen
+            threshold: 0.05, // Trigger slightly earlier
+            rootMargin: '0px 0px -20px 0px' // Less margin so it fires sooner on scroll
         });
 
         revealElements.forEach(el => revealObserver.observe(el));

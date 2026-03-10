@@ -64,8 +64,11 @@ ut
 @media screen and (min-width: 990px) {
     .velo-media-gallery {
         position: sticky;
-        top: 2rem;
+        top: 100px;
+        /* Offset for any sticky headers */
         align-self: start;
+        transition: transform 0.1s ease-out;
+        /* Smooth the sticky re-calc */
     }
 }
 
@@ -128,7 +131,7 @@ ut
 /* ---- Title ---- */
 .velo-product-title {
     font-family: var(--font-heading-family);
-    font-size: 4.8rem;
+    font-size: 3.2rem;
     font-weight: 800 !important;
     line-height: 1.05;
     margin-bottom: 2rem;
@@ -139,7 +142,7 @@ ut
 
 @media screen and (min-width: 990px) {
     .velo-product-title {
-        font-size: 5.6rem;
+        font-size: 4.2rem;
     }
 }
 
@@ -221,6 +224,11 @@ ut
     font-size: 1.6rem;
     font-weight: 500;
     color: var(--velo-navy);
+}
+
+.velo-bullet-text {
+    /* To allow rich text formatting */
+    line-height: 1.6;
 }
 
 .velo-bullet-check {

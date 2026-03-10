@@ -195,7 +195,7 @@
     transition: background 0.2s ease, transform 0.2s ease;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    font-family: 'Jost', sans-serif !important;
+    font-family: var(--font-heading-family) !important;
     margin-bottom: 1.5rem;
 }
 

@@ -164,14 +164,7 @@
               {% if bullet_text != blank %}
                 <li>
                   <div class="velo-bullet-check">{% render 'velo-icons', icon: 'check' %}</div>
-                  <span>
-                    {% if bullet_text contains ':' %}
-                      {% assign first_part = bullet_text | split: ':' | first %}
-                      <strong>{{ first_part }}:</strong> {{ bullet_text | remove_first: first_part | remove_first: ':' | strip }}
-                    {% else %}
-                      {{ bullet_text }}
-                    {% endif %}
-                  </span>
+                  <div class="velo-bullet-text">{{ bullet_text }}</div>
                 </li>
               {% endif %}
             {% endfor %}
@@ -437,25 +430,25 @@
       "default": "The only topper that supports your body's natural need for absolute comfort - working with your body, not against it."
     },
     {
-      "type": "text",
+      "type": "inline_richtext",
       "id": "bullet_1",
       "label": "Bullet Point 1",
       "default": "Energy: Prevents all-day sitting fatigue"
     },
     {
-      "type": "text",
+      "type": "inline_richtext",
       "id": "bullet_2",
       "label": "Bullet Point 2",
       "default": "Focus: Boosts concentration and clarity"
     },
     {
-      "type": "text",
+      "type": "inline_richtext",
       "id": "bullet_3",
       "label": "Bullet Point 3",
       "default": "Productivity: Increases daily work output"
     },
     {
-      "type": "text",
+      "type": "inline_richtext",
       "id": "bullet_4",
       "label": "Bullet Point 4"
     },
