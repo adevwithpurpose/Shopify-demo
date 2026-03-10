@@ -32,7 +32,15 @@
                 images = [];
                 return;
             }
-            images = Array.from(visibleGallery.querySelectorAll('.velo-lightbox-trigger'));
+            images = Array.from(visibleGallery.querySelectorAll('.velo-lightbox-trigger')).filter(trigger => {
+                // Ensure the trigger is inside a visible velo-media-main-item (preventing duplicate/hidden images from being collected)
+                // BUT actually, we want ALL images in the gallery so we can swipe through them, even if display:none.
+                // We just want to filter out actual duplicate DOM elements if any.
+                const href = trigger.dataset.src || trigger.href;
+                if (seen.has(href)) return false;
+                seen.add(href);
+                return true;
+            });
         }
 
         function updateCounter() {
@@ -88,6 +96,12 @@
             e.preventDefault();
             collectImages();
             let idx = images.findIndex(el => (el.dataset.src || el.href) === (trigger.dataset.src || trigger.href));
+
+            if (idx === -1) {
+                // Find by href if strict equality failed
+                const targetHref = trigger.dataset.src || trigger.href;
+                idx = images.findIndex(el => (el.dataset.src || el.href) === targetHref);
+            }
 
             // If the clicked image is somehow not in the collected visible images list,
             // open the lightbox at index 0 or find by mediaId if possible.
