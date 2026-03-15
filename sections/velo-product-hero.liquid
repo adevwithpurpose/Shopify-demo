@@ -165,7 +165,7 @@
         </div>
         
         {% if section.settings.bullet_1 != blank or section.settings.bullet_2 != blank or section.settings.bullet_3 != blank or section.settings.bullet_4 != blank %}
-          <ul class="velo-bullets">
+          <ul class="velo-bullets velo-bullets--font-{{ section.settings.bullet_font_size | default: 'default' }}">
             {% for i in (1..4) %}
               {% capture bullet_key %}bullet_{{ i }}{% endcapture %}
               {% assign bullet_text = section.settings[bullet_key] %}
@@ -448,6 +448,26 @@
       "type": "inline_richtext",
       "id": "bullet_4",
       "label": "Bullet Point 4"
+    },
+    {
+      "type": "select",
+      "id": "bullet_font_size",
+      "label": "Bullet Font Size",
+      "options": [
+        {
+          "value": "small",
+          "label": "Slightly Smaller"
+        },
+        {
+          "value": "default",
+          "label": "Default"
+        },
+        {
+          "value": "large",
+          "label": "Slightly Larger"
+        }
+      ],
+      "default": "default"
     },
     {
       "type": "header",

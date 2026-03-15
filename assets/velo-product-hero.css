@@ -624,6 +624,14 @@
         line-height: 1.15;
     }
 
+    .velo-bullets--font-small li {
+        font-size: 0.95em;
+    }
+
+    .velo-bullets--font-large li {
+        font-size: 1.05em;
+    }
+
     .velo-hero-trust-strip {
         flex-direction: column;
         align-items: center;
@@ -962,11 +970,20 @@
     }
 
     .velo-hero-gifts-grid--mobile-2 .velo-hero-gift-image-box {
-        padding: 12%;
+        padding: 6%;
+    }
+
+    .velo-hero-gifts-grid--mobile-2 .velo-hero-gift-image-box img {
+        max-height: 58px;
+    }
+
+    .velo-hero-gifts-grid--mobile-2 .velo-hero-gift-image-box svg {
+        width: 24px;
+        height: 24px;
     }
 
     .velo-hero-gifts-grid--mobile-2 .velo-hero-gift-title {
-        font-size: 0.82rem;
+        font-size: 0.86rem;
         line-height: 1.2;
     }
 
