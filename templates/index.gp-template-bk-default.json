@@ -8,680 +8,6 @@
  * ------------------------------------------------------------
  */
 {
-  "sections": {
-    "velo_hero": {
-      "type": "velo-product-hero",
-      "blocks": {
-        "gift_1": {
-          "type": "gift",
-          "settings": {
-            "image": "shopify://shop_images/APS-Fulfillment-Inc-j.jpg",
-            "icon": "truck",
-            "free_text": "Spedizione",
-            "title": "GRATUITA",
-            "value": ""
-          }
-        },
-        "gift_2": {
-          "type": "gift",
-          "settings": {
-            "image": "shopify://shop_images/81yslK0H7zL._AC_UF1000_1000_QL80.jpg",
-            "icon": "sparkles",
-            "free_text": "OMAGGIO",
-            "title": "Federe Premium",
-            "value": "(€23)"
-          }
-        },
-        "gift_3": {
-          "type": "gift",
-          "settings": {
-            "image": "shopify://shop_images/extended-warranty-lifetime-assurance-label-with-shield-sign_1017-56382.avif",
-            "icon": "shield",
-            "free_text": "Garanzia",
-            "title": "Estesa",
-            "value": "(€49)"
-          }
-        },
-        "gift_4": {
-          "type": "gift",
-          "settings": {
-            "image": "shopify://shop_images/istockphoto-1135795506-612x612.jpg",
-            "icon": "check",
-            "free_text": "GARANTITA",
-            "title": "Soddisfazione",
-            "value": "(€29)"
-          }
-        },
-        "acc_benefits": {
-          "type": "accordion",
-          "settings": {
-            "title": "Benefici Principali",
-            "content": "<ul><li><strong>Comfort da hotel immediato</strong> — trasforma qualsiasi materasso senza comprarne uno nuovo</li><li><strong>Imbottitura ultra-spessa 1000 GSM</strong> — riduce la pressione su fianchi, spalle e schiena</li><li><strong>Fresco e traspirante</strong> — niente più notti sudate</li><li><strong>Rimane perfettamente in posizione</strong> — tasche profonde per materassi alti</li><li><strong>Lavabile in lavatrice e igienico</strong> — facile da mantenere pulito</li><li><strong>Prova senza rischi di 30 giorni</strong> — dormi meglio o rimborso completo</li></ul>"
-          }
-        },
-        "acc_assemble": {
-          "type": "accordion",
-          "settings": {
-            "title": "Come Si Installa",
-            "content": "<p>L'installazione richiede meno di un minuto. Stendi semplicemente gli angoli elastici rinforzati sul tuo materasso. Si adatta a qualsiasi profondità da 20 a 53 cm.</p>"
-          }
-        },
-        "acc_specs": {
-          "type": "accordion",
-          "settings": {
-            "title": "Specifiche",
-            "content": "<p><strong>Imbottitura:</strong> 1000GSM Premium<br/><strong>Vestibilità:</strong> Tasche profonde universali<br/><strong>Lavaggio:</strong> 100% Lavabile in lavatrice<br/><strong>Termoregolazione:</strong> Design trapuntato con movimento d'aria</p>"
-          }
-        },
-        "acc_shipping": {
-          "type": "accordion",
-          "settings": {
-            "title": "Spedizione e Resi",
-            "content": "<p>🚚 Spedizione gratuita<br/>📦 Consegna 2–4 giorni<br/>🛡 30 giorni soddisfatti o rimborsati</p>"
-          }
-        },
-        "acc_contact": {
-          "type": "accordion",
-          "settings": {
-            "title": "Contattaci",
-            "content": "<p>Hai una domanda? Scrivici a supporto@amanotte.com e risponderemo entro 24 ore (Lun-Ven, 9:00-18:00).</p>"
-          }
-        },
-        "swatch_grigio": {
-          "type": "swatch_color",
-          "settings": {
-            "title": "Grigio",
-            "color": "#94999d"
-          }
-        },
-        "swatch_bianco": {
-          "type": "swatch_color",
-          "settings": {
-            "title": "Bianco",
-            "color": "#f2f2f2"
-          }
-        }
-      },
-      "block_order": [
-        "gift_1",
-        "gift_2",
-        "gift_3",
-        "gift_4",
-        "acc_benefits",
-        "acc_assemble",
-        "acc_specs",
-        "acc_shipping",
-        "acc_contact",
-        "swatch_grigio",
-        "swatch_bianco"
-      ],
-      "settings": {
-        "product": "topper-materasso-premium-trapuntato",
-        "badge_1": "BESTSELLER",
-        "badge_2": "TOPPER #1 NEGLI HOTEL di lusso",
-        "show_reviews": true,
-        "rating_value": "4.9",
-        "review_count": "9700+",
-        "trust_note": "Disponibile esclusivamente su Amanotte.com",
-        "hero_desc": "Lasciati avvolgere da un’imbottitura ultra spessa da 1000 GSM, un comfort trapuntato traspirante e una vestibilità sicura con tasche profonde — progettato per migliorare immediatamente la tua esperienza di riposo.",
-        "bullet_1": "Comfort di Lusso: Qualità da hotel a 5 stelle, 3 volte più spesso dei topper standard",
-        "bullet_2": "Effetto Fresco: Design traspirante che aiuta a prevenire la sudorazione notturna",
-        "bullet_3": "Ipoallergenico: Certificato OEKO-TEX® Standard 100, anti-acaro e protezione contro allergeni",
-        "bullet_4": "Vestibilità Perfetta: Fascia elastica con tasche profonde per una tenuta stabile senza spostamenti.",
-        "gifts_heading": "",
-        "urgency_text": "Quasi esaurito - aggiornato all [date]",
-        "cta_bg_color": "#ff6b00",
-        "cta_text_color": "#ffffff",
-        "atc_text": "Acquista ora",
-        "sold_out_text": "ESAURITO",
-        "save_text": "SALVA",
-        "free_label": "GRATIS",
-        "trust_1": "Spedizione Rapida in tutta Italia",
-        "trust_2": "Reso facile entro 30 giorni",
-        "sub_desc": ""
-      }
-    },
-    "velo_rich_text": {
-      "type": "velo-rich-text",
-      "blocks": {
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "heading_light": "Comfort Assoluto =",
-            "heading_bold": "Sonno Migliore"
-          }
-        },
-        "text": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Amanotte si adatta perfettamente al tuo corpo, migliora il comfort e regola la temperatura durante tutta la notte.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "heading",
-        "text"
-      ],
-      "settings": {
-        "padding_top": 80,
-        "padding_bottom": 40
-      }
-    },
-    "velo_trust": {
-      "type": "velo-trust-strip",
-      "blocks": {
-        "t1": {
-          "type": "trust",
-          "settings": {
-            "icon": "truck",
-            "title": "Spedizione GRATUITA in Italia",
-            "subtitle": ""
-          }
-        },
-        "t2": {
-          "type": "trust",
-          "settings": {
-            "icon": "shield",
-            "title": "Qualità Premium",
-            "subtitle": ""
-          }
-        },
-        "t3": {
-          "type": "trust",
-          "settings": {
-            "icon": "refresh",
-            "title": "Reso facile entro 30 giorni",
-            "subtitle": ""
-          }
-        }
-      },
-      "block_order": [
-        "t1",
-        "t2",
-        "t3"
-      ],
-      "settings": {
-        "color_scheme": "",
-        "marquee_speed": 70,
-        "padding_top": 32,
-        "padding_bottom": 32
-      }
-    },
-    "velo_features": {
-      "type": "velo-feature-grid",
-      "blocks": {
-        "card_1": {
-          "type": "card",
-          "settings": {
-            "icon": "thermometer",
-            "title": "Soffri Il Caldo E Ti Svegli Sudato/a",
-            "text": "<p>Design traspirante che regola la temperatura.</p>"
-          }
-        },
-        "card_2": {
-          "type": "card",
-          "settings": {
-            "icon": "bandage",
-            "title": "Hai Dolori Alla Schiena e Cervicale",
-            "text": "<p>Immediato sollievo sui punti di pressione.</p>"
-          }
-        },
-        "card_3": {
-          "type": "card",
-          "settings": {
-            "icon": "sparkles",
-            "title": "Possiedi un Materasso Vecchio",
-            "text": "<p>Aggiunge alle tue notti lusso e morbidezza.</p>"
-          }
-        },
-        "card_4": {
-          "type": "card",
-          "settings": {
-            "icon": "bed",
-            "title": "Ti Svegli Spesso Durante la Notte",
-            "text": "<p>Riduce i movimenti notturni.</p>"
-          }
-        },
-        "card_5": {
-          "type": "card",
-          "settings": {
-            "icon": "clock",
-            "title": "Dormi Bene Ma Non Ti Svegli Riposato/a",
-            "text": "<p>Miglioramento del sonno profondo da subito.</p>"
-          }
-        },
-        "card_6": {
-          "type": "card",
-          "settings": {
-            "icon": "check",
-            "title": "Sono Anni Che Non Dormi Bene",
-            "text": "<p>Potrai svegliarti fresco e riposato.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "card_1",
-        "card_2",
-        "card_3",
-        "card_4",
-        "card_5",
-        "card_6"
-      ],
-      "settings": {
-        "color_scheme": "",
-        "padding_top": 80,
-        "padding_bottom": 80,
-        "heading_light": "",
-        "heading_bold": "Il Topper Perfetto Per...",
-        "subheading": "Persone che vogliono svegliarsi riposate e senza dolori ogni giorno. È perfetto per te se:",
-        "columns": "3"
-      }
-    },
-    "velo_body_built": {
-      "type": "velo-body-built",
-      "blocks": {
-        "p1": {
-          "type": "point",
-          "settings": {
-            "icon": "lock",
-            "title": "Stabile Tutta La Notte",
-            "description": "Gli angoli rinforzati mantengono il topper bloccato in posizione."
-          }
-        },
-        "p2": {
-          "type": "point",
-          "settings": {
-            "icon": "check",
-            "title": "Comfort Effetto Nuvola",
-            "description": "L'imbottitura da 1000GSM si adatta esattamente al tuo corpo."
-          }
-        },
-        "p3": {
-          "type": "point",
-          "settings": {
-            "icon": "thermometer",
-            "title": "Controllo Temperatura",
-            "description": "Nessun accumulo di calore come il memory foam - fresco tutta la notte."
-          }
-        },
-        "p4": {
-          "type": "point",
-          "settings": {
-            "icon": "sliders",
-            "title": "Per Ogni Materasso",
-            "description": "Le tasche profonde si adattano a materassi da 20 a 53 cm."
-          }
-        }
-      },
-      "block_order": [
-        "p1",
-        "p2",
-        "p3",
-        "p4"
-      ],
-      "settings": {
-        "heading_prefix": "Pensato Per Chi Vuole",
-        "heading_bold": "Riposarsi Davvero",
-        "subheading": "Supporta le tue posizioni naturali di riposo",
-        "side_video": "shopify://files/videos/compressed_video.mp4"
-      }
-    },
-    "velo_comparison": {
-      "type": "velo-comparison",
-      "blocks": {
-        "feat_1": {
-          "type": "feature",
-          "settings": {
-            "svg_icon": "",
-            "icon": "check",
-            "title": "Imbottitura 3 Volte Più Spessa",
-            "description": "Dormi in modo naturale e rigenerante"
-          }
-        },
-        "feat_2": {
-          "type": "feature",
-          "settings": {
-            "svg_icon": "",
-            "icon": "check",
-            "title": "Resta Fresco Tutta la Notte",
-            "description": ""
-          }
-        },
-        "feat_3": {
-          "type": "feature",
-          "settings": {
-            "svg_icon": "",
-            "icon": "check",
-            "title": "Lavabile in Lavatrice",
-            "description": ""
-          }
-        },
-        "feat_4": {
-          "type": "feature",
-          "settings": {
-            "svg_icon": "",
-            "icon": "check",
-            "title": "Si Adatta ai Materassi Alti",
-            "description": ""
-          }
-        },
-        "feat_5": {
-          "type": "feature",
-          "settings": {
-            "svg_icon": "",
-            "icon": "check",
-            "title": "Comfort Mirato Contro il Dolore",
-            "description": ""
-          }
-        },
-        "feat_6": {
-          "type": "feature",
-          "settings": {
-            "svg_icon": "",
-            "icon": "check",
-            "title": "Non Si Comprime Né Si Appiattisce",
-            "description": ""
-          }
-        }
-      },
-      "block_order": [
-        "feat_1",
-        "feat_2",
-        "feat_3",
-        "feat_4",
-        "feat_5",
-        "feat_6"
-      ],
-      "settings": {
-        "color_scheme": "",
-        "padding_top": 24,
-        "padding_bottom": 32,
-        "heading_light": "",
-        "heading_bold": "Perché Amanotte",
-        "heading_italic": "è diverso",
-        "subheading": "Il topper Amanotte supporta le tue posizioni naturali durante il sonno, mantenendoti fresco e prevenendo rigidità muscolari.",
-        "image": "shopify://shop_images/8_1060x_ee347b1a-2570-4c85-a13d-3cf5a980cbe4.webp",
-        "image_position": "left",
-        "full_width": true
-      }
-    },
-    "velo_how_to": {
-      "type": "velo-how-to-steps",
-      "blocks": {
-        "step_1": {
-          "type": "step",
-          "settings": {
-            "title": "Fase 01",
-            "text": "<p>Apri la confezione e scuoti leggermente per ravvivare l'imbottitura da 1000GSM</p>"
-          }
-        },
-        "step_2": {
-          "type": "step",
-          "settings": {
-            "title": "Fase 02",
-            "text": "<p>Stendi la fascia elastica sopra gli angoli del tuo materasso</p>"
-          }
-        },
-        "step_3": {
-          "type": "step",
-          "settings": {
-            "title": "Fase 03",
-            "text": "<p>Metti il lenzuolo sopra e dormi finalmente come su una nuvola</p>"
-          }
-        }
-      },
-      "block_order": [
-        "step_1",
-        "step_2",
-        "step_3"
-      ],
-      "disabled": true,
-      "settings": {
-        "color_scheme": "",
-        "heading_light": "Come usare il",
-        "heading_bold": "Topper Amanotte",
-        "subheading": "Semplice come rifare il letto.",
-        "full_width": false,
-        "padding_top": 80,
-        "padding_bottom": 80
-      }
-    },
-    "velo_details": {
-      "type": "velo-details-grid",
-      "blocks": {
-        "d1": {
-          "type": "detail",
-          "settings": {
-            "icon": "move",
-            "title": "Imbottitura da 1000GSM",
-            "description": "Fino a 6cm di spessore extra per un supporto hotel 5 stelle"
-          }
-        },
-        "d2": {
-          "type": "detail",
-          "settings": {
-            "icon": "thermometer",
-            "title": "Design Trapuntato Traspirante",
-            "description": "Favorisce la circolazione dell'aria costante"
-          }
-        },
-        "d3": {
-          "type": "detail",
-          "settings": {
-            "icon": "sliders",
-            "title": "Deep Skirt Fit (8-21\")",
-            "description": "12cm extra-thick high-density foam"
-          }
-        }
-      },
-      "block_order": [
-        "d1",
-        "d2",
-        "d3"
-      ],
-      "settings": {
-        "heading_light": "Progettato Nei",
-        "heading_bold": "Minimi Dettagli",
-        "subheading": "Caratteristiche intelligenti e materiali focalizzati sul comfort",
-        "full_width": false
-      }
-    },
-    "velo_risk_free": {
-      "type": "velo-risk-free-card",
-      "settings": {
-        "main_icon": "shield",
-        "heading": "Prova senza rischi di 30 giorni",
-        "subheading": "Siamo così sicuri che dormirai meglio sul nostro coprimaterasso da 1000 GSM che offriamo una garanzia di soddisfazione. Se non ti svegli più riposato e senza dolori, puoi semplicemente restituirlo entro 30 giorni per un rimborso completo.",
-        "social_proof": "Oltre 10.000 persone hanno migliorato il loro riposo con Amanotte."
-      }
-    },
-    "velo_testimonials": {
-      "type": "velo-testimonials",
-      "blocks": {
-        "t1": {
-          "type": "testimonial",
-          "settings": {
-            "quote": "Il topper Amanotte ha cambiato il mio modo di dormire. Non mi sveglio più con dolore ai fianchi e la qualità della mia vita è migliorata tantissimo! Grazie mille!",
-            "author_name": "Emiliana A."
-          }
-        },
-        "t2": {
-          "type": "testimonial",
-          "settings": {
-            "quote": "Prima del topper Amanotte avevo provato il memory foam, ma mi svegliavo continuamente accaldata e sudata. Il topper Amanotte è una vera svolta: è soffice e traspirante, e non mi sveglio più per le vampate di calore. Sono felicissima!",
-            "author_name": "Amalia C."
-          }
-        },
-        "t3": {
-          "type": "testimonial",
-          "settings": {
-            "quote": "Amanotte mi ha fatto risparmiare oltre 2000 euro evitando di acquistare un nuovo materasso. Si è adattato perfettamente al mio vecchio materasso e ora sembra di dormire in un hotel di lusso! Non sapevo fosse possibile ottenere un risultato così con un solo topper!",
-            "author_name": "Matteo L."
-          }
-        }
-      },
-      "block_order": [
-        "t1",
-        "t2",
-        "t3"
-      ],
-      "settings": {
-        "color_scheme": "",
-        "heading": "Cosa Dicono i Nostri Clienti",
-        "subheading": "Oltre 10.000 persone hanno migliorato il loro sonno con Amanotte.",
-        "padding_top": 80,
-        "padding_bottom": 80
-      }
-    },
-    "velo_included": {
-      "type": "velo-whats-included",
-      "blocks": {
-        "i1": {
-          "type": "item",
-          "settings": {
-            "title": "Amanotte Topper Materasso",
-            "original_price": "€399",
-            "final_price": "€199",
-            "is_free": false
-          }
-        },
-        "i2": {
-          "type": "item",
-          "settings": {
-            "title": "Spedizione Rapida",
-            "original_price": "€14.00",
-            "final_price": "$397",
-            "is_free": true
-          }
-        }
-      },
-      "block_order": [
-        "i1",
-        "i2"
-      ],
-      "disabled": true,
-      "settings": {
-        "color_scheme": "",
-        "padding_top": 80,
-        "padding_bottom": 80,
-        "heading": "Incluso nel tuo",
-        "heading_bold": "Ordine Amanotte",
-        "order_today_label": "SE ORDINI OGGI:",
-        "savings_label": "Risparmio",
-        "savings_value": "Risparmi €200",
-        "total_label": "Totale",
-        "total_price": "€199",
-        "free_label": "GRATIS",
-        "free_gifts_label": "REGALI GRATUITI",
-        "trust_1": "Spedizione Oggi",
-        "trust_2": "30 Giorni Prova",
-        "cta_link": "",
-        "badge_text": "Spedizione GRATUITA Inclusa",
-        "annotation_1": "OMAGGIO Federe",
-        "anno_1_top": 25,
-        "anno_1_left": 15,
-        "anno_1_rotate": 0,
-        "annotation_2": "OMAGGIO Mascherina",
-        "anno_2_top": 65,
-        "anno_2_left": 70,
-        "anno_2_rotate": 0
-      }
-    },
-    "velo_faq": {
-      "type": "velo-faq",
-      "blocks": {
-        "f1": {
-          "type": "faq",
-          "settings": {
-            "title": "In cosa è diverso dai topper economici?",
-            "content": "<p><strong>È molto più spesso, più traspirante e progettato per durare.</strong></p><p>A differenza dei topper economici, <strong>Amanotte utilizza un’imbottitura ultra-spessa da 1000 GSM</strong>, che offre un vero effetto cuscino e allevia la pressione su schiena, spalle e fianchi.<br/><br/>Il design trapuntato favorisce la <strong>circolazione dell’aria</strong>, mantenendo il letto fresco durante la notte.</p><p>Inoltre, i materiali premium fanno sì che <strong>non si appiattisca rapidamente</strong> come molti topper economici.</p><p><strong>Risultato:</strong> più comfort, migliore supporto e una sensazione di <strong>letto da hotel ogni notte</strong>.</p>"
-          }
-        },
-        "f2": {
-          "type": "faq",
-          "settings": {
-            "title": "Si adatta al mio materasso?",
-            "content": "<p>Sì! Il nostro design con tasche profonde si adatta a materassi con altezza da 20 a 53 cm, inclusi pillow-top, memory foam e materassi ibridi. Gli angoli con elastico rinforzato garantiscono una tenuta stabile per tutta la notte — senza scivolare né formare pieghe.</p>"
-          }
-        },
-        "f3": {
-          "type": "faq",
-          "settings": {
-            "title": "Come scegliere la misura?",
-            "content": "<p>Scegli la stessa misura del tuo materasso per una vestibilità perfetta.</p><ul><li>Singolo: 90 × 200 cm</li><li>Matrimoniale: 140 × 200 cm</li><li>King: 160 × 200 cm</li><li>Super King: 180 × 200 cm</li></ul><p>Se il tuo materasso ha un’altezza tra 20 e 53 cm, il design con tasche profonde garantirà una tenuta stabile e sicura.</p>"
-          }
-        },
-        "f4": {
-          "type": "faq",
-          "settings": {
-            "title": "Posso lavarlo?",
-            "content": "<p>Assolutamente sì. È lavabile in lavatrice per una manutenzione semplice e pratica. Non serve il lavaggio a secco: basta metterlo in lavatrice per mantenere la superficie del tuo letto fresca e pulita.</p>"
-          }
-        },
-        "f5": {
-          "type": "faq",
-          "settings": {
-            "title": "In quanto tempo sentirò la differenza?",
-            "content": "<p>La maggior parte dei clienti nota un miglioramento già dalla prima notte. L’imbottitura ultra spessa offre un sollievo immediato dai punti di pressione su fianchi, spalle e schiena — così ti svegli riposato, non indolenzito.</p>"
-          }
-        },
-        "faq_3gQLyy": {
-          "type": "faq",
-          "settings": {
-            "title": "Posso restituirlo se non mi piace?",
-            "content": "<p>Certamente! Offriamo una garanzia di rimborso di 30 giorni.</p>"
-          }
-        },
-        "faq_Jqyhtg": {
-          "type": "faq",
-          "settings": {
-            "title": "Mi farà sudare di notte?",
-            "content": "<p>Assolutamente no! A differenza del memory foam tradizionale che intrappola il calore, il nostro topper da 1000GSM presenta un design trapuntato traspirante che favorisce la circolazione dell'aria, mantenendoti fresco e comodo per tutta la notte.</p>"
-          }
-        },
-        "faq_TdkNc7": {
-          "type": "faq",
-          "settings": {
-            "title": "Quanto è alto il topper da 1000GSM?",
-            "content": "<p>Il topper da <strong>1000 GSM</strong> ha uno spessore di circa <strong>5–7 cm</strong>, creando un effetto soffice e avvolgente simile ai letti degli hotel di lusso.</p>"
-          }
-        },
-        "faq_nbgxAP": {
-          "type": "faq",
-          "settings": {
-            "title": "Hai domande?",
-            "content": "<p>Siamo qui per te. Scrivici a supporto@amanotte.com e risponderemo entro 24 ore (Lun-Ven, 9:00-18:00).</p>"
-          }
-        }
-      },
-      "block_order": [
-        "f1",
-        "f2",
-        "f3",
-        "f4",
-        "f5",
-        "faq_3gQLyy",
-        "faq_Jqyhtg",
-        "faq_TdkNc7",
-        "faq_nbgxAP"
-      ],
-      "settings": {
-        "color_scheme": "",
-        "heading": "Domande Frequenti",
-        "subheading": "Tutto quello che devi sapere sul Topper Amanotte.",
-        "padding_top": 80,
-        "padding_bottom": 80
-      }
-    },
-    "velo_sticky_atc": {
-      "type": "velo-sticky-atc",
-      "settings": {
-        "product": "shopify://products/topper-materasso-premium-trapuntato",
-        "btn_text": "Acquista ora",
-        "show_for_demo": true
-      }
-    }
-  },
   "order": [
     "velo_hero",
     "velo_rich_text",
@@ -696,5 +22,682 @@
     "velo_included",
     "velo_faq",
     "velo_sticky_atc"
-  ]
+  ],
+  "sections": {
+    "velo_body_built": {
+      "block_order": [
+        "p1",
+        "p2",
+        "p3",
+        "p4"
+      ],
+      "blocks": {
+        "p1": {
+          "settings": {
+            "description": "Gli angoli rinforzati mantengono il topper bloccato in posizione.",
+            "icon": "lock",
+            "title": "Stabile Tutta La Notte"
+          },
+          "type": "point"
+        },
+        "p2": {
+          "settings": {
+            "description": "L'imbottitura da 1000GSM si adatta esattamente al tuo corpo.",
+            "icon": "check",
+            "title": "Comfort Effetto Nuvola"
+          },
+          "type": "point"
+        },
+        "p3": {
+          "settings": {
+            "description": "Nessun accumulo di calore come il memory foam - fresco tutta la notte.",
+            "icon": "thermometer",
+            "title": "Controllo Temperatura"
+          },
+          "type": "point"
+        },
+        "p4": {
+          "settings": {
+            "description": "Le tasche profonde si adattano a materassi da 20 a 53 cm.",
+            "icon": "sliders",
+            "title": "Per Ogni Materasso"
+          },
+          "type": "point"
+        }
+      },
+      "settings": {
+        "heading_bold": "Riposarsi Davvero",
+        "heading_prefix": "Pensato Per Chi Vuole",
+        "side_video": "shopify://files/videos/compressed_video.mp4",
+        "subheading": "Supporta le tue posizioni naturali di riposo"
+      },
+      "type": "velo-body-built"
+    },
+    "velo_comparison": {
+      "block_order": [
+        "feat_1",
+        "feat_2",
+        "feat_3",
+        "feat_4",
+        "feat_5",
+        "feat_6"
+      ],
+      "blocks": {
+        "feat_1": {
+          "settings": {
+            "description": "Dormi in modo naturale e rigenerante",
+            "icon": "check",
+            "svg_icon": "",
+            "title": "Imbottitura 3 Volte Più Spessa"
+          },
+          "type": "feature"
+        },
+        "feat_2": {
+          "settings": {
+            "description": "",
+            "icon": "check",
+            "svg_icon": "",
+            "title": "Resta Fresco Tutta la Notte"
+          },
+          "type": "feature"
+        },
+        "feat_3": {
+          "settings": {
+            "description": "",
+            "icon": "check",
+            "svg_icon": "",
+            "title": "Lavabile in Lavatrice"
+          },
+          "type": "feature"
+        },
+        "feat_4": {
+          "settings": {
+            "description": "",
+            "icon": "check",
+            "svg_icon": "",
+            "title": "Si Adatta ai Materassi Alti"
+          },
+          "type": "feature"
+        },
+        "feat_5": {
+          "settings": {
+            "description": "",
+            "icon": "check",
+            "svg_icon": "",
+            "title": "Comfort Mirato Contro il Dolore"
+          },
+          "type": "feature"
+        },
+        "feat_6": {
+          "settings": {
+            "description": "",
+            "icon": "check",
+            "svg_icon": "",
+            "title": "Non Si Comprime Né Si Appiattisce"
+          },
+          "type": "feature"
+        }
+      },
+      "settings": {
+        "color_scheme": "",
+        "full_width": true,
+        "heading_bold": "Perché Amanotte",
+        "heading_italic": "è diverso",
+        "heading_light": "",
+        "image": "shopify://shop_images/8_1060x_ee347b1a-2570-4c85-a13d-3cf5a980cbe4.webp",
+        "image_position": "left",
+        "padding_bottom": 32,
+        "padding_top": 24,
+        "subheading": "Il topper Amanotte supporta le tue posizioni naturali durante il sonno, mantenendoti fresco e prevenendo rigidità muscolari."
+      },
+      "type": "velo-comparison"
+    },
+    "velo_details": {
+      "block_order": [
+        "d1",
+        "d2",
+        "d3"
+      ],
+      "blocks": {
+        "d1": {
+          "settings": {
+            "description": "Fino a 6cm di spessore extra per un supporto hotel 5 stelle",
+            "icon": "move",
+            "title": "Imbottitura da 1000GSM"
+          },
+          "type": "detail"
+        },
+        "d2": {
+          "settings": {
+            "description": "Favorisce la circolazione dell'aria costante",
+            "icon": "thermometer",
+            "title": "Design Trapuntato Traspirante"
+          },
+          "type": "detail"
+        },
+        "d3": {
+          "settings": {
+            "description": "12cm extra-thick high-density foam",
+            "icon": "sliders",
+            "title": "Deep Skirt Fit (8-21\")"
+          },
+          "type": "detail"
+        }
+      },
+      "settings": {
+        "full_width": false,
+        "heading_bold": "Minimi Dettagli",
+        "heading_light": "Progettato Nei",
+        "subheading": "Caratteristiche intelligenti e materiali focalizzati sul comfort"
+      },
+      "type": "velo-details-grid"
+    },
+    "velo_faq": {
+      "block_order": [
+        "f1",
+        "f2",
+        "f3",
+        "f4",
+        "f5",
+        "faq_3gQLyy",
+        "faq_Jqyhtg",
+        "faq_TdkNc7",
+        "faq_nbgxAP"
+      ],
+      "blocks": {
+        "f1": {
+          "settings": {
+            "content": "<p><strong>È molto più spesso, più traspirante e progettato per durare.</strong></p><p>A differenza dei topper economici, <strong>Amanotte utilizza un’imbottitura ultra-spessa da 1000 GSM</strong>, che offre un vero effetto cuscino e allevia la pressione su schiena, spalle e fianchi.<br/><br/>Il design trapuntato favorisce la <strong>circolazione dell’aria</strong>, mantenendo il letto fresco durante la notte.</p><p>Inoltre, i materiali premium fanno sì che <strong>non si appiattisca rapidamente</strong> come molti topper economici.</p><p><strong>Risultato:</strong> più comfort, migliore supporto e una sensazione di <strong>letto da hotel ogni notte</strong>.</p>",
+            "title": "In cosa è diverso dai topper economici?"
+          },
+          "type": "faq"
+        },
+        "f2": {
+          "settings": {
+            "content": "<p>Sì! Il nostro design con tasche profonde si adatta a materassi con altezza da 20 a 53 cm, inclusi pillow-top, memory foam e materassi ibridi. Gli angoli con elastico rinforzato garantiscono una tenuta stabile per tutta la notte — senza scivolare né formare pieghe.</p>",
+            "title": "Si adatta al mio materasso?"
+          },
+          "type": "faq"
+        },
+        "f3": {
+          "settings": {
+            "content": "<p>Scegli la stessa misura del tuo materasso per una vestibilità perfetta.</p><ul><li>Singolo: 90 × 200 cm</li><li>Matrimoniale: 140 × 200 cm</li><li>King: 160 × 200 cm</li><li>Super King: 180 × 200 cm</li></ul><p>Se il tuo materasso ha un’altezza tra 20 e 53 cm, il design con tasche profonde garantirà una tenuta stabile e sicura.</p>",
+            "title": "Come scegliere la misura?"
+          },
+          "type": "faq"
+        },
+        "f4": {
+          "settings": {
+            "content": "<p>Assolutamente sì. È lavabile in lavatrice per una manutenzione semplice e pratica. Non serve il lavaggio a secco: basta metterlo in lavatrice per mantenere la superficie del tuo letto fresca e pulita.</p>",
+            "title": "Posso lavarlo?"
+          },
+          "type": "faq"
+        },
+        "f5": {
+          "settings": {
+            "content": "<p>La maggior parte dei clienti nota un miglioramento già dalla prima notte. L’imbottitura ultra spessa offre un sollievo immediato dai punti di pressione su fianchi, spalle e schiena — così ti svegli riposato, non indolenzito.</p>",
+            "title": "In quanto tempo sentirò la differenza?"
+          },
+          "type": "faq"
+        },
+        "faq_3gQLyy": {
+          "settings": {
+            "content": "<p>Certamente! Offriamo una garanzia di rimborso di 30 giorni.</p>",
+            "title": "Posso restituirlo se non mi piace?"
+          },
+          "type": "faq"
+        },
+        "faq_Jqyhtg": {
+          "settings": {
+            "content": "<p>Assolutamente no! A differenza del memory foam tradizionale che intrappola il calore, il nostro topper da 1000GSM presenta un design trapuntato traspirante che favorisce la circolazione dell'aria, mantenendoti fresco e comodo per tutta la notte.</p>",
+            "title": "Mi farà sudare di notte?"
+          },
+          "type": "faq"
+        },
+        "faq_TdkNc7": {
+          "settings": {
+            "content": "<p>Il topper da <strong>1000 GSM</strong> ha uno spessore di circa <strong>5–7 cm</strong>, creando un effetto soffice e avvolgente simile ai letti degli hotel di lusso.</p>",
+            "title": "Quanto è alto il topper da 1000GSM?"
+          },
+          "type": "faq"
+        },
+        "faq_nbgxAP": {
+          "settings": {
+            "content": "<p>Siamo qui per te. Scrivici a supporto@amanotte.com e risponderemo entro 24 ore (Lun-Ven, 9:00-18:00).</p>",
+            "title": "Hai domande?"
+          },
+          "type": "faq"
+        }
+      },
+      "settings": {
+        "color_scheme": "",
+        "heading": "Domande Frequenti",
+        "padding_bottom": 80,
+        "padding_top": 80,
+        "subheading": "Tutto quello che devi sapere sul Topper Amanotte."
+      },
+      "type": "velo-faq"
+    },
+    "velo_features": {
+      "block_order": [
+        "card_1",
+        "card_2",
+        "card_3",
+        "card_4",
+        "card_5",
+        "card_6"
+      ],
+      "blocks": {
+        "card_1": {
+          "settings": {
+            "icon": "thermometer",
+            "text": "<p>Design traspirante che regola la temperatura.</p>",
+            "title": "Soffri Il Caldo E Ti Svegli Sudato/a"
+          },
+          "type": "card"
+        },
+        "card_2": {
+          "settings": {
+            "icon": "bandage",
+            "text": "<p>Immediato sollievo sui punti di pressione.</p>",
+            "title": "Hai Dolori Alla Schiena e Cervicale"
+          },
+          "type": "card"
+        },
+        "card_3": {
+          "settings": {
+            "icon": "sparkles",
+            "text": "<p>Aggiunge alle tue notti lusso e morbidezza.</p>",
+            "title": "Possiedi un Materasso Vecchio"
+          },
+          "type": "card"
+        },
+        "card_4": {
+          "settings": {
+            "icon": "bed",
+            "text": "<p>Riduce i movimenti notturni.</p>",
+            "title": "Ti Svegli Spesso Durante la Notte"
+          },
+          "type": "card"
+        },
+        "card_5": {
+          "settings": {
+            "icon": "clock",
+            "text": "<p>Miglioramento del sonno profondo da subito.</p>",
+            "title": "Dormi Bene Ma Non Ti Svegli Riposato/a"
+          },
+          "type": "card"
+        },
+        "card_6": {
+          "settings": {
+            "icon": "check",
+            "text": "<p>Potrai svegliarti fresco e riposato.</p>",
+            "title": "Sono Anni Che Non Dormi Bene"
+          },
+          "type": "card"
+        }
+      },
+      "settings": {
+        "color_scheme": "",
+        "columns": "3",
+        "heading_bold": "Il Topper Perfetto Per...",
+        "heading_light": "",
+        "padding_bottom": 80,
+        "padding_top": 80,
+        "subheading": "Persone che vogliono svegliarsi riposate e senza dolori ogni giorno. È perfetto per te se:"
+      },
+      "type": "velo-feature-grid"
+    },
+    "velo_hero": {
+      "block_order": [
+        "gift_1",
+        "gift_2",
+        "gift_3",
+        "gift_4",
+        "acc_benefits",
+        "acc_assemble",
+        "acc_specs",
+        "acc_shipping",
+        "acc_contact",
+        "swatch_grigio",
+        "swatch_bianco"
+      ],
+      "blocks": {
+        "acc_assemble": {
+          "settings": {
+            "content": "<p>L'installazione richiede meno di un minuto. Stendi semplicemente gli angoli elastici rinforzati sul tuo materasso. Si adatta a qualsiasi profondità da 20 a 53 cm.</p>",
+            "title": "Installazione in Pochi Secondi"
+          },
+          "type": "accordion"
+        },
+        "acc_benefits": {
+          "settings": {
+            "content": "<ul><li><strong>Comfort da hotel immediato</strong> — trasforma qualsiasi materasso senza comprarne uno nuovo</li><li><strong>Imbottitura ultra-spessa 1000 GSM</strong> — riduce la pressione su fianchi, spalle e schiena</li><li><strong>Fresco e traspirante</strong> — niente più notti sudate</li><li><strong>Rimane perfettamente in posizione</strong> — tasche profonde per materassi alti</li><li><strong>Lavabile in lavatrice e igienico</strong> — facile da mantenere pulito</li><li><strong>Prova senza rischi di 30 giorni</strong> — dormi meglio o rimborso completo</li></ul>",
+            "title": "Benefici Principali"
+          },
+          "type": "accordion"
+        },
+        "acc_contact": {
+          "settings": {
+            "content": "<p>Hai una domanda? Scrivici a supporto@amanotte.com e risponderemo entro 24 ore (Lun-Ven, 9:00-18:00).</p>",
+            "title": "Contattaci"
+          },
+          "type": "accordion"
+        },
+        "acc_shipping": {
+          "settings": {
+            "content": "<p>🚚 Spedizione gratuita<br/>📦 Consegna 2–4 giorni<br/>🛡 30 giorni soddisfatti o rimborsati</p>",
+            "title": "Spedizione e Resi"
+          },
+          "type": "accordion"
+        },
+        "acc_specs": {
+          "settings": {
+            "content": "<p><strong>Imbottitura:</strong> 1000GSM Premium<br/><strong>Vestibilità:</strong> Tasche profonde universali<br/><strong>Lavaggio:</strong> 100% Lavabile in lavatrice<br/><strong>Termoregolazione:</strong> Design trapuntato con movimento d'aria</p>",
+            "title": "Specifiche"
+          },
+          "type": "accordion"
+        },
+        "gift_1": {
+          "settings": {
+            "free_text": "Spedizione",
+            "icon": "truck",
+            "image": "shopify://shop_images/ChatGPT_Image_Mar_6_2026_04_09_26_PM.png",
+            "title": "<strong>GRATUITA</strong>",
+            "value": ""
+          },
+          "type": "gift"
+        },
+        "gift_2": {
+          "settings": {
+            "free_text": "Qualia",
+            "icon": "sparkles",
+            "image": "shopify://shop_images/ChatGPT_Image_Mar_6_2026_04_13_56_PM.png",
+            "title": "<strong>PREMIUM</strong>",
+            "value": ""
+          },
+          "type": "gift"
+        },
+        "gift_3": {
+          "settings": {
+            "free_text": "GARANTITA",
+            "icon": "shield",
+            "image": "shopify://shop_images/ChatGPT_Image_Mar_6_2026_04_10_48_PM.png",
+            "title": "di Soddisfazione",
+            "value": ""
+          },
+          "type": "gift"
+        },
+        "gift_4": {
+          "settings": {
+            "free_text": "PROVA",
+            "icon": "check",
+            "image": "shopify://shop_images/ChatGPT_Image_Mar_6_2026_04_17_31_PM.png",
+            "title": "Senza Rischi",
+            "value": ""
+          },
+          "type": "gift"
+        },
+        "swatch_bianco": {
+          "settings": {
+            "color": "#f2f2f2",
+            "title": "Bianco"
+          },
+          "type": "swatch_color"
+        },
+        "swatch_grigio": {
+          "settings": {
+            "color": "#94999d",
+            "title": "Grigio"
+          },
+          "type": "swatch_color"
+        }
+      },
+      "settings": {
+        "atc_text": "Acquista ora",
+        "badge_1": "BESTSELLER",
+        "badge_2": "TOPPER #1 NEGLI HOTEL di lusso",
+        "bullet_1": "Comfort di Lusso: Qualità da hotel a 5 stelle, 3 volte più spesso dei topper standard",
+        "bullet_2": "Effetto Fresco: Design traspirante che aiuta a prevenire la sudorazione notturna",
+        "bullet_3": "Ipoallergenico: Certificato OEKO-TEX® Standard 100, anti-acaro e protezione contro allergeni",
+        "bullet_4": "Vestibilità Perfetta: Fascia elastica con tasche profonde per una tenuta stabile senza spostamenti",
+        "bullet_font_size": "small",
+        "cta_bg_color": "#ff6b00",
+        "cta_text_color": "#ffffff",
+        "free_label": "GRATIS",
+        "gifts_heading": "",
+        "hero_desc": "Lasciati avvolgere da un’imbottitura ultra spessa da 1000 GSM, un comfort trapuntato traspirante e una vestibilità sicura con tasche profonde — progettato per migliorare immediatamente la tua esperienza di riposo.",
+        "mobile_gifts_layout": "2",
+        "mobile_image_position": "top",
+        "product": "topper-materasso-premium-trapuntato",
+        "rating_value": "4.9",
+        "review_count": "9700+",
+        "save_text": "Risparmia il",
+        "show_reviews": true,
+        "sold_out_text": "ESAURITO",
+        "sub_desc": "",
+        "trust_1": "Spedizione Rapida in tutta Italia",
+        "trust_2": "Reso facile entro 30 giorni",
+        "trust_note": "Disponibile Solo su Amanotte.com",
+        "urgency_text": "Quasi esaurito - Aggiornato Al [date]"
+      },
+      "type": "velo-product-hero"
+    },
+    "velo_how_to": {
+      "block_order": [
+        "step_1",
+        "step_2",
+        "step_3"
+      ],
+      "blocks": {
+        "step_1": {
+          "settings": {
+            "text": "<p>Apri la confezione e scuoti leggermente per ravvivare l'imbottitura da 1000GSM</p>",
+            "title": "Fase 01"
+          },
+          "type": "step"
+        },
+        "step_2": {
+          "settings": {
+            "text": "<p>Stendi la fascia elastica sopra gli angoli del tuo materasso</p>",
+            "title": "Fase 02"
+          },
+          "type": "step"
+        },
+        "step_3": {
+          "settings": {
+            "text": "<p>Metti il lenzuolo sopra e dormi finalmente come su una nuvola</p>",
+            "title": "Fase 03"
+          },
+          "type": "step"
+        }
+      },
+      "disabled": true,
+      "settings": {
+        "color_scheme": "",
+        "full_width": false,
+        "heading_bold": "Topper Amanotte",
+        "heading_light": "Come usare il",
+        "padding_bottom": 80,
+        "padding_top": 80,
+        "subheading": "Semplice come rifare il letto."
+      },
+      "type": "velo-how-to-steps"
+    },
+    "velo_included": {
+      "block_order": [
+        "i1",
+        "i2"
+      ],
+      "blocks": {
+        "i1": {
+          "settings": {
+            "final_price": "€199",
+            "is_free": false,
+            "original_price": "€399",
+            "title": "Amanotte Topper Materasso"
+          },
+          "type": "item"
+        },
+        "i2": {
+          "settings": {
+            "final_price": "$397",
+            "is_free": true,
+            "original_price": "€14.00",
+            "title": "Spedizione Rapida"
+          },
+          "type": "item"
+        }
+      },
+      "disabled": true,
+      "settings": {
+        "anno_1_left": 15,
+        "anno_1_rotate": 0,
+        "anno_1_top": 25,
+        "anno_2_left": 70,
+        "anno_2_rotate": 0,
+        "anno_2_top": 65,
+        "annotation_1": "OMAGGIO Federe",
+        "annotation_2": "OMAGGIO Mascherina",
+        "badge_text": "Spedizione GRATUITA Inclusa",
+        "color_scheme": "",
+        "cta_link": "",
+        "free_gifts_label": "REGALI GRATUITI",
+        "free_label": "GRATIS",
+        "heading": "Incluso nel tuo",
+        "heading_bold": "Ordine Amanotte",
+        "order_today_label": "SE ORDINI OGGI:",
+        "padding_bottom": 80,
+        "padding_top": 80,
+        "savings_label": "Risparmio",
+        "savings_value": "Risparmi €200",
+        "total_label": "Totale",
+        "total_price": "€199",
+        "trust_1": "Spedizione Oggi",
+        "trust_2": "30 Giorni Prova"
+      },
+      "type": "velo-whats-included"
+    },
+    "velo_rich_text": {
+      "block_order": [
+        "heading",
+        "text"
+      ],
+      "blocks": {
+        "heading": {
+          "settings": {
+            "heading_bold": "Sonno Migliore",
+            "heading_light": "Comfort Assoluto ="
+          },
+          "type": "heading"
+        },
+        "text": {
+          "settings": {
+            "text": "<p>Amanotte si adatta perfettamente al tuo corpo, migliora il comfort e regola la temperatura durante tutta la notte.</p>"
+          },
+          "type": "text"
+        }
+      },
+      "settings": {
+        "padding_bottom": 40,
+        "padding_top": 80
+      },
+      "type": "velo-rich-text"
+    },
+    "velo_risk_free": {
+      "settings": {
+        "heading": "Prova senza rischi di 30 giorni",
+        "main_icon": "shield",
+        "social_proof": "Oltre 10.000 persone hanno migliorato il loro riposo con Amanotte.",
+        "subheading": "Siamo così sicuri che dormirai meglio sul nostro coprimaterasso da 1000 GSM che offriamo una garanzia di soddisfazione. Se non ti svegli più riposato e senza dolori, puoi semplicemente restituirlo entro 30 giorni per un rimborso completo."
+      },
+      "type": "velo-risk-free-card"
+    },
+    "velo_sticky_atc": {
+      "settings": {
+        "btn_text": "Acquista ora",
+        "product": "shopify://products/topper-materasso-premium-trapuntato",
+        "show_for_demo": true
+      },
+      "type": "velo-sticky-atc"
+    },
+    "velo_testimonials": {
+      "block_order": [
+        "t1",
+        "t2",
+        "t3"
+      ],
+      "blocks": {
+        "t1": {
+          "settings": {
+            "author_name": "Emiliana A.",
+            "quote": "Il topper Amanotte ha cambiato il mio modo di dormire. Non mi sveglio più con dolore ai fianchi e la qualità della mia vita è migliorata tantissimo! Grazie mille!"
+          },
+          "type": "testimonial"
+        },
+        "t2": {
+          "settings": {
+            "author_name": "Amalia C.",
+            "quote": "Prima del topper Amanotte avevo provato il memory foam, ma mi svegliavo continuamente accaldata e sudata. Il topper Amanotte è una vera svolta: è soffice e traspirante, e non mi sveglio più per le vampate di calore. Sono felicissima!"
+          },
+          "type": "testimonial"
+        },
+        "t3": {
+          "settings": {
+            "author_name": "Matteo L.",
+            "quote": "Amanotte mi ha fatto risparmiare oltre 2000 euro evitando di acquistare un nuovo materasso. Si è adattato perfettamente al mio vecchio materasso e ora sembra di dormire in un hotel di lusso! Non sapevo fosse possibile ottenere un risultato così con un solo topper!"
+          },
+          "type": "testimonial"
+        }
+      },
+      "settings": {
+        "color_scheme": "",
+        "heading": "Cosa Dicono i Nostri Clienti",
+        "padding_bottom": 80,
+        "padding_top": 80,
+        "subheading": "Oltre 10.000 persone hanno migliorato il loro sonno con Amanotte."
+      },
+      "type": "velo-testimonials"
+    },
+    "velo_trust": {
+      "block_order": [
+        "t1",
+        "t2",
+        "t3"
+      ],
+      "blocks": {
+        "t1": {
+          "settings": {
+            "icon": "truck",
+            "subtitle": "",
+            "title": "Spedizione GRATUITA in Italia"
+          },
+          "type": "trust"
+        },
+        "t2": {
+          "settings": {
+            "icon": "shield",
+            "subtitle": "",
+            "title": "Qualità Premium"
+          },
+          "type": "trust"
+        },
+        "t3": {
+          "settings": {
+            "icon": "refresh",
+            "subtitle": "",
+            "title": "Reso facile entro 30 giorni"
+          },
+          "type": "trust"
+        }
+      },
+      "settings": {
+        "color_scheme": "",
+        "marquee_speed": 70,
+        "padding_bottom": 32,
+        "padding_top": 32
+      },
+      "type": "velo-trust-strip"
+    }
+  }
 }
