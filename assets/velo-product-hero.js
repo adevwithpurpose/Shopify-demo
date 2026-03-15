@@ -21,6 +21,10 @@
 
         function setupThumbnailClicks(gallery) {
             const thumbnails = gallery.querySelectorAll('.velo-thumbnail-item');
+            const thumbnailsContainer = gallery.querySelector('.velo-media-thumbnails');
+            const prevBtn = gallery.querySelector('.velo-thumbnails-prev');
+            const nextBtn = gallery.querySelector('.velo-thumbnails-next');
+
             thumbnails.forEach(thumb => {
                 thumb.addEventListener('click', () => {
                     const mediaId = thumb.dataset.mediaId;
@@ -29,17 +33,47 @@
                         item.style.display = item.dataset.mediaId === mediaId ? 'block' : 'none';
                     });
 
-                    thumbnails.forEach(t => t.classList.remove('velo-thumbnail--active'));
+                    thumbnails.forEach(t => {
+                        t.classList.remove('velo-thumbnail--active');
+                    });
                     thumb.classList.add('velo-thumbnail--active');
                 });
             });
+
+            if (prevBtn && nextBtn && thumbnailsContainer) {
+                const scrollAmount = 200;
+                prevBtn.addEventListener('click', () => {
+                    thumbnailsContainer.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+                });
+                nextBtn.addEventListener('click', () => {
+                    thumbnailsContainer.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+                });
+
+                const updateNavButtons = () => {
+                    const { scrollLeft, scrollWidth, clientWidth } = thumbnailsContainer;
+                    // Add a small tolerance (1px) for rounding errors
+                    const isAtStart = scrollLeft <= 1;
+                    const isAtEnd = scrollLeft >= scrollWidth - clientWidth - 1;
+
+                    prevBtn.style.opacity = isAtStart ? '0' : '1';
+                    prevBtn.style.pointerEvents = isAtStart ? 'none' : 'auto';
+
+                    nextBtn.style.opacity = isAtEnd ? '0' : '1';
+                    nextBtn.style.pointerEvents = isAtEnd ? 'none' : 'auto';
+                };
+
+                thumbnailsContainer.addEventListener('scroll', updateNavButtons);
+                window.addEventListener('resize', updateNavButtons);
+
+                // Initial check after images load
+                setTimeout(updateNavButtons, 100);
+                setTimeout(updateNavButtons, 500);
+            }
         }
 
         const desktopGallery = document.getElementById('veloMediaGallery-' + id);
-        const mobileGallery = section.querySelector('.velo-media-gallery--mobile');
 
         if (desktopGallery) setupThumbnailClicks(desktopGallery);
-        if (mobileGallery) setupThumbnailClicks(mobileGallery);
 
         function formatMoney(cents, id) {
             const settings = (window.veloSettings && window.veloSettings[id]) || {};
@@ -52,9 +86,9 @@
             const placeholderRegex = /\{\{\s*(\w+)\s*\}\}/;
 
             function formatWithDelimiters(number, precision, thousands, decimal) {
-                precision = (typeof precision == 'undefined' ? 2 : precision);
-                thousands = (typeof thousands == 'undefined' ? ',' : thousands);
-                decimal = (typeof decimal == 'undefined' ? '.' : decimal);
+                precision = (typeof precision === 'undefined' ? 2 : precision);
+                thousands = (typeof thousands === 'undefined' ? ',' : thousands);
+                decimal = (typeof decimal === 'undefined' ? '.' : decimal);
 
                 if (isNaN(number) || number == null) { return 0; }
 
@@ -153,7 +187,7 @@
 
                     if (matchedVariant.featured_media) {
                         const mediaId = matchedVariant.featured_media.id.toString();
-                        [desktopGallery, mobileGallery].forEach(gallery => {
+                        [desktopGallery].forEach(gallery => {
                             if (!gallery) return;
 
                             gallery.querySelectorAll('.velo-media-main-item').forEach(item => {
