@@ -1,6 +1,6 @@
 ---
 name: Bug report
-about: Use this template for reporting a bug
+about: Report a bug in the Amanotte storefront theme
 labels: bug
 ---
 
@@ -10,15 +10,21 @@ labels: bug
 ## Describe the expected behavior
 
 
-## Version information (Dawn, browsers and operating systems)
+## Affected area
 
-- Dawn Version: 7.0.1
-- Chrome Version 108.0.5359.124
-- macOS Version 13.1
+- Page or template:
+- Section, snippet, asset, or workflow path:
+- Theme branch:
+
+## Environment
+
+- Browser:
+- Device:
+- Operating system:
+- Theme editor preview or live storefront:
 
 ## Possible solution
 
 
 ## Additional context/screenshots
 <!-- Add any other context about the problem here. If applicable, add screenshots to help explain. -->
-

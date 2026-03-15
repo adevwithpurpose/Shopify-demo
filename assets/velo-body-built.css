@@ -82,8 +82,8 @@
 /* Dashed circle icon container */
 .velo-bb-icon-wrap {
     flex-shrink: 0;
-    width: 48px;
-    height: 48px;
+    width: 64px;
+    height: 64px;
     border-radius: 50%;
     border: 2px dashed #b0b8c9;
     display: flex;
@@ -94,8 +94,8 @@
 }
 
 .velo-bb-icon-wrap svg {
-    width: 22px;
-    height: 22px;
+    width: 32px;
+    height: 32px;
     stroke-width: 1.5;
 }
 
@@ -128,6 +128,34 @@
     }
 
     .velo-bb-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2.5rem 1.5rem;
         max-width: 100%;
+    }
+
+    .velo-bb-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.25rem;
+        padding-bottom: 0;
+    }
+
+    .velo-bb-icon-wrap {
+        width: 56px;
+        height: 56px;
+    }
+
+    .velo-bb-icon-wrap svg {
+        width: 28px;
+        height: 28px;
+    }
+
+    .velo-bb-item-title {
+        font-size: 1.6rem;
+    }
+
+    .velo-bb-item-desc {
+        font-size: 1.4rem;
     }
 }

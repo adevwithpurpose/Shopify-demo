@@ -1,5 +1,3 @@
-ut
-
 /* ============================
    VELO Product Hero Section
    ============================ */
@@ -907,27 +905,55 @@ ut
    MOBILE / DESKTOP GALLERY ORDER
    ================================ */
 
-/* Desktop: show left-column gallery, hide mobile duplicate */
-@media screen and (min-width: 990px) {
-    .velo-media-gallery--mobile {
-        display: none !important;
-    }
-}
-
-/* Mobile: hide left-column gallery, show the one after buy box */
 @media screen and (max-width: 989px) {
-    .velo-media-gallery:not(.velo-media-gallery--mobile) {
-        display: none;
-    }
-
     .velo-hero-container {
         display: flex;
         flex-direction: column;
+        gap: 1.25rem;
+        padding: 0 1.25rem;
     }
 
-    .velo-media-gallery--mobile {
-        display: block;
-        margin-top: 2.4rem;
+    .velo-hero-container.velo-mobile-image-bottom {
+        flex-direction: column-reverse;
+        gap: 2.25rem;
+    }
+
+    .velo-hero-container.velo-mobile-image-bottom .velo-buy-box {
+        padding-top: 0.75rem;
+    }
+
+    .velo-hero-container.velo-mobile-image-bottom .velo-media-gallery {
+        padding-bottom: 1.5rem;
+    }
+
+    .velo-media-main-wrapper {
+        max-height: 55vh;
+    }
+
+    .velo-product-title {
+        font-size: 2.8rem;
+        margin-bottom: 1rem;
+    }
+
+    .velo-pricing {
+        margin-bottom: 0.75rem;
+    }
+
+    .velo-trust-note {
+        margin-bottom: 1.5rem;
+    }
+
+    .velo-description-text {
+        margin-bottom: 1.25rem;
+    }
+
+    .velo-bullets {
+        margin: 1rem 0 1.5rem;
+        gap: 0.75rem;
+    }
+
+    .velo-hero-buy-elements {
+        margin-top: 1.5rem;
     }
 }
 
@@ -954,18 +980,34 @@ ut
 }
 
 .velo-media-thumbnails {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
     gap: 0.5rem;
+    padding-bottom: 0.5rem;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.velo-media-thumbnails::-webkit-scrollbar {
+    display: none;
 }
 
 .velo-thumbnail-item {
+    flex: 0 0 22%;
+    scroll-snap-align: start;
     aspect-ratio: 1/1;
     border-radius: 4px;
     overflow: hidden;
     cursor: pointer;
     border: 2px solid transparent;
     transition: border-color 0.2s ease;
+}
+
+@media screen and (min-width: 990px) {
+    .velo-thumbnail-item {
+        flex: 0 0 18%;
+    }
 }
 
 .velo-thumbnail-item:hover {
