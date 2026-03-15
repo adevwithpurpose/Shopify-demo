@@ -952,19 +952,22 @@
         gap: 0.75rem;
     }
 
-    .velo-bullets--mobile-2 {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 1rem 0.75rem;
+    .velo-hero-gifts-grid--mobile-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.75rem;
     }
 
-    .velo-bullets--mobile-2 li {
-        font-size: 1.4rem;
-        align-items: flex-start;
+    .velo-hero-gifts-grid--mobile-2 .velo-hero-gift-card {
+        gap: 0.45rem;
     }
 
-    .velo-bullets--mobile-2 .velo-bullet-check {
-        margin-top: 0.2rem;
+    .velo-hero-gifts-grid--mobile-2 .velo-hero-gift-image-box {
+        padding: 12%;
+    }
+
+    .velo-hero-gifts-grid--mobile-2 .velo-hero-gift-title {
+        font-size: 0.82rem;
+        line-height: 1.2;
     }
 
     .velo-hero-buy-elements {

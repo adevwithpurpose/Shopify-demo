@@ -165,7 +165,7 @@
         </div>
         
         {% if section.settings.bullet_1 != blank or section.settings.bullet_2 != blank or section.settings.bullet_3 != blank or section.settings.bullet_4 != blank %}
-          <ul class="velo-bullets velo-bullets--mobile-{{ section.settings.mobile_bullets_layout | default: '2' }}">
+          <ul class="velo-bullets">
             {% for i in (1..4) %}
               {% capture bullet_key %}bullet_{{ i }}{% endcapture %}
               {% assign bullet_text = section.settings[bullet_key] %}
@@ -233,7 +233,7 @@
             <div class="velo-hero-buy-elements">
               {%- assign gift_blocks = section.blocks | where: 'type', 'gift' -%}
               {% if gift_blocks.size > 0 %}
-                <div class="velo-hero-gifts-grid">
+                <div class="velo-hero-gifts-grid velo-hero-gifts-grid--mobile-{{ section.settings.mobile_gifts_layout | default: '2' }}">
                   {% for block in gift_blocks %}
                     <div class="velo-hero-gift-card" {{ block.shopify_attributes }}>
                       <div class="velo-hero-gift-badge">{{ block.settings.value }} {{ block.settings.free_text | default: 'FREE' }}</div>
@@ -272,7 +272,7 @@
           <div class="velo-hero-buy-elements">
             {%- assign gift_blocks = section.blocks | where: 'type', 'gift' -%}
             {% if gift_blocks.size > 0 %}
-              <div class="velo-hero-gifts-grid">
+              <div class="velo-hero-gifts-grid velo-hero-gifts-grid--mobile-{{ section.settings.mobile_gifts_layout | default: '2' }}">
                 {% for block in gift_blocks %}
                   <div class="velo-hero-gift-card" {{ block.shopify_attributes }}>
                     <div class="velo-hero-gift-image">{% render 'velo-icons', icon: block.settings.icon %}</div>
@@ -400,13 +400,20 @@
     },
     {
       "type": "select",
-      "id": "mobile_bullets_layout",
-      "label": "Mobile Benefits Layout",
+      "id": "mobile_gifts_layout",
+      "label": "Mobile Gifts Layout",
       "options": [
         {
           "value": "1",
-          "label": "1 Column"
+          "label": "1 Row (4 items)"
         },
+        {
+          "value": "2",
+          "label": "2 Rows (2 items per row)"
+        }
+      ],
+      "default": "2"
+    },
         {
           "value": "2",
           "label": "2 Columns"
