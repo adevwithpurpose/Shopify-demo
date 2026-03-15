@@ -8,100 +8,16 @@
  * ------------------------------------------------------------
  */
 {
+  "order": [
+    "main",
+    "velo_body_built",
+    "velo_details",
+    "velo_included",
+    "velo_faq",
+    "related-products"
+  ],
   "sections": {
     "main": {
-      "type": "velo-product-hero",
-      "blocks": {
-        "gift_1": {
-          "type": "gift",
-          "settings": {
-            "image": "shopify://shop_images/APS-Fulfillment-Inc-j.jpg",
-            "icon": "truck",
-            "free_text": "Spedizione",
-            "title": "GRATUITA",
-            "value": ""
-          }
-        },
-        "gift_2": {
-          "type": "gift",
-          "settings": {
-            "image": "shopify://shop_images/81yslK0H7zL._AC_UF1000_1000_QL80.jpg",
-            "icon": "sparkles",
-            "free_text": "OMAGGIO",
-            "title": "Federe Premium",
-            "value": "(€23)"
-          }
-        },
-        "gift_3": {
-          "type": "gift",
-          "settings": {
-            "image": "shopify://shop_images/extended-warranty-lifetime-assurance-label-with-shield-sign_1017-56382.avif",
-            "icon": "shield",
-            "free_text": "Garanzia",
-            "title": "Estesa",
-            "value": "(€49)"
-          }
-        },
-        "gift_4": {
-          "type": "gift",
-          "settings": {
-            "image": "shopify://shop_images/istockphoto-1135795506-612x612.jpg",
-            "icon": "check",
-            "free_text": "GARANTITA",
-            "title": "Soddisfazione",
-            "value": "(€29)"
-          }
-        },
-        "acc_benefits": {
-          "type": "accordion",
-          "settings": {
-            "title": "Vantaggi",
-            "content": "<p>Goditi il massimo comfort con il nostro topper da 1000GSM. Riduce i risvegli notturni, allevia i punti di pressione e ti mantiene fresco per tutta la notte.</p>"
-          }
-        },
-        "acc_assemble": {
-          "type": "accordion",
-          "settings": {
-            "title": "Come Si Installa",
-            "content": "<p>L'installazione richiede meno di un minuto. Stendi semplicemente gli angoli elastici rinforzati sul tuo materasso. Si adatta a qualsiasi profondità da 20 a 53 cm.</p>"
-          }
-        },
-        "acc_specs": {
-          "type": "accordion",
-          "settings": {
-            "title": "Specifiche",
-            "content": "<p><strong>Imbottitura:</strong> 1000GSM Premium<br/><strong>Vestibilità:</strong> Tasche profonde universali<br/><strong>Lavaggio:</strong> 100% Lavabile in lavatrice<br/><strong>Termoregolazione:</strong> Design trapuntato con movimento d'aria</p>"
-          }
-        },
-        "acc_shipping": {
-          "type": "accordion",
-          "settings": {
-            "title": "Spedizione e Resi",
-            "content": "<ul><li>Spedizione GRATUITA in tutta Italia — consegna in 2-4 giorni lavorativi.</li><li>Garanzia Soddisfatti o Rimborsati 30 Giorni.</li><li>Qualità Premium garantita.</li></ul>"
-          }
-        },
-        "acc_contact": {
-          "type": "accordion",
-          "settings": {
-            "title": "Contattaci",
-            "content": "<p>Hai una domanda? Scrivici a supporto@amanotte.com e risponderemo entro 24 ore (Lun-Ven, 9:00-18:00).</p>"
-          }
-        },
-        "swatch_grigio": {
-          "type": "swatch_color",
-          "settings": {
-            "title": "Grigio",
-            "color": "#808080"
-          }
-        },
-        "swatch_bianco": {
-          "type": "swatch_color",
-          "settings": {
-            "title": "Bianco",
-            "color": "#FFFFFF"
-          }
-        }
-      },
       "block_order": [
         "gift_1",
         "gift_2",
@@ -115,133 +31,192 @@
         "swatch_grigio",
         "swatch_bianco"
       ],
+      "blocks": {
+        "acc_assemble": {
+          "settings": {
+            "content": "<p>L'installazione richiede meno di un minuto. Stendi semplicemente gli angoli elastici rinforzati sul tuo materasso. Si adatta a qualsiasi profondità da 20 a 53 cm.</p>",
+            "title": "Come Si Installa"
+          },
+          "type": "accordion"
+        },
+        "acc_benefits": {
+          "settings": {
+            "content": "<p>Goditi il massimo comfort con il nostro topper da 1000GSM. Riduce i risvegli notturni, allevia i punti di pressione e ti mantiene fresco per tutta la notte.</p>",
+            "title": "Vantaggi"
+          },
+          "type": "accordion"
+        },
+        "acc_contact": {
+          "settings": {
+            "content": "<p>Hai una domanda? Scrivici a supporto@amanotte.com e risponderemo entro 24 ore (Lun-Ven, 9:00-18:00).</p>",
+            "title": "Contattaci"
+          },
+          "type": "accordion"
+        },
+        "acc_shipping": {
+          "settings": {
+            "content": "<ul><li>Spedizione GRATUITA in tutta Italia — consegna in 2-4 giorni lavorativi.</li><li>Garanzia Soddisfatti o Rimborsati 30 Giorni.</li><li>Qualità Premium garantita.</li></ul>",
+            "title": "Spedizione e Resi"
+          },
+          "type": "accordion"
+        },
+        "acc_specs": {
+          "settings": {
+            "content": "<p><strong>Imbottitura:</strong> 1000GSM Premium<br/><strong>Vestibilità:</strong> Tasche profonde universali<br/><strong>Lavaggio:</strong> 100% Lavabile in lavatrice<br/><strong>Termoregolazione:</strong> Design trapuntato con movimento d'aria</p>",
+            "title": "Specifiche"
+          },
+          "type": "accordion"
+        },
+        "gift_1": {
+          "settings": {
+            "free_text": "Spedizione",
+            "icon": "truck",
+            "image": "shopify://shop_images/APS-Fulfillment-Inc-j.jpg",
+            "title": "GRATUITA",
+            "value": ""
+          },
+          "type": "gift"
+        },
+        "gift_2": {
+          "settings": {
+            "free_text": "OMAGGIO",
+            "icon": "sparkles",
+            "image": "shopify://shop_images/81yslK0H7zL._AC_UF1000_1000_QL80.jpg",
+            "title": "Federe Premium",
+            "value": "(€23)"
+          },
+          "type": "gift"
+        },
+        "gift_3": {
+          "settings": {
+            "free_text": "Garanzia",
+            "icon": "shield",
+            "image": "shopify://shop_images/extended-warranty-lifetime-assurance-label-with-shield-sign_1017-56382.avif",
+            "title": "Estesa",
+            "value": "(€49)"
+          },
+          "type": "gift"
+        },
+        "gift_4": {
+          "settings": {
+            "free_text": "GARANTITA",
+            "icon": "check",
+            "image": "shopify://shop_images/istockphoto-1135795506-612x612.jpg",
+            "title": "Soddisfazione",
+            "value": "(€29)"
+          },
+          "type": "gift"
+        },
+        "swatch_bianco": {
+          "settings": {
+            "color": "#FFFFFF",
+            "title": "Bianco"
+          },
+          "type": "swatch_color"
+        },
+        "swatch_grigio": {
+          "settings": {
+            "color": "#808080",
+            "title": "Grigio"
+          },
+          "type": "swatch_color"
+        }
+      },
       "settings": {
-        "product": "",
+        "atc_text": "Acquista ora",
         "badge_1": "BESTSELLER",
         "badge_2": "TOPPER #1 NEGLI HOTEL di lusso",
-        "show_reviews": true,
-        "rating_value": "4.9",
-        "review_count": "9700+",
-        "trust_note": "Disponibile esclusivamente su Amanotte.com",
-        "hero_desc": "Lasciati avvolgere da un’imbottitura ultra spessa da 1000 GSM, un comfort trapuntato traspirante e una vestibilità sicura con tasche profonde — progettato per migliorare immediatamente la tua esperienza di riposo.",
         "bullet_1": "Comfort di Lusso: Qualità da hotel a 5 stelle, 3 volte più spesso dei topper standard",
         "bullet_2": "Effetto Fresco: Design traspirante che aiuta a prevenire la sudorazione notturna",
         "bullet_3": "Ipoallergenico: Certificato OEKO-TEX® Standard 100, anti-acaro e protezione contro allergeni",
         "bullet_4": "Vestibilità Perfetta: Fascia elastica con tasche profonde per una tenuta stabile senza spostamenti.",
-        "gifts_heading": "",
-        "urgency_text": "Quasi esaurito - aggiornato all [date]",
         "cta_bg_color": "#ff6b00",
         "cta_text_color": "#ffffff",
-        "atc_text": "Acquista ora",
-        "sold_out_text": "ESAURITO",
-        "save_text": "SALVA",
         "free_label": "GRATIS",
+        "gifts_heading": "",
+        "hero_desc": "Lasciati avvolgere da un’imbottitura ultra spessa da 1000 GSM, un comfort trapuntato traspirante e una vestibilità sicura con tasche profonde — progettato per migliorare immediatamente la tua esperienza di riposo.",
+        "product": "",
+        "rating_value": "4.9",
+        "review_count": "9700+",
+        "save_text": "SALVA",
+        "show_reviews": true,
+        "sold_out_text": "ESAURITO",
+        "sub_desc": "",
         "trust_1": "Spedizione Rapida in tutta Italia",
         "trust_2": "Reso facile entro 30 giorni",
-        "sub_desc": ""
-      }
+        "trust_note": "Disponibile esclusivamente su Amanotte.com",
+        "urgency_text": "Quasi esaurito - aggiornato all [date]"
+      },
+      "type": "velo-product-hero"
+    },
+    "related-products": {
+      "settings": {
+        "color_scheme": "scheme-1",
+        "columns_desktop": 4,
+        "columns_mobile": "2",
+        "heading": "Potrebbe Piacerti Anche",
+        "heading_size": "h2",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "padding_bottom": 28,
+        "padding_top": 36,
+        "products_to_show": 4,
+        "show_rating": false,
+        "show_secondary_image": true,
+        "show_vendor": false
+      },
+      "type": "related-products"
     },
     "velo_body_built": {
-      "type": "velo-body-built",
-      "blocks": {
-        "p1": {
-          "type": "point",
-          "settings": {
-            "icon": "lock",
-            "title": "Stabile Tutta La Notte",
-            "description": "Gli angoli rinforzati mantengono il topper bloccato in posizione."
-          }
-        },
-        "p2": {
-          "type": "point",
-          "settings": {
-            "icon": "check",
-            "title": "Comfort Effetto Nuvola",
-            "description": "L'imbottitura da 1000GSM si adatta esattamente al tuo corpo."
-          }
-        },
-        "p3": {
-          "type": "point",
-          "settings": {
-            "icon": "thermometer",
-            "title": "Controllo Temperatura",
-            "description": "Nessun accumulo di calore come il memory foam - fresco tutta la notte."
-          }
-        },
-        "p4": {
-          "type": "point",
-          "settings": {
-            "icon": "sliders",
-            "title": "Per Ogni Materasso",
-            "description": "Le tasche profonde si adattano a materassi da 20 a 53 cm."
-          }
-        }
-      },
       "block_order": [
         "p1",
         "p2",
         "p3",
         "p4"
       ],
-      "settings": {
-        "heading_prefix": "Pensato Per Chi Vuole",
-        "heading_bold": "Riposarsi Davvero",
-        "subheading": "Supporta le tue posizioni naturali di riposo",
-        "side_video": "shopify://files/videos/compressed_video.mp4"
-      }
-    },
-    "velo_details": {
-      "type": "velo-details-grid",
       "blocks": {
-        "d1": {
-          "type": "detail",
+        "p1": {
           "settings": {
-            "icon": "move",
-            "title": "Imbottitura da 1000GSM",
-            "description": "<p>Oltre 6cm di spessore extra ultra-plush</p>"
-          }
-        },
-        "d2": {
-          "type": "detail",
-          "settings": {
-            "icon": "thermometer",
-            "title": "Tessuto Traspirante",
-            "description": "<p>Materiale soft-touch che resta fresco</p>"
-          }
-        },
-        "d3": {
-          "type": "detail",
-          "settings": {
-            "icon": "sliders",
-            "title": "Vestibilità Universale",
-            "description": "<p>Tasche profonde elasticizzate (20-53cm)</p>"
-          }
-        },
-        "d4": {
-          "type": "detail",
-          "settings": {
-            "icon": "refresh",
-            "title": "Lavabile in Lavatrice",
-            "description": "<p>Igiene perfetta notte dopo notte</p>"
-          }
-        },
-        "d5": {
-          "type": "detail",
-          "settings": {
+            "description": "Gli angoli rinforzati mantengono il topper bloccato in posizione.",
             "icon": "lock",
-            "title": "Sostegno Sicuro",
-            "description": "<p>Resta bloccato senza spostarsi mai</p>"
-          }
+            "title": "Stabile Tutta La Notte"
+          },
+          "type": "point"
         },
-        "d6": {
-          "type": "detail",
+        "p2": {
           "settings": {
-            "icon": "shield",
-            "title": "Costruito per Durare",
-            "description": "<p>Cuciture rinforzate e materiali premium</p>"
-          }
+            "description": "L'imbottitura da 1000GSM si adatta esattamente al tuo corpo.",
+            "icon": "check",
+            "title": "Comfort Effetto Nuvola"
+          },
+          "type": "point"
+        },
+        "p3": {
+          "settings": {
+            "description": "Nessun accumulo di calore come il memory foam - fresco tutta la notte.",
+            "icon": "thermometer",
+            "title": "Controllo Temperatura"
+          },
+          "type": "point"
+        },
+        "p4": {
+          "settings": {
+            "description": "Le tasche profonde si adattano a materassi da 20 a 53 cm.",
+            "icon": "sliders",
+            "title": "Per Ogni Materasso"
+          },
+          "type": "point"
         }
       },
+      "settings": {
+        "heading_bold": "Riposarsi Davvero",
+        "heading_prefix": "Pensato Per Chi Vuole",
+        "side_video": "shopify://files/videos/compressed_video.mp4",
+        "subheading": "Supporta le tue posizioni naturali di riposo"
+      },
+      "type": "velo-body-built"
+    },
+    "velo_details": {
       "block_order": [
         "d1",
         "d2",
@@ -250,136 +225,65 @@
         "d5",
         "d6"
       ],
-      "settings": {
-        "heading_light": "Progettato Nei",
-        "heading_bold": "Minimi Dettagli",
-        "subheading": "Materiali focalizzati sul comfort e vestibilità ultra stabile",
-        "full_width": false
-      }
-    },
-    "velo_included": {
-      "type": "velo-whats-included",
       "blocks": {
-        "inc_1": {
-          "type": "item",
+        "d1": {
           "settings": {
-            "title": "Topper Materasso Premium",
-            "original_price": "€399",
-            "final_price": "€199",
-            "is_free": false
-          }
+            "description": "<p>Oltre 6cm di spessore extra ultra-plush</p>",
+            "icon": "move",
+            "title": "Imbottitura da 1000GSM"
+          },
+          "type": "detail"
         },
-        "inc_2": {
-          "type": "item",
+        "d2": {
           "settings": {
-            "title": "Spedizione Rapida Italia",
-            "original_price": "€14.00",
-            "final_price": "GRATIS",
-            "is_free": true
-          }
+            "description": "<p>Materiale soft-touch che resta fresco</p>",
+            "icon": "thermometer",
+            "title": "Tessuto Traspirante"
+          },
+          "type": "detail"
         },
-        "inc_3": {
-          "type": "item",
+        "d3": {
           "settings": {
-            "title": "Mascherina per Dormire",
-            "original_price": "€23.00",
-            "final_price": "GRATIS",
-            "is_free": true
-          }
+            "description": "<p>Tasche profonde elasticizzate (20-53cm)</p>",
+            "icon": "sliders",
+            "title": "Vestibilità Universale"
+          },
+          "type": "detail"
         },
-        "inc_4": {
-          "type": "item",
+        "d4": {
           "settings": {
-            "title": "Federe Premium",
-            "original_price": "€49.00",
-            "final_price": "GRATIS",
-            "is_free": true
-          }
+            "description": "<p>Igiene perfetta notte dopo notte</p>",
+            "icon": "refresh",
+            "title": "Lavabile in Lavatrice"
+          },
+          "type": "detail"
         },
-        "inc_5": {
-          "type": "item",
+        "d5": {
           "settings": {
-            "title": "Garanzia Estesa 10 Anni",
-            "original_price": "€29.00",
-            "final_price": "GRATIS",
-            "is_free": true
-          }
+            "description": "<p>Resta bloccato senza spostarsi mai</p>",
+            "icon": "lock",
+            "title": "Sostegno Sicuro"
+          },
+          "type": "detail"
+        },
+        "d6": {
+          "settings": {
+            "description": "<p>Cuciture rinforzate e materiali premium</p>",
+            "icon": "shield",
+            "title": "Costruito per Durare"
+          },
+          "type": "detail"
         }
       },
-      "block_order": [
-        "inc_1",
-        "inc_2",
-        "inc_3",
-        "inc_4",
-        "inc_5"
-      ],
-      "disabled": true,
       "settings": {
-        "color_scheme": "",
-        "padding_top": 80,
-        "padding_bottom": 80,
-        "heading": "Tutto Quello che Ti Serve per",
-        "heading_bold": "Dormire Davvero",
-        "order_today_label": "SE ORDINI OGGI:",
-        "savings_label": "Risparmio",
-        "savings_value": "Risparmi €200",
-        "total_label": "Totale",
-        "total_price": "€199",
-        "free_label": "GRATIS",
-        "free_gifts_label": "REGALI GRATUITI",
-        "trust_1": "Spedizione Oggi",
-        "trust_2": "30 Giorni Prova",
-        "cta_link": "",
-        "badge_text": "Regali GRATUITI Inclusi (valore €115)",
-        "annotation_1": "FREE Mouse Pad",
-        "anno_1_top": 25,
-        "anno_1_left": 15,
-        "anno_1_rotate": 0,
-        "annotation_2": "FREE Chair Mat",
-        "anno_2_top": 65,
-        "anno_2_left": 70,
-        "anno_2_rotate": 0
-      }
+        "full_width": false,
+        "heading_bold": "Minimi Dettagli",
+        "heading_light": "Progettato Nei",
+        "subheading": "Materiali focalizzati sul comfort e vestibilità ultra stabile"
+      },
+      "type": "velo-details-grid"
     },
     "velo_faq": {
-      "type": "velo-faq",
-      "blocks": {
-        "f1": {
-          "type": "faq",
-          "settings": {
-            "title": "È lavabile in lavatrice?",
-            "content": "<p>Sì, assolutamente. È lavabile in lavatrice al 100% per una facile manutenzione.</p>"
-          }
-        },
-        "f2": {
-          "type": "faq",
-          "settings": {
-            "title": "Si adatterà al mio materasso alto?",
-            "content": "<p>Sì, la fascia elastica è progettata per adattarsi a materassi profondi fino a 53 cm.</p>"
-          }
-        },
-        "f3": {
-          "type": "faq",
-          "settings": {
-            "title": "Posso restituirlo se non mi piace?",
-            "content": "<p>Certamente! Offriamo una garanzia di rimborso di 30 giorni.</p>"
-          }
-        },
-        "f4": {
-          "type": "faq",
-          "settings": {
-            "title": "Mi farà sudare di notte?",
-            "content": "<p>Assolutamente no! A differenza del memory foam tradizionale che intrappola il calore, il nostro topper da 1000GSM presenta un design trapuntato traspirante che favorisce la circolazione dell'aria.</p>"
-          }
-        },
-        "f5": {
-          "type": "faq",
-          "settings": {
-            "title": "Quanto è alto il topper da 1000GSM?",
-            "content": "<p>Fornisce circa 5-6 cm di morbidezza ultra-plush, come negli hotel a 5 stelle.</p>"
-          }
-        }
-      },
       "block_order": [
         "f1",
         "f2",
@@ -387,39 +291,135 @@
         "f4",
         "f5"
       ],
+      "blocks": {
+        "f1": {
+          "settings": {
+            "content": "<p>Sì, assolutamente. È lavabile in lavatrice al 100% per una facile manutenzione.</p>",
+            "title": "È lavabile in lavatrice?"
+          },
+          "type": "faq"
+        },
+        "f2": {
+          "settings": {
+            "content": "<p>Sì, la fascia elastica è progettata per adattarsi a materassi profondi fino a 53 cm.</p>",
+            "title": "Si adatterà al mio materasso alto?"
+          },
+          "type": "faq"
+        },
+        "f3": {
+          "settings": {
+            "content": "<p>Certamente! Offriamo una garanzia di rimborso di 30 giorni.</p>",
+            "title": "Posso restituirlo se non mi piace?"
+          },
+          "type": "faq"
+        },
+        "f4": {
+          "settings": {
+            "content": "<p>Assolutamente no! A differenza del memory foam tradizionale che intrappola il calore, il nostro topper da 1000GSM presenta un design trapuntato traspirante che favorisce la circolazione dell'aria.</p>",
+            "title": "Mi farà sudare di notte?"
+          },
+          "type": "faq"
+        },
+        "f5": {
+          "settings": {
+            "content": "<p>Fornisce circa 5-6 cm di morbidezza ultra-plush, come negli hotel a 5 stelle.</p>",
+            "title": "Quanto è alto il topper da 1000GSM?"
+          },
+          "type": "faq"
+        }
+      },
       "settings": {
         "color_scheme": "",
         "heading": "Domande Frequenti",
-        "subheading": "Tutto quello che devi sapere sul Topper Amanotte.",
+        "padding_bottom": 80,
         "padding_top": 80,
-        "padding_bottom": 80
-      }
+        "subheading": "Tutto quello che devi sapere sul Topper Amanotte."
+      },
+      "type": "velo-faq"
     },
-    "related-products": {
-      "type": "related-products",
+    "velo_included": {
+      "block_order": [
+        "inc_1",
+        "inc_2",
+        "inc_3",
+        "inc_4",
+        "inc_5"
+      ],
+      "blocks": {
+        "inc_1": {
+          "settings": {
+            "final_price": "€199",
+            "is_free": false,
+            "original_price": "€399",
+            "title": "Topper Materasso Premium"
+          },
+          "type": "item"
+        },
+        "inc_2": {
+          "settings": {
+            "final_price": "GRATIS",
+            "is_free": true,
+            "original_price": "€14.00",
+            "title": "Spedizione Rapida Italia"
+          },
+          "type": "item"
+        },
+        "inc_3": {
+          "settings": {
+            "final_price": "GRATIS",
+            "is_free": true,
+            "original_price": "€23.00",
+            "title": "Mascherina per Dormire"
+          },
+          "type": "item"
+        },
+        "inc_4": {
+          "settings": {
+            "final_price": "GRATIS",
+            "is_free": true,
+            "original_price": "€49.00",
+            "title": "Federe Premium"
+          },
+          "type": "item"
+        },
+        "inc_5": {
+          "settings": {
+            "final_price": "GRATIS",
+            "is_free": true,
+            "original_price": "€29.00",
+            "title": "Garanzia Estesa 10 Anni"
+          },
+          "type": "item"
+        }
+      },
+      "disabled": true,
       "settings": {
-        "heading": "Potrebbe Piacerti Anche",
-        "heading_size": "h2",
-        "products_to_show": 4,
-        "columns_desktop": 4,
-        "columns_mobile": "2",
-        "color_scheme": "scheme-1",
-        "image_ratio": "square",
-        "image_shape": "default",
-        "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": false,
-        "padding_top": 36,
-        "padding_bottom": 28
-      }
+        "anno_1_left": 15,
+        "anno_1_rotate": 0,
+        "anno_1_top": 25,
+        "anno_2_left": 70,
+        "anno_2_rotate": 0,
+        "anno_2_top": 65,
+        "annotation_1": "FREE Mouse Pad",
+        "annotation_2": "FREE Chair Mat",
+        "badge_text": "Regali GRATUITI Inclusi (valore €115)",
+        "color_scheme": "",
+        "cta_link": "",
+        "free_gifts_label": "REGALI GRATUITI",
+        "free_label": "GRATIS",
+        "heading": "Tutto Quello che Ti Serve per",
+        "heading_bold": "Dormire Davvero",
+        "order_today_label": "SE ORDINI OGGI:",
+        "padding_bottom": 80,
+        "padding_top": 80,
+        "savings_label": "Risparmio",
+        "savings_value": "Risparmi €200",
+        "total_label": "Totale",
+        "total_price": "€199",
+        "trust_1": "Spedizione Oggi",
+        "trust_2": "30 Giorni Prova"
+      },
+      "type": "velo-whats-included"
     }
-  },
-  "order": [
-    "main",
-    "velo_body_built",
-    "velo_details",
-    "velo_included",
-    "velo_faq",
-    "related-products"
-  ]
+  }
 }
