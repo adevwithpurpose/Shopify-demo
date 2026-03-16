@@ -37,8 +37,8 @@
           "settings": {
             "image": "shopify://shop_images/ChatGPT_Image_Mar_6_2026_04_10_48_PM.png",
             "icon": "shield",
-            "free_text": "GARANTITA",
-            "title": "di Soddisfazione",
+            "free_text": "Soddisfazione",
+            "title": "<strong>GARANTITA</strong>",
             "value": ""
           }
         },
@@ -47,8 +47,8 @@
           "settings": {
             "image": "shopify://shop_images/ChatGPT_Image_Mar_6_2026_04_17_31_PM.png",
             "icon": "check",
-            "free_text": "PROVA",
-            "title": "Senza Rischi",
+            "free_text": "Prova",
+            "title": "<strong>SENZA RISCHI</strong>",
             "value": ""
           }
         },
