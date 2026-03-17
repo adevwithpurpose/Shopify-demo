@@ -15,7 +15,7 @@
         "gift_1": {
           "type": "gift",
           "settings": {
-            "image": "shopify://shop_images/ChatGPT_Image_Mar_6_2026_04_09_26_PM.png",
+            "image": "shopify://shop_images/Gemini_Generated_Image_s1aqv7s1aqv7s1aq.png",
             "icon": "truck",
             "free_text": "Spedizione",
             "title": "<strong>GRATUITA</strong>",
@@ -25,9 +25,9 @@
         "gift_2": {
           "type": "gift",
           "settings": {
-            "image": "shopify://shop_images/ChatGPT_Image_Mar_6_2026_04_13_56_PM.png",
+            "image": "shopify://shop_images/Gemini_Generated_Image_2etvdm2etvdm2etv.png",
             "icon": "sparkles",
-            "free_text": "Qualia",
+            "free_text": "Qualita",
             "title": "<strong>PREMIUM</strong>",
             "value": ""
           }
@@ -35,7 +35,7 @@
         "gift_3": {
           "type": "gift",
           "settings": {
-            "image": "shopify://shop_images/ChatGPT_Image_Mar_6_2026_04_10_48_PM.png",
+            "image": "shopify://shop_images/Gemini_Generated_Image_bfbp27bfbp27bfbp.png",
             "icon": "shield",
             "free_text": "Soddisfazione",
             "title": "<strong>GARANTITA</strong>",
@@ -45,7 +45,7 @@
         "gift_4": {
           "type": "gift",
           "settings": {
-            "image": "shopify://shop_images/ChatGPT_Image_Mar_6_2026_04_17_31_PM.png",
+            "image": "shopify://shop_images/Gemini_Generated_Image_xsfduexsfduexsfd.png",
             "icon": "check",
             "free_text": "Prova",
             "title": "<strong>SENZA RISCHI</strong>",
