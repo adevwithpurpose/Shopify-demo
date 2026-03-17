@@ -14,6 +14,7 @@
       "blocks": {
         "gift_1": {
           "type": "gift",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/Gemini_Generated_Image_s1aqv7s1aqv7s1aq.png",
             "icon": "truck",
@@ -24,6 +25,7 @@
         },
         "gift_2": {
           "type": "gift",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/Gemini_Generated_Image_2etvdm2etvdm2etv.png",
             "icon": "sparkles",
@@ -34,6 +36,7 @@
         },
         "gift_3": {
           "type": "gift",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/Gemini_Generated_Image_bfbp27bfbp27bfbp.png",
             "icon": "shield",
@@ -44,6 +47,7 @@
         },
         "gift_4": {
           "type": "gift",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/Gemini_Generated_Image_xsfduexsfduexsfd.png",
             "icon": "check",
