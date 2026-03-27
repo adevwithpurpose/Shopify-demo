@@ -250,7 +250,23 @@
                 </div>
               {% endif %}
               {% if section.settings.urgency_text != blank %}
-                {%- assign today_date_str = 'now' | date: "%d %B" -%}
+                {%- assign today_day = 'now' | date: "%d" -%}
+                {%- assign today_month_num = 'now' | date: "%m" -%}
+                {%- case today_month_num -%}
+                  {%- when '01' -%}{%- assign today_month_name = 'gennaio' -%}
+                  {%- when '02' -%}{%- assign today_month_name = 'febbraio' -%}
+                  {%- when '03' -%}{%- assign today_month_name = 'marzo' -%}
+                  {%- when '04' -%}{%- assign today_month_name = 'aprile' -%}
+                  {%- when '05' -%}{%- assign today_month_name = 'maggio' -%}
+                  {%- when '06' -%}{%- assign today_month_name = 'giugno' -%}
+                  {%- when '07' -%}{%- assign today_month_name = 'luglio' -%}
+                  {%- when '08' -%}{%- assign today_month_name = 'agosto' -%}
+                  {%- when '09' -%}{%- assign today_month_name = 'settembre' -%}
+                  {%- when '10' -%}{%- assign today_month_name = 'ottobre' -%}
+                  {%- when '11' -%}{%- assign today_month_name = 'novembre' -%}
+                  {%- when '12' -%}{%- assign today_month_name = 'dicembre' -%}
+                {%- endcase -%}
+                {%- assign today_date_str = today_day | append: ' ' | append: today_month_name -%}
                 <div class="velo-urgency-pill">
                   <span class="velo-urgency-dot"></span>
                   <span>{{ section.settings.urgency_text | replace: '[date]', today_date_str }}</span>
@@ -282,7 +298,23 @@
               </div>
             {% endif %}
             {% if section.settings.urgency_text != blank %}
-              {%- assign today_date_str = 'now' | date: "%d %B" -%}
+              {%- assign today_day = 'now' | date: "%d" -%}
+              {%- assign today_month_num = 'now' | date: "%m" -%}
+              {%- case today_month_num -%}
+                {%- when '01' -%}{%- assign today_month_name = 'gennaio' -%}
+                {%- when '02' -%}{%- assign today_month_name = 'febbraio' -%}
+                {%- when '03' -%}{%- assign today_month_name = 'marzo' -%}
+                {%- when '04' -%}{%- assign today_month_name = 'aprile' -%}
+                {%- when '05' -%}{%- assign today_month_name = 'maggio' -%}
+                {%- when '06' -%}{%- assign today_month_name = 'giugno' -%}
+                {%- when '07' -%}{%- assign today_month_name = 'luglio' -%}
+                {%- when '08' -%}{%- assign today_month_name = 'agosto' -%}
+                {%- when '09' -%}{%- assign today_month_name = 'settembre' -%}
+                {%- when '10' -%}{%- assign today_month_name = 'ottobre' -%}
+                {%- when '11' -%}{%- assign today_month_name = 'novembre' -%}
+                {%- when '12' -%}{%- assign today_month_name = 'dicembre' -%}
+              {%- endcase -%}
+              {%- assign today_date_str = today_day | append: ' ' | append: today_month_name -%}
               <div class="velo-urgency-pill">
                 <span class="velo-urgency-dot"></span>
                 <span>{{ section.settings.urgency_text | replace: '[date]', today_date_str }}</span>
