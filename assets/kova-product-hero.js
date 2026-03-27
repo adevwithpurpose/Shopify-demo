@@ -138,10 +138,9 @@
             const daysToAdd = now.getDay() === 5 ? 3 : now.getDay() === 6 ? 2 : 1;
             const nextDay = new Date(now);
             nextDay.setDate(now.getDate() + daysToAdd);
-            const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-            const dateStr = months[nextDay.getMonth()] + ' ' + nextDay.getDate();
+            const months = ['gennaio', 'febbraio', 'marzo', 'aprile', 'maggio', 'giugno', 'luglio', 'agosto', 'settembre', 'ottobre', 'novembre', 'dicembre'];
+            const dateStr = nextDay.getDate() + ' ' + months[nextDay.getMonth()];
             urgencyEl.innerHTML = urgencyEl.innerHTML.replace(/\[date\]/g, '<strong>' + dateStr + '</strong>');
         }
     });
 })();
-
