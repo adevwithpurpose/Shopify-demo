@@ -32,7 +32,7 @@
           "type": "text",
           "settings": {
             "heading": "Dove Siamo",
-            "subtext": "<p>Amanotte Topper Topper<br/>Via Roma 123, 00100 Roma<br/>info@amanotte.it</p>"
+            "subtext": "<p>Amanotte<br/>Via Roma 123, 00100 Roma<br/>info@amanotte.it</p>"
           }
         },
         "footer-brand": {
