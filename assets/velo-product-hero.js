@@ -116,6 +116,38 @@
             return format.replace(placeholderRegex, value);
         }
 
+        function updateStickyAtc(matchedVariant) {
+            const stickyAtc = document.querySelector('.velo-sticky-atc');
+            if (!stickyAtc || !matchedVariant) return;
+
+            const stickyPriceEl = stickyAtc.querySelector('.velo-sticky-atc-price');
+            const stickyCompareEl = stickyAtc.querySelector('.velo-sticky-atc-compare');
+            const stickyNameEl = stickyAtc.querySelector('.velo-sticky-atc-name');
+
+            if (stickyPriceEl) {
+                stickyPriceEl.textContent = formatMoney(matchedVariant.price, id);
+            }
+
+            if (stickyCompareEl) {
+                if (matchedVariant.compare_at_price && matchedVariant.compare_at_price > matchedVariant.price) {
+                    stickyCompareEl.textContent = formatMoney(matchedVariant.compare_at_price, id);
+                    stickyCompareEl.style.display = '';
+                } else {
+                    stickyCompareEl.style.display = 'none';
+                }
+            }
+
+            if (stickyNameEl) {
+                const variantLabel = matchedVariant.public_title && matchedVariant.public_title !== 'Default Title'
+                    ? matchedVariant.public_title
+                    : matchedVariant.title;
+
+                if (variantLabel && variantLabel !== 'Default Title') {
+                    stickyNameEl.textContent = variantLabel;
+                }
+            }
+        }
+
         const swatchInputs = section.querySelectorAll('.velo-swatch-input');
         swatchInputs.forEach(function (input) {
             input.addEventListener('change', function () {
@@ -147,6 +179,8 @@
                     if (priceEl) {
                         priceEl.textContent = formatMoney(matchedVariant.price, id);
                     }
+
+                    updateStickyAtc(matchedVariant);
 
                     const compareEl = section.querySelector('.velo-price-compare');
                     const saveEl = section.querySelector('.velo-save-badge');
