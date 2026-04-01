@@ -1,6 +1,7 @@
 {{ 'velo-sticky-atc.css' | asset_url | stylesheet_tag }}
 
 {%- assign product = section.settings.product | default: all_products[settings.featured_product] -%}
+{%- assign selected_variant = product.selected_or_first_available_variant -%}
 
 {% if product != blank or section.settings.show_for_demo %}
   <div class="velo-sticky-atc" id="veloStickyAtc-{{ section.id }}">
@@ -19,11 +20,11 @@
           </span>
           <div class="velo-sticky-atc-price-wrapper">
             <span class="velo-sticky-atc-price">
-              {% if product != blank %}{{ product.price | money }}{% else %}€199,00{% endif %}
+              {% if selected_variant != blank %}{{ selected_variant.price | money }}{% else %}€199,00{% endif %}
             </span>
-            {% if product.compare_at_price > product.price %}
+            {% if selected_variant != blank and selected_variant.compare_at_price > selected_variant.price %}
               <span class="velo-sticky-atc-compare">
-                {{ product.compare_at_price | money }}
+                {{ selected_variant.compare_at_price | money }}
               </span>
             {% endif %}
           </div>
