@@ -148,6 +148,23 @@
             }
         }
 
+        function getMatchedVariantFromSelectedOptions() {
+            const selectedOptions = [];
+
+            section.querySelectorAll('.velo-option-group').forEach(function (group) {
+                const checked = group.querySelector('.velo-swatch-input:checked');
+                if (checked) selectedOptions.push(checked.value);
+            });
+
+            if (!selectedOptions.length) return null;
+
+            return variants.find(function (v) {
+                return v.options.every(function (opt, i) {
+                    return selectedOptions[i] === opt;
+                });
+            }) || null;
+        }
+
         const swatchInputs = section.querySelectorAll('.velo-swatch-input');
         swatchInputs.forEach(function (input) {
             input.addEventListener('change', function () {
@@ -161,17 +178,7 @@
                 const labelEl = document.getElementById('veloOptionLabel-' + id + '-' + optionIndex);
                 if (labelEl) labelEl.textContent = input.value;
 
-                const selectedOptions = [];
-                section.querySelectorAll('.velo-option-group').forEach(function (group) {
-                    const checked = group.querySelector('.velo-swatch-input:checked');
-                    if (checked) selectedOptions.push(checked.value);
-                });
-
-                const matchedVariant = variants.find(function (v) {
-                    return v.options.every(function (opt, i) {
-                        return selectedOptions[i] === opt;
-                    });
-                });
+                const matchedVariant = getMatchedVariantFromSelectedOptions();
 
                 if (matchedVariant && variantIdInput) {
                     variantIdInput.value = matchedVariant.id;
@@ -236,6 +243,19 @@
                 }
             });
         });
+
+        const initialVariant = getMatchedVariantFromSelectedOptions();
+        if (initialVariant) {
+            if (variantIdInput) {
+                variantIdInput.value = initialVariant.id;
+            }
+
+            if (priceEl) {
+                priceEl.textContent = formatMoney(initialVariant.price, id);
+            }
+
+            updateStickyAtc(initialVariant);
+        }
     });
 
     (function () {
