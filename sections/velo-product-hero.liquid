@@ -284,6 +284,20 @@
             </div>
           {%- endform -%}
 
+          <script>
+              document.querySelectorAll('.velo-section form[action="/cart/add"]').forEach(function(form) {
+                  form.addEventListener('submit', function(e) {
+                        e.preventDefault();
+                              var formData = new FormData(this);
+                                    fetch('/cart/clear.js', { method: 'POST' })
+                                            .then(function() { return fetch('/cart/add.js', { method: 'POST', body: formData }); })
+                                                    .then(function(res) { return res.json(); })
+                                                            .then(function() { window.location.href = '/checkout'; })
+                                                                    .catch(function() { window.location.href = '/checkout'; });
+                                                                        });
+                                                                          });
+                                                                          </script>
+
         {% else %}
           <div class="velo-hero-buy-elements">
             {%- assign gift_blocks = section.blocks | where: 'type', 'gift' -%}
